@@ -35,6 +35,8 @@ export const MethodenDiv = () => {
     setIsCollapsed(!isCollapsed);
   };
 
+  console.log(isCollapsed);
+
   //Filter: If one is selected, the other one´s opacity is set down
   const div1 = document.getElementById("div1");
   const div2 = document.getElementById("div2");
@@ -84,7 +86,7 @@ export const MethodenDiv = () => {
   function handleClickILM() {
     if (selectedScope === "DE") {
       setILM(!isILM);
-    }
+    }else{setILM(isILM)}
   }
   function handleClickKIT() {
     setKIT(!isKIT);
@@ -269,6 +271,7 @@ export const MethodenDiv = () => {
                   setmenuAge("00+");
                   setScope(selectedScope);
                   handleDiv1Selection();
+                  handleClickILM()
                 }}
               /> 
              </button>
@@ -918,7 +921,7 @@ export const MethodenDiv = () => {
             {" "}
             <i class="fa-solid fa-caret-down"></i> Tabelle anzeigen
           </button>
-          {isCollapsed && (
+          {/* {isCollapsed && ( */}
             <div
               className={`collapse ${!isCollapsed ? "show" : ""}`}
               id="collapseExample"
@@ -940,7 +943,7 @@ export const MethodenDiv = () => {
                 />
               </div>
             </div>
-          )}
+          {/* )} */}
         </div>
       </section>
     </div>

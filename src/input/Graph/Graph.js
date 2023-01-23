@@ -147,6 +147,7 @@ export const Graph = ({
     .range([innerHeight, 0])
     .nice();
 
+
   return (
     <svg width={width} height={height}>
       <g transform={`translate(${margin.left},${margin.top})`}>
