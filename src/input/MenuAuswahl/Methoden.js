@@ -221,7 +221,7 @@ export const MethodenDiv = () => {
       <div id="datenstand" className="menuOptionen">
           <label className="einführung"><b>Datenstand</b></label>
           <div id="inhalt">
-            <div className="container">
+            
               <div>
               <button class="btn btn-light button-datenstand rounded ">
                 <input
@@ -236,7 +236,7 @@ export const MethodenDiv = () => {
           </div>
   </div>
   </div>
-  </div>
+  
  {/* 
 <div id="datenstand" className="menuOptionen">
         <label className="einführung"><b>Datenstand</b></label>
@@ -426,7 +426,7 @@ export const MethodenDiv = () => {
         <label className="einführung"><b>Unsicherheitsintervall</b></label>
          <div id="inhalt">
           <button class="btn btn-light button-unsicherheitsintervall rounded ">
-             <label> 95%  </label>
+             <label className="usi"> 95%  </label>
              <input 
                 type="radio"
                 name="unsicherheitsintervall"
@@ -435,7 +435,7 @@ export const MethodenDiv = () => {
               />
           </button>
           <button class="btn btn-light button-unsicherheitsintervall rounded ">
-             <label> 50%  </label>
+             <label className="usi"> 50%  </label>
              <input 
                 type="radio"
                 name="unsicherheitsintervall"
@@ -445,7 +445,7 @@ export const MethodenDiv = () => {
           </button>
 
           <button class="btn btn-light button-unsicherheitsintervall rounded ">
-             <label> keines </label>
+             <label className="usi"> keines </label>
              <input 
                 type="radio"
                 name="unsicherheitsintervall"
@@ -472,7 +472,7 @@ export const MethodenDiv = () => {
           </label>
           </div>
 
-          
+
         </section>
         </div>
 
