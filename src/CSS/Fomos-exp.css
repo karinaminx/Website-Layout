@@ -1,0 +1,197 @@
+/* Titel */
+#title{
+    width: 90%;
+  }
+  
+  .title{
+    position: relative;
+    left: 70px;
+  }
+  .titel-text-main{
+    position: relative;
+      left: 35px;
+    text-align: left;
+
+  }
+  .line{
+    background-color: black;
+    height: 3px;
+    width: 80px;
+    position: absolute;
+      left: -70px;
+      top: 27px;
+    margin-right: 20px;
+  }
+
+  .expbutton-expon{
+    width: 20%;
+    position: relative;
+        right: -87%;
+        top: -100%;
+    background-color: rgba(79, 173, 92, 0.418);
+    
+   
+  }
+  
+  .text-expon {
+    padding-top: 0.5rem ;
+    padding-bottom: 0.5rem;
+    font-size: 1rem;
+    margin-bottom: 0;
+    color: black;
+  }
+  .text-expon:hover {
+    
+    color: black;
+  }
+  
+
+
+  /* Buttons */
+  .row{
+    
+    text-align: center;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+
+  .rowbuttons{
+    padding: 30px 0 20px;
+   
+  }
+  
+  .button{
+    outline: black;
+    color: black;
+    font-size: 1.0rem;
+    outline: 1px solid;
+    margin: 1px;
+  }
+
+
+  
+  .button:hover{
+    background-color: white;
+    color: black;
+    transform: scale(1.05);
+  }
+
+  .infobutton:hover{
+        background-color: #ddd;
+  }
+  
+  .text-fix {
+    padding-top: 0.5rem ;
+    padding-bottom: 0.3rem;
+    font-size: 1.1rem;
+    margin-bottom: 0;
+  }
+  .text-var{
+    padding-top: 0.3rem ;
+    padding-bottom: 0.5rem;
+    font-size: 1.0rem;
+  }
+  
+  .button-table{
+    width: 100%;
+    text-align: center;
+    height: 78.375px;
+  }
+  
+  .breit{
+    width: 70%;  
+  }
+  
+
+  
+
+  /* Text */
+  #text{
+    width: 100%;
+  }
+  .text-intro{
+    width: 97%;
+    margin-right: 25px;
+    margin-left: 25px;
+    margin-bottom: 30px;
+    text-align: left;
+  }
+  
+  /* Chart */
+  #chart{
+    margin-right: 25px;
+    margin-left: 25px;
+  }
+
+  .row-chart{
+    height: 440px;
+  }
+  
+  /* Method*/
+  .button-method-exp{
+    display: block;
+    margin-left: auto;
+    margin-right: 0;
+ 
+  }
+  
+  .card-body-method{    
+    margin-bottom: 10px;
+    border-color: black;
+  }
+  
+  .collapse-method{
+    float:right;
+  }
+  
+  .input-table{
+    position: absolute;
+    right: 15px;
+  }
+
+  .hovertext-method:before{
+    width: 200px;
+    position: absolute;
+    z-index: 1;
+    left: 20%;
+    top: -140%;
+  }
+
+  .fa-angle-down{
+    background-color: white;
+  }
+  .btn-outline-dark{
+    border-color: transparent;
+    border: 0;
+    padding: 4px 12px;
+    
+  }
+  .btn-outline-dark:hover{
+    background-color: rgba(79, 173, 92, 0.418);
+    color: black;
+  }
+  
+   
+  /*Tabelle*/
+  #table{
+    margin-right: 25px;
+    margin-left: 25px;
+    margin-bottom: 40px;
+    float: left;
+    width: 100%;
+  }
+
+  .btn-table{
+    float: left;
+    margin: 4px;
+    
+  }
+
+  .collapse-table{
+    float:left;
+    width: 95%;
+  }
+  
+
+  
+  

@@ -1,0 +1,73 @@
+.App {
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 10vh;
+  
+}
+
+.nav-links{
+  width: 40%; 
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+}
+
+body{
+  background-color: white;
+  
+ }
+ 
+ h1{
+   font-size: 20px;
+   font-weight: 700;
+   margin-bottom: 5px;
+ }
+ 
+ h2{
+   font-size: 20px;
+ }
+ 
+ h3{
+   font-size: 18px;
+ }
+
+ title{
+  background-color: red;
+ }
+ 
+
+ /*Button hover text*/
+.hovertext {
+  position: relative;
+  border-bottom: 1px dotted black;
+}
+
+.hovertext:before {
+  content: attr(data-hover);
+  visibility: hidden;
+  opacity: 0;
+  width: 140px;
+  background-color: rgb(79, 173, 91);
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px 0;
+  transition: opacity 1s ease-in-out;
+
+  position: absolute;
+  z-index: 1;
+  left: 15%;
+  top: 70%;
+  padding: 2%;
+}
+
+.hovertext:hover:before {
+  opacity: 1;
+  visibility: visible;
+}

@@ -1,0 +1,77 @@
+/* Titel */
+#title{
+  width: 90%;
+  height: 53px;
+}
+
+.title{
+  position: relative;
+  left: 70px;
+  
+}
+.titel-text{
+  position: relative;
+    left: 35px;
+    top: 15px;
+    text-align: left;
+}
+.line{
+  background-color: black;
+  height: 3px;
+  width: 80px;
+  position: absolute;
+    left: -70px;
+    top: 27px;
+  margin-right: 20px;
+}
+
+
+  
+  .expl {
+    width: 97%;
+    margin-right: 25px;
+    margin-left: 25px;
+    margin-bottom: 30px;
+    margin-top: 5px; 
+  
+  }
+
+  /* Kontaktfelder*/
+
+#kontakt {
+  padding-left:10%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  padding-right: 10%;
+}
+
+
+
+.kontakttext{
+  width: 60%;
+}
+
+#Kontaktkarte1 {float:left; width:40%; 
+
+}
+#Kontaktkarte2 {float:right; 
+  width:40%;}
+ #Kontaktkarte1, #Kontaktkarte2 {padding-bottom:0; margin-bottom:0;}
+#kontakt {overflow:hidden; background:#c0c0c0;}
+
+
+.Kontaktkarte {
+  width: 440px;
+  padding:10px;
+  margin-left: 3%;
+  margin-right: 3%;
+}
+
+p {font-size:1em; line-height:1.3em; margin:0; padding:5px 0;}
+
+.Kontaktdaten {
+  border-spacing: 5%;
+}
+table {
+  border-spacing: 5%;
+}

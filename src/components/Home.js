@@ -1,0 +1,112 @@
+import React from "react";
+import '../App.css';
+import '../CSS/Home.css';
+import {Route, Routes, Link} from 'react-router-dom';
+import covidlogo from '../images/covid.jpeg';
+import KITlogo from '../images/KITlogo.jpeg';
+
+import { useTranslation } from 'react-i18next';
+
+const lngs = [
+    { code: "de", native: "Deutsch" },
+    { code: "en", native: "English" },
+  ];
+
+/* Inhalt von der Fomos Main page */
+
+function Home() {
+
+  const { t, i18n } = useTranslation();
+
+    const handleTrans = (code) => {
+        i18n.changeLanguage(code);
+      };
+      
+  return (
+
+    /* Einleitungstext */
+    <div>
+    <section id="text">
+            <div class="text-intro">
+                <p>{t("text1_home")}</p>
+                <p>{t("text2_home")}</p>
+            </div>
+    </section>
+    
+    
+    {/* Projekte */}
+    <section id="projects"> 
+        { /* erste Reihe  */ }
+      <div class="card-group">
+          <div class="card rounded project-box">
+            <img src={covidlogo}  class="card-img-top" alt="Schaubild Forecasting" />
+            <div class="card-body card-project">
+              <h5 class="card-title">{t("corona_headline")}</h5>
+              <p class="card-text">{t("corona_explain")}</p>
+              <Link to="/fomos">
+                <a href="index.html" class="btn btn-outline-secondary forecastingbutton">{t("forecasting_button")}</a>
+              </Link>
+            </div>
+          </div>
+
+          <div class="card rounded project-box">
+            <img src={KITlogo} class="card-img-top" alt="Schaubild Forecasting" />
+            <div class="card-body">
+              <h5 class="card-title">{t("two_headline")}</h5>
+              <p class="card-text">{t("two_explain")}</p>
+              <a href="#" class="btn btn-outline-secondary forecastingbutton">{t("forecasting_button")}</a>
+            </div>
+          </div>
+
+          <div class="card rounded project-box">
+            <img src={KITlogo} class="card-img-top" alt="Schaubild Forecasting" />
+            <div class="card-body">
+              <h5 class="card-title">{t("three_headline")}</h5>
+              <p class="card-text">{t("three_explain")}</p>
+              <a href="#" class="btn btn-outline-secondary forecastingbutton">{t("forecasting_button")}</a>
+            </div>
+          </div>
+        </div>
+
+        {/*zweite Reihe*/ }
+      <div class="card-group">
+        <div class="card rounded project-box">
+          <img src={KITlogo} class="card-img-top" alt="Schaubild Forecasting" />
+          <div class="card-body">
+            <h5 class="card-title">{t("four_headline")}</h5>
+            <p class="card-text">{t("four_explain")}</p>
+            <a href="#" class="btn btn-outline-secondary forecastingbutton">{t("forecasting_button")}</a>
+          </div>
+        </div>
+
+        <div class="card rounded project-box" href="https://getbootstrap.com/docs/5.2/components/card/">
+          <img src={KITlogo} class="card-img-top" alt="Schaubild Forecasting" />
+          <div class="card-body">
+            <h5 class="card-title">{t("five_headline")}</h5>
+            <p class="card-text">{t("five_explain")}</p>
+            <a href="#" class="btn btn-outline-secondary forecastingbutton">{t("forecasting_button")}</a>
+          </div>
+        </div>
+
+        <div class="card rounded project-box">
+          <img src={KITlogo} class="card-img-top" alt="Schaubild Forecasting" />
+          <div class="card-body">
+            <h5 class="card-title">{t("six_headline")}</h5>
+            <p class="card-text">{t("six_explain")}</p>
+            <a href="#" class="btn btn-outline-secondary forecastingbutton">{t("forecasting_button")}</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+
+
+    </div>
+  );
+}
+
+export default Home;

@@ -1,0 +1,19 @@
+/* Erklärung infos*/
+.FAQintro{
+    box-align: center;
+    text-align: left;
+    margin-right: 25px;
+    margin-left: 25px;
+    margin-bottom: 30px;
+    margin-top: 15px; 
+}
+
+/* FAQ Buttons*/
+
+  .AuswahlFAQ {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  
+
+  

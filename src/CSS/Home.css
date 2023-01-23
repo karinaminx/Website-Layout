@@ -1,0 +1,61 @@
+/* Titel */
+#title{
+    width: 90%;
+  }
+  
+  .title{
+    
+    left: 70px;
+  }
+  .titel-text{
+    position: relative;
+      left: 35px;
+  }
+  .line{
+    background-color: black;
+    height: 3px;
+    width: 80px;
+    position: absolute;
+      left: -60px;
+      top: 27px;
+    margin-right: 20px;
+  }
+  
+/* ganze Projekt section designen*/
+#projects {
+   background-color:#F4F4F9;
+   padding-bottom: 3%
+}
+
+/*einzelne Projektboxen designen*/
+/*hover zoom*/
+.project-box:hover{
+   transform: scale(1.1);
+  }
+.forecastingbutton:hover{
+  color: black;
+}
+.btn-outline-secondary{
+  --bs-btn-hover-bg: rgba(79, 173, 92, 0.418);
+  
+  }
+
+.project-box {
+   margin: 2% 3%;
+   background-color: white;
+   padding: 1%;
+   text-align: center;
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+   
+}
+
+.card-project{
+  padding: 5% 5% 0 5%;
+  height: 80%;
+   
+}
+
+/*Bilder designen*/
+.card-img-top {
+   height: 50%;
+}
