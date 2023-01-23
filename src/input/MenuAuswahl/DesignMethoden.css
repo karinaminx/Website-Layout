@@ -46,7 +46,7 @@
   width: 13rem;
   font-size: 0.9rem;
   position: relative;
-   right: -180px;
+   
   border-radius: 5px;
   border: 0px;
 
@@ -168,7 +168,7 @@
  .questionmark{
   
   padding-left: 30px;
-  
+  border: 0;
 
  }
 
@@ -184,18 +184,18 @@
 
  /* Tabelle */
 
+
 .button-table{
   margin-left: auto;
   margin-right: 0;
-  width: 10rem;
+  
   font-size: 0.9rem;
-  position: relative;
-   left: 15px;
+  float: left;
   border-radius: 5px;
   border: 0px;
   margin: 8px;
-  margin-bottom: 20px;
   padding: 12px 6px;
+  
 }
 
 .table{
@@ -217,17 +217,42 @@
 
 /*Auswahlbereich links von Tablle*/
 /*Position der Auswahlmöglichkeiten*/
+
+.menuOptionen{
+  text-align: left;
+}
+
 #filter {
-  position: absolute;
-  top: 14%
+  position: relative;
+    top: 14%;
+  padding: 1%;
+  margin-bottom: 10px;
+}
+
+#anzeige {
+  position: relative;
+    top: 14%;
+  padding: 1%;
+  margin-bottom: 10px;
 }
 
 #inhalt {
-  position: absolute;
+  position: relative;
   left: 20px;
   top: 25px;
+  margin-bottom: 10px;
+  padding: 1%;
   border:#EEEEEE;
 }
+
+#unsicherheitsintervall {
+  position: relative;
+    top: 26%;
+  margin-bottom: 10px;
+  padding: 1%;
+}
+
+
 
 
 /*Position der Auswahlmöglichkeiten*/
@@ -252,7 +277,7 @@
 .einführung {
   font-size: 16px;
   /*background-color: #EEEEEE;*/
-  border-radius: 10%;
+  border-radius: 1%;
   width: 160px;
 }
 
@@ -264,7 +289,7 @@
   width: 11rem;
   font-size: 0.9rem;
   position: relative;
-   
+   left: 0px;
   border-radius: 5px;
   border: 0px;
   margin: -2px 0px;

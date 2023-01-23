@@ -92,11 +92,7 @@
     font-size: 1.0rem;
   }
   
-  .button-table{
-    width: 100%;
-    text-align: center;
-    height: 78.375px;
-  }
+  
   
   .breit{
     width: 70%;  
@@ -195,3 +191,17 @@
 
   
   
+ /*Hinweis*/
+
+ #hinweis{
+  width: 100%;
+}
+
+.text-hinweis{
+  width: 97%;
+  margin-right: 25px;
+  margin-left: 25px;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  text-align: left;
+}

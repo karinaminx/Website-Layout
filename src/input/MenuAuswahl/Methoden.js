@@ -215,20 +215,7 @@ export const MethodenDiv = () => {
         <section>
         <div class="Methoden">
         
-        <div>
-          <button className=" btn btn-light button-method-exp" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample" onClick={handleClick}>
-            {isVisible ? (
-              <p><i class="fa-solid fa-caret-right"></i> Methoden ausblenden</p>
-            ) : (
-              <p><i class="fa-solid fa-caret-left"></i> Methoden einblenden</p>
-            )}
-          </button>
-          
-          
-          <label className="methodenEinblenden" onClick={handleClick}>
-            {label}
-          </label>
-          </div>
+       
           
 
       <div id="datenstand" className="menuOptionen">
@@ -469,6 +456,23 @@ export const MethodenDiv = () => {
           </button>
           </div>
         </div>
+
+        <div>
+          <button className=" btn btn-light button-method-exp" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample" onClick={handleClick}>
+            {isVisible ? (
+              <p><i class="fa-solid fa-caret-right"></i> Methoden ausblenden</p>
+            ) : (
+              <p><i class="fa-solid fa-caret-left"></i> Methoden einblenden</p>
+            )}
+          </button>
+          
+          
+          <label className="methodenEinblenden" onClick={handleClick}>
+            {label}
+          </label>
+          </div>
+
+          
         </section>
         </div>
 
@@ -905,7 +909,7 @@ export const MethodenDiv = () => {
         )}
       </div>
 
-      <section id="tabelle" style={{ position: "absolute", top: "600px" }}>
+      <section id="tabelle" >
         <div class="table">
           <button
             class="btn btn-light button-table rounded"
