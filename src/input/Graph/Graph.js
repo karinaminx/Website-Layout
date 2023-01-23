@@ -55,7 +55,7 @@ export const Graph = ({
   if (isVisible === true) {
     width = 750;   {/* Stauchung Graph*/}
   } else {
-    width = 1100;
+    width = 750;
   }
 
   if (isEpiforecast) {

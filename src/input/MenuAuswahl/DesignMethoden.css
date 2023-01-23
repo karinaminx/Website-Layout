@@ -37,15 +37,20 @@
   
 }
 
+.methodenauswahl{
+  margin: 5px;
+}
+
 
 .button-method-exp{
   display: block;
   margin-left: auto;
   margin-right: 0;
+  margin-bottom: 20px;
   width: 13rem;
   font-size: 0.9rem;
   position: relative;
-   
+  
   border-radius: 5px;
   border: 0px;
 
@@ -112,7 +117,7 @@
   padding: 2%;
   border-radius: 5px;
   width: 20%;
-  background-color: white;
+  background-color: transparent;
   border-radius: 5px;
   border-color: grey;
   /* background-color: aliceblue; */
@@ -129,6 +134,7 @@
  border-radius: 5px;
  padding-right: 8px;
  padding-left: 8px;
+ margin: 3px;
  position: relative;
   right: 0px;
  

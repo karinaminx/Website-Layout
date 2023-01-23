@@ -212,13 +212,29 @@ export const MethodenDiv = () => {
   return (
     <div>
 
+    <div className="btn-method">
+          <button className=" btn btn-light button-method-exp" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample" onClick={handleClick}>
+            {isVisible ? (
+              <p><i class="fa-solid fa-caret-right"></i>    Methoden ausblenden</p>
+            ) : (
+              <p><i class="fa-solid fa-caret-left"></i>     Methoden einblenden</p>
+            )}
+          </button>
+          
+          
+          <label className="methodenEinblenden" onClick={handleClick}>
+            {label}
+          </label>
+          </div>
+
+    <div class="row rowchart">
+      <div class="col-3">
       <div id="menuBand">
         {/* Methoden Button ----------------------------------------------------------- */}
         <section>
-        <div class="Methoden">
         
-       
-          
+
+        <div class="Methoden">       
 
       <div id="datenstand" className="menuOptionen">
           <label className="einführung"><b>Datenstand</b></label>
@@ -460,26 +476,14 @@ export const MethodenDiv = () => {
           </div>
         </div>
 
-        <div>
-          <button className=" btn btn-light button-method-exp" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample" onClick={handleClick}>
-            {isVisible ? (
-              <p><i class="fa-solid fa-caret-right"></i> Methoden ausblenden</p>
-            ) : (
-              <p><i class="fa-solid fa-caret-left"></i> Methoden einblenden</p>
-            )}
-          </button>
-          
-          
-          <label className="methodenEinblenden" onClick={handleClick}>
-            {label}
-          </label>
-          </div>
+        
 
 
         </section>
         </div>
 
-        
+      </div>
+      <div class="col-7">
 
       {/* Graph ----------------------------------------------------------- */}
       <div className="GraphundMethoden">
@@ -512,12 +516,12 @@ export const MethodenDiv = () => {
         />
 
         {/* Methoden ----------------------------------------------------------- */}
-
+        
         {isVisible && (
           <table class="methdentabelle">
             <div className="auswahl">
               {/*1*/}
-              <tr>
+              <tr className="methodenauswahl">
                 <div
                   className={`container ${isDatenstand ? "moved" : ""}`}
                   onClick={handleClickDatenstand}
@@ -910,6 +914,8 @@ export const MethodenDiv = () => {
           </table>
           
         )}
+      </div>
+      </div>
       </div>
 
       <section id="tabelle" >
