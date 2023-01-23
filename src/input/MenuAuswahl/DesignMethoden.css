@@ -37,6 +37,10 @@
   
 }
 
+.methodenauswahl{
+  margin: 5px;
+}
+
 
 .button-method-exp{
   display: block;
@@ -129,6 +133,7 @@
  border-radius: 5px;
  padding-right: 8px;
  padding-left: 8px;
+ margin: 1px;
  position: relative;
   right: 0px;
  

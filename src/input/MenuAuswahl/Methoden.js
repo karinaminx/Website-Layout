@@ -460,9 +460,9 @@ export const MethodenDiv = () => {
         <div>
           <button className=" btn btn-light button-method-exp" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample" onClick={handleClick}>
             {isVisible ? (
-              <p><i class="fa-solid fa-caret-right"></i> Methoden ausblenden</p>
+              <p><i class="fa-solid fa-caret-right"></i>    Methoden ausblenden</p>
             ) : (
-              <p><i class="fa-solid fa-caret-left"></i> Methoden einblenden</p>
+              <p><i class="fa-solid fa-caret-left"></i>     Methoden einblenden</p>
             )}
           </button>
           
@@ -514,7 +514,7 @@ export const MethodenDiv = () => {
           <table class="methdentabelle">
             <div className="auswahl">
               {/*1*/}
-              <tr>
+              <tr className="methodenauswahl">
                 <div
                   className={`container ${isDatenstand ? "moved" : ""}`}
                   onClick={handleClickDatenstand}
