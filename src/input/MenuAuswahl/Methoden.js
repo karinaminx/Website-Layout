@@ -209,72 +209,86 @@ export const MethodenDiv = () => {
 
   return (
     <div>
+
       <div id="menuBand">
         {/* Methoden Button ----------------------------------------------------------- */}
+        <section>
         <div class="Methoden">
-          <button
-            className=" btn btn-light button-method-exp"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#collapseWidthExample"
-            aria-expanded="false"
-            aria-controls="collapseWidthExample"
-            onClick={handleClick}
-          >
+        
+        <div>
+          <button className=" btn btn-light button-method-exp" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample" onClick={handleClick}>
             {isVisible ? (
-              <p>
-                <i class="fa-solid fa-caret-right"></i> Methoden ausblenden
-              </p>
+              <p><i class="fa-solid fa-caret-right"></i> Methoden ausblenden</p>
             ) : (
-              <p>
-                <i class="fa-solid fa-caret-left"></i> Methoden einblenden
-              </p>
+              <p><i class="fa-solid fa-caret-left"></i> Methoden einblenden</p>
             )}
           </button>
-
+          
+          
           <label className="methodenEinblenden" onClick={handleClick}>
             {label}
           </label>
-        </div>
+          </div>
+          
 
-        <div id="datenstand" className="menuOptionen">
-          <label className="einführung">Datenstand</label>
+      <div id="datenstand" className="menuOptionen">
+          <label className="einführung"><b>Datenstand</b></label>
           <div id="inhalt">
             <div className="container">
-              <label>Datenstand:</label>
               <div>
+              <button class="btn btn-light button-datenstand rounded ">
                 <input
+                  type="date"
+                  name="select-date"
+                  onChange={(e) => setDate(e.target.value)}
+                  max={initialDate}
+                  min="2021-07-01"
+                />
+                </button>
+              </div>
+          </div>
+  </div>
+  </div>
+  </div>
+ {/* 
+<div id="datenstand" className="menuOptionen">
+        <label className="einführung"><b>Datenstand</b></label>
+         <div id="inhalt">
+          <button class="btn btn-light button-anzeige rounded container">
+             <input
                   type="date"
                   onChange={(e) => setDate(e.target.value)}
                   max={initialDate}
                   min="2021-07-01"
                 />
+          </button>*/}
+
                 {/* Man kann ein anderes Datum nicht auswählen. Jedoch werden sie trz. angezeigt. @Lena, kannst du dir das mal anschauen? */}
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div>
-        <div id="filter" className="menuOptionen">
-          <label className="einführung">Filter</label>
-          <div id="inhalt">
-            <div id="div1" class="visible">
+             
+            
+        
+    
+      <div id="filter" className="menuOptionen">
+         <label className="einführung"><b>Filter</b></label>
+         <div id="inhalt">
+          <div id="div1" class="visible">
               <label for="scope-select">Bundesland:</label>
-              <Dropdown
+              <button class="btn btn-light button-filter rounded">
+              <Dropdown name="BundeslandSelect"
                 options={options}
                 id="scope-select"
                 selectedValue={selectedScope}
                 onSelectedValueChange={(selectedScope) => {
                   setmenuAge("00+");
                   setScope(selectedScope);
-                  setILM(false);
                   handleDiv1Selection();
                 }}
-              />
-            </div>
-            <div id="div2" class="hidden">
+              /> 
+             </button>
+          </div>
+          <div id="div2" class="hidden">
               <label for="scope-select">Alter:</label>
+              <button class="btn btn-light button-filter rounded ">         
               <Dropdown
                 options={optionsAge}
                 id="age-select"
@@ -285,15 +299,57 @@ export const MethodenDiv = () => {
                   handleDiv2Selection();
                 }}
               />
+              </button>
             </div>
+
+    {/* 
+        <div id="filter" className="menuOptionen">
+          <u><label className="einführung"><b>Filter</b></label></u>
+          <div id="inhalt">
+            <div id="div1" class="visible">
+              <label for="scope-select">Bundesland:</label>
+              
+              <Dropdown
+                options={options}
+                id="scope-select"
+                selectedValue={selectedScope}
+                onSelectedValueChange={(selectedScope) => {
+                  setmenuAge("00+");
+                  setScope(selectedScope);
+                  handleDiv1Selection();
+                }}
+              /> 
+              
+
+            </div>
+
+            <div id="div2" class="hidden">
+              <label for="scope-select">Alter:</label>
+              
+              <Dropdown
+                options={optionsAge}
+                id="age-select"
+                selectedValue={menuAge}
+                onSelectedValueChange={(selectedValue) => {
+                  setmenuAge(selectedValue);
+                  setScope("DE");
+                  handleDiv2Selection();
+                }}
+              />
+              
+            </div>*/}
+
           </div>
         </div>
-
+        
+{/*}
         <div id="anzeige" className="menuOptionen">
-          <label className="einführung">Anzeige</label>
+          <label className="einführung"><b>Anzeige</b></label>
           <div id="inhalt">
-            <div style={{ display: "flex", flexWrap: "wrap" }}>
-              <label>Pro 100.000: </label>
+           { /*<div style={{ display: "flex", flexWrap: "wrap" }}> 
+            <div class="Anzeigel">
+              <label>Pro 100.000: </label></div>
+              <div class="Anzeiger">
               <input
                 type="radio"
                 name="größe"
@@ -301,7 +357,10 @@ export const MethodenDiv = () => {
                 onChange={(e) => setAnzeige(e.target.value)}
                 checked={anzeige === "hunderttausend"}
               />
-              <label>absolute Zahlen: </label>{" "}
+              </div>
+              <div class="Anzeigel">
+              <label>absolute Zahlen: </label> </div>
+              <div class="Anzeiger">{" "}
               <input
                 type="radio"
                 name="größe"
@@ -309,29 +368,32 @@ export const MethodenDiv = () => {
                 onChange={(e) => setAnzeige(e.target.value)}
                 checked={anzeige === "absoluteZahlen"}
               />
+              </div>
             </div>
-          </div>
-        </div>
-
-        <div id="unsicherheitsintervall" className="menuOptionen">
-          <label className="einführung">Unsicherheitsintervall</label>
+        </div> 
+        
+        <label className="einführung"><b>Unsicherheitsintervall</b></label>
           <div id="inhalt">
-            <div>
-              95 % :{" "}
+          <div>
+            <div class="Anzeigel">
+              95% :</div> <div class="Anzeiger">{" "}
               <input
                 type="radio"
                 name="unsicherheitsintervall"
                 value="FÜNFundNEUNZIG"
                 onChange={(e) => setIntervall(e.target.value)}
               />
-              50 % :{" "}
+              </div>
+              <div class="Anzeigel">50% :</div><div class="Anzeiger">{" "}
               <input
                 type="radio"
                 name="unsicherheitsintervall"
                 value="FÜNFZIG"
                 onChange={(e) => setIntervall(e.target.value)}
               />
-              keines :{" "}
+              </div>
+        
+        <div class="Anzeigel">keines:</div> <div class="Anzeiger">{" "}
               <input
                 type="radio"
                 name="unsicherheitsintervall"
@@ -339,10 +401,78 @@ export const MethodenDiv = () => {
                 onChange={(e) => setIntervall(e.target.value)}
                 defaultChecked
               />
+              </div>
             </div>
+        */
+        }
+      
+        <div id="anzeige" className="menuOptionen">
+         <label className="einführung"><b>Anzeige</b></label>
+         <div id="inhalt">
+          <button class="btn btn-light button-anzeige rounded ">
+             <label>Pro 100.000 </label>
+             <input 
+               type="radio"
+               name="größe"
+               value="hunderttausend"
+               onChange={(e) => setAnzeige(e.target.value)}
+               checked={anzeige === "hunderttausend"}
+             />
+          </button>
+
+          <button class="btn btn-light button-anzeige rounded">
+              <label>absolute Zahlen </label>
+              {" "}
+              <input 
+                type="radio"
+                name="größe"
+                value="absoluteZahlen"
+                onChange={(e) => setAnzeige(e.target.value)}
+                checked={anzeige === "absoluteZahlen"}
+              />
+              </button>
+       </div>
+       </div>
+        
+
+        <div id="unsicherheitsintervall" className="menuOptionen">
+        <label className="einführung"><b>Unsicherheitsintervall</b></label>
+         <div id="inhalt">
+          <button class="btn btn-light button-unsicherheitsintervall rounded ">
+             <label> 95%  </label>
+             <input 
+                type="radio"
+                name="unsicherheitsintervall"
+                value="FÜNFundNEUNZIG"
+                onChange={(e) => setIntervall(e.target.value)}
+              />
+          </button>
+          <button class="btn btn-light button-unsicherheitsintervall rounded ">
+             <label> 50%  </label>
+             <input 
+                type="radio"
+                name="unsicherheitsintervall"
+                value="FÜNFZIG"
+                onChange={(e) => setIntervall(e.target.value)}
+              />
+          </button>
+
+          <button class="btn btn-light button-unsicherheitsintervall rounded ">
+             <label> keines </label>
+             <input 
+                type="radio"
+                name="unsicherheitsintervall"
+                value="keines"
+                onChange={(e) => setIntervall(e.target.value)}
+                defaultChecked
+              />
+          </button>
           </div>
         </div>
-      </div>
+        </section>
+        </div>
+
+        
 
       {/* Graph ----------------------------------------------------------- */}
       <div className="GraphundMethoden">
@@ -406,7 +536,7 @@ export const MethodenDiv = () => {
                     </p>
                   </td>
                   <td>
-                    <td>
+                    
                       <div
                         class="hovertext questionmark hoverq"
                         data-hover="hover text 1"
@@ -415,9 +545,11 @@ export const MethodenDiv = () => {
                           <p> ?</p>
                         </div>
                       </div>
-                    </td>
+                    
                   </td>
                 </div>
+                </tr>
+                
                 {/*2*/}
                 <tr>
                   <div
@@ -766,7 +898,7 @@ export const MethodenDiv = () => {
                     </td>
                   </div>
                 </tr>
-              </tr>
+              
             </div>
           </table>
           

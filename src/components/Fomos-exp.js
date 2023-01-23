@@ -1,4 +1,6 @@
 import React from "react";
+
+import {MethodenDiv} from '../input/MenuAuswahl/Methoden.js';
 import '../CSS/Fomos-exp.css';
 import {Route, Routes, Link} from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
@@ -109,57 +111,9 @@ function Fomosexp() {
         <section id="chart" >
         {/* Chart to be inserted*/}
 
-        <div class="row row-chart">
-        <div class="col-lg-6 col-md-6 col-sm-12 date" >
-            
-        </div>
-        <div class="col-lg-6 col-md-6 col-sm-12 method">
-                <span class="hovertext hovertext-method" data-hover="Informationstext für Methoden">
-                <p>
-                <button class="btn btn-light button-method-exp"  type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
-                    <i class="fa-solid fa-caret-down"></i> {t("show_method")}</button>
-                </p>
-                </span>
-                <div>
-                <div class="collapse collapse-horizontal collapse-method" id="collapseWidthExample">
-                    <div class="card card-body input-table card-body-method" >
-                    <table>
-                        <tr><button type="button" class="btn btn-outline-dark">Datenstand x </button></tr>
-                        <tr><button type="button" class="btn btn-outline-dark">Datenstand x</button></tr>
-                        <tr><button type="button" class="btn btn-outline-dark">Epiforecasts-independent</button></tr>
-                        <tr><button type="button" class="btn btn-outline-dark">ILM-prop</button></tr>
-                        <tr><button type="button" class="btn btn-outline-dark">KIT-simple_nowcast</button></tr>
-                        <tr><button type="button" class="btn btn-outline-dark">LMU_StaBLab-GAM_nowcast</button></tr>
-                        <tr><button type="button" class="btn btn-outline-dark">NowcastHub-MeanEnsemble</button></tr>
-                        <tr><button type="button" class="btn btn-outline-dark">NowcastHub-MedianEnsemble</button></tr>
-                        <tr><button type="button" class="btn btn-outline-dark">RIVM-KEW</button></tr>
-                        <tr><button type="button" class="btn btn-outline-dark">RKI-weekly-report</button></tr>
-                        <tr><button type="button" class="btn btn-outline-dark">SU-hier_bayes</button></tr>
-                        <tr><button type="button" class="btn btn-outline-dark">SZ-hosp_nowcast</button></tr>
-                        </table>
-                    </div>
-                </div>
-                </div> 
-        </div>
-        </div>
-        </section>
-
-
-        {/* Tabelle */}
-        <section id="tabelle">
+        <MethodenDiv />
         
-        <div class="table">
-        <p>
-            <a class="btn btn-light btn-table" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-            <i class="fa-solid fa-caret-down"></i>  Tabelle anzeigen</a>
-        </p>
-        <div class="collapse collapse-table show" id="collapseExample">
-            <div class="card card-body card-table">
-            Table to be inserted.
-            </div>
-        </div>
-        </div>
-        </section>
+        </section>        
 
         {/* Hinweis*/}
         
