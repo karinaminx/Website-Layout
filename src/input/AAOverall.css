@@ -1,0 +1,105 @@
+.wrapper{
+    width: 99%;
+    height: 900px;
+    position: absolute;
+    /* top: 20px; */
+    left: 5px;
+    overflow: -moz-scrollbars-vertical;
+    overflow-y: scroll;
+    /* border-width: 1px;
+    border-style: solid;
+    border-color: black; */
+}
+/* 
+.menuBand{
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+}
+.menuOptionen{
+    width: 20%;
+    left: 18px
+
+}
+#datenstand{
+
+    height: 100px;
+    position: absolute;
+    top: 20px;
+}
+/* CSS für den Fiterkasten */
+#filter{
+    height: 100px;
+    position: absolute;
+    top: 130px;
+}
+
+#inhalt{
+    position:absolute;
+    left:20px;
+    top:25px
+}
+
+#anzeige{
+    height: 100px;
+    position: absolute;
+    top: 240px;
+}
+#unsicherheitsintervall{
+    height: 100px;
+    position: absolute;
+    top: 400px
+}
+
+.einführung{
+    font-size: 25px;
+    position:absolute;
+    top: 0;
+}
+
+#methode{
+    float: right;
+    height: 300px;
+    width: 19%;
+}
+
+.graph{
+    width: 58%;
+    border: 1px;
+    border-color: black;
+    position: relative;
+    top:60px;
+    left: 310px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+}
+
+ /*Button hover text*/
+ .hovertext {
+    position: relative;
+   
+  }
+  
+  .hovertext:before {
+    content: attr(data-hover);
+    visibility: hidden;
+    opacity: 0;
+    width: 140px;
+    background-color: rgb(79, 173, 91);
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px 0;
+    transition: opacity 1s ease-in-out;
+  
+    position: absolute;
+    z-index: 1;
+    
+    padding: 12%;
+  }
+  
+  .hovertext:hover:before {
+    opacity: 1;
+    visibility: visible;
+  }

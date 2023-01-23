@@ -1,0 +1,216 @@
+.bold {
+  font-weight: bold;
+}
+.moved {
+  transform: translateX(-30%);
+}
+/* ---------------------------- nicht ändern */
+
+/* .line {
+  backgroundColor: "rgb(0,0,0)";
+  height:"1px";
+ /* verticalAlign: "middle"; */
+  /* position: "absolute";
+  left: "250px";
+  top: "28.9px";
+  height: "3.4px";
+  width: "30px" 
+} */
+
+.GraphundMethoden {
+  display: flex;
+  float: right;
+  width: 81%;
+}
+
+
+.Methoden {
+  position: relative;
+    right: 300px;
+  cursor: pointer;
+   
+  justify-content: flex-end;
+}
+ 
+/* Methoden Button*/
+
+.methodenEinblenden {
+  cursor: pointer;
+  
+}
+
+
+.button-method-exp{
+  display: block;
+  margin-left: auto;
+  margin-right: 0;
+  width: 13rem;
+  font-size: 0.9rem;
+  position: relative;
+   right: -30px;
+  border-radius: 5px;
+  border: 0px;
+
+}
+
+
+.card-body-method{    
+  margin-bottom: 10px;
+  border-color: black;
+}
+
+.collapse-method{
+  float:right;
+}
+
+.input-table{
+  position: absolute;
+  right: 15px;
+}
+
+
+
+.fa-angle-down{
+  background-color: white;
+}
+.btn-outline-dark{
+  border-color: transparent;
+  border: 0;
+  padding: 4px 12px;
+  
+}
+.btn-outline-dark:hover{
+  background-color: rgba(79, 173, 92, 0.418);
+  color: black;
+}
+
+/*Methoden */
+
+.methodnamerow{
+  width: 190px;
+}
+/*Methoden ende */
+
+
+.iconPfeil {
+  font-size: 2em;
+  color: rgb(58, 58, 91);
+  margin-right: 3px;
+}
+
+#methodenEinblenden {
+  cursor: pointer;
+  margin-left: 5%;
+
+}
+
+.auswahl {
+  cursor: pointer;
+  
+  position: absolute;
+   right: 10px;
+  
+  
+  padding: 2%;
+  border-radius: 5px;
+  width: 20%;
+  background-color: white;
+  border-radius: 5px;
+  border-color: grey;
+  /* background-color: aliceblue; */
+  
+}
+
+.methodentabelle{
+  width: 15%;
+}
+.moved{
+ background-color: rgba(79, 173, 92, 0.418);
+ border-radius: 1px;
+ border-color: grey;
+ border-radius: 5px;
+ padding-right: 8px;
+ padding-left: 8px;
+ position: relative;
+  right: 0px;
+ 
+}
+  
+
+.popup-content {
+  border: 1px solid gray;
+  box-shadow: 2px 2px 5px gray;
+  padding: 10px;
+  background-color: white;
+}
+
+
+
+
+/* border-width: 1px;
+    border-style: solid;
+    border-color: black; */
+
+
+ /* Lines */
+ .line{
+  position:relative;
+    top: 5px;
+ }
+ 
+ .linelayout{
+  padding-right: 10px;
+  padding-left: 10px;
+  margin-top: 11%;
+  margin-bottom: 10%;
+
+ }
+
+ .questionmark{
+  
+  padding-left: 30px;
+  
+
+ }
+
+ .hoverq:before{
+  width: 200px;
+  position: absolute;
+    left: -150px;
+    top: -28px;
+  z-index: 1;
+  
+ }
+
+
+ /* Tabelle */
+
+.button-table{
+  margin-left: auto;
+  margin-right: 0;
+  width: 10rem;
+  font-size: 0.9rem;
+  position: relative;
+   left: 15px;
+  border-radius: 5px;
+  border: 0px;
+  margin: 8px;
+  margin-bottom: 20px;
+  padding: 12px 6px;
+}
+
+.table{
+  margin-top: 30px;
+}
+
+.card-table{
+  position: relative;
+    left: 5%;
+}
+
+#methodenSelectTabelle{
+  padding: 8px;
+  margin-bottom: 2%;
+  
+}
+
