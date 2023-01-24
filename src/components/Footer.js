@@ -35,7 +35,7 @@ return (
                 <table>
                 <tr><p><Link to="/FAQ"><p>{t("FAQ")}</p></Link></p></tr>
                 <tr><Link to="/kontakt"><p>{t("kontakt")}</p></Link></tr>
-                <tr><p><a href="erklärung.html">{t("kontakt")}</a></p></tr>
+                <tr><p><a href="erklärung.html">{t("Datenschutz")}</a></p></tr>
                 <tr>
                     <p>Copyright ⓒ {new Date().getFullYear()}</p>
                 </tr>
