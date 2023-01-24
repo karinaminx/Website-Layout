@@ -426,7 +426,7 @@ export const MethodenDiv = () => {
              />
           </button>
 
-          <button class="btn btn-light button-anzeige rounded">
+          <button class="btn btn-light button-anzeige rounded" >
               <label>absolute Zahlen </label>
               {" "}
               <input 
