@@ -44,7 +44,9 @@ export const optionsAge = [
 
 export const initialValueAge = "00+";
 export const initialValueAnzeige = "absoluteZahlen";
-export const initialValue = "Deutschland";
+
+// export const initialValue = "Deutschland";
+export const initialValue = "DE";
 
 
 export const initialValueIntervall = "FÜNFundNEUNZIG";
