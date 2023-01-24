@@ -29,13 +29,11 @@ export const MethodenDiv = () => {
   const [dataTabelleMethode, setdataTabelleMethode] =
     useState(initialValueTabelle);
 
-  const [isCollapsed, setIsCollapsed] = useState(false);
+  const [isCollapsed, setIsCollapsed] = useState(true);
 
   const toggleCollapse = () => {
     setIsCollapsed(!isCollapsed);
   };
-
-  console.log(isCollapsed);
 
   //Filter: If one is selected, the other one´s opacity is set down
   const div1 = document.getElementById("div1");
@@ -215,9 +213,9 @@ export const MethodenDiv = () => {
     <div className="btn-method">
           <button className=" btn btn-light button-method-exp" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample" onClick={handleClick}>
             {isVisible ? (
-              <p><i class="fa-solid fa-caret-right"></i>    Methoden ausblenden</p>
+              <p><i className="fa-solid fa-caret-right"></i>    Methoden ausblenden</p>
             ) : (
-              <p><i class="fa-solid fa-caret-left"></i>     Methoden einblenden</p>
+              <p><i className="fa-solid fa-caret-left"></i>     Methoden einblenden</p>
             )}
           </button>
           
@@ -227,21 +225,21 @@ export const MethodenDiv = () => {
           </label>
           </div>
 
-    <div class="row rowchart">
-      <div class="col-3">
+    <div className="row rowchart">
+      <div className="col-3">
       <div id="menuBand" classNAme="menuBand rounded">
         {/* Methoden Button ----------------------------------------------------------- */}
         <section>
         
 
-        <div class="Methoden">       
+        <div className="Methoden">       
 
       <div id="datenstand" className="menuOptionen">
           <label className="einführung"><b>Datenstand</b></label>
           <div id="inhalt">
             
               <div>
-              <button class="btn btn-light button-datenstand rounded ">
+              <button className="btn btn-light button-datenstand rounded ">
                 <input
                   type="date"
                   name="select-date"
@@ -259,7 +257,7 @@ export const MethodenDiv = () => {
 <div id="datenstand" className="menuOptionen">
         <label className="einführung"><b>Datenstand</b></label>
          <div id="inhalt">
-          <button class="btn btn-light button-anzeige rounded container">
+          <button className="btn btn-light button-anzeige rounded container">
              <input
                   type="date"
                   onChange={(e) => setDate(e.target.value)}
@@ -276,9 +274,9 @@ export const MethodenDiv = () => {
       <div id="filter" className="menuOptionen">
          <label className="einführung"><b>Filter</b></label>
          <div id="inhalt">
-          <div id="div1" class="visible">
+          <div id="div1" className="visible">
               <label for="scope-select">Bundesland:</label>
-              <button class="btn btn-light button-filter rounded">
+              <button className="btn btn-light button-filter rounded">
               <Dropdown name="BundeslandSelect"
                 options={options}
                 id="scope-select"
@@ -292,9 +290,9 @@ export const MethodenDiv = () => {
               /> 
              </button>
           </div>
-          <div id="div2" class="hidden">
+          <div id="div2" className="hidden">
               <label for="scope-select">Alter:</label>
-              <button class="btn btn-light button-filter rounded ">         
+              <button className="btn btn-light button-filter rounded ">         
               <Dropdown
                 options={optionsAge}
                 id="age-select"
@@ -312,7 +310,7 @@ export const MethodenDiv = () => {
         <div id="filter" className="menuOptionen">
           <u><label className="einführung"><b>Filter</b></label></u>
           <div id="inhalt">
-            <div id="div1" class="visible">
+            <div id="div1" className="visible">
               <label for="scope-select">Bundesland:</label>
               
               <Dropdown
@@ -329,7 +327,7 @@ export const MethodenDiv = () => {
 
             </div>
 
-            <div id="div2" class="hidden">
+            <div id="div2" className="hidden">
               <label for="scope-select">Alter:</label>
               
               <Dropdown
@@ -353,9 +351,9 @@ export const MethodenDiv = () => {
           <label className="einführung"><b>Anzeige</b></label>
           <div id="inhalt">
            { /*<div style={{ display: "flex", flexWrap: "wrap" }}> 
-            <div class="Anzeigel">
+            <div className="Anzeigel">
               <label>Pro 100.000: </label></div>
-              <div class="Anzeiger">
+              <div className="Anzeiger">
               <input
                 type="radio"
                 name="größe"
@@ -364,9 +362,9 @@ export const MethodenDiv = () => {
                 checked={anzeige === "hunderttausend"}
               />
               </div>
-              <div class="Anzeigel">
+              <div className="Anzeigel">
               <label>absolute Zahlen: </label> </div>
-              <div class="Anzeiger">{" "}
+              <div className="Anzeiger">{" "}
               <input
                 type="radio"
                 name="größe"
@@ -381,8 +379,8 @@ export const MethodenDiv = () => {
         <label className="einführung"><b>Unsicherheitsintervall</b></label>
           <div id="inhalt">
           <div>
-            <div class="Anzeigel">
-              95% :</div> <div class="Anzeiger">{" "}
+            <div className="Anzeigel">
+              95% :</div> <div className="Anzeiger">{" "}
               <input
                 type="radio"
                 name="unsicherheitsintervall"
@@ -390,7 +388,7 @@ export const MethodenDiv = () => {
                 onChange={(e) => setIntervall(e.target.value)}
               />
               </div>
-              <div class="Anzeigel">50% :</div><div class="Anzeiger">{" "}
+              <div className="Anzeigel">50% :</div><div className="Anzeiger">{" "}
               <input
                 type="radio"
                 name="unsicherheitsintervall"
@@ -399,7 +397,7 @@ export const MethodenDiv = () => {
               />
               </div>
         
-        <div class="Anzeigel">keines:</div> <div class="Anzeiger">{" "}
+        <div className="Anzeigel">keines:</div> <div className="Anzeiger">{" "}
               <input
                 type="radio"
                 name="unsicherheitsintervall"
@@ -415,7 +413,7 @@ export const MethodenDiv = () => {
         <div id="anzeige" className="menuOptionen">
          <label className="einführung"><b>Anzeige</b></label>
          <div id="inhalt">
-          <button class="btn btn-light button-anzeige rounded ">
+          <button className="btn btn-light button-anzeige rounded ">
              <label>Pro 100.000 </label>
              <input 
                type="radio"
@@ -426,7 +424,7 @@ export const MethodenDiv = () => {
              />
           </button>
 
-          <button class="btn btn-light button-anzeige rounded" >
+          <button className="btn btn-light button-anzeige rounded" >
               <label>absolute Zahlen </label>
               {" "}
               <input 
@@ -444,7 +442,7 @@ export const MethodenDiv = () => {
         <div id="unsicherheitsintervall" className="menuOptionen">
         <label className="einführung"><b>Unsicherheitsintervall</b></label>
          <div id="inhalt">
-          <button class="btn btn-light button-unsicherheitsintervall rounded ">
+          <button className="btn btn-light button-unsicherheitsintervall rounded ">
              <label className="usi"> 95%  </label>
              <input 
                 type="radio"
@@ -454,7 +452,7 @@ export const MethodenDiv = () => {
                 defaultChecked
               />
           </button>
-          <button class="btn btn-light button-unsicherheitsintervall rounded ">
+          <button className="btn btn-light button-unsicherheitsintervall rounded ">
              <label className="usi"> 50%  </label>
              <input 
                 type="radio"
@@ -464,7 +462,7 @@ export const MethodenDiv = () => {
               />
           </button>
 
-          <button class="btn btn-light button-unsicherheitsintervall rounded ">
+          <button className="btn btn-light button-unsicherheitsintervall rounded ">
              <label className="usi"> keines </label>
              <input 
                 type="radio"
@@ -483,7 +481,7 @@ export const MethodenDiv = () => {
         </div>
 
       </div>
-      <div class="col-7">
+      <div className="col-7">
 
       {/* Graph ----------------------------------------------------------- */}
       <div className="GraphundMethoden">
@@ -518,7 +516,7 @@ export const MethodenDiv = () => {
         {/* Methoden ----------------------------------------------------------- */}
         
         {isVisible && (
-          <table class="methdentabelle">
+          <table className="methdentabelle">
             <div className="auswahl">
               {/*1*/}
               <tr className="methodenauswahl">
@@ -526,7 +524,7 @@ export const MethodenDiv = () => {
                   className={`container ${isDatenstand ? "moved" : ""}`}
                   onClick={handleClickDatenstand}
                 >
-                  <td class="linelayout">
+                  <td className="linelayout">
                     <hr
                       className="line"
                       style={{
@@ -538,7 +536,7 @@ export const MethodenDiv = () => {
                       }}
                     />
                   </td>
-                  <td class="methodnamerow">
+                  <td className="methodnamerow">
                     <p
                       className={`datenstand ${isDatenstand ? "bold" : ""}`}
                       onClick={handleClickDatenstand}
@@ -549,10 +547,10 @@ export const MethodenDiv = () => {
                   <td>
                     
                       <div
-                        class="hovertext questionmark hoverq"
+                        className="hovertext questionmark hoverq"
                         data-hover="hover text 1"
                       >
-                        <div class="">
+                        <div className="">
                           <p> ?</p>
                         </div>
                       </div>
@@ -567,7 +565,7 @@ export const MethodenDiv = () => {
                     className={`container ${isEpiforecast ? "moved" : ""}`}
                     onClick={handleClickEpi}
                   >
-                    <td class="linelayout">
+                    <td className="linelayout">
                       <hr
                         className="line"
                         style={{
@@ -579,7 +577,7 @@ export const MethodenDiv = () => {
                       />
                     </td>
 
-                    <td class="methodnamerow">
+                    <td className="methodnamerow">
                       <p
                         className={`Epiforecast ${isEpiforecast ? "bold" : ""}`}
                         onClick={handleClickEpi}
@@ -589,7 +587,7 @@ export const MethodenDiv = () => {
                     </td>
                     <td>
                       <div
-                        class="hovertext questionmark"
+                        className="hovertext questionmark"
                         data-hover="hover text 1"
                       >
                         <div className="">
@@ -606,7 +604,7 @@ export const MethodenDiv = () => {
                     className={`container ${isILM ? "moved" : ""}`}
                     onClick={handleClickILM}
                   >
-                    <td class="linelayout">
+                    <td className="linelayout">
                       <hr
                         className="line"
                         style={{
@@ -619,7 +617,7 @@ export const MethodenDiv = () => {
                       />
                     </td>
 
-                    <td class="methodnamerow">
+                    <td className="methodnamerow">
                       <p
                         className={`ILM ${isILM ? "bold" : ""}`}
                         onClick={handleClickILM}
@@ -629,10 +627,10 @@ export const MethodenDiv = () => {
                     </td>
                     <td>
                       <div
-                        class="hovertext questionmark hoverq"
+                        className="hovertext questionmark hoverq"
                         data-hover="hover text 3"
                       >
-                        <div class="">
+                        <div className="">
                           <p> ?</p>
                         </div>
                       </div>
@@ -646,7 +644,7 @@ export const MethodenDiv = () => {
                     className={`container ${isKIT ? "moved" : ""}`}
                     onClick={handleClickKIT}
                   >
-                    <td class="linelayout">
+                    <td className="linelayout">
                       <hr
                         className="line"
                         style={{
@@ -658,7 +656,7 @@ export const MethodenDiv = () => {
                         }}
                       />
                     </td>
-                    <td class="methodnamerow">
+                    <td className="methodnamerow">
                       <p
                         className={`KIT ${isKIT ? "bold" : ""}`}
                         onClick={handleClickKIT}
@@ -668,10 +666,10 @@ export const MethodenDiv = () => {
                     </td>
                     <td>
                       <div
-                        class="hovertext questionmark hoverq"
+                        className="hovertext questionmark hoverq"
                         data-hover="hover text 4"
                       >
-                        <div class="">
+                        <div className="">
                           <p> ?</p>
                         </div>
                       </div>
@@ -685,7 +683,7 @@ export const MethodenDiv = () => {
                     className={`container ${isLMU ? "moved" : ""}`}
                     onClick={handleClickLMU}
                   >
-                    <td class="linelayout">
+                    <td className="linelayout">
                       <hr
                         className="line"
                         style={{
@@ -697,7 +695,7 @@ export const MethodenDiv = () => {
                         }}
                       />
                     </td>
-                    <td class="methodnamerow">
+                    <td className="methodnamerow">
                       <p
                         className={`LMU ${isLMU ? "bold" : ""}`}
                         onClick={handleClickLMU}
@@ -707,10 +705,10 @@ export const MethodenDiv = () => {
                     </td>
                     <td>
                       <div
-                        class="hovertext questionmark hoverq"
+                        className="hovertext questionmark hoverq"
                         data-hover="hover text 5"
                       >
-                        <div class="">
+                        <div className="">
                           <p> ?</p>
                         </div>
                       </div>
@@ -724,7 +722,7 @@ export const MethodenDiv = () => {
                     className={`container ${isNowcast ? "moved" : ""}`}
                     onClick={handleClickNowcast}
                   >
-                    <td class="linelayout">
+                    <td className="linelayout">
                       <hr
                         className="line"
                         style={{
@@ -736,7 +734,7 @@ export const MethodenDiv = () => {
                         }}
                       />
                     </td>
-                    <td class="methodnamerow">
+                    <td className="methodnamerow">
                       <p
                         className={`Nowcast ${isNowcast ? "bold" : ""}`}
                         onClick={handleClickNowcast}
@@ -746,10 +744,10 @@ export const MethodenDiv = () => {
                     </td>
                     <td>
                       <div
-                        class="hovertext questionmark hoverq"
+                        className="hovertext questionmark hoverq"
                         data-hover="hover text 6"
                       >
-                        <div class="">
+                        <div className="">
                           <p> ?</p>
                         </div>
                       </div>
@@ -762,7 +760,7 @@ export const MethodenDiv = () => {
                     className={`container ${isRIVM ? "moved" : ""}`}
                     onClick={handleClickRIVM}
                   >
-                    <td class="linelayout">
+                    <td className="linelayout">
                       <hr
                         className="line"
                         style={{
@@ -774,7 +772,7 @@ export const MethodenDiv = () => {
                         }}
                       />
                     </td>
-                    <td class="methodnamerow">
+                    <td className="methodnamerow">
                       <p
                         className={`RIVM ${isRIVM ? "bold" : ""}`}
                         onClick={handleClickRIVM}
@@ -784,10 +782,10 @@ export const MethodenDiv = () => {
                     </td>
                     <td>
                       <div
-                        class="hovertext questionmark hoverq"
+                        className="hovertext questionmark hoverq"
                         data-hover="hover text 7"
                       >
-                        <div class="">
+                        <div className="">
                           <p> ?</p>
                         </div>
                       </div>
@@ -800,7 +798,7 @@ export const MethodenDiv = () => {
                     className={`container ${isRKI ? "moved" : ""}`}
                     onClick={handleClickRKI}
                   >
-                    <td class="linelayout">
+                    <td className="linelayout">
                       <hr
                         className="line"
                         style={{
@@ -812,7 +810,7 @@ export const MethodenDiv = () => {
                         }}
                       />
                     </td>
-                    <td class="methodnamerow">
+                    <td className="methodnamerow">
                       <p
                         className={`RKI ${isRKI ? "bold" : ""}`}
                         onClick={handleClickRKI}
@@ -822,10 +820,10 @@ export const MethodenDiv = () => {
                     </td>
                     <td>
                       <div
-                        class="hovertext questionmark hoverq"
+                        className="hovertext questionmark hoverq"
                         data-hover="hover text 8"
                       >
-                        <div class="">
+                        <div className="">
                           <p> ?</p>
                         </div>
                       </div>
@@ -839,7 +837,7 @@ export const MethodenDiv = () => {
                     className={`container ${isSU ? "moved" : ""}`}
                     onClick={handleClickSU}
                   >
-                    <td class="linelayout">
+                    <td className="linelayout">
                       <hr
                         className="line"
                         style={{
@@ -851,7 +849,7 @@ export const MethodenDiv = () => {
                         }}
                       />
                     </td>
-                    <td class="methodnamerow">
+                    <td className="methodnamerow">
                       <p
                         className={`SU ${isSU ? "bold" : ""}`}
                         onClick={handleClickSU}
@@ -861,10 +859,10 @@ export const MethodenDiv = () => {
                     </td>
                     <td>
                       <div
-                        class="hovertext questionmark hoverq "
+                        className="hovertext questionmark hoverq "
                         data-hover="hover text 9"
                       >
-                        <div class="">
+                        <div className="">
                           <p> ?</p>
                         </div>
                       </div>
@@ -877,7 +875,7 @@ export const MethodenDiv = () => {
                     className={`container ${isSZ ? "moved" : ""}`}
                     onClick={handleClickSZ}
                   >
-                    <td class="linelayout">
+                    <td className="linelayout">
                       <hr
                         className="line"
                         style={{
@@ -889,7 +887,7 @@ export const MethodenDiv = () => {
                         }}
                       />
                     </td>
-                    <td class="methodnamerow">
+                    <td className="methodnamerow">
                       <p
                         className={`SZ container ${isSZ ? "bold" : ""}`}
                         onClick={handleClickSZ}
@@ -899,10 +897,10 @@ export const MethodenDiv = () => {
                     </td>
                     <td>
                       <div
-                        class="hovertext questionmark hoverq"
+                        className="hovertext questionmark hoverq"
                         data-hover="hover text 10"
                       >
-                        <div class="">
+                        <div className="">
                           <p> ?</p>
                         </div>
                       </div>
@@ -919,13 +917,13 @@ export const MethodenDiv = () => {
       </div>
 
       <section id="tabelle" >
-        <div class="table">
+        <div className="table">
           <button
-            class="btn btn-light button-table rounded"
+            className="btn btn-light button-table rounded"
             onClick={toggleCollapse}
           >
             {" "}
-            <i class="fa-solid fa-caret-down"></i> Tabelle anzeigen
+            <i className="fa-solid fa-caret-down"></i> Tabelle anzeigen
           </button>
           {/* {isCollapsed && ( */}
             <div
