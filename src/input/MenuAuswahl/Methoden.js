@@ -116,7 +116,7 @@ export const MethodenDiv = () => {
   const [anzeige, setAnzeige] = useState(initialValueAnzeige);
   const [selectedScope, setScope] = useState(initialValue);
   const [date, setDate] = useState(initialDate);
-  const [intervall, setIntervall] = useState(initialValueIntervall);
+  const [intervall, setIntervall] = useState("FÜNFundNEUNZIG");
 
   //Importing the data for the graph
 
@@ -451,6 +451,7 @@ export const MethodenDiv = () => {
                 name="unsicherheitsintervall"
                 value="FÜNFundNEUNZIG"
                 onChange={(e) => setIntervall(e.target.value)}
+                defaultChecked
               />
           </button>
           <button class="btn btn-light button-unsicherheitsintervall rounded ">
@@ -470,7 +471,6 @@ export const MethodenDiv = () => {
                 name="unsicherheitsintervall"
                 value="keines"
                 onChange={(e) => setIntervall(e.target.value)}
-                defaultChecked
               />
           </button>
           </div>

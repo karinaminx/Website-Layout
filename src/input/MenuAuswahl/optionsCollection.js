@@ -47,7 +47,7 @@ export const initialValueAnzeige = "absoluteZahlen";
 export const initialValue = "Deutschland";
 
 
-export const initialValueIntervall = "keines";
+export const initialValueIntervall = "FÜNFundNEUNZIG";
 export const initialValueTabelle = "KIT-simple_nowcast";
 
 export const dateFormatter = timeFormat("%Y-%m-%d");
