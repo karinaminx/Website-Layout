@@ -32,7 +32,7 @@ return (
                 </div>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-12 ">
-                <table>
+                <table className="footer_table">
                 <tr><p><Link to="/FAQ"><p>{t("FAQ")}</p></Link></p></tr>
                 <tr><Link to="/kontakt"><p>{t("kontakt")}</p></Link></tr>
                 <tr><p><a href="erklärung.html">{t("Datenschutz")}</a></p></tr>
