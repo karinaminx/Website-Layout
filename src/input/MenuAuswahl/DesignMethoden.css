@@ -341,7 +341,8 @@
    left: 0px;
   border-radius: 5px;
   border: 0px;
-  margin: 5px 1px;
+  margin-top: 5px;
+  margin-right: 20%;
   margin-bottom: 0px;
   padding: 6px 6px;
   text-align: center;
@@ -351,6 +352,7 @@
   padding-right: 8%;
   border: 1px;
   border-color: grey;
+  margin-right: 3%;
 }
 /*Beginn Abschnitte*/
 
