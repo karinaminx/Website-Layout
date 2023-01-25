@@ -119,7 +119,7 @@ export const Graph = ({
   }
 
   if (!data || !EPIdata || !ILMdata || !KITdata || !LMUdata || !Nowcastdata || !RIVMdata|| !RKIdata || !SUdata || !SZdata ) {
-    return <pre>Loading...</pre>;
+    return <p className="loading">Loading...</p>;
   }
 
   const innerHeight = height - margin.top - margin.bottom;
