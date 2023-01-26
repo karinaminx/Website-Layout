@@ -53,9 +53,10 @@ export const Graph = ({
   let anzeigeSZ;
 
   if (isVisible === true) {
-    width = 750;   {/* Stauchung Graph*/}
+    width = +(0.55*window.innerWidth);   {/* Stauchung Graph*/}
   } else {
-    width = 750;
+    width = +(0.75*window.innerWidth);
+    
   }
 
   if (isEpiforecast) {

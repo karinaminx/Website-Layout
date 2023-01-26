@@ -19,7 +19,8 @@
 
 .GraphundMethoden {
   display: flex;
-  width: 81%;
+  
+  
 }
 
 
@@ -39,8 +40,13 @@
 
 .methodenauswahl{
   margin: 5px;
+  background-color: transparent;
 }
 
+
+.methodenauswahl::before{
+  background-color: transparent;
+}
 
 .button-method-exp{
   display: block;

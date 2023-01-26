@@ -228,7 +228,7 @@ export const MethodenDiv = () => {
           </div>
 
     <div className="row rowchart">
-      <div className="col-3">
+      <div className="col-2">
       <div id="menuBand" classNAme="menuBand rounded">
         {/* Methoden Button ----------------------------------------------------------- */}
         <section>
@@ -483,7 +483,7 @@ export const MethodenDiv = () => {
         </div>
 
       </div>
-      <div className="col-7">
+      <div className="col-9">
 
       {/* Graph ----------------------------------------------------------- */}
       <div className="GraphundMethoden">
