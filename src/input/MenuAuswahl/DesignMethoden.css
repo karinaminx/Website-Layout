@@ -41,6 +41,7 @@
 .methodenauswahl{
   margin: 5px;
   background-color: transparent;
+  height: 80%;
 }
 
 
@@ -97,6 +98,7 @@
 
 .methodnamerow{
   width: 190px;
+  
 }
 /*Methoden ende */
 
@@ -120,7 +122,7 @@
    right: 10px;
   
   
-  padding: 2%;
+  padding: 0 2%;
   border-radius: 5px;
   width: 20%;
   background-color: transparent;
@@ -143,6 +145,7 @@
  margin: 3px;
  position: relative;
   right: 0px;
+  align-items: center;
  
 }
   
@@ -166,13 +169,16 @@
  .line{
   position:relative;
     top: 5px;
+    left: 20%;
  }
  
  .linelayout{
   padding-right: 10px;
   padding-left: 10px;
-  margin-top: 11%;
-  margin-bottom: 10%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+
+  
 
  }
 
@@ -221,6 +227,7 @@
 #methodenSelectTabelle{
   padding: 8px;
   margin-bottom: 2%;
+  height: auto;
   
 }
 

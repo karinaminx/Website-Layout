@@ -29,7 +29,7 @@ function Fomosmain() {
         
         {/* Überschrift */}
             <div class="title">
-            <i class="fa-regular fa-dash line"></i>
+            <i class="fa-regular fa-dash lineheader"></i>
                 <div class="titel-text-main">
                     <h1>NOWCAST</h1><h2> {t("heading_nowcast")}</h2> 
                 </div> 
