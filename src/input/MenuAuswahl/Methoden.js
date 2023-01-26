@@ -526,6 +526,8 @@ export const MethodenDiv = () => {
                   className={`container ${isDatenstand ? "moved" : ""}`}
                   onClick={handleClickDatenstand}
                 >
+                  
+                  
                   <td className="linelayout">
                     <hr
                       className="line"
@@ -562,7 +564,7 @@ export const MethodenDiv = () => {
                 </tr>
                 
                 {/*2*/}
-                <tr>
+                <tr className="methodenauswahl">
                   <div
                     className={`container ${isEpiforecast ? "moved" : ""}`}
                     onClick={handleClickEpi}
