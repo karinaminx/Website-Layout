@@ -41,7 +41,7 @@
 .methodenauswahl{
   margin: 5px;
   background-color: transparent;
-  height: 80%;
+  height: 60%;
 }
 
 
@@ -98,6 +98,7 @@
 
 .methodnamerow{
   width: 190px;
+  padding-bottom: 5%;
   
 }
 /*Methoden ende */
@@ -168,19 +169,11 @@
  /* Lines */
  .line{
   position:relative;
-    top: 5px;
+    top: 10%;
     left: 20%;
  }
  
- .linelayout{
-  padding-right: 10px;
-  padding-left: 10px;
-  margin-top: 1%;
-  margin-bottom: 1%;
 
-  
-
- }
 
  .questionmark{
   
