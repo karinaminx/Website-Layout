@@ -141,9 +141,9 @@ export const useDataAxes = (
             d.quantileKlein =  (100000/age15to34*(+d[unteresQuantile]))
             d.quantileGroß =  (100000/age15to34*(+d[oberesQuantile]))
           } else if (menuAge == "35-59"){
-            d.value = (100000/{age35to59}*(+d.mean))
-            d.quantileKlein =  (100000/{age35to59}*(+d[unteresQuantile]))
-            d.quantileGroß =  (100000/{age35to59}*(+d[oberesQuantile]))
+            d.value = (100000/age35to59*(+d.mean))
+            d.quantileKlein =  (100000/age35to59*(+d[unteresQuantile]))
+            d.quantileGroß =  (100000/age35to59*(+d[oberesQuantile]))
           } else if (menuAge== "60-79"){
             d.value = (100000/age60to79*(+d.mean))
             d.quantileKlein =  (100000/age60to79*(+d[unteresQuantile]))
