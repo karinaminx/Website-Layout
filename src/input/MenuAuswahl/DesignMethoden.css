@@ -4,6 +4,8 @@
 .moved {
   transform: translateX(-30%);
 }
+
+
 /* ---------------------------- nicht ändern */
 
 /* .line {
@@ -38,16 +40,12 @@
   
 }
 
-.methodenauswahl{
-  margin: 5px;
-  background-color: transparent;
-  text-align: center;
-}
+
 
 
 .methodenauswahl::before{
   background-color: transparent;
-  align: center;
+  
 }
 
 .button-method-exp{
@@ -138,17 +136,30 @@
 .methodentabelle{
   width: 15%;
 }
+
+
+
+.container{
+  background-color: rgba(191, 192, 191, 0.418);
+  border-radius: 1px;
+  border-color: grey;
+  border-radius: 5px;
+  margin: 3px;
+  margin-right: 10%;
+  position: relative;
+    right: 7%;
+}
 .moved{
  background-color: rgba(191, 192, 191, 0.418);
+ width: 250px;
  border-radius: 1px;
  border-color: grey;
  border-radius: 5px;
  padding-right: 8px;
  padding-left: 8px;
  margin: 3px;
- position: relative;
-  right: 0px;
-align-items: center;
+ 
+
  
 }
   
@@ -175,10 +186,13 @@ align-items: center;
     left: 2%;
   margin: 1%;
  }
+
+
  
 .linelayout{
   padding-right: 20px;
   padding-left: 20px;
+  object-position: center;
   
 }
 

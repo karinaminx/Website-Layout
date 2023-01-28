@@ -23,6 +23,17 @@ import {
 import { useDataAxes } from "../Graph/useDataAxes";
 import { useDataDatenstand } from "../Graph/useDataBjörn";
 
+import datenstand_line from '../../images/datenstand_line.png';
+import Epiforecast_line from '../../images/Epiforecast_line.png';
+import ILM_line from '../../images/ILM_line.png';
+import KIT_line from '../../images/KIT_line.png';
+import LMU_line from '../../images/LMU_line.png';
+import NowcastHub_line from '../../images/NowcastHub_line.png';
+import RIVM_line from '../../images/RIVM_line.png';
+import RKI_line from '../../images/RKI_line.png';
+import SU_line from '../../images/SU_line.png';
+import SZ_line from '../../images/SZ_line.png';
+
 export const MethodenDiv = () => {
   // Tabelle mit Button eine und ausblende -----------------------------------
 
@@ -521,25 +532,16 @@ export const MethodenDiv = () => {
           <table className="methdentabelle">
             <div className="auswahl">
               {/*1*/}
-              <tr className="methodenauswahl">
+              <tr >
                 <div
                   className={`container ${isDatenstand ? "moved" : ""}`}
                   onClick={handleClickDatenstand}
                 >
                   
-                  
                   <td className="linelayout">
-                    <hr
-                      className="line"
-                      style={{
-                        backgroundColor: "blue",
-                        borderColor: "blue",
-                        height: "1px",
-                        height: "3.4px",
-                        width: "30px",
-                      }}
-                    />
-                  </td>
+                    <img src={datenstand_line}  style={{width: "35px"}}  />
+                  </td> 
+                  
                   <td className="methodnamerow">
                     <p
                       className={`datenstand ${isDatenstand ? "bold" : ""}`}
@@ -564,22 +566,14 @@ export const MethodenDiv = () => {
                 </tr>
                 
                 {/*2*/}
-                <tr className="methodenauswahl">
+                <tr >
                   <div
                     className={`container ${isEpiforecast ? "moved" : ""}`}
                     onClick={handleClickEpi}
                   >
                     <td className="linelayout">
-                      <hr
-                        className="line"
-                        style={{
-                          backgroundColor: "rgb(0,200,100)",
-                          height: "1px",
-                          height: "3.4px",
-                          width: "30px",
-                        }}
-                      />
-                    </td>
+                    <img src={Epiforecast_line}  style={{width: "35px"}}  />
+                  </td> 
 
                     <td className="methodnamerow">
                       <p
@@ -609,17 +603,8 @@ export const MethodenDiv = () => {
                     onClick={handleClickILM}
                   >
                     <td className="linelayout">
-                      <hr
-                        className="line"
-                        style={{
-                          backgroundColor: "rgb(0,0,255)",
-                          borderColor: "rgb(0,0,255)",
-                          height: "1px",
-                          height: "3.4px",
-                          width: "30px",
-                        }}
-                      />
-                    </td>
+                    <img src={ILM_line}  style={{width: "35px"}}  />
+                  </td> 
 
                     <td className="methodnamerow">
                       <p
@@ -649,17 +634,9 @@ export const MethodenDiv = () => {
                     onClick={handleClickKIT}
                   >
                     <td className="linelayout">
-                      <hr
-                        className="line"
-                        style={{
-                          backgroundColor: "rgb(100,0,250)",
-                          borderColor: "rgb(100,0,250)",
-                          height: "1px",
-                          height: "3.4px",
-                          width: "30px",
-                        }}
-                      />
-                    </td>
+                    <img src={KIT_line}  style={{width: "35px",  }}  />
+                  </td> 
+
                     <td className="methodnamerow">
                       <p
                         className={`KIT ${isKIT ? "bold" : ""}`}
@@ -688,17 +665,8 @@ export const MethodenDiv = () => {
                     onClick={handleClickLMU}
                   >
                     <td className="linelayout">
-                      <hr
-                        className="line"
-                        style={{
-                          backgroundColor: "rgb(400,10,200)",
-                          borderColor: "rgb(400,10,200)",
-                          height: "1px",
-                          height: "3.4px",
-                          width: "30px",
-                        }}
-                      />
-                    </td>
+                    <img src={LMU_line}  style={{width: "35px"}}  />
+                  </td> 
                     <td className="methodnamerow">
                       <p
                         className={`LMU ${isLMU ? "bold" : ""}`}
@@ -727,17 +695,8 @@ export const MethodenDiv = () => {
                     onClick={handleClickNowcast}
                   >
                     <td className="linelayout">
-                      <hr
-                        className="line"
-                        style={{
-                          backgroundColor: "rgb(100,049,0)",
-                          borderColor: "rgb(100,049,0)",
-                          height: "1px",
-                          height: "3.4px",
-                          width: "30px",
-                        }}
-                      />
-                    </td>
+                    <img src={NowcastHub_line}  style={{width: "35px"}}  />
+                  </td> 
                     <td className="methodnamerow">
                       <p
                         className={`Nowcast ${isNowcast ? "bold" : ""}`}
@@ -765,17 +724,8 @@ export const MethodenDiv = () => {
                     onClick={handleClickRIVM}
                   >
                     <td className="linelayout">
-                      <hr
-                        className="line"
-                        style={{
-                          backgroundColor: "rgb(600,100,200)",
-                          borderColor: "rgb(600,100,200)",
-                          height: "1px",
-                          height: "3.4px",
-                          width: "30px",
-                        }}
-                      />
-                    </td>
+                    <img src={RIVM_line}  style={{width: "35px"}}  />
+                  </td> 
                     <td className="methodnamerow">
                       <p
                         className={`RIVM ${isRIVM ? "bold" : ""}`}
@@ -803,17 +753,8 @@ export const MethodenDiv = () => {
                     onClick={handleClickRKI}
                   >
                     <td className="linelayout">
-                      <hr
-                        className="line"
-                        style={{
-                          backgroundColor: "rgb(100,100,100)",
-                          borderColor: "rgb(100,100,100)",
-                          height: "1px",
-                          height: "3.4px",
-                          width: "30px",
-                        }}
-                      />
-                    </td>
+                    <img src={RKI_line}  style={{width: "35px"}}  />
+                  </td> 
                     <td className="methodnamerow">
                       <p
                         className={`RKI ${isRKI ? "bold" : ""}`}
@@ -842,17 +783,8 @@ export const MethodenDiv = () => {
                     onClick={handleClickSU}
                   >
                     <td className="linelayout">
-                      <hr
-                        className="line"
-                        style={{
-                          backgroundColor: "rgb(010,200,222)",
-                          borderColor: "rgb(010,200,222)",
-                          height: "1px",
-                          height: "3.4px",
-                          width: "30px",
-                        }}
-                      />
-                    </td>
+                    <img src={SU_line}  style={{width: "35px"}}  />
+                  </td> 
                     <td className="methodnamerow">
                       <p
                         className={`SU ${isSU ? "bold" : ""}`}
@@ -874,26 +806,18 @@ export const MethodenDiv = () => {
                   </div>
                 </tr>
                 {/*10*/}
-                <tr>
+                <tr className="Methodechose">
                   <div
                     className={`container ${isSZ ? "moved" : ""}`}
                     onClick={handleClickSZ}
                   >
-                    <td className="linelayout">
-                      <hr
-                        className="line"
-                        style={{
-                          backgroundColor: "rgb(0,200,100)",
-                          borderColor: "rgb(0,200,100)",
-                          height: "1px",
-                          height: "3.4px",
-                          width: "30px",
-                        }}
-                      />
-                    </td>
+                  <td className="linelayout">
+                    <img src={SZ_line}  style={{width: "35px"}}  />
+                  </td> 
+                    
                     <td className="methodnamerow">
                       <p
-                        className={`SZ container ${isSZ ? "bold" : ""}`}
+                        className={`SZ ${isSZ ? "bold" : ""}`}
                         onClick={handleClickSZ}
                       >
                         SZ Nowcast
