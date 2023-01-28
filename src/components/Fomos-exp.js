@@ -39,7 +39,7 @@ function Fomosexp() {
 
         {/* Expert Mode Button */}
                 <Link style={navStyle} to="/fomos">
-                <div class="button rounded expbutton-expon expbutton-expon-over" >
+                <div class="button expbutton-expon expbutton-expon-over" >
                     <p class="text-expon">{t("expertbutton_aus")}</p>
                 </div>
                 </Link>
@@ -52,7 +52,7 @@ function Fomosexp() {
             <div class="row rowbuttons">
                 <div class="col-lg-3 col-md-6 col-sm-12">
                     <span class="hovertext" data-hover={t("button1hover_nowcast")}>
-                    <div class="button rounded infobutton" >
+                    <div class="button infobutton" >
                         <p class="text-fix">{t("button1_nowcast")}</p>
                         <p class="text-var">xxx</p>
                     </div>
@@ -60,7 +60,7 @@ function Fomosexp() {
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-12">
                     <span class="hovertext" data-hover={t("button2hover_nowcast")}>
-                    <div class="button rounded infobutton"> 
+                    <div class="button infobutton"> 
                         <p class="text-fix">{t("button2_nowcast")}</p>
                         <p class="text-var">xxx</p>
                     </div> 
@@ -68,7 +68,7 @@ function Fomosexp() {
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-12 ">
                     <span class="hovertext" data-hover={t("button3hover_nowcast")}>
-                    <div class="button rounded infobutton"> 
+                    <div class="button infobutton"> 
                         <p class="text-fix">{t("button3_nowcast")}</p>
                         <p class="text-var">xxx</p>
                     </div>
@@ -76,7 +76,7 @@ function Fomosexp() {
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-12 ">
                     <span class="hovertext" data-hover={t("button4hover_nowcast")}>
-                    <div class="button rounded infobutton"> 
+                    <div class="button infobutton"> 
                     <table class="button-table">
                         <tr>
                         <td class="text-fix breit">{t("button4_nowcast")}</td>

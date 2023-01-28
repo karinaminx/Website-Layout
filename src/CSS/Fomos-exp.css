@@ -41,6 +41,7 @@
     font-size: 1rem;
     margin-bottom: 0;
     color: black;
+    border-radius: 5px;
   }
   .text-expon:hover {
     
@@ -77,6 +78,12 @@
     background-color: white;
     color: black;
     transform: scale(1.05);
+  }
+
+  .infobutton{
+    height: 80px;
+    border-radius: 5px;
+
   }
 
   .infobutton:hover{
@@ -126,50 +133,7 @@
     height: 440px;
   }
   
-  /* Method*/
-  .button-method-exp{
-    display: block;
-    margin-left: auto;
-    margin-right: 0;
  
-  }
-  
-  .card-body-method{    
-    margin-bottom: 10px;
-    border-color: black;
-  }
-  
-  .collapse-method{
-    float:right;
-  }
-  
-  .input-table{
-    position: absolute;
-    right: 15px;
-  }
-
-  .hovertext-method:before{
-    width: 200px;
-    position: absolute;
-    z-index: 1;
-    left: 20%;
-    top: -140%;
-  }
-
-  .fa-angle-down{
-    background-color: white;
-  }
-  .btn-outline-dark{
-    border-color: transparent;
-    border: 0;
-    padding: 4px 12px;
-    
-  }
-  .btn-outline-dark:hover{
-    background-color: rgba(79, 173, 92, 0.418);
-    color: black;
-  }
-  
    
   /*Tabelle*/
   #table{
