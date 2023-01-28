@@ -16,10 +16,10 @@ i18n
         translation: {
 
         /* Landingpage*/
-        text1_home: "Das Hauptziel dieses Projekts besteht darin, verschiedene Inzidenz Werte für Deutschland und die Bundesländer zuverlässig zu schätzen und aus vorläufigen Daten mithilfe statistischen Korrekturverfahren aktuelle Trends herauszuarbeiten. Nowcast-Korrekturen dieser Zahlen erlauben eine bessere Einschätzung der tatsächlichen Lage.", 
-        text2_home: "Gleichzeitig haben wir ein wissenschaftliches Interesse, verschiedene Nowcasting-Verfahren miteinander zu vergleichen und zu untersuchen, ob die Kombination verschiedener Nowcasts zu verlässlicheren Ergebnissen führt.", 
-        corona_headline: "Forecasting Corona",
-        corona_explain: "Kurzerkärung Forecasting 1",
+        text1_home: "Das Forecasting, Modelling and Scenario hub (FOMOS Hub)  ist eine integrierte Plattform für die Kommunikation und Interaktion von Forschung zu transparenten Prognosen, Entscheidungen und Ergebnissen für und mit der Gesellschaft.", 
+        text2_home: "FOMOS zeigt Forschung und Forschungsergebnisse in Echtzeit zu wichtigen gesellschaftlichen Themenfeldern.", 
+        corona_headline: "Nowcasting von COVID-Hospitalisierungen",
+        corona_explain: "Echtzeitkorrektur der Meldeverzüge in COVID-19 Hospitalisierungsdaten.",
         forecasting_button: "Forecasting",
         two_explain: "Kurzerkärung Forecasting 2",
         two_headline: "Forecasting 2",
@@ -167,10 +167,10 @@ i18n
         translation: {
 
         /* Landingpage*/
-        text1_home: "The main goal of this project is to reliably estimate different incidence values ​​for Germany and the federal states and to work out current trends from preliminary data using statistical correction methods. Nowcast corrections to these numbers allow for a better assessment of the actual situation.", 
-        text2_home: "At the same time, we have a scientific interest in comparing different nowcasting methods and investigating whether the combination of different nowcasts leads to more reliable results.", 
-        corona_headline: "Forecasting Corona",
-        corona_explain: "Short explanation Forecasting 1",
+        text1_home: "The Forecasting, Modeling and Scenario hub (FOMOS Hub) is an integrated platform for the communication and interaction of research on transparent forecasts, decisions and results for and with society.", 
+        text2_home: "FOMOS shows research and research results in real time on important social topics.", 
+        corona_headline: "Nowcasting of COVID hospitalizations",
+        corona_explain: "Real-time correction of reporting delays in COVID-19 hospitalization data.",
         forecasting_button: "Forecasting",
         two_explain: "Short explanation Forecasting 2",
         two_headline: "Forecasting 2",

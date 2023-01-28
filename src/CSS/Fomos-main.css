@@ -28,6 +28,8 @@
     position: relative;
         right: -87%;
         top: -100%;
+    border-radius: 1px;
+    border-radius: 5px;
    
   }
   
@@ -50,6 +52,8 @@
 
   .rowbuttons{
     padding: 30px 0 20px;
+    border-radius: 1px;
+    border-radius: 5px;
    
   }
   
