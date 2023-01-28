@@ -1,6 +1,5 @@
 import React from 'react';
 
-//Dies ist nur als Hintergrund für Bundesland und Age -> muss also nicht gestyled werden
 export const Dropdown = ({ options, id, selectedValue, onSelectedValueChange }) => (
   <select id={id} onChange={event => onSelectedValueChange(event.target.value)}>
     {options.map(({ value, label }) => (

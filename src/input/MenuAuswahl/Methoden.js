@@ -65,7 +65,8 @@ export const MethodenDiv = () => {
   }
 
   //Const to show and hide the line for the method ----------------------------------------------------------
-  const [isDatenstand, setDatenstand] = useState(false);
+  const [isDatenstandSchwarz, setDatenstandSchwarz] = useState(true);
+  const [isDatenstandGrau, setDatenstandGrau] = useState(true);
   const [isEpiforecast, setEpiforecast] = useState(false);
   const [isILM, setILM] = useState(false);
   const [isKIT, setKIT] = useState(true);
@@ -86,8 +87,11 @@ export const MethodenDiv = () => {
   }
 
   //Function to show and hide the line for the method ----------------------------------------------------------
-  function handleClickDatenstand() {
-    setDatenstand(!isDatenstand);
+  function handleClickDatenstandSchwarz() {
+    setDatenstandSchwarz(!isDatenstandSchwarz);
+  }
+  function handleClickDatenstandGrau() {
+    setDatenstandGrau(!isDatenstandGrau);
   }
   function handleClickEpi() {
     setEpiforecast(!isEpiforecast);
@@ -219,10 +223,14 @@ export const MethodenDiv = () => {
     anzeige,
     date
   );
-
-  // let datesAfterEnde = useDataDatenstand(datenstand_schwarz);
-
-  // console.log(datenstand_schwarz);
+  const datenstand_grau = useDataDatenstand(
+    "KIT-simple_nowcast",
+    menuAge,
+    selectedScope,
+    intervall,
+    anzeige,
+    date
+  );
 
   return (
     <div>
@@ -511,7 +519,8 @@ export const MethodenDiv = () => {
             <Graph
               className="graph"
               isVisible={isVisible}
-              isDatenstand={isDatenstand}
+              isDatenstandSchwarz={isDatenstandSchwarz}
+              isDatenstandGrau={isDatenstandGrau}
               isEpiforecast={isEpiforecast}
               isILM={isILM}
               isKIT={isKIT}
@@ -534,6 +543,7 @@ export const MethodenDiv = () => {
               menuAge={menuAge}
               selectedScope={selectedScope}
               datenstand_schwarz={datenstand_schwarz}
+              datenstand_grau={datenstand_grau}
             />
 
             {/* Methoden ----------------------------------------------------------- */}
@@ -541,11 +551,14 @@ export const MethodenDiv = () => {
             {isVisible && (
               <table className="methdentabelle">
                 <div className="auswahl">
-                  {/*1*/}
+                  {/*1.0*/}
+
                   <tr>
                     <div
-                      className={`container ${isDatenstand ? "moved" : ""}`}
-                      onClick={handleClickDatenstand}
+                      className={`container ${
+                        isDatenstandSchwarz ? "moved" : ""
+                      }`}
+                      onClick={handleClickDatenstandSchwarz}
                     >
                       <td className="linelayout">
                         <img src={datenstand_line} style={{ width: "35px" }} />
@@ -553,10 +566,46 @@ export const MethodenDiv = () => {
 
                       <td className="methodnamerow">
                         <p
-                          className={`datenstand ${isDatenstand ? "bold" : ""}`}
-                          onClick={handleClickDatenstand}
+                          className={`datenstand ${
+                            isDatenstandSchwarz ? "bold" : ""
+                          }`}
+                          onClick={handleClickDatenstandSchwarz}
                         >
-                          Datenstand
+                          Datenstand Schwarz
+                        </p>
+                      </td>
+                      <td>
+                        <div
+                          className="hovertext questionmark hoverq"
+                          data-hover="hover text 1"
+                        >
+                          <div className="">
+                            <p> ?</p>
+                          </div>
+                        </div>
+                      </td>
+                    </div>
+                  </tr>
+
+                  {/*1.1*/}
+
+                  <tr>
+                    <div
+                      className={`container ${isDatenstandGrau ? "moved" : ""}`}
+                      onClick={handleClickDatenstandGrau}
+                    >
+                      <td className="linelayout">
+                        <img src={datenstand_line} style={{ width: "35px" }} />
+                      </td>
+
+                      <td className="methodnamerow">
+                        <p
+                          className={`datenstand ${
+                            isDatenstandGrau ? "bold" : ""
+                          }`}
+                          onClick={handleClickDatenstandGrau}
+                        >
+                          Datenstand Grau
                         </p>
                       </td>
                       <td>

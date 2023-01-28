@@ -17,7 +17,8 @@ const yAxisLabelOffset = 45;
 
 export const Graph = ({
   isVisible,
-  isDatenstand,
+  isDatenstandSchwarz,
+  isDatenstandGrau,
   isEpiforecast,
   isILM,
   isKIT,
@@ -38,10 +39,12 @@ export const Graph = ({
   SUdata,
   SZdata,
   datenstand_schwarz,
+  datenstand_grau,
 }) => {
   let width = 800;
 
-  let anzeigeDatenstand;
+  let anzeigeDatenstandSchwarz;
+  let anzeigeDatenstandGrau;
 
   let anzeigeEpiforecast;
   let anzeigeILM;
@@ -54,10 +57,12 @@ export const Graph = ({
   let anzeigeSZ;
 
   if (isVisible === true) {
-    width = +(0.55*window.innerWidth);   {/* Stauchung Graph*/}
+    width = +(0.55 * window.innerWidth);
+    {
+      /* Stauchung Graph*/
+    }
   } else {
-    width = +(0.75*window.innerWidth);
-    
+    width = +(0.75 * window.innerWidth);
   }
 
   if (isEpiforecast) {
@@ -66,10 +71,16 @@ export const Graph = ({
     anzeigeEpiforecast = "hidden";
   }
 
-  if (isDatenstand) {
-    anzeigeDatenstand = "visible";
+  if (isDatenstandGrau) {
+    anzeigeDatenstandGrau = "visible";
   } else {
-    anzeigeDatenstand = "hidden";
+    anzeigeDatenstandGrau = "hidden";
+  }
+
+  if (isDatenstandSchwarz) {
+    anzeigeDatenstandSchwarz = "visible";
+  } else {
+    anzeigeDatenstandSchwarz = "hidden";
   }
 
   if (isILM) {
@@ -120,7 +131,19 @@ export const Graph = ({
     anzeigeSZ = "hidden";
   }
 
-  if (!data || !EPIdata || !ILMdata || !KITdata || !LMUdata || !Nowcastdata || !RIVMdata|| !RKIdata || !SUdata || !SZdata || !datenstand_schwarz) {
+  if (
+    !data ||
+    !EPIdata ||
+    !ILMdata ||
+    !KITdata ||
+    !LMUdata ||
+    !Nowcastdata ||
+    !RIVMdata ||
+    !RKIdata ||
+    !SUdata ||
+    !SZdata ||
+    !datenstand_schwarz
+  ) {
     return <p className="loading">Loading...</p>;
   }
 
@@ -132,8 +155,7 @@ export const Graph = ({
   const xValue = (d) => d.date;
   const xAxisLabel = "Meldedatum";
 
- 
-  const yValueDatenstand  = (d) =>  d.value_0d;
+  const yValueDatenstand = (d) => d.value_0d;
 
   const yValue = (d) => d.value;
   const yQuantileKlein = (d) => d.quantileKlein;
@@ -151,7 +173,6 @@ export const Graph = ({
     .domain([0, max(data, yQuantileGroß)])
     .range([innerHeight, 0])
     .nice();
-
 
   return (
     <svg width={width} height={height}>
@@ -299,8 +320,18 @@ export const Graph = ({
             xValue={xValue}
             yValue={yValueDatenstand}
             circleRadius={3}
-            anzeigeAnAus={anzeigeDatenstand}
-          /> 
+            anzeigeAnAus={anzeigeDatenstandSchwarz}
+          />
+
+          <MarksRealData
+            data={datenstand_grau}
+            xScale={xScale}
+            yScale={yScale}
+            xValue={xValue}
+            yValue={yValueDatenstand}
+            circleRadius={3}
+            anzeigeAnAus={anzeigeDatenstandGrau}
+          />
         </g>
       </g>
     </svg>
