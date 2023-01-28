@@ -38,7 +38,7 @@ function Fomosmain() {
 
         {/* Expert Mode Button */}
                 <Link style={navStyle} to="/fomosexpert">
-                <div class="button rounded expbutton-expoff" >
+                <div class="button expbutton-expoff" >
                     <p class="text-expoff">{t("expertbutton_on")}</p>
                 </div>
                 </Link>
@@ -51,7 +51,7 @@ function Fomosmain() {
             <div class="row rowbuttons">
                 <div class="col-lg-3 col-md-6 col-sm-12">
                     <span class="hovertext" data-hover={t("button1hover_nowcast")}>
-                    <div class="button rounded infobutton" >
+                    <div class="button infobutton" >
                         <p class="text-fix">{t("button1_nowcast")}</p>
                         <p class="text-var">xxx</p>
                     </div>
@@ -59,7 +59,7 @@ function Fomosmain() {
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-12">
                     <span class="hovertext" data-hover={t("button2hover_nowcast")}>
-                    <div class="button rounded infobutton"> 
+                    <div class="button infobutton"> 
                         <p class="text-fix">{t("button2_nowcast")}</p>
                         <p class="text-var">xxx</p>
                     </div> 
@@ -67,7 +67,7 @@ function Fomosmain() {
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-12 ">
                     <span class="hovertext" data-hover={t("button3hover_nowcast")}>
-                    <div class="button rounded infobutton"> 
+                    <div class="button infobutton"> 
                         <p class="text-fix">{t("button3_nowcast")}</p>
                         <p class="text-var">xxx</p>
                     </div>
@@ -75,7 +75,7 @@ function Fomosmain() {
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-12 ">
                     <span class="hovertext" data-hover={t("button4hover_nowcast")}>
-                    <div class="button rounded infobutton"> 
+                    <div class="button infobutton"> 
                     <table class="button-table">
                         <tr>
                         <td class="text-fix breit">{t("button4_nowcast")}</td>
@@ -110,29 +110,8 @@ function Fomosmain() {
 
         <section id="chart" >
 
-        
-
         {/* Chart to be inserted*/}
-        <div>
-        <div class="row row-chart">
-        <div class="col-lg-6 col-md-6 col-sm-12 date" >
-            
-
-        </div>
-        <div class="col-lg-6 col-md-6 col-sm-12 method">
-                <span class="hovertext hovertext-method" data-hover="Kombination unterschiedliche Nowcasting-Verfahren zu einer Prognose">
-                <p>
-                <button class="btn btn-light button-method"  type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
-                Ensemble-Nowcast
-                </button>
-                </p>
-                </span>
-                <div>
-                </div> 
-        </div>
         
-        </div>
-        </div>
 
         </section>
 
