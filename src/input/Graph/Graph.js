@@ -6,6 +6,7 @@ import { Marks } from "./Marks";
 import "./Graph.css";
 import { line, curveNatural } from "d3";
 import { MarksRealData } from "./MarksRealData";
+import { isLabelWithInternallyDisabledControl } from "@testing-library/user-event/dist/utils";
 
 const height = 500;
 const margin = { top: 20, right: 10, bottom: 65, left: 100 };
@@ -60,15 +61,15 @@ export const Graph = ({
   }
 
   if (isEpiforecast) {
-    anzeigeDatenstand = "visible";
-  } else {
-    anzeigeDatenstand = "hidden";
-  }
-
-  if (isDatenstand) {
     anzeigeEpiforecast = "visible";
   } else {
     anzeigeEpiforecast = "hidden";
+  }
+
+  if (isDatenstand) {
+    anzeigeDatenstand = "visible";
+  } else {
+    anzeigeDatenstand = "hidden";
   }
 
   if (isILM) {
@@ -119,7 +120,7 @@ export const Graph = ({
     anzeigeSZ = "hidden";
   }
 
-  if (!data || !EPIdata || !ILMdata || !KITdata || !LMUdata || !Nowcastdata || !RIVMdata|| !RKIdata || !SUdata || !SZdata ) {
+  if (!data || !EPIdata || !ILMdata || !KITdata || !LMUdata || !Nowcastdata || !RIVMdata|| !RKIdata || !SUdata || !SZdata || !datenstand_schwarz) {
     return <p className="loading">Loading...</p>;
   }
 
@@ -130,6 +131,9 @@ export const Graph = ({
 
   const xValue = (d) => d.date;
   const xAxisLabel = "Meldedatum";
+
+ 
+  const yValueDatenstand  = (d) =>  d.value_0d;
 
   const yValue = (d) => d.value;
   const yQuantileKlein = (d) => d.quantileKlein;
@@ -148,6 +152,8 @@ export const Graph = ({
     .range([innerHeight, 0])
     .nice();
 
+
+    console.log(datenstand_schwarz);
 
   return (
     <svg width={width} height={height}>
@@ -288,15 +294,16 @@ export const Graph = ({
             anzeigeAnAus={anzeigeSZ}
             farbe={"0,200,100"}
           />
-          {/*<MarksRealData
+          <MarksRealData
             data={datenstand_schwarz}
             xScale={xScale}
             yScale={yScale}
             xValue={xValue}
-            yValue={yValue}
+            yValue={yValueDatenstand}
             circleRadius={3}
             farbe={"0,200,100"}
-          />  */}
+            anzeigeAnAus={anzeigeDatenstand}
+          /> 
         </g>
       </g>
     </svg>

@@ -32,7 +32,7 @@ export const useDataDatenstand = (
       d["value_>80d"] = parseFloat(d["value_>80d"]);
       d.date = new Date(d.date);
 
-      d.value = Object.values(d).reduce((total, value) => {
+      d.valueTest = Object.values(d).reduce((total, value) => {
         return total + (typeof value === 'number' ? value : 0);
       }, 0);
 

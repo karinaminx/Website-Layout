@@ -218,7 +218,7 @@ export const MethodenDiv = () => {
 
   // let datesAfterEnde = useDataDatenstand(datenstand_schwarz);
 
-  console.log(SUdata);
+  // console.log(datenstand_schwarz);
 
   return (
     <div>

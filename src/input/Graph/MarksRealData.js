@@ -13,7 +13,7 @@ export const MarksRealData = ({
 }) => (
   <g className="mark" stroke={farbe}>
     <path
-      visibility={anzeigeAnAus}
+     visibility={anzeigeAnAus}
       fill="none"
       stroke={`rgba(${farbe},0.9)`}
       d={
@@ -23,4 +23,4 @@ export const MarksRealData = ({
       }
     />
   </g>
-);
+); 
