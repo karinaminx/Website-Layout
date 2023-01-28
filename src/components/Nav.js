@@ -57,16 +57,8 @@ function Nav() {
         </button>
         <div class="collapse navbar-collapse" id="target1">
           <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-                <Link style={navStyle} to="/">
-                    <a class="nav-link">{t("home")}</a>
-                </Link>
-            </li>
-            <li class="nav-item">
-                <Link style={navStyle} to="/hintergrund">
-                    <a class="nav-link" >{t("hintergrund")}</a>
-                </Link>
-            </li>
+            
+            
             <li class="nav-item">
                 <Link style={navStyle} to="/kontakt">
                     <a class="nav-link" >{t("kontakt")}</a>

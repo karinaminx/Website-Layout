@@ -1,6 +1,8 @@
 import React from "react";
 import '../CSS/Fomos-main.css';
 import {Route, Routes, Link} from 'react-router-dom';
+import NavFomos from './Nav-Fomos.js';
+import FooterFomos from './Footer-Fomos.js';
 
 import { useTranslation } from 'react-i18next';
 
@@ -24,6 +26,8 @@ function Fomosmain() {
 
 
     return (
+        <div>
+        <NavFomos />
         <div>
         <section id="title">
         
@@ -147,6 +151,8 @@ function Fomosmain() {
 
 
 
+        </div>
+        <FooterFomos />
         </div>
        
             );

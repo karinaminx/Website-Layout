@@ -16,7 +16,7 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        <Nav/>
+        
         <Routes>
           <Route path="" element={<Home />} />
           <Route path="/hintergrund" element={<Hintergrund />} /> 
@@ -25,7 +25,7 @@ function App() {
           <Route path="/fomosexpert" element={<Fomosexp />} /> 
           <Route path="/FAQ" element={<FAQ />} /> 
         </Routes>
-        <Footer />
+        
       </div>
     </BrowserRouter>
   );

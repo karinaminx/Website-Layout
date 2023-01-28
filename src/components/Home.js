@@ -4,6 +4,8 @@ import '../CSS/Home.css';
 import {Route, Routes, Link} from 'react-router-dom';
 import covidlogo from '../images/covid.jpeg';
 import KITlogo from '../images/KITlogo.jpeg';
+import Nav from './Nav.js';
+import Footer from './Footer.js';
 
 import { useTranslation } from 'react-i18next';
 
@@ -23,8 +25,11 @@ function Home() {
       };
       
   return (
+   <div>
+    <Nav />
+    
 
-    /* Einleitungstext */
+   { /* Einleitungstext */}
     <div>
     <section id="text">
             <div class="text-intro">
@@ -104,7 +109,8 @@ function Home() {
 
 
 
-
+    </div>
+    <Footer />
     </div>
   );
 }

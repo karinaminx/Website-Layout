@@ -4,6 +4,8 @@ import {MethodenDiv} from '../input/MenuAuswahl/Methoden.js';
 import '../CSS/Fomos-exp.css';
 import {Route, Routes, Link} from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import NavFomos from './Nav-Fomos.js';
+import FooterFomos from './Footer-Fomos.js';
 
 const lngs = [
     { code: "de", native: "Deutsch" },
@@ -23,8 +25,8 @@ function Fomosexp() {
       };
 
     return (
-        
-        
+        <div>
+        <NavFomos />
         <div>
         <section id="title">
         
@@ -129,7 +131,8 @@ function Fomosexp() {
         
 
         </div>
-       
+        <FooterFomos />
+        </div>
 
 
     );

@@ -2,6 +2,7 @@ import React from "react";
 import '../CSS/FAQ.css';
 import {Route, Routes, Link} from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import NavFomos from './Nav-Fomos.js';
 
 const lngs = [
     { code: "de", native: "Deutsch" },
@@ -17,12 +18,15 @@ function FAQ() {
       };
       
     return (
+        <div>
+            <NavFomos />
+        
     <div>
             
         <section id="title">
         {/* Überschrift */}
         <div class="title">
-          <i class="fa-regular fa-dash line"></i>
+          <i class="fa-regular fa-dash lineheader"></i>
             <div class="titel-text">
             <h1>{t("FAQ_Heading")}</h1>
             </div>
@@ -295,7 +299,7 @@ function FAQ() {
     </div>
     </section>
 
-
+    </div>
 
     </div>
     );

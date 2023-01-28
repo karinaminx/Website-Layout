@@ -8,6 +8,8 @@ import Stockholm_Logo from '../images/Uni_stockholm.png';
 import RIVM_Logo from '../images/RIVM_Logo.png';
 import TU_Logo from '../images/TU-Ilmenau-Logo.png';
 import { useTranslation } from 'react-i18next';
+import NavFomos from './Nav-Fomos.js';
+import FooterFomos from './Footer-Fomos.js';
 
 const lngs = [
     { code: "de", native: "Deutsch" },
@@ -24,11 +26,14 @@ function Hintergrund() {
   
   return (
     <div>
+      <NavFomos />
+    
+    <div>
 
     <section id="title">
         {/* Überschrift */}
         <div class="title">
-          <i class="fa-regular fa-dash line"></i>
+          <i class="fa-regular fa-dash lineheader"></i>
             <div class="titel-text">
             <h1>{t("hintergrund_headline")}</h1>
             </div>
@@ -292,6 +297,8 @@ function Hintergrund() {
     </section>
 
 
+    </div>
+    <FooterFomos />
     </div>
     );
 }

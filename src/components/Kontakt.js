@@ -3,6 +3,8 @@ import '../CSS/Kontakt.css';
 import Platzhalter_Bild from '../images/Platzhalter_w.jpeg';
 import {Route, Routes, Link} from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import NavFomos from './Nav-Fomos.js';
+import Footer from './Footer.js';
 
 const lngs = [
     { code: "de", native: "Deutsch" },
@@ -18,12 +20,15 @@ function Kontakt() {
       };
     
     return (
+      <div>
+        <NavFomos />
+      
     <div>
             
             <section id="title">
       {/* Überschrift */}
        <div class="title">
-        <i class="fa-regular fa-dash line"></i>
+        <i class="fa-regular fa-dash lineheader"></i>
           <div class="titel-text">
           <h1>KONTAKT</h1>
           </div> 
@@ -111,8 +116,8 @@ function Kontakt() {
     
 
     
-
-    
+      <Footer />
+    </div>
     
     );
 }
