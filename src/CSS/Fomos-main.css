@@ -59,7 +59,7 @@
     outline: black;
     color: black;
     font-size: 1.0rem;
-    
+    outline: 1px solid;
     
     
   }
@@ -74,6 +74,7 @@
 
   .infobutton{
     height: 80px;
+    border-radius: 5px;
   }
   .infobutton:hover{
         background-color: #ddd;
