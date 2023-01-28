@@ -29,6 +29,8 @@
         right: -87%;
         top: -100%;
     background-color: rgba(79, 173, 92, 0.418);
+    border-radius: 1px;
+    border-radius: 5px;
     
    
   }
@@ -57,6 +59,7 @@
 
   .rowbuttons{
     padding: 30px 0 20px;
+    border-radius: 5px;
    
   }
   
