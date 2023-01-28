@@ -54,7 +54,7 @@
   display: block;
   margin-left: auto;
   margin-right: 0;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   width: 13rem;
   font-size: 0.9rem;
   position: relative;
@@ -99,7 +99,7 @@
 
 .methodnamerow{
   width: 190px;
-  padding-bottom: 5%;
+  padding: 1% 0;
   
 }
 /*Methoden ende */
@@ -139,7 +139,7 @@
   width: 15%;
 }
 .moved{
- background-color: rgba(79, 173, 92, 0.418);
+ background-color: rgba(191, 192, 191, 0.418);
  border-radius: 1px;
  border-color: grey;
  border-radius: 5px;
@@ -148,7 +148,7 @@
  margin: 3px;
  position: relative;
   right: 0px;
-  
+align-items: center;
  
 }
   
@@ -391,6 +391,11 @@ input[name="select-date"] {
   text-align: left;
   font-size: 0.9rem;
   accent-color: grey;
+  
+}
+
+.agelayout{
+  padding-right: 50%;
 }
 #age-select {
   width: 100%;

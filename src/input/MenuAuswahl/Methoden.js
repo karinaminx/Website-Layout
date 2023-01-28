@@ -293,7 +293,7 @@ export const MethodenDiv = () => {
              </button>
           </div>
           <div id="div2" className="hidden">
-              <label for="scope-select">Alter:</label>
+              <label className= "agelayout" for="scope-select">Alter:</label>
               <button className="btn btn-light button-filter rounded ">         
               <Dropdown
                 options={optionsAge}
