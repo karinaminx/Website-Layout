@@ -23,16 +23,16 @@ import {
 import { useDataAxes } from "../Graph/useDataAxes";
 import { useDataDatenstand } from "../Graph/useDataBjörn";
 
-import datenstand_line from '../../images/datenstand_line.png';
-import Epiforecast_line from '../../images/Epiforecast_line.png';
-import ILM_line from '../../images/ILM_line.png';
-import KIT_line from '../../images/KIT_line.png';
-import LMU_line from '../../images/LMU_line.png';
-import NowcastHub_line from '../../images/NowcastHub_line.png';
-import RIVM_line from '../../images/RIVM_line.png';
-import RKI_line from '../../images/RKI_line.png';
-import SU_line from '../../images/SU_line.png';
-import SZ_line from '../../images/SZ_line.png';
+import datenstand_line from "../../images/datenstand_line.png";
+import Epiforecast_line from "../../images/Epiforecast_line.png";
+import ILM_line from "../../images/ILM_line.png";
+import KIT_line from "../../images/KIT_line.png";
+import LMU_line from "../../images/LMU_line.png";
+import NowcastHub_line from "../../images/NowcastHub_line.png";
+import RIVM_line from "../../images/RIVM_line.png";
+import RKI_line from "../../images/RKI_line.png";
+import SU_line from "../../images/SU_line.png";
+import SZ_line from "../../images/SZ_line.png";
 
 export const MethodenDiv = () => {
   // Tabelle mit Button eine und ausblende -----------------------------------
@@ -93,10 +93,14 @@ export const MethodenDiv = () => {
     setEpiforecast(!isEpiforecast);
   }
   function handleClickILM() {
-    if (selectedScope === "DE") {
+    if (selectedScope != "DE") {
+      setILM(false);
+    } else {
       setILM(!isILM);
-    }else{setILM(isILM)}
+    }
   }
+
+  console.log(isILM);
   function handleClickKIT() {
     setKIT(!isKIT);
   }
@@ -222,51 +226,59 @@ export const MethodenDiv = () => {
 
   return (
     <div>
+      <div className="btn-method">
+        <button
+          className=" btn btn-light button-method-exp"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapseWidthExample"
+          aria-expanded="false"
+          aria-controls="collapseWidthExample"
+          onClick={handleClick}
+        >
+          {isVisible ? (
+            <p>
+              <i className="fa-solid fa-caret-right"></i> Methoden ausblenden
+            </p>
+          ) : (
+            <p>
+              <i className="fa-solid fa-caret-left"></i> Methoden einblenden
+            </p>
+          )}
+        </button>
 
-    <div className="btn-method">
-          <button className=" btn btn-light button-method-exp" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample" onClick={handleClick}>
-            {isVisible ? (
-              <p><i className="fa-solid fa-caret-right"></i>    Methoden ausblenden</p>
-            ) : (
-              <p><i className="fa-solid fa-caret-left"></i>     Methoden einblenden</p>
-            )}
-          </button>
-          
-          
-          <label className="methodenEinblenden" onClick={handleClick}>
-            {label}
-          </label>
-          </div>
+        <label className="methodenEinblenden" onClick={handleClick}>
+          {label}
+        </label>
+      </div>
 
-    <div className="row rowchart">
-      <div className="col-2">
-      <div id="menuBand" classNAme="menuBand rounded">
-        {/* Methoden Button ----------------------------------------------------------- */}
-        <section>
-        
-
-        <div className="Methoden">       
-
-      <div id="datenstand" className="menuOptionen">
-          <label className="einführung"><b>Datenstand</b></label>
-          <div id="inhalt">
-            
-              <div>
-              <button className="btn btn-light button-datenstand rounded ">
-                <input
-                  type="date"
-                  name="select-date"
-                  onChange={(e) => setDate(e.target.value)}
-                  max={initialDate}
-                  min="2021-07-01"
-                />
-                </button>
+      <div className="row rowchart">
+        <div className="col-2">
+          <div id="menuBand" classNAme="menuBand rounded">
+            {/* Methoden Button ----------------------------------------------------------- */}
+            <section>
+              <div className="Methoden">
+                <div id="datenstand" className="menuOptionen">
+                  <label className="einführung">
+                    <b>Datenstand</b>
+                  </label>
+                  <div id="inhalt">
+                    <div>
+                      <button className="btn btn-light button-datenstand rounded ">
+                        <input
+                          type="date"
+                          name="select-date"
+                          onChange={(e) => setDate(e.target.value)}
+                          max={initialDate}
+                          min="2021-07-01"
+                        />
+                      </button>
+                    </div>
+                  </div>
+                </div>
               </div>
-          </div>
-  </div>
-  </div>
-  
- {/* 
+
+              {/* 
 <div id="datenstand" className="menuOptionen">
         <label className="einführung"><b>Datenstand</b></label>
          <div id="inhalt">
@@ -279,47 +291,51 @@ export const MethodenDiv = () => {
                 />
           </button>*/}
 
-                {/* Man kann ein anderes Datum nicht auswählen. Jedoch werden sie trz. angezeigt. @Lena, kannst du dir das mal anschauen? */}
-             
-            
-        
-    
-      <div id="filter" className="menuOptionen">
-         <label className="einführung"><b>Filter</b></label>
-         <div id="inhalt">
-          <div id="div1" className="visible">
-              <label for="scope-select">Bundesland:</label>
-              <button className="btn btn-light button-filter rounded">
-              <Dropdown name="BundeslandSelect"
-                options={options}
-                id="scope-select"
-                selectedValue={selectedScope}
-                onSelectedValueChange={(selectedScope) => {
-                  setmenuAge("00+");
-                  setScope(selectedScope);
-                  handleDiv1Selection();
-                  handleClickILM()
-                }}
-              /> 
-             </button>
-          </div>
-          <div id="div2" className="hidden">
-              <label className= "agelayout" for="scope-select">Alter:</label>
-              <button className="btn btn-light button-filter rounded ">         
-              <Dropdown
-                options={optionsAge}
-                id="age-select"
-                selectedValue={menuAge}
-                onSelectedValueChange={(selectedValue) => {
-                  setmenuAge(selectedValue);
-                  setScope("DE");
-                  handleDiv2Selection();
-                }}
-              />
-              </button>
-            </div>
+              {/* Man kann ein anderes Datum nicht auswählen. Jedoch werden sie trz. angezeigt. @Lena, kannst du dir das mal anschauen? */}
 
-    {/* 
+              <div id="filter" className="menuOptionen">
+                <label className="einführung">
+                  <b>Filter</b>
+                </label>
+                <div id="inhalt">
+                  <div id="div1" className="visible">
+                    <label for="scope-select">Bundesland:</label>
+                    <button className="btn btn-light button-filter rounded">
+                      <Dropdown
+                        name="BundeslandSelect"
+                        options={options}
+                        id="scope-select"
+                        selectedValue={selectedScope}
+                        onSelectedValueChange={(selectedScope) => {
+                          setmenuAge("00+");
+                          setScope(selectedScope);
+                          handleDiv1Selection();
+                          if (selectedScope !== "DE") {
+                            setILM(false);
+                          }
+                        }}
+                      />
+                    </button>
+                  </div>
+                  <div id="div2" className="hidden">
+                    <label className="agelayout" for="scope-select">
+                      Alter:
+                    </label>
+                    <button className="btn btn-light button-filter rounded ">
+                      <Dropdown
+                        options={optionsAge}
+                        id="age-select"
+                        selectedValue={menuAge}
+                        onSelectedValueChange={(selectedValue) => {
+                          setmenuAge(selectedValue);
+                          setScope("DE");
+                          handleDiv2Selection();
+                        }}
+                      />
+                    </button>
+                  </div>
+
+                  {/* 
         <div id="filter" className="menuOptionen">
           <u><label className="einführung"><b>Filter</b></label></u>
           <div id="inhalt">
@@ -355,11 +371,10 @@ export const MethodenDiv = () => {
               />
               
             </div>*/}
+                </div>
+              </div>
 
-          </div>
-        </div>
-        
-{/*}
+              {/*}
         <div id="anzeige" className="menuOptionen">
           <label className="einführung"><b>Anzeige</b></label>
           <div id="inhalt">
@@ -420,431 +435,423 @@ export const MethodenDiv = () => {
               />
               </div>
             </div>
-        */
-        }
-      
-        <div id="anzeige" className="menuOptionen">
-         <label className="einführung"><b>Anzeige</b></label>
-         <div id="inhalt">
-          <button className="btn btn-light button-anzeige rounded ">
-             <label>Pro 100.000 </label>
-             <input 
-               type="radio"
-               name="größe"
-               value="hunderttausend"
-               onChange={(e) => setAnzeige(e.target.value)}
-               checked={anzeige === "hunderttausend"}
-             />
-          </button>
+        */}
 
-          <button className="btn btn-light button-anzeige rounded" >
-              <label>absolute Zahlen </label>
-              {" "}
-              <input 
-                type="radio"
-                name="größe"
-                value="absoluteZahlen"
-                onChange={(e) => setAnzeige(e.target.value)}
-                checked={anzeige === "absoluteZahlen"}
-              />
-              </button>
-       </div>
-       </div>
-        
+              <div id="anzeige" className="menuOptionen">
+                <label className="einführung">
+                  <b>Anzeige</b>
+                </label>
+                <div id="inhalt">
+                  <button className="btn btn-light button-anzeige rounded ">
+                    <label>Pro 100.000 </label>
+                    <input
+                      type="radio"
+                      name="größe"
+                      value="hunderttausend"
+                      onChange={(e) => setAnzeige(e.target.value)}
+                      checked={anzeige === "hunderttausend"}
+                    />
+                  </button>
 
-        <div id="unsicherheitsintervall" className="menuOptionen">
-        <label className="einführung"><b>Unsicherheitsintervall</b></label>
-         <div id="inhalt">
-          <button className="btn btn-light button-unsicherheitsintervall rounded ">
-             <label className="usi"> 95%  </label>
-             <input 
-                type="radio"
-                name="unsicherheitsintervall"
-                value="FÜNFundNEUNZIG"
-                onChange={(e) => setIntervall(e.target.value)}
-                defaultChecked
-              />
-          </button>
-          <button className="btn btn-light button-unsicherheitsintervall rounded ">
-             <label className="usi"> 50%  </label>
-             <input 
-                type="radio"
-                name="unsicherheitsintervall"
-                value="FÜNFZIG"
-                onChange={(e) => setIntervall(e.target.value)}
-              />
-          </button>
+                  <button className="btn btn-light button-anzeige rounded">
+                    <label>absolute Zahlen </label>{" "}
+                    <input
+                      type="radio"
+                      name="größe"
+                      value="absoluteZahlen"
+                      onChange={(e) => setAnzeige(e.target.value)}
+                      checked={anzeige === "absoluteZahlen"}
+                    />
+                  </button>
+                </div>
+              </div>
 
-          <button className="btn btn-light button-unsicherheitsintervall rounded ">
-             <label className="usi"> keines </label>
-             <input 
-                type="radio"
-                name="unsicherheitsintervall"
-                value="keines"
-                onChange={(e) => setIntervall(e.target.value)}
-              />
-          </button>
+              <div id="unsicherheitsintervall" className="menuOptionen">
+                <label className="einführung">
+                  <b>Unsicherheitsintervall</b>
+                </label>
+                <div id="inhalt">
+                  <button className="btn btn-light button-unsicherheitsintervall rounded ">
+                    <label className="usi"> 95% </label>
+                    <input
+                      type="radio"
+                      name="unsicherheitsintervall"
+                      value="FÜNFundNEUNZIG"
+                      onChange={(e) => setIntervall(e.target.value)}
+                      defaultChecked
+                    />
+                  </button>
+                  <button className="btn btn-light button-unsicherheitsintervall rounded ">
+                    <label className="usi"> 50% </label>
+                    <input
+                      type="radio"
+                      name="unsicherheitsintervall"
+                      value="FÜNFZIG"
+                      onChange={(e) => setIntervall(e.target.value)}
+                    />
+                  </button>
+
+                  <button className="btn btn-light button-unsicherheitsintervall rounded ">
+                    <label className="usi"> keines </label>
+                    <input
+                      type="radio"
+                      name="unsicherheitsintervall"
+                      value="keines"
+                      onChange={(e) => setIntervall(e.target.value)}
+                    />
+                  </button>
+                </div>
+              </div>
+            </section>
           </div>
         </div>
+        <div className="col-9">
+          {/* Graph ----------------------------------------------------------- */}
+          <div className="GraphundMethoden">
+            <Graph
+              className="graph"
+              isVisible={isVisible}
+              isDatenstand={isDatenstand}
+              isEpiforecast={isEpiforecast}
+              isILM={isILM}
+              isKIT={isKIT}
+              isLMU={isLMU}
+              isNowcast={isNowcast}
+              isRIVM={isRIVM}
+              isRKI={isRKI}
+              isSU={isSU}
+              isSZ={isSZ}
+              data={data}
+              EPIdata={EPIdata}
+              ILMdata={ILMdata}
+              KITdata={KITdata}
+              LMUdata={LMUdata}
+              Nowcastdata={Nowcastdata}
+              RIVMdata={RIVMdata}
+              RKIdata={RKIdata}
+              SUdata={SUdata}
+              SZdata={SZdata}
+              menuAge={menuAge}
+              selectedScope={selectedScope}
+              datenstand_schwarz={datenstand_schwarz}
+            />
 
-        
+            {/* Methoden ----------------------------------------------------------- */}
 
-
-        </section>
-        </div>
-
-      </div>
-      <div className="col-9">
-
-      {/* Graph ----------------------------------------------------------- */}
-      <div className="GraphundMethoden">
-        <Graph
-          className="graph"
-          isVisible={isVisible}
-          isDatenstand={isDatenstand}
-          isEpiforecast={isEpiforecast}
-          isILM={isILM}
-          isKIT={isKIT}
-          isLMU={isLMU}
-          isNowcast={isNowcast}
-          isRIVM={isRIVM}
-          isRKI={isRKI}
-          isSU={isSU}
-          isSZ={isSZ}
-          data={data}
-          EPIdata={EPIdata}
-          ILMdata={ILMdata}
-          KITdata={KITdata}
-          LMUdata={LMUdata}
-          Nowcastdata={Nowcastdata}
-          RIVMdata={RIVMdata}
-          RKIdata={RKIdata}
-          SUdata={SUdata}
-          SZdata={SZdata}
-          menuAge={menuAge}
-          selectedScope={selectedScope}
-          datenstand_schwarz={datenstand_schwarz}
-        />
-
-        {/* Methoden ----------------------------------------------------------- */}
-        
-        {isVisible && (
-          <table className="methdentabelle">
-            <div className="auswahl">
-              {/*1*/}
-              <tr >
-                <div
-                  className={`container ${isDatenstand ? "moved" : ""}`}
-                  onClick={handleClickDatenstand}
-                >
-                  
-                  <td className="linelayout">
-                    <img src={datenstand_line}  style={{width: "35px"}}  />
-                  </td> 
-                  
-                  <td className="methodnamerow">
-                    <p
-                      className={`datenstand ${isDatenstand ? "bold" : ""}`}
+            {isVisible && (
+              <table className="methdentabelle">
+                <div className="auswahl">
+                  {/*1*/}
+                  <tr>
+                    <div
+                      className={`container ${isDatenstand ? "moved" : ""}`}
                       onClick={handleClickDatenstand}
                     >
-                      Datenstand
-                    </p>
-                  </td>
-                  <td>
-                    
-                      <div
-                        className="hovertext questionmark hoverq"
-                        data-hover="hover text 1"
-                      >
-                        <div className="">
-                          <p> ?</p>
+                      <td className="linelayout">
+                        <img src={datenstand_line} style={{ width: "35px" }} />
+                      </td>
+
+                      <td className="methodnamerow">
+                        <p
+                          className={`datenstand ${isDatenstand ? "bold" : ""}`}
+                          onClick={handleClickDatenstand}
+                        >
+                          Datenstand
+                        </p>
+                      </td>
+                      <td>
+                        <div
+                          className="hovertext questionmark hoverq"
+                          data-hover="hover text 1"
+                        >
+                          <div className="">
+                            <p> ?</p>
+                          </div>
                         </div>
-                      </div>
-                    
-                  </td>
+                      </td>
+                    </div>
+                  </tr>
+
+                  {/*2*/}
+                  <tr>
+                    <div
+                      className={`container ${isEpiforecast ? "moved" : ""}`}
+                      onClick={handleClickEpi}
+                    >
+                      <td className="linelayout">
+                        <img src={Epiforecast_line} style={{ width: "35px" }} />
+                      </td>
+
+                      <td className="methodnamerow">
+                        <p
+                          className={`Epiforecast ${
+                            isEpiforecast ? "bold" : ""
+                          }`}
+                          onClick={handleClickEpi}
+                        >
+                          independent Epiforecast
+                        </p>
+                      </td>
+                      <td>
+                        <div
+                          className="hovertext questionmark"
+                          data-hover="hover text 1"
+                        >
+                          <div className="">
+                            <p> ?</p>
+                          </div>
+                        </div>
+                      </td>
+                    </div>
+                  </tr>
+
+                  {/*3*/}
+                  <tr>
+                    <div
+                      className={`container ${isILM ? "moved" : ""}`}
+                      onClick={handleClickILM}
+                    >
+                      <td className="linelayout">
+                        <img src={ILM_line} style={{ width: "35px" }} />
+                      </td>
+
+                      <td className="methodnamerow">
+                        <p
+                          className={`ILM ${isILM ? "bold" : ""}`}
+                          onClick={handleClickILM}
+                        >
+                          ILM prop
+                        </p>
+                      </td>
+                      <td>
+                        <div
+                          className="hovertext questionmark hoverq"
+                          data-hover="hover text 3"
+                        >
+                          <div className="">
+                            <p> ?</p>
+                          </div>
+                        </div>
+                      </td>
+                    </div>
+                  </tr>
+
+                  {/*4*/}
+                  <tr>
+                    <div
+                      className={`container ${isKIT ? "moved" : ""}`}
+                      onClick={handleClickKIT}
+                    >
+                      <td className="linelayout">
+                        <img src={KIT_line} style={{ width: "35px" }} />
+                      </td>
+
+                      <td className="methodnamerow">
+                        <p
+                          className={`KIT ${isKIT ? "bold" : ""}`}
+                          onClick={handleClickKIT}
+                        >
+                          KIT Simple Nowcast
+                        </p>
+                      </td>
+                      <td>
+                        <div
+                          className="hovertext questionmark hoverq"
+                          data-hover="hover text 4"
+                        >
+                          <div className="">
+                            <p> ?</p>
+                          </div>
+                        </div>
+                      </td>
+                    </div>
+                  </tr>
+
+                  {/*5*/}
+                  <tr>
+                    <div
+                      className={`container ${isLMU ? "moved" : ""}`}
+                      onClick={handleClickLMU}
+                    >
+                      <td className="linelayout">
+                        <img src={LMU_line} style={{ width: "35px" }} />
+                      </td>
+                      <td className="methodnamerow">
+                        <p
+                          className={`LMU ${isLMU ? "bold" : ""}`}
+                          onClick={handleClickLMU}
+                        >
+                          LMU StaBlab-GAM Nowcast
+                        </p>
+                      </td>
+                      <td>
+                        <div
+                          className="hovertext questionmark hoverq"
+                          data-hover="hover text 5"
+                        >
+                          <div className="">
+                            <p> ?</p>
+                          </div>
+                        </div>
+                      </td>
+                    </div>
+                  </tr>
+
+                  {/*6*/}
+                  <tr>
+                    <div
+                      className={`container ${isNowcast ? "moved" : ""}`}
+                      onClick={handleClickNowcast}
+                    >
+                      <td className="linelayout">
+                        <img src={NowcastHub_line} style={{ width: "35px" }} />
+                      </td>
+                      <td className="methodnamerow">
+                        <p
+                          className={`Nowcast ${isNowcast ? "bold" : ""}`}
+                          onClick={handleClickNowcast}
+                        >
+                          NowcastHub MeanEnsemble
+                        </p>
+                      </td>
+                      <td>
+                        <div
+                          className="hovertext questionmark hoverq"
+                          data-hover="hover text 6"
+                        >
+                          <div className="">
+                            <p> ?</p>
+                          </div>
+                        </div>
+                      </td>
+                    </div>
+                  </tr>
+                  {/*7*/}
+                  <tr>
+                    <div
+                      className={`container ${isRIVM ? "moved" : ""}`}
+                      onClick={handleClickRIVM}
+                    >
+                      <td className="linelayout">
+                        <img src={RIVM_line} style={{ width: "35px" }} />
+                      </td>
+                      <td className="methodnamerow">
+                        <p
+                          className={`RIVM ${isRIVM ? "bold" : ""}`}
+                          onClick={handleClickRIVM}
+                        >
+                          RIVM Weekly Report
+                        </p>
+                      </td>
+                      <td>
+                        <div
+                          className="hovertext questionmark hoverq"
+                          data-hover="hover text 7"
+                        >
+                          <div className="">
+                            <p> ?</p>
+                          </div>
+                        </div>
+                      </td>
+                    </div>
+                  </tr>
+                  {/*8*/}
+                  <tr>
+                    <div
+                      className={`container ${isRKI ? "moved" : ""}`}
+                      onClick={handleClickRKI}
+                    >
+                      <td className="linelayout">
+                        <img src={RKI_line} style={{ width: "35px" }} />
+                      </td>
+                      <td className="methodnamerow">
+                        <p
+                          className={`RKI ${isRKI ? "bold" : ""}`}
+                          onClick={handleClickRKI}
+                        >
+                          RKI Weekly Report
+                        </p>
+                      </td>
+                      <td>
+                        <div
+                          className="hovertext questionmark hoverq"
+                          data-hover="hover text 8"
+                        >
+                          <div className="">
+                            <p> ?</p>
+                          </div>
+                        </div>
+                      </td>
+                    </div>
+                  </tr>
+
+                  {/*9*/}
+                  <tr>
+                    <div
+                      className={`container ${isSU ? "moved" : ""}`}
+                      onClick={handleClickSU}
+                    >
+                      <td className="linelayout">
+                        <img src={SU_line} style={{ width: "35px" }} />
+                      </td>
+                      <td className="methodnamerow">
+                        <p
+                          className={`SU ${isSU ? "bold" : ""}`}
+                          onClick={handleClickSU}
+                        >
+                          SU hier bayes
+                        </p>
+                      </td>
+                      <td>
+                        <div
+                          className="hovertext questionmark hoverq "
+                          data-hover="hover text 9"
+                        >
+                          <div className="">
+                            <p> ?</p>
+                          </div>
+                        </div>
+                      </td>
+                    </div>
+                  </tr>
+                  {/*10*/}
+                  <tr className="Methodechose">
+                    <div
+                      className={`container ${isSZ ? "moved" : ""}`}
+                      onClick={handleClickSZ}
+                    >
+                      <td className="linelayout">
+                        <img src={SZ_line} style={{ width: "35px" }} />
+                      </td>
+
+                      <td className="methodnamerow">
+                        <p
+                          className={`SZ ${isSZ ? "bold" : ""}`}
+                          onClick={handleClickSZ}
+                        >
+                          SZ Nowcast
+                        </p>
+                      </td>
+                      <td>
+                        <div
+                          className="hovertext questionmark hoverq"
+                          data-hover="hover text 10"
+                        >
+                          <div className="">
+                            <p> ?</p>
+                          </div>
+                        </div>
+                      </td>
+                    </div>
+                  </tr>
                 </div>
-                </tr>
-                
-                {/*2*/}
-                <tr >
-                  <div
-                    className={`container ${isEpiforecast ? "moved" : ""}`}
-                    onClick={handleClickEpi}
-                  >
-                    <td className="linelayout">
-                    <img src={Epiforecast_line}  style={{width: "35px"}}  />
-                  </td> 
-
-                    <td className="methodnamerow">
-                      <p
-                        className={`Epiforecast ${isEpiforecast ? "bold" : ""}`}
-                        onClick={handleClickEpi}
-                      >
-                        independent Epiforecast
-                      </p>
-                    </td>
-                    <td>
-                      <div
-                        className="hovertext questionmark"
-                        data-hover="hover text 1"
-                      >
-                        <div className="">
-                          <p> ?</p>
-                        </div>
-                      </div>
-                    </td>
-                  </div>
-                </tr>
-
-                {/*3*/}
-                <tr>
-                  <div
-                    className={`container ${isILM ? "moved" : ""}`}
-                    onClick={handleClickILM}
-                  >
-                    <td className="linelayout">
-                    <img src={ILM_line}  style={{width: "35px"}}  />
-                  </td> 
-
-                    <td className="methodnamerow">
-                      <p
-                        className={`ILM ${isILM ? "bold" : ""}`}
-                        onClick={handleClickILM}
-                      >
-                        ILM prop
-                      </p>
-                    </td>
-                    <td>
-                      <div
-                        className="hovertext questionmark hoverq"
-                        data-hover="hover text 3"
-                      >
-                        <div className="">
-                          <p> ?</p>
-                        </div>
-                      </div>
-                    </td>
-                  </div>
-                </tr>
-
-                {/*4*/}
-                <tr>
-                  <div
-                    className={`container ${isKIT ? "moved" : ""}`}
-                    onClick={handleClickKIT}
-                  >
-                    <td className="linelayout">
-                    <img src={KIT_line}  style={{width: "35px",  }}  />
-                  </td> 
-
-                    <td className="methodnamerow">
-                      <p
-                        className={`KIT ${isKIT ? "bold" : ""}`}
-                        onClick={handleClickKIT}
-                      >
-                        KIT Simple Nowcast
-                      </p>
-                    </td>
-                    <td>
-                      <div
-                        className="hovertext questionmark hoverq"
-                        data-hover="hover text 4"
-                      >
-                        <div className="">
-                          <p> ?</p>
-                        </div>
-                      </div>
-                    </td>
-                  </div>
-                </tr>
-
-                {/*5*/}
-                <tr>
-                  <div
-                    className={`container ${isLMU ? "moved" : ""}`}
-                    onClick={handleClickLMU}
-                  >
-                    <td className="linelayout">
-                    <img src={LMU_line}  style={{width: "35px"}}  />
-                  </td> 
-                    <td className="methodnamerow">
-                      <p
-                        className={`LMU ${isLMU ? "bold" : ""}`}
-                        onClick={handleClickLMU}
-                      >
-                        LMU StaBlab-GAM Nowcast
-                      </p>
-                    </td>
-                    <td>
-                      <div
-                        className="hovertext questionmark hoverq"
-                        data-hover="hover text 5"
-                      >
-                        <div className="">
-                          <p> ?</p>
-                        </div>
-                      </div>
-                    </td>
-                  </div>
-                </tr>
-
-                {/*6*/}
-                <tr>
-                  <div
-                    className={`container ${isNowcast ? "moved" : ""}`}
-                    onClick={handleClickNowcast}
-                  >
-                    <td className="linelayout">
-                    <img src={NowcastHub_line}  style={{width: "35px"}}  />
-                  </td> 
-                    <td className="methodnamerow">
-                      <p
-                        className={`Nowcast ${isNowcast ? "bold" : ""}`}
-                        onClick={handleClickNowcast}
-                      >
-                        NowcastHub MeanEnsemble
-                      </p>
-                    </td>
-                    <td>
-                      <div
-                        className="hovertext questionmark hoverq"
-                        data-hover="hover text 6"
-                      >
-                        <div className="">
-                          <p> ?</p>
-                        </div>
-                      </div>
-                    </td>
-                  </div>
-                </tr>
-                {/*7*/}
-                <tr>
-                  <div
-                    className={`container ${isRIVM ? "moved" : ""}`}
-                    onClick={handleClickRIVM}
-                  >
-                    <td className="linelayout">
-                    <img src={RIVM_line}  style={{width: "35px"}}  />
-                  </td> 
-                    <td className="methodnamerow">
-                      <p
-                        className={`RIVM ${isRIVM ? "bold" : ""}`}
-                        onClick={handleClickRIVM}
-                      >
-                        RIVM Weekly Report
-                      </p>
-                    </td>
-                    <td>
-                      <div
-                        className="hovertext questionmark hoverq"
-                        data-hover="hover text 7"
-                      >
-                        <div className="">
-                          <p> ?</p>
-                        </div>
-                      </div>
-                    </td>
-                  </div>
-                </tr>
-                {/*8*/}
-                <tr>
-                  <div
-                    className={`container ${isRKI ? "moved" : ""}`}
-                    onClick={handleClickRKI}
-                  >
-                    <td className="linelayout">
-                    <img src={RKI_line}  style={{width: "35px"}}  />
-                  </td> 
-                    <td className="methodnamerow">
-                      <p
-                        className={`RKI ${isRKI ? "bold" : ""}`}
-                        onClick={handleClickRKI}
-                      >
-                        RKI Weekly Report
-                      </p>
-                    </td>
-                    <td>
-                      <div
-                        className="hovertext questionmark hoverq"
-                        data-hover="hover text 8"
-                      >
-                        <div className="">
-                          <p> ?</p>
-                        </div>
-                      </div>
-                    </td>
-                  </div>
-                </tr>
-
-                {/*9*/}
-                <tr>
-                  <div
-                    className={`container ${isSU ? "moved" : ""}`}
-                    onClick={handleClickSU}
-                  >
-                    <td className="linelayout">
-                    <img src={SU_line}  style={{width: "35px"}}  />
-                  </td> 
-                    <td className="methodnamerow">
-                      <p
-                        className={`SU ${isSU ? "bold" : ""}`}
-                        onClick={handleClickSU}
-                      >
-                        SU hier bayes
-                      </p>
-                    </td>
-                    <td>
-                      <div
-                        className="hovertext questionmark hoverq "
-                        data-hover="hover text 9"
-                      >
-                        <div className="">
-                          <p> ?</p>
-                        </div>
-                      </div>
-                    </td>
-                  </div>
-                </tr>
-                {/*10*/}
-                <tr className="Methodechose">
-                  <div
-                    className={`container ${isSZ ? "moved" : ""}`}
-                    onClick={handleClickSZ}
-                  >
-                  <td className="linelayout">
-                    <img src={SZ_line}  style={{width: "35px"}}  />
-                  </td> 
-                    
-                    <td className="methodnamerow">
-                      <p
-                        className={`SZ ${isSZ ? "bold" : ""}`}
-                        onClick={handleClickSZ}
-                      >
-                        SZ Nowcast
-                      </p>
-                    </td>
-                    <td>
-                      <div
-                        className="hovertext questionmark hoverq"
-                        data-hover="hover text 10"
-                      >
-                        <div className="">
-                          <p> ?</p>
-                        </div>
-                      </div>
-                    </td>
-                  </div>
-                </tr>
-              
-            </div>
-          </table>
-          
-        )}
-      </div>
-      </div>
+              </table>
+            )}
+          </div>
+        </div>
       </div>
 
-      <section id="tabelle" >
+      <section id="tabelle">
         <div className="table">
           <button
             className="btn btn-light button-table rounded"
@@ -854,27 +861,27 @@ export const MethodenDiv = () => {
             <i className="fa-solid fa-caret-down"></i> Tabelle anzeigen
           </button>
           {/* {isCollapsed && ( */}
-            <div
-              className={`collapse ${!isCollapsed ? "show" : ""}`}
-              id="collapseExample"
-            >
-              <div className="card card-body card-table">
-                <Dropdown
-                  options={methodenTabelle}
-                  id="methodenSelectTabelle"
-                  dataTabelle={dataTabelleMethode}
-                  onSelectedValueChange={setdataTabelleMethode}
-                />
-                <Tabelle
-                  menuAge={menuAge}
-                  selectedScope={selectedScope}
-                  intervall={intervall}
-                  anzeige={anzeige}
-                  date={date}
-                  dataTabelleMethode={dataTabelleMethode}
-                />
-              </div>
+          <div
+            className={`collapse ${!isCollapsed ? "show" : ""}`}
+            id="collapseExample"
+          >
+            <div className="card card-body card-table">
+              <Dropdown
+                options={methodenTabelle}
+                id="methodenSelectTabelle"
+                dataTabelle={dataTabelleMethode}
+                onSelectedValueChange={setdataTabelleMethode}
+              />
+              <Tabelle
+                menuAge={menuAge}
+                selectedScope={selectedScope}
+                intervall={intervall}
+                anzeige={anzeige}
+                date={date}
+                dataTabelleMethode={dataTabelleMethode}
+              />
             </div>
+          </div>
           {/* )} */}
         </div>
       </section>

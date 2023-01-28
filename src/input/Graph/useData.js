@@ -145,11 +145,7 @@ export const useData = (
           }
 
         }        
-        
 
-        {/*d.value =(100000/10000000*(+d.mean))
-          d.quantileKlein =  (100000/10000000*(+d[unteresQuantile]))
-          d.quantileGroß =  (100000/10000000*(+d[oberesQuantile]))*/}
       } else {
         d.value = +d.mean;
         d.quantileKlein = +d[unteresQuantile];

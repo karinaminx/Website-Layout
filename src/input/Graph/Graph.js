@@ -153,8 +153,6 @@ export const Graph = ({
     .nice();
 
 
-    console.log(datenstand_schwarz);
-
   return (
     <svg width={width} height={height}>
       <g transform={`translate(${margin.left},${margin.top})`}>
@@ -301,7 +299,6 @@ export const Graph = ({
             xValue={xValue}
             yValue={yValueDatenstand}
             circleRadius={3}
-            farbe={"0,200,100"}
             anzeigeAnAus={anzeigeDatenstand}
           /> 
         </g>
