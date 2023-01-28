@@ -142,8 +142,9 @@
 .container{
   background-color: rgba(191, 192, 191, 0.418);
   border-radius: 1px;
-  border-color: grey;
   border-radius: 5px;
+  border-color: grey;
+  
   margin: 3px;
   margin-right: 10%;
   position: relative;
