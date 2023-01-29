@@ -59,19 +59,12 @@ function Kontakt() {
                 </div>
                 <div class="col-md-8 kontakttext">
                   <div class="card-body">
-                    <h5 class="card-title">Max Mustermann</h5>
-                    <p class="card-text">Professor am Institut Muster</p>
+                    <h5 class="card-title">Prof. Dr. Melanie Schienle</h5>
+                    <p class="card-text">Professorin am Karlsruher Institut für Technologie</p>
                     <p class="card-text">
-                      <table class="Kontaktdaten">
-                        <tr>
-                          <td> <small class="text-muted"> Mail </small></td>
-                          <td><a href= "mailto:max.mustermann@kit.edu"> <small class="text-muted">max.mustermann@kit.edu </small></a></td>
-                        </tr>
-                        <tr>
-                          <td> <small class="text-muted"> Telefon </small></td>
-                          <td><a href="tel:+491234"> <small class="text-muted"> +491234 </small> </a></td>
-                        </tr>
-                      </table>
+                      <div class="Kontaktdaten">
+                          <a href= "mailto:melanie.schienle@kit.edu"> <small class="text-muted">  melanie.schienle@kit.edu </small></a>
+                      </div>
                     </p>
                   </div>
                 </div>
@@ -88,19 +81,12 @@ function Kontakt() {
                 </div>
                 <div class="col-md-8 kontakttext">
                   <div class="card-body">
-                    <h5 class="card-title">Max Mustermann</h5>
-                    <p class="card-text">Professor am Institut Muster</p>
+                    <h5 class="card-title">Prof. Dr. Alexander Mädche,</h5>
+                    <p class="card-text">Professor am Karlsruher Institut für Technologie </p>
                     <p class="card-text">
-                      <table class="Kontaktdaten">
-                        <tr>
-                          <td> <small class="text-muted"> Mail </small></td>
-                          <td><a href= "mailto:max.mustermann@kit.edu"> <small class="text-muted">max.mustermann@kit.edu </small></a></td>
-                        </tr>
-                        <tr>
-                          <td> <small class="text-muted"> Telefon </small></td>
-                          <td><a href="tel:+491234"> <small class="text-muted"> +491234 </small> </a></td>
-                        </tr>
-                      </table>
+                      <div class="Kontaktdaten">
+                        <a href= "mailto: alexander.maedche@kit.edu"> <small class="text-muted">  alexander.maedche@kit.edu </small></a>
+                      </div>
                     </p>
                   </div>
                 </div>
