@@ -126,6 +126,18 @@ export const MethodenDiv = () => {
   function handleClickSZ() {
     setSZ(!isSZ);
   }
+  // hover function --------------------------------------------------------------------------------------
+ 
+  const[ isHovering, setIsHovering]  = useState(false);
+
+    function handleMouseEnter () {
+      setIsHovering (true);
+    }
+
+    function handleMouseLeave () {
+      setIsHovering (false);
+    }
+
 
   // const for the selection section on the left side of the window ----------------------------------------------------------
 
@@ -286,7 +298,9 @@ export const MethodenDiv = () => {
                 </div>
               </div>
 
-          
+              
+
+              {/* Man kann ein anderes Datum nicht auswählen. Jedoch werden sie trz. angezeigt. @Lena, kannst du dir das mal anschauen? */}
 
               <div id="filter" className="menuOptionen">
                 <label className="einführung">
@@ -329,12 +343,8 @@ export const MethodenDiv = () => {
                       />
                     </button>
                   </div>
-
-                 
                 </div>
-              </div>
-
-             
+                </div>
 
               <div id="anzeige" className="menuOptionen">
                 <label className="einführung">
@@ -416,9 +426,12 @@ export const MethodenDiv = () => {
             </section>
           </div>
         </div>
-        <div className="col-9">
+        <div className="col-9" >
           {/* Graph ----------------------------------------------------------- */}
-          <div className="GraphundMethoden">
+          <div className= "GraphundMethoden" 
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}>
+            <div className={`${isHovering ? '' : '' }`}> </div>
             <Graph
               className="graph"
               isVisible={isVisible}
