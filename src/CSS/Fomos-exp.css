@@ -51,17 +51,14 @@
 
 
   /* Buttons */
-  .row{
-    
-    text-align: center;
-    margin-right: 10px;
-    margin-left: 10px;
-  }
+ 
 
   .rowbuttons{
     padding: 30px 0 20px;
     border-radius: 5px;
-   
+    text-align: center;
+    margin-right: 10px;
+    margin-left: 10px;
   }
   
   .button{

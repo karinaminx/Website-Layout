@@ -900,7 +900,7 @@ export const MethodenDiv = () => {
         </div>
       </div>
 
-      <section id="tabelle">
+      
         <div className="table">
           <button
             className="btn btn-light button-table rounded"
@@ -933,7 +933,7 @@ export const MethodenDiv = () => {
           </div>
           {/* )} */}
         </div>
-      </section>
+                          
     </div>
   );
 };
