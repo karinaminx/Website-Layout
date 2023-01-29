@@ -286,20 +286,7 @@ export const MethodenDiv = () => {
                 </div>
               </div>
 
-              {/* 
-<div id="datenstand" className="menuOptionen">
-        <label className="einführung"><b>Datenstand</b></label>
-         <div id="inhalt">
-          <button className="btn btn-light button-anzeige rounded container">
-             <input
-                  type="date"
-                  onChange={(e) => setDate(e.target.value)}
-                  max={initialDate}
-                  min="2021-07-01"
-                />
-          </button>*/}
-
-              {/* Man kann ein anderes Datum nicht auswählen. Jedoch werden sie trz. angezeigt. @Lena, kannst du dir das mal anschauen? */}
+          
 
               <div id="filter" className="menuOptionen">
                 <label className="einführung">
@@ -343,107 +330,11 @@ export const MethodenDiv = () => {
                     </button>
                   </div>
 
-                  {/* 
-        <div id="filter" className="menuOptionen">
-          <u><label className="einführung"><b>Filter</b></label></u>
-          <div id="inhalt">
-            <div id="div1" className="visible">
-              <label for="scope-select">Bundesland:</label>
-              
-              <Dropdown
-                options={options}
-                id="scope-select"
-                selectedValue={selectedScope}
-                onSelectedValueChange={(selectedScope) => {
-                  setmenuAge("00+");
-                  setScope(selectedScope);
-                  handleDiv1Selection();
-                }}
-              /> 
-              
-
-            </div>
-
-            <div id="div2" className="hidden">
-              <label for="scope-select">Alter:</label>
-              
-              <Dropdown
-                options={optionsAge}
-                id="age-select"
-                selectedValue={menuAge}
-                onSelectedValueChange={(selectedValue) => {
-                  setmenuAge(selectedValue);
-                  setScope("DE");
-                  handleDiv2Selection();
-                }}
-              />
-              
-            </div>*/}
+                 
                 </div>
               </div>
 
-              {/*}
-        <div id="anzeige" className="menuOptionen">
-          <label className="einführung"><b>Anzeige</b></label>
-          <div id="inhalt">
-           { /*<div style={{ display: "flex", flexWrap: "wrap" }}> 
-            <div className="Anzeigel">
-              <label>Pro 100.000: </label></div>
-              <div className="Anzeiger">
-              <input
-                type="radio"
-                name="größe"
-                value="hunderttausend"
-                onChange={(e) => setAnzeige(e.target.value)}
-                checked={anzeige === "hunderttausend"}
-              />
-              </div>
-              <div className="Anzeigel">
-              <label>absolute Zahlen: </label> </div>
-              <div className="Anzeiger">{" "}
-              <input
-                type="radio"
-                name="größe"
-                value="absoluteZahlen"
-                onChange={(e) => setAnzeige(e.target.value)}
-                checked={anzeige === "absoluteZahlen"}
-              />
-              </div>
-            </div>
-        </div> 
-        
-        <label className="einführung"><b>Unsicherheitsintervall</b></label>
-          <div id="inhalt">
-          <div>
-            <div className="Anzeigel">
-              95% :</div> <div className="Anzeiger">{" "}
-              <input
-                type="radio"
-                name="unsicherheitsintervall"
-                value="FÜNFundNEUNZIG"
-                onChange={(e) => setIntervall(e.target.value)}
-              />
-              </div>
-              <div className="Anzeigel">50% :</div><div className="Anzeiger">{" "}
-              <input
-                type="radio"
-                name="unsicherheitsintervall"
-                value="FÜNFZIG"
-                onChange={(e) => setIntervall(e.target.value)}
-              />
-              </div>
-        
-        <div className="Anzeigel">keines:</div> <div className="Anzeiger">{" "}
-              <input
-                type="radio"
-                name="unsicherheitsintervall"
-                value="keines"
-                onChange={(e) => setIntervall(e.target.value)}
-                defaultChecked
-              />
-              </div>
-            </div>
-        */}
+             
 
               <div id="anzeige" className="menuOptionen">
                 <label className="einführung">
