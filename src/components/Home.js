@@ -2,7 +2,7 @@ import React from "react";
 import '../App.css';
 import '../CSS/Home.css';
 import {Route, Routes, Link} from 'react-router-dom';
-import covidlogo from '../images/SARS-CoV.png';
+import covidlogo from '../images/SARS-CoV2.png';
 import KITlogo from '../images/KITlogo.jpeg';
 import Nav from './Nav.js';
 import Footer from './Footer.js';
