@@ -157,6 +157,23 @@ export const Graph = ({
 
   const yValueDatenstand = (d) => d.value_0d;
 
+  let y = 0;
+  const yValueDatenstandBlack = (d) => 
+
+   {for (let i = 0; i <= 6; i++){
+    while([`value_${i}d`] != null){
+
+    y = y + (d-i)[`value_${i}d`] 
+
+    }
+    }
+    return y;
+  }
+
+  //for (let i = 0; i <= 80; i++) {
+  //  d[`value_${i}d`] = parseFloat(d[`value_${i}d`]);
+  //}
+
   const yValue = (d) => d.value;
   const yQuantileKlein = (d) => d.quantileKlein;
   const yQuantileGroß = (d) => d.quantileGroß;
@@ -318,7 +335,7 @@ export const Graph = ({
             xScale={xScale}
             yScale={yScale}
             xValue={xValue}
-            yValue={yValueDatenstand}
+            yValue={yValueDatenstandBlack}
             circleRadius={3}
             anzeigeAnAus={anzeigeDatenstandSchwarz}
           />

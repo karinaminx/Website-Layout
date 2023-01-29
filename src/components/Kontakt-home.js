@@ -12,7 +12,7 @@ const lngs = [
     { code: "en", native: "English" },
   ];
 
-function Kontakt() {
+function Kontakthome() {
     
     const { t, i18n } = useTranslation();
 
@@ -111,4 +111,4 @@ function Kontakt() {
     );
 }
 
-export default Kontakt;
+export default Kontakthome;

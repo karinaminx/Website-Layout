@@ -60,7 +60,7 @@ function Nav() {
             
             
             <li class="nav-item">
-                <Link style={navStyle} to="/kontakt">
+                <Link style={navStyle} to="/kontakthome">
                     <a class="nav-link" >{t("kontakt")}</a>
                 </Link>
             </li>
