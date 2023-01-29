@@ -1,12 +1,10 @@
 import React from "react";
 import '../CSS/Kontakt.css';
 import Bild_Melanie_Schienle from '../images/Bild_Melanie_Schienle.jpeg';
-import Bild_Alexander_Mädche from '../images/Bild_Alexander_Mädche.jpg';
 import Bild_Johannes_Bracher from '../images/Bild_Johannes_Bracher.png';
-import Bild_Jonas_Gunklach from '../images/Bild_Jonas_Gunklach.jpeg';
 import {Route, Routes, Link} from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import NavFomos from './Nav-Fomos.js';
+import NavFomos from './Nav.js';
 import Footer from './Footer.js';
 
 const lngs = [
