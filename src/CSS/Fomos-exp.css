@@ -65,8 +65,9 @@
     outline: black;
     color: black;
     font-size: 1.0rem;
-    outline: 1px solid;
+    border: 1px solid;
     margin: 1px;
+
   }
 
 
