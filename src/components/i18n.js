@@ -140,27 +140,39 @@ i18n
         methoden_headline: "METHODEN",
         methoden_text: "Alle Methoden auf einen Blick.",
 
-        method1: "ILM-prop (TU Ilmenau)",
-        method1_text: "Diese Nowcasts verwenden die in der Vergangenheit beobachteten, an der 7-Tage-Inzidenz der COVID-19 Fällen anteiligen, 7-Tage-Hospitalisierungsinzidenz nach einer, zwei usw. Wochen. Von der heute bekannten 7-Tage-Inzidenz werden dann diese Anteile berechnet und aufsummiert um die finale Anzahl an 7-Tage-Hospitalisierungen vorherzusagen. Die Unsicherheit wird durch Anwendung der Methode auf vergangene Zeitpunkte quantifiziert, wobei eine Log-Normalverteilung (Altersgruppen) beziehungsweise Normalverteilung (Summe über alle Altersgruppen) für die Vorhersagefehler angesetzt wird. Die Hauptannahme dieses Verfahrens ist, dass sich der Anteil von Hospitalisierungen an der 7-Tage-Inzidenz und die Verzüge von Meldedatum des Falls bis dieser in den RKI-Daten erscheint nur langsam ändert.",
-        method2: "KIT-simple_nowcast (Karlsruher Institut für Technologie)",
-        method2_text: "Das Nowcasting beruht auf einer einfachen Schätzung der Verteilung der Verzögerungsdauern zwischen Meldedatum und Erscheinen einer Hospitalisierung in den RKI-Daten (basierend auf den letzten 60 Tagen). Aus diesen werden Multiplikationsfaktoren abgeleitet, mit denen die jeweils unvollständigen aktuellsten Beobachtungen nach oben korrigiert werden. Um die Nowcast-Unsicherheit zu beurteilen werden derartige korrigierte Werte auch für vergangene Zeitpunkte (basierend jeweils auf der damals verfügbaren Information) generiert und mit den entsprechenden später gemachten Beobachtungen verglichen. Hierfür wird eine negative Binomialverteilung angenommen, deren Streuungsparameter vom zeitlichen Abstand zwischen Meldedatum und Zeitpunkt des Nowcats abhängt. Die Schätzung der Streuungsparameter erfolgt mittels der Maximum Likelihood-Methode. Dieses Verfahren ist bewusst einfach gehalten und hat die Funktion eines Referenz-/Baseline-Modells in unserer vergleichenden Evaluationsstudie (siehe unten). Die zentrale Annahme besteht darin, dass die Struktur der Meldeverzüge zeitlich stabil bleibt. Z.B. Wochentagseffekte oder Entwicklungen der Fallzahlen werden nicht berücksichtigt.",
-        method3: "LMU_StaBLab-GAM_nowcast (LMU München)",
-        method3_text: "Die Nowcasts beruhen auf einem generalisierten additiven Modell und der sequenziellen Multinomialstruktur der zeitlichen Verzögerungen. Das Modell ist eine geringfügig angepasste Version des Verfahrens von Schneble et al. (2020) zum Nowcasting von tödlich verlaufenden Infektionen.",
-        method4: "RIVM-KEW (RIVM (Rijksinstituut voor Volksgezondheid en Milieu), Bilthoven, Niederlande)",
-        method4_text: "Dieses Modell ist eine vereinfachte Version des Verfahrens von van de Kassteele, Eilers und Wallinga (Epidemiology, 2019). Für die berichteten Zählwerte pro Meldedatum und Verzögerung wird eine negative Binomialverteilung angenommen. Die erwarteten Werte werden mittels einer zweidimensionalen P-Spline-Oberfläche und weiteren Kovariablen modelliert. Diese Oberfläche wird für die noch nicht beobachteten Kombinationen von Datums- und Verzögerungswert extrapoliert. Der Nowcast für ein Meldedatum entspricht dann der Summe über die entsprechenden beobachteten und extrapolierten Zählwerte pro Verzögerungsdauer. Vorhersageintervalle werden per Monte-Carlo-Simulation aus der entsprechenden prädiktiven Verteilung generiert. Die vereinfachte Version des Modells enthält keine Interaktionsterme für Kalenderzeit und Verzögerung und keine Unimodalitäts- oder Boundary-Restriktionen. Das Modell wird mittels des R-Pakets mgcv angepasst.",
-        method5: "RKI-weekly_report (Robert Koch Institut)",
-        method5_text: "Hierbei handelt es sich um Schätzungen, die zunächst jeweils Donnerstags in den Wochenberichten des Robert Koch Instituts veröffentlicht wurden und mittlerweile täglich im COVID-19 Trends Dashboard erscheinen. Diese basieren auf einer modifizierten Variante der Nowcastingberechnung zur 7-Tage-Inzidenz.",
-        method6: "SU-hier_bayes (Universität Stockholm)",
-        method6_text: "tba",
-        method7: "SZ-hosp_nowcast (Süddeutsche Zeitung)",
-        method7_text: "Die SZ schätzt die Werte für das Nowcasting der Hospitalisierungsinzidenz auf Basis der Abweichungen zwischen täglich veröffentlichten und nachträglich korrigierten Werten, die durch Nachmeldungen entstehen. Dabei werden die archivierten Datensätze des Robert-Koch-Instituts (https://github.com/robert-koch-institut/COVID-19-Hospitalisierungen_in_Deutschland) der vergangenen 60 Tage analysiert. Jeweils für die 25 Tage vor dem letzten Datum im Datensatz wird berechnet, um wie viel Prozent der an späteren Tagen gemeldete korrigierte Wert von der ursprünglich gemeldeten Hospitalisierungsinzidenz abweicht. Für diese abgeleiteten Multiplikationsfaktoren werden Quantile berechnet. Die aktuell veröffentlichte Inzidenz wird mit den berechneten Quantilen multipliziert, um die Hospitalisierungsinzidenz zu schätzen. Abschließend wird die Hospitalisierungsinzidenz über ein Drei-Tage-Fenster geglättet, um unrealistische größere Schwankungen auszugleichen.",
-        method8: "Epiforecasts-independent (London School of Hygiene and Tropical Medicine / epiforecasts)",
-        method8_text: "Ein semiparametrisches Nowcasting-Verfahren für rechszensierte Hospitalisierungen nach Datum des positiven Tests. Hospitalisierungen werden mittels eines Random-Walk auf der log-Skala modelliert. Reporting-Verzögerungen werden anschließend parametrisch mit einer log-Normalverteilung modelliert, wobei der log-Erwartungswert und die log-Standardabweichung einem wöchentlichen Random-Walk mit gemeinsamer Standardabweichung folgen. Wochentagseffekte im Reporting werden mit zufälligen Effekten modelliert, wobei Feiertage wie Sonntage behandelt werden. Nowcasts für Altersgruppen und geographische Einheiten werden jeweils separat erstellt (daher der Name des Modells). Das Modell ist im R-Paket epinowcast implementiert. Der Analyse-Code ist hier verfügbar. Anmerkung: In einer zweiten Version des Modells (bisher nicht angezeigt) werden die verschiedenen Zeitreihen gemeinsam modelliert (Epiforecasts-hierarchical).",
-        method9: "NowcastHub-MeanEnsemble",
-        method9_text: "Dieses Ensemble berechnet sich als der quantilsweise Mittelwert der eingereichten Modelle mit vollständigen Nowcasts (28 bis 0 Tage vor dem aktuellen Datum).",
+        method1: "Epiforecasts-independent (London School of Hygiene and Tropical Medicine / epiforecasts)",
+        method1_text: "Ein semiparametrisches Nowcasting-Verfahren für rechszensierte Hospitalisierungen nach Datum des positiven Tests. Hospitalisierungen werden mittels eines Random-Walk auf der log-Skala modelliert. Reporting-Verzögerungen werden anschließend parametrisch mit einer log-Normalverteilung modelliert, wobei der log-Erwartungswert und die log-Standardabweichung einem wöchentlichen Random-Walk mit gemeinsamer Standardabweichung folgen. Wochentagseffekte im Reporting werden mit zufälligen Effekten modelliert, wobei Feiertage wie Sonntage behandelt werden. Nowcasts für Altersgruppen und geographische Einheiten werden jeweils separat erstellt (daher der Name des Modells). Das Modell ist im R-Paket epinowcast implementiert. Der Analyse-Code ist hier verfügbar. Anmerkung: In einer zweiten Version des Modells (bisher nicht angezeigt) werden die verschiedenen Zeitreihen gemeinsam modelliert (Epiforecasts-hierarchical).",
+        method2: "ILM-prop (TU Ilmenau)",
+        method2_text: "Diese Nowcasts verwenden die in der Vergangenheit beobachteten, an der 7-Tage-Inzidenz der COVID-19 Fällen anteiligen, 7-Tage-Hospitalisierungsinzidenz nach einer, zwei usw. Wochen. Von der heute bekannten 7-Tage-Inzidenz werden dann diese Anteile berechnet und aufsummiert um die finale Anzahl an 7-Tage-Hospitalisierungen vorherzusagen. Die Unsicherheit wird durch Anwendung der Methode auf vergangene Zeitpunkte quantifiziert, wobei eine Log-Normalverteilung (Altersgruppen) beziehungsweise Normalverteilung (Summe über alle Altersgruppen) für die Vorhersagefehler angesetzt wird. Die Hauptannahme dieses Verfahrens ist, dass sich der Anteil von Hospitalisierungen an der 7-Tage-Inzidenz und die Verzüge von Meldedatum des Falls bis dieser in den RKI-Daten erscheint nur langsam ändert.",
+        method3: "KIT-simple_nowcast (Karlsruher Institut für Technologie)",
+        method3_text: "Das Nowcasting beruht auf einer einfachen Schätzung der Verteilung der Verzögerungsdauern zwischen Meldedatum und Erscheinen einer Hospitalisierung in den RKI-Daten (basierend auf den letzten 60 Tagen). Aus diesen werden Multiplikationsfaktoren abgeleitet, mit denen die jeweils unvollständigen aktuellsten Beobachtungen nach oben korrigiert werden. Um die Nowcast-Unsicherheit zu beurteilen werden derartige korrigierte Werte auch für vergangene Zeitpunkte (basierend jeweils auf der damals verfügbaren Information) generiert und mit den entsprechenden später gemachten Beobachtungen verglichen. Hierfür wird eine negative Binomialverteilung angenommen, deren Streuungsparameter vom zeitlichen Abstand zwischen Meldedatum und Zeitpunkt des Nowcats abhängt. Die Schätzung der Streuungsparameter erfolgt mittels der Maximum Likelihood-Methode. Dieses Verfahren ist bewusst einfach gehalten und hat die Funktion eines Referenz-/Baseline-Modells in unserer vergleichenden Evaluationsstudie (siehe unten). Die zentrale Annahme besteht darin, dass die Struktur der Meldeverzüge zeitlich stabil bleibt. Z.B. Wochentagseffekte oder Entwicklungen der Fallzahlen werden nicht berücksichtigt.",
+        method4: "LMU_StaBLab-GAM_nowcast (LMU München)",
+        method4_text: "Die Nowcasts beruhen auf einem generalisierten additiven Modell und der sequenziellen Multinomialstruktur der zeitlichen Verzögerungen. Das Modell ist eine geringfügig angepasste Version des Verfahrens von Schneble et al. (2020) zum Nowcasting von tödlich verlaufenden Infektionen.",
+        method5: "NowcastHub-MeanEnsemble",
+        method5_text: "Dieses Ensemble berechnet sich als der quantilsweise Mittelwert der eingereichten Modelle mit vollständigen Nowcasts (28 bis 0 Tage vor dem aktuellen Datum).",
+        method6: "RIVM-KEW (RIVM (Rijksinstituut voor Volksgezondheid en Milieu), Bilthoven, Niederlande)",
+        method6_text: "Dieses Modell ist eine vereinfachte Version des Verfahrens von van de Kassteele, Eilers und Wallinga (Epidemiology, 2019). Für die berichteten Zählwerte pro Meldedatum und Verzögerung wird eine negative Binomialverteilung angenommen. Die erwarteten Werte werden mittels einer zweidimensionalen P-Spline-Oberfläche und weiteren Kovariablen modelliert. Diese Oberfläche wird für die noch nicht beobachteten Kombinationen von Datums- und Verzögerungswert extrapoliert. Der Nowcast für ein Meldedatum entspricht dann der Summe über die entsprechenden beobachteten und extrapolierten Zählwerte pro Verzögerungsdauer. Vorhersageintervalle werden per Monte-Carlo-Simulation aus der entsprechenden prädiktiven Verteilung generiert. Die vereinfachte Version des Modells enthält keine Interaktionsterme für Kalenderzeit und Verzögerung und keine Unimodalitäts- oder Boundary-Restriktionen. Das Modell wird mittels des R-Pakets mgcv angepasst.",
+        method7: "RKI-weekly_report (Robert Koch Institut)",
+        method7_text: "Hierbei handelt es sich um Schätzungen, die zunächst jeweils Donnerstags in den Wochenberichten des Robert Koch Instituts veröffentlicht wurden und mittlerweile täglich im COVID-19 Trends Dashboard erscheinen. Diese basieren auf einer modifizierten Variante der Nowcastingberechnung zur 7-Tage-Inzidenz.",
+        method8: "SU-hier_bayes (Universität Stockholm)",
+        method8_text: "tba",
+        method9: "SZ-hosp_nowcast (Süddeutsche Zeitung)",
+        method9_text: "Die SZ schätzt die Werte für das Nowcasting der Hospitalisierungsinzidenz auf Basis der Abweichungen zwischen täglich veröffentlichten und nachträglich korrigierten Werten, die durch Nachmeldungen entstehen. Dabei werden die archivierten Datensätze des Robert-Koch-Instituts (https://github.com/robert-koch-institut/COVID-19-Hospitalisierungen_in_Deutschland) der vergangenen 60 Tage analysiert. Jeweils für die 25 Tage vor dem letzten Datum im Datensatz wird berechnet, um wie viel Prozent der an späteren Tagen gemeldete korrigierte Wert von der ursprünglich gemeldeten Hospitalisierungsinzidenz abweicht. Für diese abgeleiteten Multiplikationsfaktoren werden Quantile berechnet. Die aktuell veröffentlichte Inzidenz wird mit den berechneten Quantilen multipliziert, um die Hospitalisierungsinzidenz zu schätzen. Abschließend wird die Hospitalisierungsinzidenz über ein Drei-Tage-Fenster geglättet, um unrealistische größere Schwankungen auszugleichen.",
         method10: "NowcastHub-MedianEnsemble",
         method10_text: "Dieses Ensemble berechnet sich als der quantilsweise Median der eingereichten Modelle mit vollständigen Nowcasts (28 bis 0 Tage vor dem aktuellen Datum).",
     
+
+        /* hover Texte Graph*/
+        hover1: "",
+        hover2: "",
+        hover3: "",
+        hover4: "",
+        hover5: "",
+        hover6: "",
+        hover7: "",
+        hover8: "",
+        hover9: "",
+        hover10: "Abweichungen zwischen täglich veröffentlichten und nachträglich korrigierten Werten"
     }
       },
       en: {
@@ -314,7 +326,17 @@ i18n
     
         
 
-
+        /* hover Texte Graph*/
+        hover1: "",
+        hover2: "",
+        hover3: "",
+        hover4: "",
+        hover5: "",
+        hover6: "",
+        hover7:"",
+        hover8:"",
+        hover9:"",
+        hover10:""
 
 
 
