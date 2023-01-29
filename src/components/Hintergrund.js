@@ -113,7 +113,7 @@ function Hintergrund() {
     <section id="title">
         {/* Überschrift */}
         <div class="title">
-          <i class="fa-regular fa-dash line"></i>
+        <i class="fa-regular fa-dash lineheader"></i>
             <div class="titel-text">
             <h1>{t("methoden_headline")}</h1>
             </div>

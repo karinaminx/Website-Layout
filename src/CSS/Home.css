@@ -36,7 +36,7 @@
   color: black;
 }
 .btn-outline-secondary{
-  --bs-btn-hover-bg: rgba(79, 173, 92, 0.418);
+  --bs-btn-hover-bg: rgb(64, 143, 243);
   
   }
 

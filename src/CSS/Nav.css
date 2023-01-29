@@ -47,7 +47,7 @@
    color: black;
   }
   .dropdown-item:hover{
-    background-color: rgba(79, 173, 92, 0.418);
+    background-color: rgb(64, 143, 243);
   }
 
   .navbar-toggler{
