@@ -73,35 +73,7 @@ function Home() {
           </div>
         </div>
 
-        {/*zweite Reihe*/ }
-      <div class="card-group">
-        <div class="card rounded project-box">
-          <img src={KITlogo} class="card-img-top" alt="Schaubild Forecasting" />
-          <div class="card-body">
-            <h5 class="card-title">{t("four_headline")}</h5>
-            <p class="card-text">{t("four_explain")}</p>
-            <a href="#" class="btn btn-outline-secondary forecastingbutton">{t("forecasting_button")}</a>
-          </div>
-        </div>
-
-        <div class="card rounded project-box" href="https://getbootstrap.com/docs/5.2/components/card/">
-          <img src={KITlogo} class="card-img-top" alt="Schaubild Forecasting" />
-          <div class="card-body">
-            <h5 class="card-title">{t("five_headline")}</h5>
-            <p class="card-text">{t("five_explain")}</p>
-            <a href="#" class="btn btn-outline-secondary forecastingbutton">{t("forecasting_button")}</a>
-          </div>
-        </div>
-
-        <div class="card rounded project-box">
-          <img src={KITlogo} class="card-img-top" alt="Schaubild Forecasting" />
-          <div class="card-body">
-            <h5 class="card-title">{t("six_headline")}</h5>
-            <p class="card-text">{t("six_explain")}</p>
-            <a href="#" class="btn btn-outline-secondary forecastingbutton">{t("forecasting_button")}</a>
-          </div>
-        </div>
-      </div>
+     
     </section>
 
 
