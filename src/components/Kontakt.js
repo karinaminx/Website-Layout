@@ -54,11 +54,11 @@ function Kontakt() {
     <div class="">
     
       
-      <div id="Kontaktkarte1">
-            <div class="card mb-3 Kontaktkarte" >
+    <div id="Kontaktkarte1">
+            <div class="card mb-2 Kontaktkarte" >
               <div class="row g-0">
                 <div class="col-md-4">
-                  <img src={Platzhalter_Bild} class="img-fluid rounded-start" alt="Platzhalter"></img>
+                  <img src={Bild_Melanie_Schienle} class="img-fluid rounded-start contact_picture1" alt="Bild"></img>
                 </div>
                 <div class="col-md-8 kontakttext">
                   <div class="card-body">
@@ -76,15 +76,15 @@ function Kontakt() {
         </div>
 
 
-      <div id="Kontaktkarte2">
+        <div id="Kontaktkarte2">
             <div class="card mb-3 Kontaktkarte" >
               <div class="row g-0">
                 <div class="col-md-4">
-                  <img src={Platzhalter_Bild} class="img-fluid rounded-start" alt="Platzhalter"></img>
+                  <img src={Bild_Alexander_Mädche} class="img-fluid rounded-start contact_picture1" alt="Bild"></img>
                 </div>
                 <div class="col-md-8 kontakttext">
                   <div class="card-body">
-                    <h5 class="card-title">Prof. Dr. Alexander Mädche,</h5>
+                    <h5 class="card-title">Prof. Dr. Alexander Mädche</h5>
                     <p class="card-text">Professor am Karlsruher Institut für Technologie </p>
                     <p class="card-text">
                       <div class="Kontaktdaten">
@@ -100,17 +100,17 @@ function Kontakt() {
 
         <div id="Kontaktkarte3">
             <div class="card mb-3 Kontaktkarte" >
-              <div class="row g-0">
-                <div class="col-md-4">
-                  <img src={Platzhalter_Bild} class="img-fluid rounded-start" alt="Platzhalter"></img>
+              <div class="row g-0 contact_sm">
+                <div class="col-md-4 contact_picture">
+                  <img src={Bild_Johannes_Bracher} class="img-fluid rounded-start contact_picture2" alt="Bild"></img>
                 </div>
                 <div class="col-md-8 kontakttext">
                   <div class="card-body">
-                    <h5 class="card-title">Prof. Dr. Alexander Mädche,</h5>
-                    <p class="card-text">Professor am Karlsruher Institut für Technologie </p>
+                    <h5 class="card-title">Dr. Johannes Bracher</h5>
+                    <p class="card-text">Karlsruher Institut für Technologie </p>
                     <p class="card-text">
                       <div class="Kontaktdaten">
-                        <a href= "mailto: alexander.maedche@kit.edu"> <small class="text-muted">  alexander.maedche@kit.edu </small></a>
+                        <a href= "mailto: johannes.bracher@kit.edu"> <small class="text-muted">  johannes.bracher@kit.edu </small></a>
                       </div>
                     </p>
                   </div>
@@ -121,17 +121,17 @@ function Kontakt() {
 
         <div id="Kontaktkarte4">
             <div class="card mb-3 Kontaktkarte" >
-              <div class="row g-0">
+              <div class="row g-0 contact_sm">
                 <div class="col-md-4">
-                  <img src={Platzhalter_Bild} class="img-fluid rounded-start" alt="Platzhalter"></img>
+                  <img src={Bild_Jonas_Gunklach} class="img-fluid rounded-start contact_picture2" alt="Bild"></img>
                 </div>
                 <div class="col-md-8 kontakttext">
                   <div class="card-body">
-                    <h5 class="card-title">Prof. Dr. Alexander Mädche,</h5>
-                    <p class="card-text">Professor am Karlsruher Institut für Technologie </p>
+                    <h5 class="card-title">M. Sc. Jonas Gunklach</h5>
+                    <p class="card-text">Karlsruher Institut für Technologie </p>
                     <p class="card-text">
                       <div class="Kontaktdaten">
-                        <a href= "mailto: alexander.maedche@kit.edu"> <small class="text-muted">  alexander.maedche@kit.edu </small></a>
+                        <a href= "mailto: jonas.gunklach@kit.edu"> <small class="text-muted">  jonas.gunklach@kit.edu </small></a>
                       </div>
                     </p>
                   </div>
@@ -140,7 +140,7 @@ function Kontakt() {
             </div>
         </div>
       </div>
-
+      
     </div>
     </div>
 
