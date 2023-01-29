@@ -93,6 +93,49 @@ function Kontakt() {
               </div>
             </div>
         </div>
+
+
+        <div id="Kontaktkarte3">
+            <div class="card mb-3 Kontaktkarte" >
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img src={Platzhalter_Bild} class="img-fluid rounded-start" alt="Platzhalter"></img>
+                </div>
+                <div class="col-md-8 kontakttext">
+                  <div class="card-body">
+                    <h5 class="card-title">Prof. Dr. Alexander Mädche,</h5>
+                    <p class="card-text">Professor am Karlsruher Institut für Technologie </p>
+                    <p class="card-text">
+                      <div class="Kontaktdaten">
+                        <a href= "mailto: alexander.maedche@kit.edu"> <small class="text-muted">  alexander.maedche@kit.edu </small></a>
+                      </div>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <div id="Kontaktkarte4">
+            <div class="card mb-3 Kontaktkarte" >
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img src={Platzhalter_Bild} class="img-fluid rounded-start" alt="Platzhalter"></img>
+                </div>
+                <div class="col-md-8 kontakttext">
+                  <div class="card-body">
+                    <h5 class="card-title">Prof. Dr. Alexander Mädche,</h5>
+                    <p class="card-text">Professor am Karlsruher Institut für Technologie </p>
+                    <p class="card-text">
+                      <div class="Kontaktdaten">
+                        <a href= "mailto: alexander.maedche@kit.edu"> <small class="text-muted">  alexander.maedche@kit.edu </small></a>
+                      </div>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
       </div>
 
     </div>
