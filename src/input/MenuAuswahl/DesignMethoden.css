@@ -63,8 +63,10 @@
   
   border-radius: 5px;
   border: 0px;
+  
 
 }
+
 
 
 .card-body-method{    
@@ -93,7 +95,7 @@
   
 }
 .btn-outline-dark:hover{
-  background-color: rgba(79, 173, 92, 0.418);
+  background-color: rgba(64, 142, 243, 0.266);
   color: black;
 }
 
@@ -118,6 +120,8 @@
   margin-left: 5%;
 
 }
+
+
 
 .auswahl {
   cursor: pointer;

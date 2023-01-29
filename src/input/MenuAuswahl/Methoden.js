@@ -245,11 +245,11 @@ export const MethodenDiv = () => {
           onClick={handleClick}
         >
           {isVisible ? (
-            <p>
+            <p >
               <i className="fa-solid fa-caret-right"></i> Methoden ausblenden
             </p>
           ) : (
-            <p>
+            <p >
               <i className="fa-solid fa-caret-left"></i> Methoden einblenden
             </p>
           )}
