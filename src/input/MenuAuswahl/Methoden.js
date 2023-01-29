@@ -104,6 +104,8 @@ export const MethodenDiv = () => {
     }
   }
 
+
+
   console.log(isILM);
   function handleClickKIT() {
     setKIT(!isKIT);
@@ -245,11 +247,11 @@ export const MethodenDiv = () => {
           onClick={handleClick}
         >
           {isVisible ? (
-            <p >
+            <p>
               <i className="fa-solid fa-caret-right"></i> Methoden ausblenden
             </p>
           ) : (
-            <p >
+            <p>
               <i className="fa-solid fa-caret-left"></i> Methoden einblenden
             </p>
           )}
@@ -450,27 +452,30 @@ export const MethodenDiv = () => {
                   <b>Anzeige</b>
                 </label>
                 <div id="inhalt">
-                  <button className="btn btn-light button-anzeige rounded ">
-                    <label>Pro 100.000 </label>
-                    <input
-                      type="radio"
-                      name="größe"
-                      value="hunderttausend"
-                      onChange={(e) => setAnzeige(e.target.value)}
-                      checked={anzeige === "hunderttausend"}
-                    />
-                  </button>
-
-                  <button className="btn btn-light button-anzeige rounded">
-                    <label>absolute Zahlen </label>{" "}
-                    <input
-                      type="radio"
-                      name="größe"
-                      value="absoluteZahlen"
-                      onChange={(e) => setAnzeige(e.target.value)}
-                      checked={anzeige === "absoluteZahlen"}
-                    />
-                  </button>
+                  <button
+                        className="btn btn-light button-anzeige rounded"
+                        onClick={() => setAnzeige("hunderttausend")}
+                      >
+                        <label>Pro 100.000</label>
+                        <input
+                          type="radio"
+                          name="größe"
+                          value="hunderttausend"
+                          checked={anzeige === "hunderttausend"}
+                        />
+                      </button>
+                      <button
+                          className="btn btn-light button-anzeige rounded"
+                          onClick={() => setAnzeige("absoluteZahlen")}
+                        >
+                          <label>absolute Zahlen</label>
+                          <input
+                            type="radio"
+                            name="größe"
+                            value="absoluteZahlen"
+                            checked={anzeige === "absoluteZahlen"}
+                          />
+                        </button>
                 </div>
               </div>
 
@@ -479,35 +484,44 @@ export const MethodenDiv = () => {
                   <b>Unsicherheitsintervall</b>
                 </label>
                 <div id="inhalt">
-                  <button className="btn btn-light button-unsicherheitsintervall rounded ">
-                    <label className="usi"> 95% </label>
-                    <input
-                      type="radio"
-                      name="unsicherheitsintervall"
-                      value="FÜNFundNEUNZIG"
-                      onChange={(e) => setIntervall(e.target.value)}
-                      defaultChecked
-                    />
-                  </button>
-                  <button className="btn btn-light button-unsicherheitsintervall rounded ">
-                    <label className="usi"> 50% </label>
-                    <input
-                      type="radio"
-                      name="unsicherheitsintervall"
-                      value="FÜNFZIG"
-                      onChange={(e) => setIntervall(e.target.value)}
-                    />
-                  </button>
+                <button
+                      className="btn btn-light button-unsicherheitsintervall rounded"
+                      onClick={() => setIntervall("FÜNFundNEUNZIG")}
+                    >
+                      <label className="usi">95%</label>
+                      <input
+                        type="radio"
+                        name="unsicherheitsintervall"
+                        value="FÜNFundNEUNZIG"
+                        checked={intervall === "FÜNFundNEUNZIG"}
+                      />
+                    </button>
+                    <button
+                        className="btn btn-light button-unsicherheitsintervall rounded"
+                        onClick={() => setIntervall("FÜNFZIG")}
+                      >
+                        <label className="usi">50%</label>
+                        <input
+                          type="radio"
+                          name="unsicherheitsintervall"
+                          value="FÜNFZIG"
+                          checked={intervall === "FÜNFZIG"}
+                        />
+                      </button>
 
-                  <button className="btn btn-light button-unsicherheitsintervall rounded ">
-                    <label className="usi"> keines </label>
-                    <input
-                      type="radio"
-                      name="unsicherheitsintervall"
-                      value="keines"
-                      onChange={(e) => setIntervall(e.target.value)}
-                    />
-                  </button>
+
+                      <button
+                          className="btn btn-light button-unsicherheitsintervall rounded"
+                          onClick={() => setIntervall("keines")}
+                        >
+                          <label className="usi">keines</label>
+                          <input
+                            type="radio"
+                            name="unsicherheitsintervall"
+                            value="keines"
+                            checked={intervall === "keines"}
+                          />
+                        </button>
                 </div>
               </div>
             </section>
@@ -580,7 +594,7 @@ export const MethodenDiv = () => {
                           data-hover="hover text 1"
                         >
                           <div className="">
-                            <p> ?</p>
+                            <p> ⓘ</p>
                           </div>
                         </div>
                       </td>
@@ -614,7 +628,7 @@ export const MethodenDiv = () => {
                           data-hover="hover text 1"
                         >
                           <div className="">
-                            <p> ?</p>
+                            <p> ⓘ</p>
                           </div>
                         </div>
                       </td>
@@ -643,11 +657,11 @@ export const MethodenDiv = () => {
                       </td>
                       <td>
                         <div
-                          className="hovertext questionmark hoverq"
+                          className="hovertext questionmark"
                           data-hover="hover text 1"
                         >
                           <div className="">
-                            <p> ?</p>
+                            <p> ⓘ</p>
                           </div>
                         </div>
                       </td>
@@ -678,7 +692,7 @@ export const MethodenDiv = () => {
                           data-hover="hover text 3"
                         >
                           <div className="">
-                            <p> ?</p>
+                            <p> ⓘ</p>
                           </div>
                         </div>
                       </td>
@@ -709,7 +723,7 @@ export const MethodenDiv = () => {
                           data-hover="hover text 4"
                         >
                           <div className="">
-                            <p> ?</p>
+                            <p> ⓘ</p>
                           </div>
                         </div>
                       </td>
@@ -739,7 +753,7 @@ export const MethodenDiv = () => {
                           data-hover="hover text 5"
                         >
                           <div className="">
-                            <p> ?</p>
+                            <p> ⓘ</p>
                           </div>
                         </div>
                       </td>
@@ -769,7 +783,7 @@ export const MethodenDiv = () => {
                           data-hover="hover text 6"
                         >
                           <div className="">
-                            <p> ?</p>
+                            <p> ⓘ</p>
                           </div>
                         </div>
                       </td>
@@ -798,7 +812,7 @@ export const MethodenDiv = () => {
                           data-hover="hover text 7"
                         >
                           <div className="">
-                            <p> ?</p>
+                            <p> ⓘ</p>
                           </div>
                         </div>
                       </td>
@@ -827,7 +841,7 @@ export const MethodenDiv = () => {
                           data-hover="hover text 8"
                         >
                           <div className="">
-                            <p> ?</p>
+                            <p> ⓘ</p>
                           </div>
                         </div>
                       </td>
@@ -857,7 +871,7 @@ export const MethodenDiv = () => {
                           data-hover="hover text 9"
                         >
                           <div className="">
-                            <p> ?</p>
+                            <p> ⓘ</p>
                           </div>
                         </div>
                       </td>
@@ -887,7 +901,7 @@ export const MethodenDiv = () => {
                           data-hover="hover text 10"
                         >
                           <div className="">
-                            <p> ?</p>
+                            <p> ⓘ</p>
                           </div>
                         </div>
                       </td>
