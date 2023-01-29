@@ -643,7 +643,7 @@ export const MethodenDiv = () => {
                       </td>
                       <td>
                         <div
-                          className="hovertext questionmark"
+                          className="hovertext questionmark hoverq"
                           data-hover="hover text 1"
                         >
                           <div className="">

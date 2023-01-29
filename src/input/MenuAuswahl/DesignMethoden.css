@@ -210,9 +210,12 @@
  .hoverq:before{
   width: 200px;
   position: absolute;
-    left: -150px;
-    top: -28px;
+    left: -400%;
+    top: -50%;
   z-index: 1;
+  padding: 2%;
+
+ 
   
  }
 
