@@ -559,8 +559,8 @@ export const MethodenDiv = () => {
                       </td>
                       <td>
                         <div
-                          className="hovertext questionmark"
-                          data-hover="hover text 1"
+                          className="hovertext questionmark hoverq"
+                          data-hover="hover text 2"
                         >
                           <div className="">
                             <p> ⓘ</p>

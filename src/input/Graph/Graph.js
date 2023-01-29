@@ -155,24 +155,38 @@ export const Graph = ({
   const xValue = (d) => d.date;
   const xAxisLabel = "Meldedatum";
 
-  const yValueDatenstand = (d) => d.value_0d;
+  const yValueDatenstand = (d) =>  d.value_0d;
+  const yValueDatenstandBlack = (d) =>  d.value_0d;
 
-  let y = 0;
-  const yValueDatenstandBlack = (d) => 
-
-   {for (let i = 0; i <= 6; i++){
-    while([`value_${i}d`] != null){
-
-    y = y + (d-i)[`value_${i}d`] 
-
+  /*let y = 0;
+  const yValueDatenstandBlack = (d) => {
+    
+    for (let i = 0; i <= 6; i++){
+    
+    let j = 0;
+    while((d-i)[`value_${j}d`] !== null && j <= 80){
+      
+    y = y + (d-i)[`value_${j}d`] 
+    j++;
     }
     }
     return y;
-  }
+   } */
 
-  //for (let i = 0; i <= 80; i++) {
-  //  d[`value_${i}d`] = parseFloat(d[`value_${i}d`]);
-  //}
+   /* let overallSum = 0;
+      for (let i = 0; i <= 6; i++) {
+        let date = new Date(d.date.getTime() - i * 24 * 60 * 60 * 1000);
+        for (let j = 0; j <= 80; j++) {
+          let value = d[`value_${j}d`];
+          if (value !== null) {
+            overallSum += parseFloat(value);
+          }
+        }
+      }
+    
+      return overallSum;
+    }; */
+
 
   const yValue = (d) => d.value;
   const yQuantileKlein = (d) => d.quantileKlein;
