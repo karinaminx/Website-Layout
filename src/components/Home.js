@@ -2,7 +2,7 @@ import React from "react";
 import '../App.css';
 import '../CSS/Home.css';
 import {Route, Routes, Link} from 'react-router-dom';
-import covidlogo from '../images/covid.jpeg';
+import covidlogo from '../images/SARS-CoV.png';
 import KITlogo from '../images/KITlogo.jpeg';
 import Nav from './Nav.js';
 import Footer from './Footer.js';
@@ -44,7 +44,7 @@ function Home() {
         { /* erste Reihe  */ }
       <div class="card-group">
           <div class="card rounded project-box">
-            <img src={covidlogo}  class="card-img-top" alt="Schaubild Forecasting" />
+            <img src={covidlogo}  class="card-img-top schaubild" alt="Schaubild Forecasting" />
             <div class="card-body card-project">
               <h5 class="card-title">{t("corona_headline")}</h5>
               <p class="card-text">{t("corona_explain")}</p>
