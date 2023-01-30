@@ -73,7 +73,7 @@ function NavFomos() {
                 </Link>
             </li>
             <li class="nav-item">
-                <Link style={navStyle} to="/kontakthome">
+                <Link style={navStyle} to="/kontaktfomos">
                     <a class="nav-link" >{t("kontakt")}</a>
                 </Link>
             </li>

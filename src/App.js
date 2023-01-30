@@ -9,7 +9,7 @@ import Fomosmain from './components/Fomos-main';
 import Fomosexp from './components/Fomos-exp';
 import FAQ from './components/FAQ';
 import Footer from './components/Footer';
-import Kontakthome from './components/Kontakt-home';
+import KontaktFomos from './components/Kontakt-Fomos';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 
@@ -22,7 +22,7 @@ function App() {
           <Route path="" element={<Home />} />
           <Route path="/hintergrund" element={<Hintergrund />} /> 
           <Route path="/kontakt" element={<Kontakt />} /> 
-          <Route path="/kontakthome" element={<Kontakthome />} /> 
+          <Route path="/kontaktfomos" element={<KontaktFomos />} /> 
           <Route path="/fomos" element={<Fomosmain />} /> 
           <Route path="/fomosexpert" element={<Fomosexp />} /> 
           <Route path="/FAQ" element={<FAQ />} /> 
