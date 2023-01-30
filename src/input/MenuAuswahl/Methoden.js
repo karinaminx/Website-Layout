@@ -541,7 +541,7 @@ export const MethodenDiv = () => {
                       <td>
                         <div
                           className="hovertext questionmark hoverq"
-                          data-hover="hover text 1"
+                          data-hover={t("hover1_methoden")} 
                         >
                           <div className="">
                             <p> ⓘ</p>
@@ -574,7 +574,7 @@ export const MethodenDiv = () => {
                       <td>
                         <div
                           className="hovertext questionmark hoverq"
-                          data-hover="hover text 2"
+                          data-hover={t("hover2_methoden")} 
                         >
                           <div className="">
                             <p> ⓘ</p>
@@ -605,7 +605,7 @@ export const MethodenDiv = () => {
                       <td>
                         <div
                           className="hovertext questionmark hoverq"
-                          data-hover="hover text 3"
+                          data-hover={t("hover3_methoden")} 
                         >
                           <div className="">
                             <p> ⓘ</p>
@@ -636,7 +636,7 @@ export const MethodenDiv = () => {
                       <td>
                         <div
                           className="hovertext questionmark hoverq"
-                          data-hover="hover text 4"
+                          data-hover={t("hover4_methoden")} 
                         >
                           <div className="">
                             <p> ⓘ</p>
@@ -666,7 +666,7 @@ export const MethodenDiv = () => {
                       <td>
                         <div
                           className="hovertext questionmark hoverq"
-                          data-hover="hover text 5"
+                          data-hover={t("hover5_methoden")} 
                         >
                           <div className="">
                             <p> ⓘ</p>
@@ -696,7 +696,7 @@ export const MethodenDiv = () => {
                       <td>
                         <div
                           className="hovertext questionmark hoverq"
-                          data-hover="hover text 6"
+                          data-hover={t("hover6_methoden")} 
                         >
                           <div className="">
                             <p> ⓘ</p>
@@ -725,7 +725,7 @@ export const MethodenDiv = () => {
                       <td>
                         <div
                           className="hovertext questionmark hoverq"
-                          data-hover="hover text 7"
+                          data-hover={t("hover7_methoden")} 
                         >
                           <div className="">
                             <p> ⓘ</p>
@@ -754,7 +754,7 @@ export const MethodenDiv = () => {
                       <td>
                         <div
                           className="hovertext questionmark hoverq"
-                          data-hover="hover text 8"
+                          data-hover={t("hover8_methoden")} 
                         >
                           <div className="">
                             <p> ⓘ</p>
@@ -784,7 +784,7 @@ export const MethodenDiv = () => {
                       <td>
                         <div
                           className="hovertext questionmark hoverq "
-                          data-hover="hover text 9"
+                          data-hover={t("hover9_methoden")} 
                         >
                           <div className="">
                             <p> ⓘ</p>
@@ -814,7 +814,7 @@ export const MethodenDiv = () => {
                       <td>
                         <div
                           className="hovertext questionmark hoverq"
-                          data-hover="hover text 10"
+                          data-hover={t("hover10_methoden")} 
                         >
                           <div className="">
                             <p> ⓘ</p>
