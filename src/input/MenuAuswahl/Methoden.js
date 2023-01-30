@@ -135,18 +135,6 @@ export const MethodenDiv = () => {
   function handleClickSZ() {
     setSZ(!isSZ);
   }
-  // hover function --------------------------------------------------------------------------------------
- 
-  const[ isHovering, setIsHovering]  = useState(false);
-
-    function handleMouseEnter () {
-      setIsHovering (true);
-    }
-
-    function handleMouseLeave () {
-      setIsHovering (false);
-    }
-
 
   // const for the selection section on the left side of the window ----------------------------------------------------------
 
@@ -443,10 +431,7 @@ export const MethodenDiv = () => {
         </div>
         <div className="col-9" >
           {/* Graph ----------------------------------------------------------- */}
-          <div className= "GraphundMethoden" 
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}>
-            <div className={`${isHovering ? '' : '' }`}> </div>
+          <div className= "GraphundMethoden">
             <Graph
               className="graph"
               isVisible={isVisible}
