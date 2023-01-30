@@ -119,7 +119,7 @@
 // };
 
 import React, { useState, useEffect } from "react";
-import { csv } from "d3";
+import { csv, filter } from "d3";
 import "./Graph.css";
 
 const dateEnd = new Date("2023-01-18");
@@ -167,6 +167,7 @@ export const useDataDatenstand = (
 
       const filteredDataWithValue = filteredData.map((row, index) => {
         let value = 0;
+        // let valueSieben = value;
 
         for (
           let i = 0;
@@ -178,15 +179,12 @@ export const useDataDatenstand = (
           value += row[`value_${i}d`];
         }
 
-        let valueSieben = row.value;
-        for (let i = 1; i <= 6 && index >= i; i++) {
-          valueSieben += filteredData[index - i].value;
-        }
+        // valueSieben = filteredData[300].value;
 
-        return { ...row, value, valueSieben };
+        return { ...row, value };
       });
 
-      setData(filteredData);
+      setData(filteredDataWithValue);
 
       console.log(filteredDataWithValue);
     });
@@ -206,3 +204,17 @@ function distanceToEnd(array, dateEnd) {
   return array.length - dateEndIndex - 1;
 }
 
+// for (
+//   let i = 0;
+//   i <
+//   Object.keys(row).length - 4 - distanceToEnd(filteredData, dateEnd);
+//   i++
+// ) {
+//   if (isNaN(row[`value_${i}d`])) break;
+//   value += row[`value_${i}d`];
+// }
+
+// value = 0;
+// for (let i = 1; i <= 6 && index >= i; i++) {
+// let valueSieben = filteredData[300].value;
+// }
