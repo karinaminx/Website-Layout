@@ -38,7 +38,9 @@ function Fomosmain() {
                     <h1>NOWCAST</h1><h2> {t("heading_nowcast")}</h2> 
                 </div> 
             </div>
-       
+       </section>
+
+       <section id="expbutton">
 
         {/* Expert Mode Button */}
                 <Link style={navStyle} to="/fomosexpert">
@@ -113,27 +115,12 @@ function Fomosmain() {
         {/* Methode  */}
 
         <section id="chart" >
-
         {/* Chart to be inserted*/}
         
 
         </section>
 
-        {/* Tabelle */}
-        <section id="tabelle">
         
-        <div class="table">
-        <p>
-            <a class="btn btn-light btn-table" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-            <i class="fa-solid fa-caret-down"></i>{t("tabelbutton")}</a>
-        </p>
-        <div class="collapse collapse-table collapsed" id="collapseExample">
-            <div class="card card-body card-table">
-            Table to be inserted.
-            </div>
-        </div>
-        </div>
-        </section>
 
         
 

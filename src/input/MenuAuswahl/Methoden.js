@@ -8,7 +8,6 @@ import { color, timeFormat } from "d3";
 import { useData } from "../Graph/useData";
 import { QuestionMark } from "./QuestionMark";
 import { Tabelle } from "../Graph/Tabelle";
-import { useTranslation } from 'react-i18next';
 import {
   optionsAge,
   options,

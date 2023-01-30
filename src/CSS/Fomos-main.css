@@ -25,9 +25,7 @@
 
   .expbutton-expoff{
     width: 20%;
-    position: relative;
-        right: -87%;
-        top: -100%;
+    float: right;
     border-radius: 5px;
    
   }
