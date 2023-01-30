@@ -354,7 +354,7 @@ export const Graph = ({
             yValue={yValueDatenstandBlack}
             circleRadius={3}
             anzeigeAnAus={anzeigeDatenstandSchwarz}
-            farbe={"0,200,100"}
+            farbe={"0,0,0"}
           />
 
           <MarksRealData
@@ -365,7 +365,7 @@ export const Graph = ({
             yValue={yValueDatenstand}
             circleRadius={3}
             anzeigeAnAus={anzeigeDatenstandGrau}
-            farbe={"0,200,100"}
+            farbe={"134, 134, 134"}
           />
         </g>
       </g>

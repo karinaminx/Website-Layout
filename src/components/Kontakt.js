@@ -6,7 +6,7 @@ import Bild_Johannes_Bracher from '../images/Bild_Johannes_Bracher.png';
 import Bild_Jonas_Gunklach from '../images/Bild_Jonas_Gunklach.jpeg';
 import {Route, Routes, Link} from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import NavFomos from './Nav-Fomos.js';
+import Nav from './Nav.js';
 import Footer from './Footer.js';
 
 const lngs = [
@@ -24,7 +24,7 @@ function Kontakt() {
     
     return (
       <div>
-        <NavFomos />
+        <Nav />
       
     <div>
             

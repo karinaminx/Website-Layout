@@ -24,7 +24,7 @@ return (
 <section id="footer">
     <footer>
         <div class="row rowfooter">
-            <div class="col-lg-8 col-md-8 col-sm-12">
+            <div class="col-lg-8 col-md-8 col-sm-12 footerelements">
                 <h1 class="footer-h1">NOWCAST</h1>
                 <div>
                 <p>{t("KIT")} </p>

@@ -4,8 +4,8 @@ import Bild_Melanie_Schienle_klein from '../images/Bild_Melanie_Schienle_klein.j
 import Bild_Johannes_Bracher from '../images/Bild_Johannes_Bracher.png';
 import {Route, Routes, Link} from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import NavFomos from './Nav.js';
-import Footer from './Footer.js';
+import NavFomos from './Nav-Fomos.js';
+import FooterFomos from './Footer-Fomos.js';
 
 const lngs = [
     { code: "de", native: "Deutsch" },
@@ -102,7 +102,7 @@ function Kontakthome() {
     
 
     
-      <Footer />
+      <FooterFomos />
     </div>
     
     );

@@ -23,7 +23,8 @@ import {
 import { useDataAxes } from "../Graph/useDataAxes";
 import { useDataDatenstand } from "../Graph/useDataBjörn";
 
-import datenstand_line from "../../images/datenstand_line.png";
+import datenstand_g from "../../images/datenstand_grau.png";
+import datenstand_sw from "../../images/datenstand_sw.png";
 import Epiforecast_line from "../../images/Epiforecast_line.png";
 import ILM_line from "../../images/ILM_line.png";
 import KIT_line from "../../images/KIT_line.png";
@@ -483,15 +484,15 @@ export const MethodenDiv = () => {
                 <div className="auswahl">
                   {/*1.0*/}
 
-                  <tr>
+                  <tr className= "trmethod">
                     <div
                       className={`container ${
                         isDatenstandSchwarz ? "moved" : ""
                       }`}
                       onClick={handleClickDatenstandSchwarz}
                     >
-                      <td className="linelayout">
-                        <img src={datenstand_line} style={{ width: "35px" }} />
+                     <td className="linelayout">
+                        <img src={datenstand_sw} style={{ width: "38px" }} />
                       </td>
 
                       <td className="methodnamerow">
@@ -519,13 +520,13 @@ export const MethodenDiv = () => {
 
                   {/*1.1*/}
 
-                  <tr>
+                  <tr className= "trmethod">
                     <div
                       className={`container ${isDatenstandGrau ? "moved" : ""}`}
                       onClick={handleClickDatenstandGrau}
                     >
                       <td className="linelayout">
-                        <img src={datenstand_line} style={{ width: "35px" }} />
+                        <img src={datenstand_g} style={{ width: "38px" }} />
                       </td>
 
                       <td className="methodnamerow">
@@ -541,7 +542,7 @@ export const MethodenDiv = () => {
                       <td>
                         <div
                           className="hovertext questionmark hoverq"
-                          data-hover="hover text 1"
+                          data-hover={t("hover1_methoden")} 
                         >
                           <div className="">
                             <p> ⓘ</p>
@@ -552,7 +553,7 @@ export const MethodenDiv = () => {
                   </tr>
 
                   {/*2*/}
-                  <tr>
+                  <tr className= "trmethod">
                     <div
                       className={`container ${isEpiforecast ? "moved" : ""}`}
                       onClick={handleClickEpi}
@@ -574,7 +575,7 @@ export const MethodenDiv = () => {
                       <td>
                         <div
                           className="hovertext questionmark hoverq"
-                          data-hover="hover text 2"
+                          data-hover={t("hover2_methoden")} 
                         >
                           <div className="">
                             <p> ⓘ</p>
@@ -585,7 +586,7 @@ export const MethodenDiv = () => {
                   </tr>
 
                   {/*3*/}
-                  <tr>
+                  <tr className= "trmethod">
                     <div
                       className={`container ${isILM ? "moved" : ""}`}
                       onClick={handleClickILM}
@@ -605,7 +606,7 @@ export const MethodenDiv = () => {
                       <td>
                         <div
                           className="hovertext questionmark hoverq"
-                          data-hover="hover text 3"
+                          data-hover={t("hover3_methoden")} 
                         >
                           <div className="">
                             <p> ⓘ</p>
@@ -616,7 +617,7 @@ export const MethodenDiv = () => {
                   </tr>
 
                   {/*4*/}
-                  <tr>
+                  <tr className= "trmethod">
                     <div
                       className={`container ${isKIT ? "moved" : ""}`}
                       onClick={handleClickKIT}
@@ -636,7 +637,7 @@ export const MethodenDiv = () => {
                       <td>
                         <div
                           className="hovertext questionmark hoverq"
-                          data-hover="hover text 4"
+                          data-hover={t("hover4_methoden")} 
                         >
                           <div className="">
                             <p> ⓘ</p>
@@ -647,7 +648,7 @@ export const MethodenDiv = () => {
                   </tr>
 
                   {/*5*/}
-                  <tr>
+                  <tr className= "trmethod">
                     <div
                       className={`container ${isLMU ? "moved" : ""}`}
                       onClick={handleClickLMU}
@@ -666,7 +667,7 @@ export const MethodenDiv = () => {
                       <td>
                         <div
                           className="hovertext questionmark hoverq"
-                          data-hover="hover text 5"
+                          data-hover={t("hover5_methoden")} 
                         >
                           <div className="">
                             <p> ⓘ</p>
@@ -677,7 +678,7 @@ export const MethodenDiv = () => {
                   </tr>
 
                   {/*6*/}
-                  <tr>
+                  <tr className= "trmethod">
                     <div
                       className={`container ${isNowcast ? "moved" : ""}`}
                       onClick={handleClickNowcast}
@@ -696,7 +697,7 @@ export const MethodenDiv = () => {
                       <td>
                         <div
                           className="hovertext questionmark hoverq"
-                          data-hover="hover text 6"
+                          data-hover={t("hover6_methoden")} 
                         >
                           <div className="">
                             <p> ⓘ</p>
@@ -706,7 +707,7 @@ export const MethodenDiv = () => {
                     </div>
                   </tr>
                   {/*7*/}
-                  <tr>
+                  <tr className= "trmethod">
                     <div
                       className={`container ${isRIVM ? "moved" : ""}`}
                       onClick={handleClickRIVM}
@@ -725,7 +726,7 @@ export const MethodenDiv = () => {
                       <td>
                         <div
                           className="hovertext questionmark hoverq"
-                          data-hover="hover text 7"
+                          data-hover={t("hover7_methoden")} 
                         >
                           <div className="">
                             <p> ⓘ</p>
@@ -735,7 +736,7 @@ export const MethodenDiv = () => {
                     </div>
                   </tr>
                   {/*8*/}
-                  <tr>
+                  <tr className= "trmethod">
                     <div
                       className={`container ${isRKI ? "moved" : ""}`}
                       onClick={handleClickRKI}
@@ -754,7 +755,7 @@ export const MethodenDiv = () => {
                       <td>
                         <div
                           className="hovertext questionmark hoverq"
-                          data-hover="hover text 8"
+                          data-hover={t("hover8_methoden")} 
                         >
                           <div className="">
                             <p> ⓘ</p>
@@ -765,7 +766,7 @@ export const MethodenDiv = () => {
                   </tr>
 
                   {/*9*/}
-                  <tr>
+                  <tr className= "trmethod">
                     <div
                       className={`container ${isSU ? "moved" : ""}`}
                       onClick={handleClickSU}
@@ -784,7 +785,7 @@ export const MethodenDiv = () => {
                       <td>
                         <div
                           className="hovertext questionmark hoverq "
-                          data-hover="hover text 9"
+                          data-hover={t("hover9_methoden")} 
                         >
                           <div className="">
                             <p> ⓘ</p>
@@ -794,7 +795,7 @@ export const MethodenDiv = () => {
                     </div>
                   </tr>
                   {/*10*/}
-                  <tr className="Methodechose">
+                  <tr className= "trmethod">
                     <div
                       className={`container ${isSZ ? "moved" : ""}`}
                       onClick={handleClickSZ}
@@ -814,7 +815,7 @@ export const MethodenDiv = () => {
                       <td>
                         <div
                           className="hovertext questionmark hoverq"
-                          data-hover="hover text 10"
+                          data-hover={t("hover10_methoden")} 
                         >
                           <div className="">
                             <p> ⓘ</p>

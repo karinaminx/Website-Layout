@@ -16,7 +16,7 @@ i18n
         translation: {
 
         /* Landingpage*/
-        text1_home: "Das FOrecasting, MOdelling and Scenario hub (FOMOS Hub)  ist eine integrierte Plattform für die Kommunikation und Interaktion von Forschung zu transparenten Prognosen, Entscheidungen und Ergebnissen für und mit der Gesellschaft.", 
+        text1_home: "Das Forecasting, Modelling and Scenario hub (FOMOS Hub)  ist eine integrierte Plattform für die Kommunikation und Interaktion von Forschung zu transparenten Prognosen, Entscheidungen und Ergebnissen für und mit der Gesellschaft.", 
         text2_home: "FOMOS zeigt Forschung und Forschungsergebnisse in Echtzeit zu wichtigen gesellschaftlichen Themenfeldern.", 
         corona_headline: "Nowcasting von COVID-Hospitalisierungen",
         corona_explain: "Echtzeitkorrektur der Meldeverzüge in COVID-19 Hospitalisierungsdaten.",
@@ -55,6 +55,7 @@ i18n
 
         /* Nav*/
         home: "Home",
+        fomos: "Fomos",
         hintergrund: "Hintergrund",
         kontakt: "Kontakt",
         sprache: "Sprache",
@@ -166,16 +167,16 @@ i18n
     
 
         /* hover Texte Graph*/
-        hover1: "",
-        hover2: "Ein semiparametrisches Nowcasting-Verfahren für rechszensierte Hospitalisierungen nach Datum des positiven Tests.",
-        hover3: "Verwenden von in der Vergangenheit beobachteten, an der 7-Tage-Inzidenz der COVID-19 Fällen anteiligen, 7-Tage-Hospitalisierungsinzidenz nach einer, zwei usw. Wochen.",
-        hover4: "Basierend auf einfacher Schätzung der Verteilung der Verzögerungsdauern zwischen Meldedatum und Erscheinen einer Hospitalisierung in den RKI-Daten.",
-        hover5: "Basierend auf generalisiertem additiven Modell und der sequenziellen Multinomialstruktur der zeitlichen Verzögerungen.",
-        hover6: "Als quantilsweiser Mittelwert der eingereichten Modelle mit vollständigen Nowcasts berechnet.",
-        hover7: "Für die berichteten Zählwerte pro Meldedatum und Verzögerung wird eine negative Binomialverteilung angenommen.",
-        hover8: "Basierend auf modifizierter Variante der Nowcastingberechnung zur 7-Tage-Inzidenz.",
-        hover9: "tba",
-        hover10: "Abweichungen zwischen täglich veröffentlichten und nachträglich korrigierten Werten."
+        hover1_methoden: "",
+        hover2_methoden: "Ein semiparametrisches Nowcasting-Verfahren für rechszensierte Hospitalisierungen nach Datum des positiven Tests.",
+        hover3_methoden: "Verwenden von in der Vergangenheit beobachteten, an der 7-Tage-Inzidenz der COVID-19 Fällen anteiligen, 7-Tage-Hospitalisierungsinzidenz nach einer, zwei usw. Wochen.",
+        hover4_methoden: "Basierend auf einfacher Schätzung der Verteilung der Verzögerungsdauern zwischen Meldedatum und Erscheinen einer Hospitalisierung in den RKI-Daten.",
+        hover5_methoden: "Basierend auf generalisiertem additiven Modell und der sequenziellen Multinomialstruktur der zeitlichen Verzögerungen.",
+        hover6_methoden: "Als quantilsweiser Mittelwert der eingereichten Modelle mit vollständigen Nowcasts berechnet.",
+        hover7_methoden: "Für die berichteten Zählwerte pro Meldedatum und Verzögerung wird eine negative Binomialverteilung angenommen.",
+        hover8_methoden: "Basierend auf modifizierter Variante der Nowcastingberechnung zur 7-Tage-Inzidenz.",
+        hover9_methoden: "tba",
+        hover10_methoden: "Abweichungen zwischen täglich veröffentlichten und nachträglich korrigierten Werten."
     }
       },
       en: {
@@ -224,6 +225,7 @@ i18n
         
         /* Nav*/
         home: "Home",
+        fomos: "Fomos",
         hintergrund: "Background",
         kontakt: "Contact",
         sprache: "Language",
@@ -336,16 +338,16 @@ i18n
         
 
         /* hover Texte Graph*/
-        hover1: "",
-        hover2: "",
-        hover3: "",
-        hover4: "",
-        hover5: "",
-        hover6: "",
-        hover7:"",
-        hover8:"",
-        hover9:"",
-        hover10:""
+        hover1_methoden: "",
+        hover2_methoden: "A semi-parametric nowcasting procedure for right-censored hospitalisations by date of positive test",
+        hover3_methoden: "Using past observed proportional to 7-day incidence of COVID-19 cases, 7-day hospitalisation incidence after one, two, etc. weeks.",
+        hover4_methoden: "Based on simple estimation of the distribution of delay durations between reporting date and appearance of a hospitalisation in the RKI data.",
+        hover5_methoden: "Based on generalised additive model and the sequential multinomial structure of temporal delays.",
+        hover6_methoden: "Calculated as quantile mean of submitted models with full nowcasts.",
+        hover7_methoden:"A negative binomial distribution is assumed for the reported counts per reporting date and delay.",
+        hover8_methoden:"Based on modified variant of nowcasting calculation for 7-day incidence.",
+        hover9_methoden:"tba",
+        hover10_methoden:"Discrepancies between daily published and subsequently corrected values."
 
 
 
