@@ -1,6 +1,6 @@
 import React from "react";
 import '../CSS/Kontakt.css';
-import Bild_Melanie_Schienle from '../images/Bild_Melanie_Schienle.jpeg';
+import Bild_Melanie_Schienle_klein from '../images/Bild_Melanie_Schienle_klein.jpeg';
 import Bild_Johannes_Bracher from '../images/Bild_Johannes_Bracher.png';
 import {Route, Routes, Link} from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
@@ -31,17 +31,14 @@ function Kontakthome() {
        <div class="title">
         <i class="fa-regular fa-dash lineheader"></i>
           <div class="titel-text">
-          <h1>KONTAKT</h1>
+          <h1>{t("kontaktheadline")}</h1>
           </div> 
       </div>
      </section>
 
     <section id="explanation">
     <div class="expl">
-
-        Diese Plattform wird betrieben von Mitgliedern des Lehrstuhls für Statistik und Ökonometrie am Karlsruher Institut für Technologie und der Computational Statistics Gruppe am Heidelberger Institut für Theoretische Studien.
-        Sie können uns unter forecasthub@econ.kit.edu kontaktieren. Technische Hinweise können Sie auch als Issue in unserem GitHub Repositoryabgeben.
-
+    {t("kontaktexpl")}
     </div>
     </section>
     
@@ -56,7 +53,7 @@ function Kontakthome() {
             <div class="card mb-2 Kontaktkarte" >
               <div class="row g-0">
                 <div class="col-md-4">
-                  <img src={Bild_Melanie_Schienle} class="img-fluid rounded-start contact_picture1" alt="Bild"></img>
+                  <img src={Bild_Melanie_Schienle_klein} class="img-fluid rounded-start contact_picture1" alt="Bild"></img>
                 </div>
                 <div class="col-md-8 kontakttext">
                   <div class="card-body">

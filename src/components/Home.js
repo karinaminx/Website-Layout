@@ -3,7 +3,7 @@ import '../App.css';
 import '../CSS/Home.css';
 import {Route, Routes, Link} from 'react-router-dom';
 import covidlogo from '../images/SARS-CoV2.jpeg';
-import KITlogo from '../images/KITlogo.jpeg';
+import fomosLogo from '../images/fomos-logo.png'; /*nur Rakete oder schrift fomos hub in blau*/
 import Nav from './Nav.js';
 import Footer from './Footer.js';
 
@@ -55,7 +55,7 @@ function Home() {
           </div>
 
           <div class="card rounded project-box">
-            <img src={KITlogo} class="card-img-top" alt="Schaubild Forecasting" />
+            <img src={fomosLogo} class="card-img-top" alt="Schaubild Forecasting" />
             <div class="card-body">
               <h5 class="card-title">{t("two_headline")}</h5>
               <p class="card-text">{t("two_explain")}</p>
@@ -64,7 +64,7 @@ function Home() {
           </div>
 
           <div class="card rounded project-box">
-            <img src={KITlogo} class="card-img-top" alt="Schaubild Forecasting" />
+            <img src={fomosLogo} class="card-img-top" alt="Schaubild Forecasting" />
             <div class="card-body">
               <h5 class="card-title">{t("three_headline")}</h5>
               <p class="card-text">{t("three_explain")}</p>

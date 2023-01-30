@@ -69,6 +69,10 @@ i18n
         FAQ: "FAQ",
         Datenschutz: "Datenschutz | Impressum",
 
+        /* Kontakt*/
+        kontaktheadline: "KONTAKT",
+        kontaktexpl: "Diese Plattform wird betrieben von Mitgliedern des Lehrstuhls für Statistik und Ökonometrie am Karlsruher Institut für Technologie und der Computational Statistics Gruppe am Heidelberger Institut für Theoretische Studien. Sie können uns unter forecasthub@econ.kit.edu kontaktieren. Technische Hinweise können Sie auch als Issue in unserem GitHub Repositoryabgeben.",
+        
         /* FAQ*/
         FAQ_Heading: "FAQ",
         FAQ_Text: "",
@@ -179,7 +183,7 @@ i18n
         translation: {
 
         /* Landingpage*/
-        text1_home: "The Forecasting, Modeling and Scenario hub (FOMOS Hub) is an integrated platform for the communication and interaction of research on transparent forecasts, decisions and results for and with society.", 
+        text1_home: "The FOrecasting, MOdelling and Scenario hub (FOMOS Hub) is an integrated platform for the communication and interaction of research into transparent forecasts, decisions and outcomes for and with society.",
         text2_home: "FOMOS shows research and research results in real time on important social topics.", 
         corona_headline: "Nowcasting of COVID hospitalizations",
         corona_explain: "Real-time correction of reporting delays in COVID-19 hospitalization data.",
@@ -231,6 +235,10 @@ i18n
         FAQ: "FAQ",
         Datenschutz: "Privacy Policy | Imprint ",
 
+        /*contact*/
+        kontaktheadline: "CONTACT",
+        kontaktexpl: "This platform is operated by members of the Chair of Statistics and Econometrics at the Karlsruhe Institute of Technology and the Computational Statistics Group at the Heidelberg Institute for Theoretical Studies. You can contact us at forecasthub@econ.kit.edu. You can also submit technical notes as an issue in our GitHub repository.",
+       
         /* FAQ*/
         FAQ_Heading: "FAQ",
         FAQ_Text: "",
