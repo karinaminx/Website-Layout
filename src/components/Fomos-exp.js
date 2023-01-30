@@ -36,8 +36,13 @@ function Fomosexp() {
                 <div class="titel-text-main">
                     <h1>NOWCAST EXPERT</h1><h2> {t("heading_nowcast")}</h2> 
                 </div> 
-            </div>
-       
+            </div>          
+                
+
+        </section>
+
+        <section id="expbutton">
+       <div className="expbutton">
 
         {/* Expert Mode Button */}
                 <Link style={navStyle} to="/fomos">
@@ -46,7 +51,7 @@ function Fomosexp() {
                 </div>
                 </Link>
                 
-
+         </div>
         </section>
 
         <section id="entrance">

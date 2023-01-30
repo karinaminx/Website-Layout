@@ -23,10 +23,18 @@
     margin-right: 20px;
   }
 
+  .expbutton{
+    width: 100%;
+    margin-right: 5%;
+  }
+
   .expbutton-expoff{
-    width: 20%;
-    float: right;
+    width: 18%;
+    position: relative;
+     left: 79%;
+    margin-right: 5%;
     border-radius: 5px;
+    
    
   }
   
@@ -44,11 +52,11 @@
  
 
   .rowbuttons{
-    padding: 30px 0 20px;
+    width: 100%;
+    padding: 15px 15px 20px;
     border-radius: 5px;
     text-align: center;
-    margin-right: 10px;
-    margin-left: 10px;
+    
   }
   
   .button{

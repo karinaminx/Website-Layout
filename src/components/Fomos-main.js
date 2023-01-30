@@ -41,6 +41,7 @@ function Fomosmain() {
        </section>
 
        <section id="expbutton">
+       <div className="expbutton">
 
         {/* Expert Mode Button */}
                 <Link style={navStyle} to="/fomosexpert">
@@ -49,7 +50,7 @@ function Fomosmain() {
                 </div>
                 </Link>
                 
-
+         </div>
         </section>
 
         <section id="entrance">
