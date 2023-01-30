@@ -164,15 +164,15 @@ i18n
 
         /* hover Texte Graph*/
         hover1: "",
-        hover2: "",
-        hover3: "",
-        hover4: "",
-        hover5: "",
-        hover6: "",
-        hover7: "",
-        hover8: "",
-        hover9: "",
-        hover10: "Abweichungen zwischen täglich veröffentlichten und nachträglich korrigierten Werten"
+        hover2: "Ein semiparametrisches Nowcasting-Verfahren für rechszensierte Hospitalisierungen nach Datum des positiven Tests.",
+        hover3: "Verwenden von in der Vergangenheit beobachteten, an der 7-Tage-Inzidenz der COVID-19 Fällen anteiligen, 7-Tage-Hospitalisierungsinzidenz nach einer, zwei usw. Wochen.",
+        hover4: "Basierend auf einfacher Schätzung der Verteilung der Verzögerungsdauern zwischen Meldedatum und Erscheinen einer Hospitalisierung in den RKI-Daten.",
+        hover5: "Basierend auf generalisiertem additiven Modell und der sequenziellen Multinomialstruktur der zeitlichen Verzögerungen.",
+        hover6: "Als quantilsweiser Mittelwert der eingereichten Modelle mit vollständigen Nowcasts berechnet.",
+        hover7: "Für die berichteten Zählwerte pro Meldedatum und Verzögerung wird eine negative Binomialverteilung angenommen.",
+        hover8: "Basierend auf modifizierter Variante der Nowcastingberechnung zur 7-Tage-Inzidenz.",
+        hover9: "tba",
+        hover10: "Abweichungen zwischen täglich veröffentlichten und nachträglich korrigierten Werten."
     }
       },
       en: {
