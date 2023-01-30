@@ -8,6 +8,7 @@ import { color, timeFormat } from "d3";
 import { useData } from "../Graph/useData";
 import { QuestionMark } from "./QuestionMark";
 import { Tabelle } from "../Graph/Tabelle";
+import { useTranslation } from 'react-i18next';
 import {
   optionsAge,
   options,
@@ -493,7 +494,7 @@ export const MethodenDiv = () => {
                       <td>
                         <div
                           className="hovertext questionmark hoverq"
-                          data-hover="hover text 1"
+                          data-hover="hover1" /*{{t("hover1")}}*/
                         >
                           <div className="">
                             <p> ⓘ</p>

@@ -37,14 +37,15 @@ i18n
         heading_nowcast: "Hospitalisierungsinzidenz in Deutschland (COVID-19)",
         expertbutton_on: "Expertenmodus an",
         expertbutton_aus: "Expertenmodus aus",
-        button1_nowcast: "7-Tage-Hospitalisierungsinzidenz",
-        button1hover_nowcast: "Anzahl der hospitalisierten COVID-19 Fällen pro 100.000 Einwohner deren Meldedatum in den letzten 7 Tagen liegt.",
-        button2_nowcast: "7-Tage-Fallzahlen",
-        button2hover_nowcast: "Anzahl der gemeldeten neuen Fälle in den letzten 7 Tagen.",
-        button3_nowcast: "Neue Fallzahlen",
+        button1_nowcast: "Korrigierter Nowcastwert",
+        button1hover_nowcast: "Letzter korrigierter Trend für die Hospitalisierung. ",
+        button2_nowcast: "Unkorrigierter Nowcastwert",
+        button2hover_nowcast: "Letzter unkorrigierter Trend für die Hospitalisierung.",
+        button3_nowcast: "Letzter Trend des Graphen",
         button3hover_nowcast: "Anzahl der gemeldeten neuen Fälle in den letzten 24 Stunden.",
-        button4_nowcast: "Letzte Tendenz des Graphen",
+        button4_nowcast: "Vergleich Fallzahlen",
         button4hover_nowcast: "Gibt die Tendenz des Graphen der letzten 7 Tage an.",
+
 
         text1_nowcast: "Die 7-Tages-Hospitalisierungsinzidenz ist einer der Leitindikatoren für die COVID-19 Pandemie in Deutschland. Diese Plattform vereint Nowcasts der 7-Tages-Hospitalisierungsinzidenz basierend auf verschiedenen statistischen Korrekturverfahren, mit dem Ziel einer verlässlichen Einschätzung der aktuellen Trends. Dadurch ist es möglich, eine bessere Einschätzung der derzeitigen epidemischen Lage zu bekommen.",
         text2_nowcast: "Aufgrund von Verzögerungen sind die für die letzten Tage veröffentlichten rohen Inzidenzwerte stets zu niedrig. Nowcasts helfen, diese Werte zu korrigieren. Sie stellen eine Vorhersage dafür dar, um wie viel die Hospitalisierungsinzidenz noch nach oben korrigiert werden wird. Wir zeigen die Nowcasts gemeinsam mit Unsicherheitsintervallen, die den späteren korrigierten Wert mit einer gegebenen Wahrscheinlichkeit enthalten sollen (95%).",
@@ -72,7 +73,10 @@ i18n
         /* Kontakt*/
         kontaktheadline: "KONTAKT",
         kontaktexpl: "Diese Plattform wird betrieben von Mitgliedern des Lehrstuhls für Statistik und Ökonometrie am Karlsruher Institut für Technologie und der Computational Statistics Gruppe am Heidelberger Institut für Theoretische Studien. Sie können uns unter forecasthub@econ.kit.edu kontaktieren. Technische Hinweise können Sie auch als Issue in unserem GitHub Repositoryabgeben.",
-        
+        kontaktprof1: "Professorin am ",
+        kontaktprof2: "Professor am ",
+
+
         /* FAQ*/
         FAQ_Heading: "FAQ",
         FAQ_Text: "",
@@ -238,7 +242,9 @@ i18n
         /*contact*/
         kontaktheadline: "CONTACT",
         kontaktexpl: "This platform is operated by members of the Chair of Statistics and Econometrics at the Karlsruhe Institute of Technology and the Computational Statistics Group at the Heidelberg Institute for Theoretical Studies. You can contact us at forecasthub@econ.kit.edu. You can also submit technical notes as an issue in our GitHub repository.",
-       
+        kontaktprof1: "Professor at the",
+        kontaktprof2: "Professor at the",
+
         /* FAQ*/
         FAQ_Heading: "FAQ",
         FAQ_Text: "",
