@@ -58,7 +58,7 @@ function Kontakthome() {
                 <div class="col-md-8 kontakttext">
                   <div class="card-body">
                     <h5 class="card-title">Prof. Dr. Melanie Schienle</h5>
-                    <p class="card-text">Professorin am Karlsruher Institut für Technologie</p>
+                    <p class="card-text"> {t("kontaktprof1")} Karlsruher Institut für Technologie</p>
                     <p class="card-text">
                       <div class="Kontaktdaten">
                           <a href= "mailto:melanie.schienle@kit.edu"> <small class="text-muted">  melanie.schienle@kit.edu </small></a>

@@ -28,13 +28,13 @@ return (
                 <h1 class="footer-h1">NOWCAST</h1>
                 <div>
                 <p>{t("KIT")} </p>
-                <p>{t("HITS")} </p>
+                <p><a href="https://statistik.econ.kit.edu"></a>{t("HITS")} </p>
                 </div>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-12 ">
                 <table className="footer_table">
                 <tr><p><Link to="/FAQ"><p>{t("FAQ")}</p></Link></p></tr>
-                <tr><Link to="/kontakt"><p>{t("kontakt")}</p></Link></tr>
+                <tr><Link to="/kontakthome"><p>{t("kontakt")}</p></Link></tr>
                 <tr><p><a href="erklärung.html">{t("Datenschutz")}</a></p></tr>
                 <tr>
                     <p>Copyright ⓒ {new Date().getFullYear()}</p>
