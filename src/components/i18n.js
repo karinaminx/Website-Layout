@@ -21,16 +21,11 @@ i18n
         corona_headline: "Nowcasting von COVID-Hospitalisierungen",
         corona_explain: "Echtzeitkorrektur der Meldeverzüge in COVID-19 Hospitalisierungsdaten.",
         forecasting_button: "Forecasting",
-        two_explain: "Kurzerkärung Forecasting 2",
+        two_explain: "coming soon...",
         two_headline: "Forecasting 2",
-        three_explain: "Kurzerkärung Forecasting 3",
+        three_explain: "coming soon...",
         three_headline: "Forecasting 3",
-        four_explain: "Kurzerkärung Forecasting 4",
-        four_headline: "Forecasting 4",
-        five_explain: "Kurzerkärung Forecasting 5",
-        five_headline: "Forecasting 5",
-        six_explain: "Kurzerkärung Forecasting 6",
-        six_headline: "Forecasting 6",
+        
         
 
         /* Fomos main + Expert*/
