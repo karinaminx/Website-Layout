@@ -55,6 +55,7 @@ i18n
 
         /* Nav*/
         home: "Home",
+        fomos: "Fomos",
         hintergrund: "Hintergrund",
         kontakt: "Kontakt",
         sprache: "Sprache",
@@ -224,6 +225,7 @@ i18n
         
         /* Nav*/
         home: "Home",
+        fomos: "Fomos",
         hintergrund: "Background",
         kontakt: "Contact",
         sprache: "Language",
