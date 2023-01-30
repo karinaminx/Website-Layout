@@ -7,7 +7,6 @@ export const MarksRealData = ({
   yScale,
   xValue,
   yValue,
-  circleRadius,
   anzeigeAnAus,
   farbe
 }) => (
@@ -15,7 +14,7 @@ export const MarksRealData = ({
     <path
      visibility={anzeigeAnAus}
       fill="none"
-      stroke="black"
+      stroke={`rgba(${farbe},0.9)`}
       d={
         line()
           .x((d) => xScale(xValue(d)))

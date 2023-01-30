@@ -156,22 +156,24 @@ export const Graph = ({
   const xAxisLabel = "Meldedatum";
 
   const yValueDatenstand = (d) =>  d.value_0d;
-  const yValueDatenstandBlack = (d) =>  d.value_0d;
+  const yValueDatenstandBlack = (d) =>  d.value_1d;
 
-  /*let y = 0;
-  const yValueDatenstandBlack = (d) => {
-    
-    for (let i = 0; i <= 6; i++){
-    
-    let j = 0;
-    while((d-i)[`value_${j}d`] !== null && j <= 80){
-      
-    y = y + (d-i)[`value_${j}d`] 
-    j++;
-    }
-    }
-    return y;
-   } */
+
+
+
+  //  let y = 0;
+
+  //  for (let i = 0; i <= 6; i++){
+ 
+  //    let j = 0;
+  //    while((d-i)[`value_${j}d`] !== null || j <= 80){
+       
+  //    y = y + (d-i)[`value_${j}d`] 
+  //    j++;
+  //    }
+  //    }
+
+
 
    /* let overallSum = 0;
       for (let i = 0; i <= 6; i++) {
@@ -352,6 +354,7 @@ export const Graph = ({
             yValue={yValueDatenstandBlack}
             circleRadius={3}
             anzeigeAnAus={anzeigeDatenstandSchwarz}
+            farbe={"0,200,100"}
           />
 
           <MarksRealData
@@ -362,6 +365,7 @@ export const Graph = ({
             yValue={yValueDatenstand}
             circleRadius={3}
             anzeigeAnAus={anzeigeDatenstandGrau}
+            farbe={"0,200,100"}
           />
         </g>
       </g>
