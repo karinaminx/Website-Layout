@@ -35,6 +35,14 @@ import RKI_line from "../../images/RKI_line.png";
 import SU_line from "../../images/SU_line.png";
 import SZ_line from "../../images/SZ_line.png";
 
+import { useTranslation } from 'react-i18next';
+
+const lngs = [
+    { code: "de", native: "Deutsch" },
+    { code: "en", native: "English" },
+  ];
+
+
 export const MethodenDiv = () => {
   // Tabelle mit Button eine und ausblende -----------------------------------
 
@@ -244,6 +252,12 @@ export const MethodenDiv = () => {
     anzeige,
     date
   );
+
+  const { t, i18n } = useTranslation();
+
+  const handleTrans = (code) => {
+      i18n.changeLanguage(code);
+    };
 
   return (
     <div>
