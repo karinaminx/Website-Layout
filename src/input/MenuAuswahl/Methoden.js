@@ -508,7 +508,7 @@ export const MethodenDiv = () => {
                       <td>
                         <div
                           className="hovertext questionmark hoverq"
-                          data-hover="hover1" /*{{t("hover1")}}*/
+                          data-hover={t("hover1_methoden")} /*{{t("hover1")}}*/
                         >
                           <div className="">
                             <p> ⓘ</p>
