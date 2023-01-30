@@ -23,7 +23,7 @@ import {
 import { useDataAxes } from "../Graph/useDataAxes";
 import { useDataDatenstand } from "../Graph/useDataBjörn";
 
-import datenstand_line from "../../images/datenstand_line.png";
+import datenstand_g from "../../images/datenstand_grau.png";
 import Epiforecast_line from "../../images/Epiforecast_line.png";
 import ILM_line from "../../images/ILM_line.png";
 import KIT_line from "../../images/KIT_line.png";
@@ -490,9 +490,18 @@ export const MethodenDiv = () => {
                       }`}
                       onClick={handleClickDatenstandSchwarz}
                     >
-                      <td className="linelayout">
-                        <img src={datenstand_line} style={{ width: "35px" }} />
-                      </td>
+                      <td class="linelayout">
+                    <hr
+                      className="line"
+                      style={{
+                        backgroundColor: "0, 0, 0",
+                        borderColor: "0, 0, 0",
+                        
+                        height: "3.4px",
+                        width: "30px",
+                      }}
+                    />
+                  </td>
 
                       <td className="methodnamerow">
                         <p
@@ -525,7 +534,7 @@ export const MethodenDiv = () => {
                       onClick={handleClickDatenstandGrau}
                     >
                       <td className="linelayout">
-                        <img src={datenstand_line} style={{ width: "35px" }} />
+                        <img src={datenstand_g} style={{ width: "38px" }} />
                       </td>
 
                       <td className="methodnamerow">
