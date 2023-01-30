@@ -8,7 +8,6 @@ import { color, timeFormat } from "d3";
 import { useData } from "../Graph/useData";
 import { QuestionMark } from "./QuestionMark";
 import { Tabelle } from "../Graph/Tabelle";
-import { useTranslation } from 'react-i18next';
 import {
   optionsAge,
   options,
@@ -34,6 +33,14 @@ import RIVM_line from "../../images/RIVM_line.png";
 import RKI_line from "../../images/RKI_line.png";
 import SU_line from "../../images/SU_line.png";
 import SZ_line from "../../images/SZ_line.png";
+
+import { useTranslation } from 'react-i18next';
+
+const lngs = [
+    { code: "de", native: "Deutsch" },
+    { code: "en", native: "English" },
+  ];
+
 
 export const MethodenDiv = () => {
   // Tabelle mit Button eine und ausblende -----------------------------------
@@ -244,6 +251,12 @@ export const MethodenDiv = () => {
     anzeige,
     date
   );
+
+  const { t, i18n } = useTranslation();
+
+  const handleTrans = (code) => {
+      i18n.changeLanguage(code);
+    };
 
   return (
     <div>
@@ -494,7 +507,7 @@ export const MethodenDiv = () => {
                       <td>
                         <div
                           className="hovertext questionmark hoverq"
-                          data-hover="hover1" /*{{t("hover1")}}*/
+                          data-hover={t("hover1_methoden")} /*{{t("hover1")}}*/
                         >
                           <div className="">
                             <p> ⓘ</p>
