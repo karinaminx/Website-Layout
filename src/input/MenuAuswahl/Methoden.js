@@ -484,7 +484,7 @@ export const MethodenDiv = () => {
                 <div className="auswahl">
                   {/*1.0*/}
 
-                  <tr>
+                  <tr className= "trmethod">
                     <div
                       className={`container ${
                         isDatenstandSchwarz ? "moved" : ""
@@ -520,7 +520,7 @@ export const MethodenDiv = () => {
 
                   {/*1.1*/}
 
-                  <tr>
+                  <tr className= "trmethod">
                     <div
                       className={`container ${isDatenstandGrau ? "moved" : ""}`}
                       onClick={handleClickDatenstandGrau}
@@ -553,7 +553,7 @@ export const MethodenDiv = () => {
                   </tr>
 
                   {/*2*/}
-                  <tr>
+                  <tr className= "trmethod">
                     <div
                       className={`container ${isEpiforecast ? "moved" : ""}`}
                       onClick={handleClickEpi}
@@ -586,7 +586,7 @@ export const MethodenDiv = () => {
                   </tr>
 
                   {/*3*/}
-                  <tr>
+                  <tr className= "trmethod">
                     <div
                       className={`container ${isILM ? "moved" : ""}`}
                       onClick={handleClickILM}
@@ -617,7 +617,7 @@ export const MethodenDiv = () => {
                   </tr>
 
                   {/*4*/}
-                  <tr>
+                  <tr className= "trmethod">
                     <div
                       className={`container ${isKIT ? "moved" : ""}`}
                       onClick={handleClickKIT}
@@ -648,7 +648,7 @@ export const MethodenDiv = () => {
                   </tr>
 
                   {/*5*/}
-                  <tr>
+                  <tr className= "trmethod">
                     <div
                       className={`container ${isLMU ? "moved" : ""}`}
                       onClick={handleClickLMU}
@@ -678,7 +678,7 @@ export const MethodenDiv = () => {
                   </tr>
 
                   {/*6*/}
-                  <tr>
+                  <tr className= "trmethod">
                     <div
                       className={`container ${isNowcast ? "moved" : ""}`}
                       onClick={handleClickNowcast}
@@ -707,7 +707,7 @@ export const MethodenDiv = () => {
                     </div>
                   </tr>
                   {/*7*/}
-                  <tr>
+                  <tr className= "trmethod">
                     <div
                       className={`container ${isRIVM ? "moved" : ""}`}
                       onClick={handleClickRIVM}
@@ -736,7 +736,7 @@ export const MethodenDiv = () => {
                     </div>
                   </tr>
                   {/*8*/}
-                  <tr>
+                  <tr className= "trmethod">
                     <div
                       className={`container ${isRKI ? "moved" : ""}`}
                       onClick={handleClickRKI}
@@ -766,7 +766,7 @@ export const MethodenDiv = () => {
                   </tr>
 
                   {/*9*/}
-                  <tr>
+                  <tr className= "trmethod">
                     <div
                       className={`container ${isSU ? "moved" : ""}`}
                       onClick={handleClickSU}
@@ -795,7 +795,7 @@ export const MethodenDiv = () => {
                     </div>
                   </tr>
                   {/*10*/}
-                  <tr className="Methodechose">
+                  <tr className= "trmethod">
                     <div
                       className={`container ${isSZ ? "moved" : ""}`}
                       onClick={handleClickSZ}
