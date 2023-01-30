@@ -141,9 +141,21 @@ export const useDataDatenstand = (
   useEffect(() => {
     const processRow = (row) => {
       for (let i = 0; i <= 80; i++) {
-        row[`value_${i}d`] = parseFloat(row[`value_${i}d`]);
+        const value = row[`value_${i}d`];
+        if (isNaN(parseFloat(value))) {
+          delete row[`value_${i}d`];
+        } else {
+          row[`value_${i}d`] = parseFloat(value);
+        }
       }
-      row["value_>80d"] = parseFloat(row["value_>80d"]);
+
+      const value = row[`value_>80d`];
+      if (isNaN(parseFloat(value))) {
+        delete row[`value_>80d`];
+      } else {
+        row[`value_>80d`] = parseFloat(value);
+      }
+
       row.date = new Date(row.date);
       return row;
     };
@@ -153,20 +165,44 @@ export const useDataDatenstand = (
         (row) => row.location === selectedScope && row.age_group === menuAge
       );
 
-      const filteredDataWithValue = filteredData.map((row) => {
+      const filteredDataWithValue = filteredData.map((row, index) => {
         let value = 0;
 
-        for (let i = 0; i < Object.keys(row).length - 4; i++) {
+        for (
+          let i = 0;
+          i <
+          Object.keys(row).length - 4 - distanceToEnd(filteredData, dateEnd);
+          i++
+        ) {
           if (isNaN(row[`value_${i}d`])) break;
           value += row[`value_${i}d`];
         }
-        return { ...row, value };
+
+        let valueSieben = row.value;
+        for (let i = 1; i <= 6 && index >= i; i++) {
+          valueSieben += filteredData[index - i].value;
+        }
+
+        return { ...row, value, valueSieben };
       });
 
       setData(filteredData);
+
       console.log(filteredDataWithValue);
     });
   }, [method, menuAge, selectedScope, display]);
 
   return data;
 };
+
+function distanceToEnd(array, dateEnd) {
+  let dateEndIndex = -1;
+  for (let i = 0; i < array.length; i++) {
+    if (array[i].date.getTime() === dateEnd.getTime()) {
+      dateEndIndex = i;
+      break;
+    }
+  }
+  return array.length - dateEndIndex - 1;
+}
+
