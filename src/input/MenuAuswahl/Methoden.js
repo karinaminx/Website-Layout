@@ -293,6 +293,7 @@ export const MethodenDiv = () => {
                         <input
                           type="date"
                           name="select-date"
+                          defaultValue = ""
                           onChange={(e) => setDate(e.target.value)}
                           max={initialDate}
                           min="2021-07-01"
@@ -367,6 +368,7 @@ export const MethodenDiv = () => {
                   <button
                         className="btn btn-light button-anzeige rounded"
                         onClick={() => setAnzeige("hunderttausend")}
+                        
                       >
                         <label>Pro 100.000</label>
                         <input
@@ -374,6 +376,7 @@ export const MethodenDiv = () => {
                           name="größe"
                           value="hunderttausend"
                           checked={anzeige === "hunderttausend"}
+                          
                         />
                       </button>
                       <button

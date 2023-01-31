@@ -43,7 +43,8 @@ export const optionsAge = [
   ]
 
 export const initialValueAge = "00+";
-export const initialValueAnzeige = "absoluteZahlen";
+export const initialValueAnzeige = "hunderttausend";
+
 
 // export const initialValue = "Deutschland";
 export const initialValue = "DE";
