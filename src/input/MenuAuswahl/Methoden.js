@@ -332,7 +332,14 @@ export const MethodenDiv = () => {
                       />
                     </button>
                   </div>
-                  <p class="oderText"><sm>oder</sm>  </p>
+
+                  <div
+                    className="hovertext hoverq"
+                    data-hover={t("hover_oder")} 
+                        > <p class="oderText"><sm>{t("oder")}</sm>  </p>
+                  </div>
+                  
+
                   <div id="div2" className="hidden">
                     <label className="agelayout" for="scope-select">
                       Alter:

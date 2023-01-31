@@ -167,6 +167,8 @@ i18n
     
 
         /* hover Texte Graph*/
+        oder: "oder",
+        hover_oder: "oderrrrrr",
         hover1_methoden: "",
         hover2_methoden: "Semiparametrisches Nowcasting-Verfahren für rechszensierte Hospitalisierungen nach Datum des positiven Tests.",
         hover3_methoden: "Verwenden von in der Vergangenheit beobachteten, an der 7-Tage-Inzidenz der COVID-19 Fällen anteiligen, 7-Tage-Hospitalisierungsinzidenz nach einer, zwei usw. Wochen.",
@@ -338,6 +340,8 @@ i18n
         
 
         /* hover Texte Graph*/
+        oder: "or",
+        hover_oder: "xxx",
         hover1_methoden: "",
         hover2_methoden: "A semi-parametric nowcasting procedure for right-censored hospitalisations by date of positive test",
         hover3_methoden: "Using past observed proportional to 7-day incidence of COVID-19 cases, 7-day hospitalisation incidence after one, two, etc. weeks.",
