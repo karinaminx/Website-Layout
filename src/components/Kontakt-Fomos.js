@@ -38,7 +38,9 @@ function Kontakthome() {
 
     <section id="explanation">
     <div class="expl">
-    {t("kontaktexpl")}
+    {t("kontakttext1")}
+    <a href="mail:  forecasthub@econ.kit.edu" >  forecasthub@econ.kit.edu</a>
+    {t("kontakttext2")}
     </div>
     </section>
     

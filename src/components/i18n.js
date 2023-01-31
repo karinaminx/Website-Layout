@@ -69,7 +69,8 @@ i18n
 
         /* Kontakt*/
         kontaktheadline: "KONTAKT",
-        kontaktexpl: "Diese Plattform wird betrieben von Mitgliedern des Lehrstuhls für Statistik und Ökonometrie am Karlsruher Institut für Technologie und der Computational Statistics Gruppe am Heidelberger Institut für Theoretische Studien. Sie können uns unter forecasthub@econ.kit.edu kontaktieren. Technische Hinweise können Sie auch als Issue in unserem GitHub Repositoryabgeben.",
+        kontakttext1: "Diese Plattform wird betrieben von Mitgliedern des Lehrstuhls für Statistik und Ökonometrie am Karlsruher Institut für Technologie und der Computational Statistics Gruppe am Heidelberger Institut für Theoretische Studien. Sie können uns unter ",
+        kontakttext2:" kontaktieren. Technische Hinweise können Sie auch als Issue in unserem GitHub Repository abgeben.",
         kontaktprof1: "Professorin am ",
         kontaktprof2: "Professor am ",
 
@@ -312,7 +313,8 @@ i18n
 
         /*contact*/
         kontaktheadline: "CONTACT",
-        kontaktexpl: "This platform is operated by members of the Chair of Statistics and Econometrics at the Karlsruhe Institute of Technology and the Computational Statistics Group at the Heidelberg Institute for Theoretical Studies. You can contact us at forecasthub@econ.kit.edu. You can also submit technical notes as an issue in our GitHub repository.",
+        kontakttext1: "This platform is operated by members of the Chair of Statistics and Econometrics at the Karlsruhe Institute of Technology and the Computational Statistics Group at the Heidelberg Institute for Theoretical Studies. You can contact us at ",
+        kontakttext2:". You can also submit technical notes as an issue in our GitHub repository.",
         kontaktprof1: "Professor at the",
         kontaktprof2: "Professor at the",
 
@@ -456,28 +458,25 @@ i18n
         Datenschutz_S3_Title: "Server-Log-Files",
         Datenschutz_S4_Title: "Right to information, deletion, blocking",
        
-        Datenschutz_S1_Text1: ".",
-        Datenschutz_S1_Text2: ".",
-        Datenschutz_S1_Text3: "",
+        Datenschutz_S1_Text1: "The operators of these pages take the protection of your personal data very seriously. We treat your personal data confidentially and in accordance with the statutory data protection regulations and this data protection declaration.",
+        Datenschutz_S1_Text2: "The use of our website is generally possible without providing personal data. Insofar as personal data (e.g. name, address or e-mail addresses) is collected on our pages, this is always done on a voluntary basis as far as possible. This data will not be passed on to third parties without your express consent.",
+        Datenschutz_S1_Text3: "We would like to point out that data transmission on the Internet (e.g. when communicating by e-mail) can have security gaps. Complete protection of data against access by third parties is not possible.",
 
-
-        Datenschutz_S2_Text1: "",
-        Datenschutz_S2_Text2: "",
-        Datenschutz_S2_Text3: " ",
+        Datenschutz_S2_Text1: "Some of the Internet pages use so-called cookies. Cookies do not cause any damage to your computer and do not contain viruses. Cookies serve to make our offer more user-friendly, effective and secure. Cookies are small text files that are stored on your computer and saved by your browser.",
+        Datenschutz_S2_Text2: "Most of the cookies we use are so-called 'session cookies'. They are automatically deleted after the end of your visit. Other cookies remain stored on your terminal device until you delete them. These cookies enable us to recognise your browser on your next visit.",
+        Datenschutz_S2_Text3: "You can set your browser so that you are informed about the setting of cookies and only allow cookies in individual cases, exclude the acceptance of cookies for certain cases or in general and activate the automatic deletion of cookies when closing the browser. If you deactivate cookies, the functionality of this website may be limited.",
         
-        Datenschutz_S3_Text1: "Der Provider der Seiten erhebt und speichert automatisch Informationen in so genannten Server-Log Files, die Ihr Browser automatisch an uns übermittelt. Dies sind:",
-        Datenschutz_S3_ul1: "Browsertyp und Browserversion",
-        Datenschutz_S3_ul2: "Verwendetes Betriebssystem",
+        Datenschutz_S3_Text1: "The provider of the pages automatically collects and stores information in so-called server log files, which your browser automatically transmits to us. These are:",
+         Datenschutz_S3_ul1: "Browser type and version",
+        Datenschutz_S3_ul2: "Operating system used",
         Datenschutz_S3_ul3: "Referrer URL",
-        Datenschutz_S3_ul4: "Hostname des zugreifenden Rechners",
-        Datenschutz_S3_ul5: "Uhrzeit der Serveranfrage",
+        Datenschutz_S3_ul4: "Host name of the accessing computer",
+        Datenschutz_S3_ul5: "Time of the server request",
         
-        Datenschutz_S3_Text3: "Diese Daten sind nicht bestimmten Personen zuordenbar. Eine Zusammenführung dieser Daten mit anderen Datenquellen wird nicht vorgenommen. Wir behalten uns vor, diese Daten nachträglich zu prüfen, wenn uns konkrete Anhaltspunkte für eine rechtswidrige Nutzung bekannt werden.",
-       
-        Datenschutz_S4_Text:"Sie haben jederzeit das Recht auf unentgeltliche Auskunft über Ihre gespeicherten personenbezogenen Daten, deren Herkunft und Empfänger und den Zweck der Datenverarbeitung sowie ein Recht auf Berichtigung, Sperrung oder Löschung dieser Daten. Hierzu sowie zu weiteren Fragen zum Thema personenbezogene Daten können Sie sich jederzeit unter der im Impressum angegebenen Adresse an uns wenden.",
-        
+        Datenschutz_S3_Text3: "You have the right at any time to free information about your stored personal data, its origin and recipient and the purpose of data processing, as well as the right to correct, block or delete this data. For this purpose as well as for further questions on the subject of personal data, you can contact us at any time at the address given in the imprint.",
+        Datenschutz_S4_Text:"You have the right at any time to free information about your stored personal data, its origin and recipient and the purpose of data processing, as well as the right to correct, block or delete this data. For this purpose as well as for further questions on the subject of personal data, you can contact us at any time at the address given in the imprint.",
         /*Impressum*/
-        ImpressumTitle:"IMPRESSUM",
+        ImpressumTitle:"IMPRINT",
         Impressum_S1_Title: "Information according to § 5 TMG:",
         Impressum_S2_Title: "Contact",
         Impressum_S3_Title:"Register entry:",
@@ -488,8 +487,6 @@ i18n
         Impressum_S3_Text1: "Entry in the register of associations.",
         Impressum_S3_Text2: "Register court: Mannheim ",
         Impressum_S3_Text3:" Register number: 700629",
-        
-
 
         }
       },

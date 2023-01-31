@@ -58,16 +58,16 @@ function DatenschutzFomos() {
                 <br />
                 <br />
        <ul> 
-                <li class="Gruppen"> {t("Datenschutz_S3_ul1")}</li>
-                <li class="Gruppen"> {t("Datenschutz_S3_ul2")}</li>
-                <li class="Gruppen"> {t("Datenschutz_S3_ul3")}</li>
-                <li class="Gruppen"> {t("Datenschutz_S3_ul4")}</li>
-                <li class="Gruppen"> {t("Datenschutz_S3_ul5")}</li>
+                <li class="LogFiles"> {t("Datenschutz_S3_ul1")}</li>
+                <li class="LogFiles"> {t("Datenschutz_S3_ul2")}</li>
+                <li class="LogFiles"> {t("Datenschutz_S3_ul3")}</li>
+                <li class="LogFiles"> {t("Datenschutz_S3_ul4")}</li>
+                <li class="LogFiles"> {t("Datenschutz_S3_ul5")}</li>
                  </ul>
     </div>
     <br /> 
     <div>
-                <h3 class="texttitle"> {t("Datenschutz_S3_Title")}</h3>
+                <h3 class="texttitle"> {t("Datenschutz_S4_Title")}</h3>
                 {t("Datenschutz_S4_Text")} 
     </div>
     </div>
@@ -93,8 +93,8 @@ function DatenschutzFomos() {
 
       <br />
       <p class="texttitle">  {t("Impressum_S2_Title")}</p>
-      <p> {t("Impressum_S2_Text1")} +49 721 608-41585 </p>
-      <p> {t("Impressum_S2_Text2")} info@usability-in-germany.de </p>
+      <p> {t("Impressum_S2_Text1")} <a href= "tel: +4972160841585" > +49721608-41585 </a> </p>
+      <p> {t("Impressum_S2_Text2")} <a href= "mailto: info@usability-in-germany.de" > info@usability-in-germany.de </a></p>
 
       <br />
       <p class="texttitle">  {t("Impressum_S3_Title")}</p>

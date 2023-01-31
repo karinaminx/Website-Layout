@@ -18,7 +18,7 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        
+
         <Routes>
           <Route path="" element={<Home />} />
           <Route path="/hintergrund" element={<Hintergrund />} /> 
