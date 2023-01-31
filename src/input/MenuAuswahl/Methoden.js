@@ -113,7 +113,6 @@ export const MethodenDiv = () => {
     }
   }
 
-  console.log(isILM);
   function handleClickKIT() {
     setKIT(!isKIT);
   }
