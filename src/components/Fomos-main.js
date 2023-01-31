@@ -83,13 +83,9 @@ function Fomosmain() {
                 <div class="col-lg-3 col-md-6 col-sm-12 ">
                     <span class="hovertext" data-hover={t("button4hover_nowcast")}>
                     <div class="button infobutton"> 
-                    <table class="button-table">
-                        <tr>
-                        <td class="text-fix breit">{t("button4_nowcast")}</td>
-                        <td class="ext-var">xxx</td>
-                        </tr>
-                    </table>
-                    </div>
+                        <p class="text-fix">{t("button4_nowcast")}</p>
+                        <p class="text-var">xxx</p>
+                    </div>                    
                     </span>
                 </div>  
             </div>
