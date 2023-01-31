@@ -156,38 +156,8 @@ export const Graph = ({
   const xAxisLabel = "Meldedatum";
 
   const yValueDatenstand = (d) =>  d.value_0d;
-  const yValueDatenstandBlack = (d) =>  d.value_1d;
+  const yValueDatenstandBlack = (d) =>  d.valueSieben;
 
-
-
-
-  //  let y = 0;
-
-  //  for (let i = 0; i <= 6; i++){
- 
-  //    let j = 0;
-  //    while((d-i)[`value_${j}d`] !== null || j <= 80){
-       
-  //    y = y + (d-i)[`value_${j}d`] 
-  //    j++;
-  //    }
-  //    }
-
-
-
-   /* let overallSum = 0;
-      for (let i = 0; i <= 6; i++) {
-        let date = new Date(d.date.getTime() - i * 24 * 60 * 60 * 1000);
-        for (let j = 0; j <= 80; j++) {
-          let value = d[`value_${j}d`];
-          if (value !== null) {
-            overallSum += parseFloat(value);
-          }
-        }
-      }
-    
-      return overallSum;
-    }; */
 
 
   const yValue = (d) => d.value;

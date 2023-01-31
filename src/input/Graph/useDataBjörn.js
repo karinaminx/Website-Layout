@@ -122,7 +122,7 @@ import React, { useState, useEffect } from "react";
 import { csv, filter } from "d3";
 import "./Graph.css";
 
-const dateEnd = new Date("2023-01-18");
+const dateEnd = new Date("2023-01-20");
 const dateStart = new Date("2022-12-23");
 
 const csvUrl =
@@ -179,14 +179,24 @@ export const useDataDatenstand = (
           value += row[`value_${i}d`];
         }
 
-        // valueSieben = filteredData[300].value;
-
         return { ...row, value };
       });
 
-      setData(filteredDataWithValue);
+      const filteredDataWithValueSieben = filteredDataWithValue.map(
+        (row, index) => {
+          // let valueSieben = value;
 
-      console.log(filteredDataWithValue);
+          let valueSieben = filteredDataWithValue[index].value;
+          for (let i = 1; i <= 6 && index >= i; i++) {
+            valueSieben += filteredDataWithValue[index - i].value;
+          }
+
+          return { ...row, valueSieben };
+        }
+      );
+      setData(filteredDataWithValueSieben);
+
+      console.log(filteredDataWithValueSieben);
     });
   }, [method, menuAge, selectedScope, display]);
 
