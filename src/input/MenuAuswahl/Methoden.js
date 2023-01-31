@@ -297,6 +297,14 @@ export const MethodenDiv = () => {
             </p>
       </button>
       </span>
+      <span class="hovertext hovermr" data-hover={t("")}>
+      <button className="btn-outline-dark buttonmovearea">
+          
+            <p>
+            default 
+            </p>
+      </button>
+      </span>
       <span class="hovertext hoverml" data-hover={t("buttonleftchart")}>
       <button className=" btn-outline-dark buttonmovearea" handleClick>
             <p>
