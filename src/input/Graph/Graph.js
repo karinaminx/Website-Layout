@@ -1,5 +1,13 @@
 import React, { useEffect, useState, useCallback } from "react";
-import { scaleLinear, scaleTime, timeFormat, min, max, tickStep } from "d3";
+import {
+  scaleLinear,
+  scaleTime,
+  timeFormat,
+  min,
+  max,
+  tickStep,
+  timeDay,
+} from "d3";
 import { AxisBottom } from "./AxisBottom";
 import { AxisLeft } from "./AxisLeft";
 import { Marks } from "./Marks";
@@ -150,15 +158,10 @@ export const Graph = ({
   const innerHeight = height - margin.top - margin.bottom;
   const innerWidth = width - margin.left - margin.right;
 
-  //please change
-
   const xValue = (d) => d.date;
   const xAxisLabel = "Meldedatum";
 
-  const yValueDatenstand = (d) =>  d.value_0d;
-  const yValueDatenstandBlack = (d) =>  d.valueSieben;
-
-
+  const yValueDatenstand = (d) => d.valueSieben;
 
   const yValue = (d) => d.value;
   const yQuantileKlein = (d) => d.quantileKlein;
@@ -167,8 +170,16 @@ export const Graph = ({
 
   const xAxisTickFormat = timeFormat("%d.%m.%Y");
 
+  const dateStart = timeDay.offset(max(data, xValue), -35);
+  const dateEnde = timeDay.offset(max(data, xValue), 0);
+
+  // const xScale = scaleTime()
+  // .domain([dateStart,dateEnde])
+  // .range([0, innerWidth])
+  // .nice();
+
   const xScale = scaleTime()
-    .domain([min(data, xValue), max(data, xValue)])
+    .domain([dateStart, max(data, xValue)])
     .range([0, innerWidth])
     .nice();
 
@@ -321,7 +332,7 @@ export const Graph = ({
             xScale={xScale}
             yScale={yScale}
             xValue={xValue}
-            yValue={yValueDatenstandBlack}
+            yValue={yValueDatenstand}
             circleRadius={3}
             anzeigeAnAus={anzeigeDatenstandSchwarz}
             farbe={"0,0,0"}
