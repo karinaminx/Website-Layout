@@ -595,38 +595,9 @@ export const MethodenDiv = () => {
                     </div>
                   </tr>
 
+                  
+
                   {/*3*/}
-                  <tr className= "trmethod">
-                    <div
-                      className={`container ${isILM ? "moved" : ""}`}
-                      onClick={handleClickILM}
-                    >
-                      <td className="linelayout">
-                        <img src={ILM_line} style={{ width: "35px" }} />
-                      </td>
-
-                      <td className="methodnamerow">
-                        <p
-                          className={`ILM ${isILM ? "bold" : ""}`}
-                          onClick={handleClickILM}
-                        >
-                          ILM prop
-                        </p>
-                      </td>
-                      <td>
-                        <div
-                          className="hovertext questionmark hoverq"
-                          data-hover={t("hover3_methoden")} 
-                        >
-                          <div className="">
-                            <p> ⓘ</p>
-                          </div>
-                        </div>
-                      </td>
-                    </div>
-                  </tr>
-
-                  {/*4*/}
                   <tr className= "trmethod">
                     <div
                       className={`container ${isKIT ? "moved" : ""}`}
@@ -657,7 +628,7 @@ export const MethodenDiv = () => {
                     </div>
                   </tr>
 
-                  {/*5*/}
+                  {/*4*/}
                   <tr className= "trmethod">
                     <div
                       className={`container ${isLMU ? "moved" : ""}`}
@@ -687,7 +658,7 @@ export const MethodenDiv = () => {
                     </div>
                   </tr>
 
-                  {/*6*/}
+                  {/*5*/}
                   <tr className= "trmethod">
                     <div
                       className={`container ${isNowcast ? "moved" : ""}`}
@@ -716,7 +687,7 @@ export const MethodenDiv = () => {
                       </td>
                     </div>
                   </tr>
-                  {/*7*/}
+                  {/*6*/}
                   <tr className= "trmethod">
                     <div
                       className={`container ${isRIVM ? "moved" : ""}`}
@@ -745,37 +716,9 @@ export const MethodenDiv = () => {
                       </td>
                     </div>
                   </tr>
-                  {/*8*/}
-                  <tr className= "trmethod">
-                    <div
-                      className={`container ${isRKI ? "moved" : ""}`}
-                      onClick={handleClickRKI}
-                    >
-                      <td className="linelayout">
-                        <img src={RKI_line} style={{ width: "35px" }} />
-                      </td>
-                      <td className="methodnamerow">
-                        <p
-                          className={`RKI ${isRKI ? "bold" : ""}`}
-                          onClick={handleClickRKI}
-                        >
-                          RKI Weekly Report
-                        </p>
-                      </td>
-                      <td>
-                        <div
-                          className="hovertext questionmark hoverq"
-                          data-hover={t("hover8_methoden")} 
-                        >
-                          <div className="">
-                            <p> ⓘ</p>
-                          </div>
-                        </div>
-                      </td>
-                    </div>
-                  </tr>
+                  
 
-                  {/*9*/}
+                  {/*7*/}
                   <tr className= "trmethod">
                     <div
                       className={`container ${isSU ? "moved" : ""}`}
@@ -804,7 +747,7 @@ export const MethodenDiv = () => {
                       </td>
                     </div>
                   </tr>
-                  {/*10*/}
+                  {/*8*/}
                   <tr className= "trmethod">
                     <div
                       className={`container ${isSZ ? "moved" : ""}`}
@@ -834,6 +777,69 @@ export const MethodenDiv = () => {
                       </td>
                     </div>
                   </tr>
+
+                  {/*9*/}
+                  <tr className= "trmethod">
+                    <div
+                      className={`container ${isILM ? "moved" : ""}`}
+                      onClick={handleClickILM}
+                    >
+                      <td className="linelayout">
+                        <img src={ILM_line} style={{ width: "35px" }} />
+                      </td>
+
+                      <td className="methodnamerow">
+                        <p
+                          className={`ILM ${isILM ? "bold" : ""}`}
+                          onClick={handleClickILM}
+                        > 
+                          ILM prop
+                        </p>
+                      </td>
+                      <td>
+                        <div
+                          className="hovertext questionmark hoverq"
+                          data-hover={t("hover3_methoden")} 
+                        >
+                          <div className="">
+                            <p> ⓘ</p>
+                          </div>
+                        </div>
+                      </td>
+                    </div>
+                  </tr>
+
+                    {/*10*/}
+                    <tr className= "trmethod">
+                    <div
+                      className={`container ${isRKI ? "moved" : ""}`}
+                      onClick={handleClickRKI}
+                    >
+                      <td className="linelayout">
+                        <img src={RKI_line} style={{ width: "35px" }} />
+                      </td>
+                      <td className="methodnamerow">
+                        <p
+                          className={`RKI ${isRKI ? "bold" : ""}`}
+                          onClick={handleClickRKI}
+                        >
+                          RKI Weekly Report
+                        </p>
+                      </td>
+                      <td>
+                        <div
+                          className="hovertext questionmark hoverq"
+                          data-hover={t("hover8_methoden")} 
+                        >
+                          <div className="">
+                            <p> ⓘ</p>
+                          </div>
+                        </div>
+                      </td>
+                    </div>
+                  </tr>
+
+
                 </div>
               </table>
             )}
