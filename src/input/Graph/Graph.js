@@ -49,7 +49,10 @@ export const Graph = ({
   SZdata,
   datenstand_schwarz,
   datenstand_grau,
+  dateGraphStart,
 }) => {
+
+  
   let width = 800;
 
   let anzeigeDatenstandSchwarz;
@@ -171,13 +174,20 @@ export const Graph = ({
 
   const xAxisTickFormat = timeFormat("%d.%m.%Y");
 
-  const dateStart = timeDay.offset(max(data, xValue), -35);
+  const dateStartMethoden= timeDay.offset(max(data, xValue), -35);
+  const dateStart = new Date(dateGraphStart);
+
   const dateEnde = timeDay.offset(max(data, xValue), 0);
 
+  // dateGraphStart
   // const xScale = scaleTime()
   // .domain([dateStart,dateEnde])
   // .range([0, innerWidth])
   // .nice();
+
+  
+  console.log(dateGraphStart);
+  console.log(dateStart);
 
   const xScale = scaleTime()
     .domain([dateStart, max(data, xValue)])

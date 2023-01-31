@@ -11,7 +11,7 @@ const datum = "2023-01-10";
 //   datum +
 //   "_forecast_data.csv";
 
-  const csvUrl = "https://raw.githubusercontent.com/KITmetricslab/hospitalization-nowcast-hub/main/nowcast_viz_de/plot_data/2023-01-20_forecast_data.csv";
+  // const csvUrl = "https://raw.githubusercontent.com/KITmetricslab/hospitalization-nowcast-hub/main/nowcast_viz_de/plot_data/2023-01-20_forecast_data.csv";
 
 export const useData = (
   methode,
@@ -21,6 +21,13 @@ export const useData = (
   anzeige,
   date
 ) => {
+
+
+  // const csvUrl =
+  // "https://raw.githubusercontent.com/KITmetricslab/hospitalization-nowcast-hub/main/nowcast_viz_de/plot_data/" +
+  // date +
+  // "_forecast_data.csv";
+
 
   let unteresQuantile;
   let oberesQuantile;
@@ -35,6 +42,12 @@ export const useData = (
   const [data, setData] = useState(null);
 
   useEffect(() => {
+
+    const csvUrl =
+    "https://raw.githubusercontent.com/KITmetricslab/hospitalization-nowcast-hub/main/nowcast_viz_de/plot_data/" +
+    date +
+    "_forecast_data.csv";
+
     if (intervall === "FÜNFZIG") {
       unteresQuantile = "q0.25";
       oberesQuantile = "q0.75";
@@ -167,7 +180,7 @@ export const useData = (
       );
       setData(filteredData);
     });
-  }, [methode, menuAge, selectedScope, intervall, anzeige]);
+  }, [methode, menuAge, selectedScope, intervall, anzeige, date]);
 
   return data;
 };

@@ -19,7 +19,8 @@ import {
   initialValueTabelle,
   dateFormatter,
   initialDate,
-  initialdateGraphStart
+  initialdateGraphStart,
+  initialdateGraphEnde
 } from "./optionsCollection";
 import { useDataAxes } from "../Graph/useDataAxes";
 import { useDataDatenstand } from "../Graph/useDataBjörn";
@@ -146,7 +147,7 @@ export const MethodenDiv = () => {
   const [dateGraphStart, setGraphDateStart] = useState(initialdateGraphStart)
 
 
-  // const [dateGraphEnde, setGraphDateEnde] = 
+  const [dateGraphEnde, setGraphDateEnde] = useState(initialdateGraphEnde);
 
   const [date, setDate] = useState(initialDate);
 
@@ -485,6 +486,7 @@ export const MethodenDiv = () => {
               selectedScope={selectedScope}
               datenstand_schwarz={datenstand_schwarz}
               datenstand_grau={datenstand_grau}
+              dateGraphStart={dateGraphStart}
             />
 
             {/* Methoden ----------------------------------------------------------- */}
