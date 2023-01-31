@@ -137,6 +137,29 @@ export const MethodenDiv = () => {
     setSZ(!isSZ);
   }
 
+  //hide and unhide RKI and ILM Button depending on attributes
+  let l;
+  function showrki(){
+  
+      if(menuAge != "00+"){
+      l= "hidden"
+      } else if (menuAge == "00+") {
+      l= ""
+      }
+      return l;
+    }; 
+
+    let k;
+  function showilm(){
+  
+      if(selectedScope != "DE"){
+      k= "hidden"
+      } else if (selectedScope == "DE") {
+      k= ""
+      }
+      return k;
+    }; 
+
   // const for the selection section on the left side of the window ----------------------------------------------------------
 
   const [menuAge, setmenuAge] = useState(initialValueAge);
@@ -256,7 +279,7 @@ export const MethodenDiv = () => {
       i18n.changeLanguage(code);
     };
 
-  
+
 
   return (
     <div>
@@ -339,6 +362,8 @@ export const MethodenDiv = () => {
                           handleDiv1Selection();
                           if (selectedScope !== "DE") {
                             setILM(false);
+                            
+
                           }
                         }}
                       />
@@ -364,6 +389,7 @@ export const MethodenDiv = () => {
                         onSelectedValueChange={(selectedValue) => {
                           setmenuAge(selectedValue);
                           setScope("DE");
+                         
                           handleDiv2Selection();
                         }}
                       />
@@ -454,6 +480,14 @@ export const MethodenDiv = () => {
             </section>
           </div>
         </div>
+        
+        
+        <script>
+
+          
+          
+        </script>
+
         <div className="col-9" >
           {/* Graph ----------------------------------------------------------- */}
           <div className= "GraphundMethoden">
@@ -779,7 +813,7 @@ export const MethodenDiv = () => {
                   </tr>
 
                   {/*9*/}
-                  <tr className= "trmethod">
+                  <tr id="ILMtr" className= "trmethod" hidden={showilm()}>
                     <div
                       className={`container ${isILM ? "moved" : ""}`}
                       onClick={handleClickILM}
@@ -809,8 +843,9 @@ export const MethodenDiv = () => {
                     </div>
                   </tr>
 
-                    {/*10*/}
-                    <tr className= "trmethod">
+                    {/*10*/} 
+              
+                    <tr id="RKItr" className= "trmethod" hidden={showrki()}>
                     <div
                       className={`container ${isRKI ? "moved" : ""}`}
                       onClick={handleClickRKI}
@@ -838,6 +873,8 @@ export const MethodenDiv = () => {
                       </td>
                     </div>
                   </tr>
+
+
 
 
                 </div>
@@ -884,3 +921,4 @@ export const MethodenDiv = () => {
     </div>
   );
 };
+
