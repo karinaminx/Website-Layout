@@ -181,8 +181,49 @@ i18n
         hover7_methoden: "Für die berichteten Zählwerte pro Meldedatum und Verzögerung wird eine negative Binomialverteilung angenommen.",
         hover8_methoden: "Basierend auf modifizierter Variante der Nowcastingberechnung zur 7-Tage-Inzidenz.",
         hover9_methoden: "tba",
-        hover10_methoden: "Abweichungen zwischen täglich veröffentlichten und nachträglich korrigierten Werten."
-    }
+        hover10_methoden: "Abweichungen zwischen täglich veröffentlichten und nachträglich korrigierten Werten.",
+   
+       /*Datenschutz*/
+        DatenschutzTitle:"DATENSCHUTZ | IMPRESSUM",
+        Datenschutz_S1_Title: "Datenschutz",
+        Datenschutz_S2_Title: "Cookies",
+        Datenschutz_S3_Title: "Server-Log-Files",
+        Datenschutz_S4_Title: "Recht auf Auskunft, Löschung, Sperrung",
+        
+        Datenschutz_S1_Text1: "Die Betreiber dieser Seiten nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Wir behandeln Ihre personenbezogenen Daten vertraulich und entsprechend der gesetzlichen Datenschutzvorschriften sowie dieser Datenschutzerklärung.",
+        Datenschutz_S1_Text2: "Die Nutzung unserer Webseite ist in der Regel ohne Angabe personenbezogener Daten möglich. Soweit auf unseren Seiten personenbezogene Daten (beispielsweise Name, Anschrift oder E-Mail-Adressen) erhoben werden, erfolgt dies, soweit möglich, stets auf freiwilliger Basis. Diese Daten werden ohne Ihre ausdrückliche Zustimmung nicht an Dritte weitergegeben.",
+        Datenschutz_S1_Text3: "Wir weisen darauf hin, dass die Datenübertragung im Internet (z.B. bei der Kommunikation per E-Mail) Sicherheitslücken aufweisen kann. Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht möglich.",
+
+
+        Datenschutz_S2_Text1: "Die Internetseiten verwenden teilweise so genannte Cookies. Cookies richten auf Ihrem Rechner keinen Schaden an und enthalten keine Viren. Cookies dienen dazu, unser Angebot nutzerfreundlicher, effektiver und sicherer zu machen. Cookies sind kleine Textdateien, die auf Ihrem Rechner abgelegt werden und die Ihr Browser speichert.",
+        Datenschutz_S2_Text2: "Die meisten der von uns verwendeten Cookies sind so genannte „Session-Cookies“. Sie werden nach Ende Ihres Besuchs automatisch gelöscht. Andere Cookies bleiben auf Ihrem Endgerät gespeichert, bis Sie diese löschen. Diese Cookies ermöglichen es uns, Ihren Browser beim nächsten Besuch wiederzuerkennen.",
+        Datenschutz_S2_Text3: "Sie können Ihren Browser so einstellen, dass Sie über das Setzen von Cookies informiert werden und Cookies nur im Einzelfall erlauben, die Annahme von Cookies für bestimmte Fälle oder generell ausschließen sowie das automatische Löschen der Cookies beim Schließen des Browser aktivieren. Bei der Deaktivierung von Cookies kann die Funktionalität dieser Website eingeschränkt sein.",
+
+        Datenschutz_S3_Text1: "Der Provider der Seiten erhebt und speichert automatisch Informationen in so genannten Server-Log Files, die Ihr Browser automatisch an uns übermittelt. Dies sind:",
+        Datenschutz_S3_ul1: "Browsertyp und Browserversion",
+        Datenschutz_S3_ul2: "Verwendetes Betriebssystem",
+        Datenschutz_S3_ul3: "Referrer URL",
+        Datenschutz_S3_ul4: "Hostname des zugreifenden Rechners",
+        Datenschutz_S3_ul5: "Uhrzeit der Serveranfrage",
+        
+        Datenschutz_S3_Text3: "Diese Daten sind nicht bestimmten Personen zuordenbar. Eine Zusammenführung dieser Daten mit anderen Datenquellen wird nicht vorgenommen. Wir behalten uns vor, diese Daten nachträglich zu prüfen, wenn uns konkrete Anhaltspunkte für eine rechtswidrige Nutzung bekannt werden.",
+       
+        Datenschutz_S4_Text:"Sie haben jederzeit das Recht auf unentgeltliche Auskunft über Ihre gespeicherten personenbezogenen Daten, deren Herkunft und Empfänger und den Zweck der Datenverarbeitung sowie ein Recht auf Berichtigung, Sperrung oder Löschung dieser Daten. Hierzu sowie zu weiteren Fragen zum Thema personenbezogene Daten können Sie sich jederzeit unter der im Impressum angegebenen Adresse an uns wenden.",
+        
+        /*Impressum*/
+        ImpressumTitle:"IMPRESSUM",
+        Impressum_S1_Title: "Angaben gemäß § 5 TMG:",
+        Impressum_S2_Title: "Kontakt",
+        Impressum_S3_Title:"Registereintrag:",
+        Impressum_S4_Title:"Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:",
+        Impressum_S5_Title:"Quelle",
+        Impressum_S2_Text1:"Telefon: ",
+        Impressum_S2_Text2: "Mail:",
+        Impressum_S3_Text1: "Eintragung im Vereinsregister.",
+        Impressum_S3_Text2: "Registergericht: Mannheim ",
+        Impressum_S3_Text3:" Registernummer: 700629",
+        
+      }
       },
       en: {
         translation: {
@@ -366,7 +407,39 @@ i18n
         Datenschutz_S3_Title: "Server-Log-Files",
         Datenschutz_S4_Title: "Right to information, deletion, blocking",
        
+        Datenschutz_S1_Text1: ".",
+        Datenschutz_S1_Text2: ".",
+        Datenschutz_S1_Text3: "",
 
+
+        Datenschutz_S2_Text1: "",
+        Datenschutz_S2_Text2: "",
+        Datenschutz_S2_Text3: " ",
+        
+        Datenschutz_S3_Text1: "Der Provider der Seiten erhebt und speichert automatisch Informationen in so genannten Server-Log Files, die Ihr Browser automatisch an uns übermittelt. Dies sind:",
+        Datenschutz_S3_ul1: "Browsertyp und Browserversion",
+        Datenschutz_S3_ul2: "Verwendetes Betriebssystem",
+        Datenschutz_S3_ul3: "Referrer URL",
+        Datenschutz_S3_ul4: "Hostname des zugreifenden Rechners",
+        Datenschutz_S3_ul5: "Uhrzeit der Serveranfrage",
+        
+        Datenschutz_S3_Text3: "Diese Daten sind nicht bestimmten Personen zuordenbar. Eine Zusammenführung dieser Daten mit anderen Datenquellen wird nicht vorgenommen. Wir behalten uns vor, diese Daten nachträglich zu prüfen, wenn uns konkrete Anhaltspunkte für eine rechtswidrige Nutzung bekannt werden.",
+       
+        Datenschutz_S4_Text:"Sie haben jederzeit das Recht auf unentgeltliche Auskunft über Ihre gespeicherten personenbezogenen Daten, deren Herkunft und Empfänger und den Zweck der Datenverarbeitung sowie ein Recht auf Berichtigung, Sperrung oder Löschung dieser Daten. Hierzu sowie zu weiteren Fragen zum Thema personenbezogene Daten können Sie sich jederzeit unter der im Impressum angegebenen Adresse an uns wenden.",
+        
+        /*Impressum*/
+        ImpressumTitle:"IMPRESSUM",
+        Impressum_S1_Title: "Information according to § 5 TMG:",
+        Impressum_S2_Title: "Contact",
+        Impressum_S3_Title:"Register entry:",
+        Impressum_S4_Title:"Responsible for the content according to § 55 para. 2 RStV:",
+        Impressum_S5_Title:"Source",
+        Impressum_S2_Text1:"Phone:",
+        Impressum_S2_Text2: "Mail:",
+        Impressum_S3_Text1: "Entry in the register of associations.",
+        Impressum_S3_Text2: "Register court: Mannheim ",
+        Impressum_S3_Text3:" Register number: 700629",
+        
 
 
         }

@@ -1,0 +1,10 @@
+.texttitle {
+    color:rgb(64, 143, 243);
+  }
+
+.titel-text{
+    position: relative;
+      left: 35px;
+      top: 15px;
+      text-align: left;
+  }
