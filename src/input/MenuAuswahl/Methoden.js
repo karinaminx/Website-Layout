@@ -333,7 +333,7 @@ export const MethodenDiv = () => {
                   </div>
 
                   <div
-                    className="hovertext hoverq"
+                    className="hovertext "
                     data-hover={t("hover_oder")} 
                         > <p class="oderText"><sm>{t("oder")}</sm>  </p>
                   </div>
