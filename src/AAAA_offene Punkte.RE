@@ -1,8 +1,7 @@
 - Methoden Button neu ausrichten
-- Y Achse Kit rausnehmen (Björn)
-- Datenstand Filter -> funktioniert nur wenn man auf Kalender klickt
+- Datenstand Filter -> funktioniert nur wenn man auf Kalender klickt (auswahl)
 - Logo ganz oben 
 - Datum auch ganz Ende anzeigen
-- RKI ausblenden (Björn)
 - vll. noch einbauen das falls keine Daten da sind, Funktionen button nicht erscheint (Björn)
-- Senkrechte (Björn)
+- Hoover Over 
+- Komplett Verschossen wenn man die Bildschirmgröße verändert
