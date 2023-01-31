@@ -48,6 +48,7 @@ i18n
         text4_nowcast: "Gleichzeitig haben wir ein wissenschaftliches Interesse, die verschiedenen Nowcasting-Verfahren miteinander zu vergleichen.",
 
         show_method: "Methoden einblenden",
+        unshow_method: "Methoden ausblenden",
         tabelbutton: "Tabelle anzeigen",
 
 
@@ -170,7 +171,7 @@ i18n
         buttonrightchart:"Zum vergrößern des Graph Ausschnitts.",
         buttonleftchart: "Zum verkleinern des Graph Ausschnitts.",
 
-        oder: "oder",
+        
         hover_oder: "Es ist nur möglich, nach Bundesland oder dem Alter zu Filtern. Eine Kombination ist aufgrund der Datengrundlage nicht möglich.",
         hover1_methoden: "",
         hover2_methoden: "Semiparametrisches Nowcasting-Verfahren für rechszensierte Hospitalisierungen nach Datum des positiven Tests.",
@@ -182,6 +183,32 @@ i18n
         hover8_methoden: "Basierend auf modifizierter Variante der Nowcastingberechnung zur 7-Tage-Inzidenz.",
         hover9_methoden: "tba",
         hover10_methoden: "Abweichungen zwischen täglich veröffentlichten und nachträglich korrigierten Werten.",
+
+        /* Texte Graph*/
+
+        Datenstand: "Datenstand",
+        Filter: "Filter",
+        oder: "oder",
+        Bundesland: "Bundesland:",
+        Alter: "Alter: ",
+        Anzeige: "Anzeige",
+        per100k: "Pro 100.000",
+        absoluteZ: "absolute Zahlen",
+        Unsicherheitsintervall: "Unsicherheitsintervall",
+        keines: "keines",
+
+        /* Methoden*/
+
+        Datenstand_s: "Datenstand schwarz",
+        Datenstand_g: "Datenstand grau",
+
+
+        Deutschland: "Deutschland",
+
+
+
+
+        
    
        /*Datenschutz*/
         DatenschutzTitle:"DATENSCHUTZ | IMPRESSUM",
@@ -265,6 +292,7 @@ i18n
 
 
         show_method: "Show methodes",
+        unshow_method: "Hide methodes",
         tabelbutton: "Show table",
 
         hinweis: "Note: Irregularities or overloads in the reporting process can affect the reliability of the nowcasts.",
@@ -387,7 +415,6 @@ i18n
         buttonrightchart:"To enlarge the graph section.",
         buttonleftchart: "To reduce the size of the graph section.",
         
-        oder: "or",
         hover_oder: "It is only possible to filter by state or age. A combination is not possible due to the data basis. ",
         hover1_methoden: "",
         hover2_methoden: "A semi-parametric nowcasting procedure for right-censored hospitalisations by date of positive test",
@@ -399,6 +426,28 @@ i18n
         hover8_methoden:"Based on modified variant of nowcasting calculation for 7-day incidence.",
         hover9_methoden:"tba",
         hover10_methoden:"Discrepancies between daily published and subsequently corrected values.",
+
+
+        /*Texte Graph*/
+
+        Datenstand: "Current data",
+        Filter: "Filter",
+        oder: "or",
+        Bundesland: "State:",
+        Alter: "Age: ",
+        Anzeige: "Display",
+        per100k: "Per 100.000",
+        absoluteZ: "absolute numbers",
+        Unsicherheitsintervall: "Uncertainty interval",
+        keines: "none",
+
+        /* Methoden*/
+
+        Datenstand_s: "Current data black",
+        Datenstand_g: "Current data grey",
+
+
+        Deutschland: "Germany",
 
         /*Datenschutz*/
         DatenschutzTitle:"PRIVACY | IMPRINT",

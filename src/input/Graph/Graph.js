@@ -18,6 +18,13 @@ import { MarksRealDataSchwarz } from "./MarksRealDataSchwarz";
 // import { isLabelWithInternallyDisabledControl } from "@testing-library/user-event/dist/utils";
 import {Tooltipp} from "./Tooltipp";
 
+import { useTranslation } from 'react-i18next';
+
+const lngs = [
+    { code: "de", native: "Deutsch" },
+    { code: "en", native: "English" },
+  ];
+
 const height = 500;
 const margin = { top: 20, right: 10, bottom: 65, left: 100 };
 const xAxisLabelOffset = 50;
@@ -158,8 +165,15 @@ export const Graph = ({
     !datenstand_schwarz
   ) {
     return <p className="loading">Loading...</p>;
+
   }
 
+  const { t, i18n } = useTranslation();
+
+    const handleTrans = (code) => {
+        i18n.changeLanguage(code);
+      };
+      
   const innerHeight = height - margin.top - margin.bottom;
   const innerWidth = width - margin.left - margin.right;
 
@@ -208,6 +222,8 @@ yesterday.setDate(yesterday.getDate() - 1);
   // const toopltipp = 
 
   return (
+
+    
     <div>
     <Tooltipp xScale={xScale} yScale={yScale}/>
     <svg width={width} height={height}>
