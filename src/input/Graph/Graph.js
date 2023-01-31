@@ -14,7 +14,8 @@ import { Marks } from "./Marks";
 import "./Graph.css";
 import { line, curveNatural } from "d3";
 import { MarksRealData } from "./MarksRealData";
-import { isLabelWithInternallyDisabledControl } from "@testing-library/user-event/dist/utils";
+// import { isLabelWithInternallyDisabledControl } from "@testing-library/user-event/dist/utils";
+import {Tooltipp} from "./Tooltipp";
 
 const height = 500;
 const margin = { top: 20, right: 10, bottom: 65, left: 100 };
@@ -48,7 +49,10 @@ export const Graph = ({
   SZdata,
   datenstand_schwarz,
   datenstand_grau,
+  dateGraphStart,
 }) => {
+
+  
   let width = 800;
 
   let anzeigeDatenstandSchwarz;
@@ -170,13 +174,20 @@ export const Graph = ({
 
   const xAxisTickFormat = timeFormat("%d.%m.%Y");
 
-  const dateStart = timeDay.offset(max(data, xValue), -35);
+  const dateStartMethoden= timeDay.offset(max(data, xValue), -35);
+  const dateStart = new Date(dateGraphStart);
+
   const dateEnde = timeDay.offset(max(data, xValue), 0);
 
+  // dateGraphStart
   // const xScale = scaleTime()
   // .domain([dateStart,dateEnde])
   // .range([0, innerWidth])
   // .nice();
+
+  
+  console.log(dateGraphStart);
+  console.log(dateStart);
 
   const xScale = scaleTime()
     .domain([dateStart, max(data, xValue)])
@@ -188,8 +199,13 @@ export const Graph = ({
     .range([innerHeight, 0])
     .nice();
 
+  // const toopltipp = 
+
   return (
+    <div>
+    <Tooltipp xScale={xScale} yScale={yScale}/>
     <svg width={width} height={height}>
+
       <g transform={`translate(${margin.left},${margin.top})`}>
         <AxisBottom
           xScale={xScale}
@@ -351,5 +367,7 @@ export const Graph = ({
         </g>
       </g>
     </svg>
+    </div>
   );
 };
+

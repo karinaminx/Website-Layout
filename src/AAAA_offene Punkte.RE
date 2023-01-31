@@ -3,3 +3,6 @@
 - Datenstand Filter -> funktioniert nur wenn man auf Kalender klickt
 - Logo ganz oben 
 - Datum auch ganz Ende anzeigen
+- RKI ausblenden (Björn)
+- vll. noch einbauen das falls keine Daten da sind, Funktionen button nicht erscheint (Björn)
+- Senkrechte (Björn)

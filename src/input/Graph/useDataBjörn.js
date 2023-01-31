@@ -3,8 +3,8 @@ import { csv, filter } from "d3";
 import "./Graph.css";
 import { initialDate } from "../MenuAuswahl/optionsCollection";
 
-const dateEnd = new Date("2023-01-19");
-const dateStart = new Date("2022-12-23");
+let dateEnd;
+let dateStart;
 
 const csvUrl =
   "https://raw.githubusercontent.com/KITmetricslab/hospitalization-nowcast-hub/main/data-truth/COVID-19/COVID-19_hospitalizations_preprocessed.csv";

@@ -8,12 +8,12 @@ const datum = "2023-01-10";
 
 //{DE00, DEBW, DEBY, DEBE, DEBB, DEHB, DEHH, DEHE, DEMV, DENI, DENW, DERP, DESL, DESN, DEST, DESH, DETH, age00to04, age05to14, age15to34, age35to59, age60to79, age80up}
 
-// const csvUrl =
-//   "https://raw.githubusercontent.com/KITmetricslab/hospitalization-nowcast-hub/main/nowcast_viz_de/plot_data/" +
-//   datum +
-//   "_forecast_data.csv";
+const csvUrl =
+  "https://raw.githubusercontent.com/KITmetricslab/hospitalization-nowcast-hub/main/nowcast_viz_de/plot_data/" +
+  datum +
+  "_forecast_data.csv";
 
-  const csvUrl = "https://raw.githubusercontent.com/KITmetricslab/hospitalization-nowcast-hub/main/nowcast_viz_de/plot_data/2023-01-20_forecast_data.csv";
+  // const csvUrl = "https://raw.githubusercontent.com/KITmetricslab/hospitalization-nowcast-hub/main/nowcast_viz_de/plot_data/2023-01-20_forecast_data.csv";
 
    
 
@@ -29,22 +29,14 @@ export const useDataAxes = (
   let unteresQuantile;
   let oberesQuantile;
 
-// console.log(methode + " " +selectedScope + " " + menuAge + " " + intervall + " " + " " + anzeige + " " + date);
-
-  // let populationTabelle = getPopulation(menuAge,selectedScope);
-
-  // console.log(populationTabelle);
-  
-  // let population = populationTabelle[0].population;
-
-
-  // d.value = (+d.mean/+population) * 100000;
-  // d.quantileKlein = (+[unteresQuantile]/population) * 100000;
-  // d.quantileGroß = (+d[oberesQuantile]/population) * 100000;
-
   const [data, setData] = useState(null);
 
   useEffect(() => {
+    const csvUrl =
+  "https://raw.githubusercontent.com/KITmetricslab/hospitalization-nowcast-hub/main/nowcast_viz_de/plot_data/" +
+  date +
+  "_forecast_data.csv";
+
     if (intervall === "FÜNFZIG") {
       unteresQuantile = "q0.25";
       oberesQuantile = "q0.75";
@@ -177,7 +169,7 @@ export const useDataAxes = (
       );
       setData(filteredData);
     });
-  }, [methode, menuAge, selectedScope, intervall, anzeige]);
+  }, [methode, menuAge, selectedScope, intervall, anzeige, date]);
 
   return data;
 };
