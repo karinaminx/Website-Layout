@@ -317,11 +317,11 @@ export const MethodenDiv = () => {
         
           {isVisible ? (
             <p>
-              <i className="fa-solid fa-caret-right"></i> Methoden ausblenden
+              <i className="fa-solid fa-caret-right"></i> {t("unshow_method")}
             </p>
           ) : (
             <p>
-              <i className="fa-solid fa-caret-left"></i> Methoden einblenden
+              <i className="fa-solid fa-caret-left"></i> {t("show_method")}
             </p>
           )}
         </button>
@@ -344,7 +344,7 @@ export const MethodenDiv = () => {
               <div className="Methoden">
                 <div id="datenstand" className="menuOptionen">
                   <label className="einführung">
-                    <b>Datenstand</b>
+                    <b>{t("Datenstand")}</b>
                   </label>
                   <div id="inhalt">
                     <div>
@@ -369,11 +369,11 @@ export const MethodenDiv = () => {
 
               <div id="filter" className="menuOptionen">
                 <label className="einführung">
-                  <b>Filter</b>
+                  <b>{t("Filter")}</b>
                 </label>
                 <div id="inhalt">
                   <div id="div1" className="visible">
-                    <label for="scope-select">Bundesland:</label>
+                    <label for="scope-select">{t("Bundesland")}</label>
                     <button className="btn btn-light button-filter rounded">
                       <Dropdown
                         name="BundeslandSelect"
@@ -403,7 +403,7 @@ export const MethodenDiv = () => {
 
                   <div id="div2" className="hidden">
                     <label className="agelayout" for="scope-select">
-                      Alter:
+                    {t("Alter")}
                     </label>
                     <button className="btn btn-light button-filter rounded ">
                       <Dropdown
@@ -424,7 +424,7 @@ export const MethodenDiv = () => {
 
               <div id="anzeige" className="menuOptionen">
                 <label className="einführung">
-                  <b>Anzeige</b>
+                  <b>{t("Anzeige")}</b>
                 </label>
                 <div id="inhalt">
                   <button
@@ -432,7 +432,7 @@ export const MethodenDiv = () => {
                         onClick={() => setAnzeige("hunderttausend")}
                         
                       >
-                        <label>Pro 100.000</label>
+                        <label>{t("per100k")}</label>
                         <input
                           type="radio"
                           name="größe"
@@ -445,7 +445,7 @@ export const MethodenDiv = () => {
                           className="btn btn-light button-anzeige rounded"
                           onClick={() => setAnzeige("absoluteZahlen")}
                         >
-                          <label>absolute Zahlen</label>
+                          <label>{t("absoluteZ")}</label>
                           <input
                             type="radio"
                             name="größe"
@@ -458,7 +458,7 @@ export const MethodenDiv = () => {
 
               <div id="unsicherheitsintervall" className="menuOptionen">
                 <label className="einführung">
-                  <b>Unsicherheitsintervall</b>
+                  <b>{t("Unsicherheitsintervall")}</b>
                 </label>
                 <div id="inhalt">
                 <button
@@ -491,7 +491,7 @@ export const MethodenDiv = () => {
                           className="btn btn-light button-unsicherheitsintervall rounded"
                           onClick={() => setIntervall("keines")}
                         >
-                          <label className="usi">keines</label>
+                          <label className="usi">{t("keines")}</label>
                           <input
                             type="radio"
                             name="unsicherheitsintervall"
@@ -571,7 +571,7 @@ export const MethodenDiv = () => {
                           }`}
                           onClick={handleClickDatenstandSchwarz}
                         >
-                          Datenstand Schwarz
+                          {t("Datenstand_s")}
                         </p>
                       </td>
                       <td>
@@ -605,7 +605,7 @@ export const MethodenDiv = () => {
                           }`}
                           onClick={handleClickDatenstandGrau}
                         >
-                          Datenstand Grau
+                          {t("Datenstand_g")}
                         </p>
                       </td>
                       <td>

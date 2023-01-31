@@ -1,4 +1,16 @@
 import {  timeFormat } from "d3";
+import { useTranslation } from 'react-i18next';
+
+const lngs = [
+    { code: "de", native: "Deutsch" },
+    { code: "en", native: "English" },
+  ];
+
+  const { t, i18n } = useTranslation();
+
+    const handleTrans = (code) => {
+        i18n.changeLanguage(code);
+      };
 
 export const optionsAge = [
     { value: "00+", label: "00+" },
@@ -11,6 +23,8 @@ export const optionsAge = [
   ];
 
   export const options = [
+
+    
     { value: "DE", label: "Deutschland" },
     { value: "DE-SH", label: "Schleswig-Holstein" },
     { value: "DE-HH", label: "Hamburg" },
