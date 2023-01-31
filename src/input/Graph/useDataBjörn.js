@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { csv, filter } from "d3";
 import "./Graph.css";
+import { initialDate } from "../MenuAuswahl/optionsCollection";
 
 const dateEnd = new Date("2023-01-19");
 const dateStart = new Date("2022-12-23");
@@ -9,15 +10,25 @@ const csvUrl =
   "https://raw.githubusercontent.com/KITmetricslab/hospitalization-nowcast-hub/main/data-truth/COVID-19/COVID-19_hospitalizations_preprocessed.csv";
 
 export const useDataDatenstand = (
-  method,
   menuAge,
   selectedScope,
-  display
+  display,
+  anzeige,
+  dateGraphStart,
+  dateEndÜbergeben
 ) => {
+  const dateStarA= new Date(dateGraphStart);
+
+  // console.log(dateStarA);
+
+
+
   const [data, setData] = useState(null);
-  const [Datenstand, setDatenstand] = useState(null);
 
   useEffect(() => {
+    const dateStart = new Date(dateGraphStart);
+    const dateEnd = new Date(dateEndÜbergeben)
+
     const processRow = (row) => {
       for (let i = 0; i <= 80; i++) {
         const value = row[`value_${i}d`];
@@ -73,9 +84,9 @@ export const useDataDatenstand = (
       );
       setData(filteredDataWithValueSieben);
 
-      console.log(filteredDataWithValueSieben);
     });
-  }, [method, menuAge, selectedScope, display]);
+  }, [ menuAge, selectedScope, display, dateStart, dateEndÜbergeben]);
+
 
   return data;
 };

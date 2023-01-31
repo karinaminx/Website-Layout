@@ -19,6 +19,7 @@ import {
   initialValueTabelle,
   dateFormatter,
   initialDate,
+  initialdateGraphStart
 } from "./optionsCollection";
 import { useDataAxes } from "../Graph/useDataAxes";
 import { useDataDatenstand } from "../Graph/useDataBjörn";
@@ -36,6 +37,7 @@ import SU_line from "../../images/SU_line.png";
 import SZ_line from "../../images/SZ_line.png";
 
 import { useTranslation } from 'react-i18next';
+import { init } from "i18next";
 
 const lngs = [
     { code: "de", native: "Deutsch" },
@@ -140,7 +142,14 @@ export const MethodenDiv = () => {
   const [menuAge, setmenuAge] = useState(initialValueAge);
   const [anzeige, setAnzeige] = useState(initialValueAnzeige);
   const [selectedScope, setScope] = useState(initialValue);
+
+  const [dateGraphStart, setGraphDateStart] = useState(initialdateGraphStart)
+
+
+  // const [dateGraphEnde, setGraphDateEnde] = 
+
   const [date, setDate] = useState(initialDate);
+
   const [intervall, setIntervall] = useState("FÜNFundNEUNZIG");
 
   //Importing the data for the graph
@@ -223,20 +232,22 @@ export const MethodenDiv = () => {
     date
   );
 
+
   const datenstand_schwarz = useDataDatenstand(
-    "KIT-simple_nowcast",
     menuAge,
     selectedScope,
     intervall,
     anzeige,
-    date
+    dateGraphStart,
+    initialDate
   );
   const datenstand_grau = useDataDatenstand(
     menuAge,
     selectedScope,
     intervall,
     anzeige,
-    date
+    dateGraphStart,
+    date,
   );
 
   const { t, i18n } = useTranslation();
@@ -245,7 +256,7 @@ export const MethodenDiv = () => {
       i18n.changeLanguage(code);
     };
 
-    console.log(initialDate);
+  
 
   return (
     <div>

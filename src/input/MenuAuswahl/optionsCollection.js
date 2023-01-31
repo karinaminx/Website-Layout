@@ -59,3 +59,13 @@ export const dateFormatter = timeFormat("%Y-%m-%d");
 const yesterday = new Date();
 yesterday.setDate(yesterday.getDate() - 1);
 export const initialDate = dateFormatter(yesterday);
+
+
+const yesterdayGraphStart = new Date();
+yesterdayGraphStart.setDate(yesterdayGraphStart.getDate()-35);
+export const initialdateGraphStart = dateFormatter(yesterdayGraphStart);
+
+
+// const yesterdayGraphStart = new Date();
+// yesterdayGraphStart.setDate(yesterdayGraphStart.getDate()-);
+// export const initialDate = dateFormatter(yesterdayGraphStart);
