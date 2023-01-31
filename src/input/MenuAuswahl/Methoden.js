@@ -58,6 +58,8 @@ export const MethodenDiv = () => {
     setIsCollapsed(!isCollapsed);
   };
 
+
+
   //Filter: If one is selected, the other one´s opacity is set down
   const div1 = document.getElementById("div1");
   const div2 = document.getElementById("div2");
@@ -168,9 +170,12 @@ export const MethodenDiv = () => {
   const [selectedScope, setScope] = useState(initialValue);
 
   const [dateGraphStart, setGraphDateStart] = useState(initialdateGraphStart)
-  const [dateGraphEnde, setGraphDateEnde] = useState(initialdateGraphEnde);
+  // const [dateGraphEnde, setGraphDateEnde] = useState(initialdateGraphEnde);
 
-  const [date, setDate] = useState(initialDate);
+  // const 
+
+
+  const [date, setDate] = useState(initialDate); // vom Datenstand
 
   const [intervall, setIntervall] = useState("FÜNFundNEUNZIG");
 
@@ -293,7 +298,7 @@ export const MethodenDiv = () => {
       </button>
       </span>
       <span class="hovertext hoverml" data-hover={t("buttonleftchart")}>
-      <button className=" btn-outline-dark buttonmovearea">
+      <button className=" btn-outline-dark buttonmovearea" handleClick>
             <p>
             <i className="fa-solid fa-caret-right"></i> 
             </p>
@@ -361,10 +366,7 @@ export const MethodenDiv = () => {
                 </div>
               </div>
 
-              
-
-              {/* Man kann ein anderes Datum nicht auswählen. Jedoch werden sie trz. angezeigt. @Lena, kannst du dir das mal anschauen? */}
-
+            
               <div id="filter" className="menuOptionen">
                 <label className="einführung">
                   <b>{t("Filter")}</b>
