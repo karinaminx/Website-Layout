@@ -13,7 +13,7 @@ export const Marks = ({
   farbe
 }) => (
   <g className="mark" stroke={farbe}>
-    {/* <path
+    <path
       visibility={anzeigeAnAus}
       fill="none"
       stroke={`rgba(${farbe},0.9)`}
@@ -22,7 +22,7 @@ export const Marks = ({
           .x((d) => xScale(xValue(d)))
           .y((d) => yScale(yValue(d)))(data)
       }
-    /> */}
+    />
     <path
       visibility={anzeigeAnAus}
       fill="none"
