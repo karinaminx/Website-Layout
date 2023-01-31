@@ -3,6 +3,7 @@
 }
 .moved {
   transform: translateX(-30%);
+  z-index: 1;
 }
 
 
@@ -221,9 +222,8 @@
   position: absolute;
     left: -400%;
     top: -50%;
-  z-index: 1;
+  z-index: 6;
   padding: 2%;
-
  
   
  }
