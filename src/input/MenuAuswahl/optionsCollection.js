@@ -62,7 +62,7 @@ export const initialDate = dateFormatter(yesterday);
 
 
 const yesterdayGraphStart = new Date();
-yesterdayGraphStart.setDate(yesterdayGraphStart.getDate()-45);
+yesterdayGraphStart.setDate(yesterdayGraphStart.getDate()-35);
 export const initialdateGraphStart = dateFormatter(yesterdayGraphStart);
 
 

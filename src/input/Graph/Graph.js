@@ -185,12 +185,17 @@ export const Graph = ({
   // .range([0, innerWidth])
   // .nice();
 
-  
-  console.log(dateGraphStart);
-  console.log(dateStart);
+  const yesterday = new Date();
+yesterday.setDate(yesterday.getDate() - 1);
+// const initialDate = dateFormatter(yesterday);
 
-  const xScale = scaleTime()
-    .domain([dateStart, max(data, xValue)])
+  // const xScale = scaleTime()
+  //   .domain([dateStart, max(data, xValue)])
+  //   .range([0, innerWidth])
+  //   .nice();
+
+    const xScale = scaleTime()
+    .domain([dateStart, yesterday])
     .range([0, innerWidth])
     .nice();
 
