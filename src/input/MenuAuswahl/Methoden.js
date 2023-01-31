@@ -232,7 +232,6 @@ export const MethodenDiv = () => {
     date
   );
   const datenstand_grau = useDataDatenstand(
-    "KIT-simple_nowcast",
     menuAge,
     selectedScope,
     intervall,
@@ -245,6 +244,8 @@ export const MethodenDiv = () => {
   const handleTrans = (code) => {
       i18n.changeLanguage(code);
     };
+
+    console.log(initialDate);
 
   return (
     <div>
@@ -293,7 +294,7 @@ export const MethodenDiv = () => {
                         <input
                           type="date"
                           name="select-date"
-                          defaultValue = ""
+                          defaultValue = {initialDate}
                           onChange={(e) => setDate(e.target.value)}
                           max={initialDate}
                           min="2021-07-01"
