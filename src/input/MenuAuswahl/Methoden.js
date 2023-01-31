@@ -286,7 +286,7 @@ export const MethodenDiv = () => {
     <div>
       <div className=" buttonschart">
       
-      <span class="hovertext hoverm" data-hover={t("buttonleftchart")}>
+      <span class="hovertext hovermr" data-hover={t("buttonrightchart")}>
       <button className="btn-outline-dark buttonmovearea">
           
             <p>
@@ -294,7 +294,7 @@ export const MethodenDiv = () => {
             </p>
       </button>
       </span>
-      <span class="hovertext hoverm" data-hover={t("buttonrightchart")}>
+      <span class="hovertext hoverml" data-hover={t("buttonleftchart")}>
       <button className=" btn-outline-dark buttonmovearea">
             <p>
             <i className="fa-solid fa-caret-right"></i> 
