@@ -1,3 +1,15 @@
+/* Titel */
+#title{
+  width: 90%;
+  height: 53px;
+}
+
+.title{
+  position: relative;
+  left: 70px;
+  
+}
+
 .texttitle {
     color:rgb(64, 143, 243);
   }
@@ -7,4 +19,28 @@
       left: 35px;
       top: 15px;
       text-align: left;
+  }
+
+  .textbereich {
+    box-align: center;
+    text-align: left;
+    margin-right: 50px;
+    margin-left: 50px;
+    margin-bottom: 30px;
+    margin-top: 25px; 
+    text-align: justify;
+  }
+  
+  .Gruppen {
+    padding-bottom: 0%;
+  }
+
+  .textbereich_Impressum {
+    box-align: center;
+    text-align: left;
+    margin-right: 50px;
+    margin-left: 50px;
+    margin-bottom: 30px;
+    margin-top: 50px; 
+    text-align: justify;
   }
