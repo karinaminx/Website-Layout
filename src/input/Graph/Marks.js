@@ -1,5 +1,5 @@
 import "./Graph.css";
-import { line, curveNatural, reduce, area } from "d3";
+import { line, area } from "d3";
 
 export const Marks = ({
   data,
@@ -7,14 +7,13 @@ export const Marks = ({
   yScale,
   xValue,
   yValue,
-  circleRadius,
   anzeigeAnAus,
   yQuantileGroß,
   yQuantileKlein,
   farbe
 }) => (
   <g className="mark" stroke={farbe}>
-    <path
+    {/* <path
       visibility={anzeigeAnAus}
       fill="none"
       stroke={`rgba(${farbe},0.9)`}
@@ -23,7 +22,7 @@ export const Marks = ({
           .x((d) => xScale(xValue(d)))
           .y((d) => yScale(yValue(d)))(data)
       }
-    />
+    /> */}
     <path
       visibility={anzeigeAnAus}
       fill="none"
@@ -54,6 +53,7 @@ export const Marks = ({
           .y1((d) => yScale(yValue(d)))(data)
       }
     />
+  
     <path
       visibility={anzeigeAnAus}
       fill={`rgba(${farbe},0.2)`}
@@ -64,5 +64,17 @@ export const Marks = ({
           .y1((d) => yScale(yQuantileGroß(d)))(data)
       }
     />
+      <path
+      visibility={anzeigeAnAus}
+      fill="none"
+      stroke={`rgba(${farbe},0.9)`}
+      d={
+        line()
+          .x((d) => xScale(xValue(d)))
+          .y((d) => yScale(yScale.domain()[0]))
+          .defined((d) => yScale(yValue(d)))
+      }
+    />
+
   </g>
 );

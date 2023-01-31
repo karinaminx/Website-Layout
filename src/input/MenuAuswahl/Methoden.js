@@ -5,7 +5,7 @@ import { Graph } from "../Graph/Graph";
 import "./DesignMethoden.css";
 import { Dropdown } from "./Dropdown";
 import { color, timeFormat } from "d3";
-import { useData } from "../Graph/useData";
+import { useData } from "../Graph/useDataMethode";
 import { QuestionMark } from "./QuestionMark";
 import { Tabelle } from "../Graph/Tabelle";
 import {
@@ -23,7 +23,7 @@ import {
   initialdateGraphEnde
 } from "./optionsCollection";
 import { useDataAxes } from "../Graph/useDataAxes";
-import { useDataDatenstand } from "../Graph/useDataBjörn";
+import { useDataDatenstand } from "../Graph/useDataDatenstand";
 
 import datenstand_g from "../../images/datenstand_grau.png";
 import datenstand_sw from "../../images/datenstand_sw.png";
@@ -179,7 +179,7 @@ export const MethodenDiv = () => {
   //Importing the data for the graph
 
   const data = useDataAxes(
-    "KIT-simple_nowcast",
+    "",
     menuAge,
     selectedScope,
     intervall,

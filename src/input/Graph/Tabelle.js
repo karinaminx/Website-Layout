@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useData } from "../Graph/useData";
+import { useData } from "./useDataMethode";
 import "./DesignTabelle.css";
 
 export const Tabelle = ({

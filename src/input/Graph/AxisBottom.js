@@ -1,7 +1,7 @@
 import "./Graph.css"
 
 export const AxisBottom = ({ xScale, innerHeight, tickFormat, tickOffset = 1 }) =>
-xScale.ticks().filter((tickValue, index) => index % 4 === 0).map(tickValue => (
+xScale.ticks().filter((tickValue, index) => index % 3  === 0).map(tickValue => (
   <g
     className="tick"
     key={tickValue}

@@ -13,7 +13,8 @@ import { AxisLeft } from "./AxisLeft";
 import { Marks } from "./Marks";
 import "./Graph.css";
 import { line, curveNatural } from "d3";
-import { MarksRealData } from "./MarksRealData";
+import { MarksRealDataGrau } from "./MarksRealDataGrau";
+import { MarksRealDataSchwarz } from "./MarksRealDataSchwarz";
 // import { isLabelWithInternallyDisabledControl } from "@testing-library/user-event/dist/utils";
 import {Tooltipp} from "./Tooltipp";
 
@@ -348,7 +349,7 @@ yesterday.setDate(yesterday.getDate() - 1);
             anzeigeAnAus={anzeigeSZ}
             farbe={"0,200,100"}
           />
-          <MarksRealData
+          <MarksRealDataSchwarz
             data={datenstand_schwarz}
             xScale={xScale}
             yScale={yScale}
@@ -359,7 +360,7 @@ yesterday.setDate(yesterday.getDate() - 1);
             farbe={"0,0,0"}
           />
 
-          <MarksRealData
+          <MarksRealDataGrau
             data={datenstand_grau}
             xScale={xScale}
             yScale={yScale}
