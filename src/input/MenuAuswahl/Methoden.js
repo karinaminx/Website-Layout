@@ -886,7 +886,7 @@ export const MethodenDiv = () => {
         </div>
       </div>
 
-      
+      {/*
         <div className="table">
           <button
             className="btn btn-light button-table rounded"
@@ -895,7 +895,7 @@ export const MethodenDiv = () => {
             {" "}
             <i className="fa-solid fa-caret-down"></i> Tabelle anzeigen
           </button>
-          {/* {isCollapsed && ( */}
+           
           <div
             className={`collapse ${!isCollapsed ? "show" : ""}`}
             id="collapseExample"
@@ -917,10 +917,10 @@ export const MethodenDiv = () => {
               />
             </div>
           </div>
-          {/* )} */}
-        </div>
+          
+        </div> */ }
                           
-    </div>
+    </div>   
   );
 };
 
