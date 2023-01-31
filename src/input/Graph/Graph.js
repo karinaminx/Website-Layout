@@ -223,7 +223,7 @@ yesterday.setDate(yesterday.getDate() - 1);
 
     
     <div>
-    <Tooltipp xScale={xScale} yScale={yScale} width={innerWidth} height={innerHeight} yValueDatenstand xValue yValue yQuantileKlein yQuantileGroß/>
+    {/* <Tooltipp xScale={xScale} yScale={yScale} width={innerWidth} height={innerHeight} yValueDatenstand xValue yValue yQuantileKlein yQuantileGroß/> */}
     <svg id = 'my_dataviz' width={width} height={height}>
 
       <g transform={`translate(${margin.left},${margin.top})`}>
