@@ -14,7 +14,8 @@ import { Marks } from "./Marks";
 import "./Graph.css";
 import { line, curveNatural } from "d3";
 import { MarksRealData } from "./MarksRealData";
-import { isLabelWithInternallyDisabledControl } from "@testing-library/user-event/dist/utils";
+// import { isLabelWithInternallyDisabledControl } from "@testing-library/user-event/dist/utils";
+import {Tooltipp} from "./Tooltipp";
 
 const height = 500;
 const margin = { top: 20, right: 10, bottom: 65, left: 100 };
@@ -188,8 +189,13 @@ export const Graph = ({
     .range([innerHeight, 0])
     .nice();
 
+  // const toopltipp = 
+
   return (
+    <div>
+    <Tooltipp xScale={xScale} yScale={yScale}/>
     <svg width={width} height={height}>
+
       <g transform={`translate(${margin.left},${margin.top})`}>
         <AxisBottom
           xScale={xScale}
@@ -351,5 +357,7 @@ export const Graph = ({
         </g>
       </g>
     </svg>
+    </div>
   );
 };
+
