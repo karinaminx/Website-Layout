@@ -6,12 +6,7 @@ const lngs = [
     { code: "en", native: "English" },
   ];
 
-  const { t, i18n } = useTranslation();
-
-    const handleTrans = (code) => {
-        i18n.changeLanguage(code);
-      };
-
+  
 export const optionsAge = [
     { value: "00+", label: "00+" },
     { value: "00-04", label: "00-04" },

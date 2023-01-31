@@ -168,11 +168,7 @@ export const Graph = ({
 
   }
 
-  const { t, i18n } = useTranslation();
-
-    const handleTrans = (code) => {
-        i18n.changeLanguage(code);
-      };
+  
       
   const innerHeight = height - margin.top - margin.bottom;
   const innerWidth = width - margin.left - margin.right;
