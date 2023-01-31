@@ -11,7 +11,8 @@ import FAQ from './components/FAQ';
 import Footer from './components/Footer';
 import KontaktFomos from './components/Kontakt-Fomos';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-
+import FomosDatenschutz from './components/Datenschutz-Fomos'
+import Datenschutz from './components/Datenschutz'
 
 function App() {
   return (
@@ -26,7 +27,8 @@ function App() {
           <Route path="/fomos" element={<Fomosmain />} /> 
           <Route path="/fomosexpert" element={<Fomosexp />} /> 
           <Route path="/FAQ" element={<FAQ />} /> 
-          
+          <Route path="/fomosDatenschutz" element={<FomosDatenschutz/>}/>
+          <Route path="/Datenschutz" element={<Datenschutz/>}/>
         </Routes>
         
       </div>

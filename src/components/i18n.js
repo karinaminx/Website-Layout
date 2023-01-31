@@ -351,7 +351,15 @@ i18n
         hover7_methoden:"A negative binomial distribution is assumed for the reported counts per reporting date and delay.",
         hover8_methoden:"Based on modified variant of nowcasting calculation for 7-day incidence.",
         hover9_methoden:"tba",
-        hover10_methoden:"Discrepancies between daily published and subsequently corrected values."
+        hover10_methoden:"Discrepancies between daily published and subsequently corrected values.",
+
+        /*Datenschutz*/
+        DatenschutzTitle:"PRIVACY | IMPRINT",
+        Datenschutz_S1_Title: "Privacy",
+        Datenschutz_S2_Title: "Cookies",
+        Datenschutz_S3_Title: "Server-Log-Files",
+        Datenschutz_S4_Title: "Right to information, deletion, blocking",
+       
 
 
 
