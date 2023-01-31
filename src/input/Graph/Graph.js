@@ -76,6 +76,8 @@ export const Graph = ({
   let anzeigeSU;
   let anzeigeSZ;
 
+  //useEffect -> Björn
+
   if (isVisible === true) {
     width = +(0.55 * window.innerWidth);
     {
