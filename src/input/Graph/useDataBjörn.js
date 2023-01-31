@@ -17,17 +17,11 @@ export const useDataDatenstand = (
   dateGraphStart,
   dateEndÜbergeben
 ) => {
-  const dateStarA= new Date(dateGraphStart);
-
-  // console.log(dateStarA);
-
-
-
   const [data, setData] = useState(null);
 
   useEffect(() => {
     const dateStart = new Date(dateGraphStart);
-    const dateEnd = new Date(dateEndÜbergeben)
+    const dateEnd = new Date(dateEndÜbergeben);
 
     const processRow = (row) => {
       for (let i = 0; i <= 80; i++) {
@@ -73,7 +67,6 @@ export const useDataDatenstand = (
 
       const filteredDataWithValueSieben = filteredDataWithValue.map(
         (row, index) => {
-
           let valueSieben = filteredDataWithValue[index].value;
           for (let i = 1; i <= 6 && index >= i; i++) {
             valueSieben += filteredDataWithValue[index - i].value;
@@ -82,11 +75,16 @@ export const useDataDatenstand = (
           return { ...row, valueSieben };
         }
       );
-      setData(filteredDataWithValueSieben);
 
+      const filteredDataWithValueSiebenUGefiltered = filteredDataWithValueSieben.filter(
+        (row) =>
+                 row.date >= dateStart && 
+                 row.date <= dateEnd
+      );
+
+      setData(filteredDataWithValueSiebenUGefiltered);
     });
-  }, [ menuAge, selectedScope, display, dateStart, dateEndÜbergeben]);
-
+  }, [menuAge, selectedScope, display, dateStart, dateEndÜbergeben]);
 
   return data;
 };

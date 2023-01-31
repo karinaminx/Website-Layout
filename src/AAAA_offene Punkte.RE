@@ -2,3 +2,4 @@
 - Y Achse Kit rausnehmen (Björn)
 - Datenstand Filter -> funktioniert nur wenn man auf Kalender klickt
 - Logo ganz oben 
+- Datum auch ganz Ende anzeigen
