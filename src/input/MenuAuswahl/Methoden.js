@@ -359,16 +359,17 @@ export const MethodenDiv = () => {
                   </label>
                   <div id="inhalt">
                     <div>
-                      <button className="btn btn-light button-datenstand rounded ">
-                        <input
-                          type="date"
-                          name="select-date"
-                          defaultValue = {initialDate}
-                          onChange={(e) => setDate(e.target.value)}
-                          max={initialDate}
-                          min="2021-07-01"
-                        />
-                      </button>
+                    <button className="btn btn-light button-datenstand rounded" onClick={() => {}}>
+                      <input
+                        type="date"
+                        name="select-date"
+                        defaultValue={initialDate}
+                        onChange={(e) => setDate(e.target.value)}
+                        max={initialDate}
+                        min="2021-07-01"
+                      />
+                    </button>
+
                     </div>
                   </div>
                 </div>
