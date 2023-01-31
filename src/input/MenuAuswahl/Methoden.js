@@ -275,6 +275,9 @@ export const MethodenDiv = () => {
         </label>
       </div>
 
+    
+
+
       <div className="row rowchart">
         <div className="col-2">
           <div id="menuBand" classNAme="menuBand rounded">
@@ -329,6 +332,7 @@ export const MethodenDiv = () => {
                       />
                     </button>
                   </div>
+                  <p class="oderText"><sm>oder</sm>  </p>
                   <div id="div2" className="hidden">
                     <label className="agelayout" for="scope-select">
                       Alter:

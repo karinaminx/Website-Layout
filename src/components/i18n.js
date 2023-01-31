@@ -168,7 +168,7 @@ i18n
 
         /* hover Texte Graph*/
         hover1_methoden: "",
-        hover2_methoden: "Ein semiparametrisches Nowcasting-Verfahren für rechszensierte Hospitalisierungen nach Datum des positiven Tests.",
+        hover2_methoden: "Semiparametrisches Nowcasting-Verfahren für rechszensierte Hospitalisierungen nach Datum des positiven Tests.",
         hover3_methoden: "Verwenden von in der Vergangenheit beobachteten, an der 7-Tage-Inzidenz der COVID-19 Fällen anteiligen, 7-Tage-Hospitalisierungsinzidenz nach einer, zwei usw. Wochen.",
         hover4_methoden: "Basierend auf einfacher Schätzung der Verteilung der Verzögerungsdauern zwischen Meldedatum und Erscheinen einer Hospitalisierung in den RKI-Daten.",
         hover5_methoden: "Basierend auf generalisiertem additiven Modell und der sequenziellen Multinomialstruktur der zeitlichen Verzögerungen.",
