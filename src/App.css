@@ -45,7 +45,7 @@ body{
  /*Button hover text*/
 .hovertext {
   position: relative;
-  border-bottom: 1px dotted black;
+
 }
 
 .hovertext:before {
@@ -65,6 +65,7 @@ body{
   left: 15%;
   top: 70%;
   padding: 2%;
+  
 }
 
 .hovertext:hover:before {

@@ -293,6 +293,7 @@ export const MethodenDiv = () => {
                         <input
                           type="date"
                           name="select-date"
+                          defaultValue = ""
                           onChange={(e) => setDate(e.target.value)}
                           max={initialDate}
                           min="2021-07-01"
@@ -331,7 +332,14 @@ export const MethodenDiv = () => {
                       />
                     </button>
                   </div>
-                  <p class="oderText"><sm>oder</sm>  </p>
+
+                  <div
+                    className="hovertext "
+                    data-hover={t("hover_oder")} 
+                        > <p class="oderText"><sm>{t("oder")}</sm>  </p>
+                  </div>
+                  
+
                   <div id="div2" className="hidden">
                     <label className="agelayout" for="scope-select">
                       Alter:
@@ -360,6 +368,7 @@ export const MethodenDiv = () => {
                   <button
                         className="btn btn-light button-anzeige rounded"
                         onClick={() => setAnzeige("hunderttausend")}
+                        
                       >
                         <label>Pro 100.000</label>
                         <input
@@ -367,6 +376,7 @@ export const MethodenDiv = () => {
                           name="größe"
                           value="hunderttausend"
                           checked={anzeige === "hunderttausend"}
+                          
                         />
                       </button>
                       <button

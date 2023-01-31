@@ -53,4 +53,9 @@ export const initialValueIntervall = "FÜNFundNEUNZIG";
 export const initialValueTabelle = "KIT-simple_nowcast";
 
 export const dateFormatter = timeFormat("%Y-%m-%d");
-export const initialDate = dateFormatter(new Date());
+
+// export const initialDate = dateFormatter(new Date());
+
+const yesterday = new Date();
+yesterday.setDate(yesterday.getDate() - 1);
+export const initialDate = dateFormatter(yesterday);
