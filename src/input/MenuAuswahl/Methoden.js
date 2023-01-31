@@ -168,8 +168,6 @@ export const MethodenDiv = () => {
   const [selectedScope, setScope] = useState(initialValue);
 
   const [dateGraphStart, setGraphDateStart] = useState(initialdateGraphStart)
-
-
   const [dateGraphEnde, setGraphDateEnde] = useState(initialdateGraphEnde);
 
   const [date, setDate] = useState(initialDate);
