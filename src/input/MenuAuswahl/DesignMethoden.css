@@ -69,10 +69,18 @@
 
 }
 
-.hoverm:before{
+.hovermr:before{
   position: absolute;
-    left: -400%;
-    top: -50%;
+    left: -370%;
+    top: -420%;
+  z-index: 5;
+  padding: 2%;
+}
+
+.hoverml:before{
+  position: absolute;
+    left: -250%;
+    top: -420%;
   z-index: 5;
   padding: 2%;
 }
