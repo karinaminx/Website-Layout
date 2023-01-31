@@ -167,6 +167,9 @@ i18n
     
 
         /* hover Texte Graph*/
+        buttonrightchart:"Zum vergrößern des Graph Ausschnitts.",
+        buttonleftchart: "Zum verkleinern des Graph Ausschnitts.",
+
         oder: "oder",
         hover_oder: "Es ist nur möglich, nach Bundesland oder dem Alter zu Filtern. Eine Kombination ist aufgrund der Datengrundlage nicht möglich.",
         hover1_methoden: "",
@@ -340,6 +343,9 @@ i18n
         
 
         /* hover Texte Graph*/
+        buttonrightchart:"To enlarge the graph section.",
+        buttonleftchart: "To reduce the size of the graph section.",
+        
         oder: "or",
         hover_oder: "It is only possible to filter by state or age. A combination is not possible due to the data basis. ",
         hover1_methoden: "",

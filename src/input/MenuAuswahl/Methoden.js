@@ -284,7 +284,27 @@ export const MethodenDiv = () => {
 
   return (
     <div>
-      <div className="btn-method">
+      <div className=" buttonschart">
+      
+      <span class="hovertext hoverm" data-hover={t("buttonleftchart")}>
+      <button className="btn-outline-dark buttonmovearea">
+          
+            <p>
+            <i className="fa-solid fa-caret-left"></i> 
+            </p>
+      </button>
+      </span>
+      <span class="hovertext hoverm" data-hover={t("buttonrightchart")}>
+      <button className=" btn-outline-dark buttonmovearea">
+            <p>
+            <i className="fa-solid fa-caret-right"></i> 
+            </p>
+        </button>
+
+      </span>
+
+        
+        
         <button
           className=" btn btn-light button-method-exp"
           type="button"
@@ -294,6 +314,7 @@ export const MethodenDiv = () => {
           aria-controls="collapseWidthExample"
           onClick={handleClick}
         >
+        
           {isVisible ? (
             <p>
               <i className="fa-solid fa-caret-right"></i> Methoden ausblenden
@@ -308,7 +329,9 @@ export const MethodenDiv = () => {
         <label className="methodenEinblenden" onClick={handleClick}>
           {label}
         </label>
-      </div>
+        
+        </div>
+      
 
     
 
