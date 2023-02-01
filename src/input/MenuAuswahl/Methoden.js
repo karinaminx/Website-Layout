@@ -163,20 +163,13 @@ export const MethodenDiv = () => {
   }
   
    
-  const dat = new Date();
- 
-  let daycheck = dat.getDate() -1 ; 
-  let monthcheck= dat.getMonth();
-  let yearcheck= dat.getFullYear();
-  let datecheck = yearcheck + "-" + monthcheck + "-" + daycheck;
-
 
  
   let j;
   function showgrey() {
-    if (dateGraphStart == dat) {
+    if (date  == initialDate) {
       j = "hidden";
-    } else if (dateGraphStart != dat) {
+    } else if (date != initialDate) {
       j = "";
     }
     return j;
