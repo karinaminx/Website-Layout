@@ -3,7 +3,7 @@ import '../App.css';
 import '../CSS/Home.css';
 import {Route, Routes, Link} from 'react-router-dom';
 import covidlogo from '../images/SARS-CoV2.jpeg';
-import fomosLogo from '../images/fomos-logo.png'; /*nur Rakete oder schrift fomos hub in blau*/
+import fomosLogo from '../images/fomos-logo-rakete.jpeg'; /*nur Rakete oder schrift fomos hub in blau*/
 import energie from '../images/Bild_energie.jpeg';
 import Nav from './Nav.js';
 import Footer from './Footer.js';
