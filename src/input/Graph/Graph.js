@@ -211,8 +211,10 @@ yesterday.setDate(yesterday.getDate() - 1);
 
   const dateGraphStartFormat = new Date(dateGraphStart);
 
-  console.log(dateGraphStartFormat);
-  console.log(dateStartMethoden);
+  // console.log(dateGraphStartFormat);
+  // console.log(dateStartMethoden);
+
+// console.log(Math.max(Math.max(dateGraphStart, valueSieben)),(Math.max(data, yQuantileGroß)));
 
     const xScale = scaleTime()
     .domain([dateGraphStartFormat, yesterday])
