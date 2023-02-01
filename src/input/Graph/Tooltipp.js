@@ -1,8 +1,8 @@
 // import { 
-//     select, bisector, line, mouse
+//     select, bisector, line, 
 // } from 'd3';
 // import { Graph } from './Graph';
-// import {xScale , yScale, width , height, margin, yValueDatenstand, xValue, yValue, yQuantileKlein, yQuantileGroß} from './Graph'
+// // import {xScale , yScale, width , height, margin, yValueDatenstand, xValue, yValue, yQuantileKlein, yQuantileGroß} from './Graph'
 
 
 // var svg = select("#my_dataviz")
@@ -53,8 +53,8 @@
 //   function mousemove() {
 //     // recover coordinate we need
 //     var x0 = xScale.invert(mouse(this)[0]);
-//     var i = bisect(data, x0, 1);
-//     selectedData = data[i]
+//     var i = bisect(xValue, x0, 1);
+//     selectedData = xValue[i]
 //     focus
 //       .attr("cx", x(selectedData.x))
 //       .attr("cy", y(selectedData.y))
