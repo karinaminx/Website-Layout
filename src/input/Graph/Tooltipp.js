@@ -1,75 +1,64 @@
-// import { 
-//     select, bisector, line, 
-// } from 'd3';
-// import { Graph } from './Graph';
-// // import {xScale , yScale, width , height, margin, yValueDatenstand, xValue, yValue, yQuantileKlein, yQuantileGroß} from './Graph'
+import React, { useRef, useState } from 'react';
+import { select, scaleLinear, scaleBand, axisLeft, axisBottom } from 'd3';
 
+const svgRef = useRef();
 
-// var svg = select("#my_dataviz")
-//   .append("svg")
-//     .attr("width", width + margin.left + margin.right)
-//     .attr("height", height + margin.top + margin.bottom)
-//   .append("g")
-//     .attr("transform",
-//           "translate(" + margin.left + "," + margin.top + ")");
+const xValue = d => d.xValue;
+const yValueDatenstand = d => d.yValueDatenstand;
+const yValue = d => d.yValue;
+const yQuantileKlein = d => d.yQuantileKlein;
+const yQuantileGroß = d => d.yQuantileGroß;
 
-// // This allows to find the closest X index of the mouse:
-// var bisect = bisector(function(d) { return d.x; }).left;
+const margin = { top: 20, right: 20, bottom: 30, left: 40 };
+const innerWidth = 800 - margin.left - margin.right;
+const innerHeight = 500 - margin.top - margin.bottom;
 
-// // Create the circle that travels along the curve of chart
-// var focus = svg
-// .append('g')
-// .append('circle')
-// .style("fill", "none")
-// .attr("stroke", "black")
-// .attr('r', 8.5)
-// .style("opacity", 0)
+const [data, setData] = useState([]);
 
-// // Create the text that travels along the curve of chart
-// var focusText = svg
-// .append('g')
-// .append('text')
-// .style("opacity", 0)
-// .attr("text-anchor", "left")
-// .attr("alignment-baseline", "middle")
+const xScale = scaleBand()
+.domain(data.map(xValue))
+.range([0, innerWidth])
+.padding(0.1);
 
-//  // Create a rect on top of the svg area: this rectangle recovers mouse position
-// svg
-// .append('rect')
-// .style("fill", "none")
-// .style("pointer-events", "all")
-// .attr('width', width)
-// .attr('height', height)
-// .on('mouseover', mouseover)
-// .on('mousemove', mousemove)
-// .on('mouseout', mouseout);
+const yScale = scaleLinear()
+.domain([0, Math.max(...data.map(yValueDatenstand))])
+.range([innerHeight, 0]);
 
-// // What happens when the mouse move -> show the annotations at the right positions.
-// function mouseover() {
-//     focus.style("opacity", 1)
-//     focusText.style("opacity",1)
-//   }
+const xAxis = axisBottom(xScale);
+const yAxis = axisLeft(yScale);
 
-//   function mousemove() {
-//     // recover coordinate we need
-//     var x0 = xScale.invert(mouse(this)[0]);
-//     var i = bisect(xValue, x0, 1);
-//     selectedData = xValue[i]
-//     focus
-//       .attr("cx", x(selectedData.x))
-//       .attr("cy", y(selectedData.y))
-//     focusText
-//       .html("x:" + selectedData.x + "  -  " + "y:" + selectedData.y)
-//       .attr("x", x(selectedData.x)+15)
-//       .attr("y", y(selectedData.y))
-//     }
-//   function mouseout() {
-//     focus.style("opacity", 0)
-//     focusText.style("opacity", 0)
-//   }
+const tooltipRef = useRef();
 
+const onMouseOver = (d, i, n) => {
+select(tooltipRef.current)
+.style("opacity", 1)
+.style("left", ${xScale(xValue(d)) + xScale.bandwidth() / 2}px)
+.style("top", ${yScale(yValueDatenstand(d))}px)
+.html( <p>xValue: ${xValue(d)}</p> <p>yValueDatenstand: ${yValueDatenstand(d)}</p> <p>yValue: ${yValue(d)}</p> <p>yQuantileKlein: ${yQuantileKlein(d)}</p> <p>yQuantileGroß: ${yQuantileGroß(d)}</p> );
+};
 
-// export function Tooltipp({xScale,yScale}){
-//     return <div> </div>
-// }
+const onMouseOut = (d, i, n) => {
+select(tooltipRef.current).style("opacity", 0);
+};
 
+return (
+<div>
+<svg ref={svgRef} width={800} height={500}>
+<g transform={translate(${margin.left}, ${margin.top})}>
+{data.map((d, i) => (
+<rect
+key={i}
+x={xScale(xValue(d))}
+y={yScale(yValueDatenstand(d))}
+width={xScale.bandwidth()}
+height={innerHeight - yScale(yValueDatenstand(d))}
+fill="blue"
+onMouseOver={onMouseOver}
+onMouseOut={onMouseOut}
+/>
+))}
+</g>
+<div ref={tooltipRef} style={{ opacity: 0, position: 'absolute' }} />
+</svg>
+</div>
+);
