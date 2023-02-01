@@ -47,7 +47,8 @@ const lngs = [
 
 export const MethodenDiv = () => {
   const [dateGraphStart, setGraphDateStart] = useState(initialdateGraphStart);
-  // console.log(dateGraphStart);
+  //console.log(dateGraphStart);
+  
 
   // Tabelle mit Button eine und ausblende -----------------------------------
 
@@ -160,7 +161,29 @@ export const MethodenDiv = () => {
     }
     return k;
   }
+  
+   
+  const dat = new Date();
+ 
+  let daycheck = dat.getDate() -1 ; 
+  let monthcheck= dat.getMonth();
+  let yearcheck= dat.getFullYear();
+  let datecheck = yearcheck + "-" + monthcheck + "-" + daycheck;
 
+
+ 
+  let j;
+  function showgrey() {
+    if (dateGraphStart == dat) {
+      j = "hidden";
+    } else if (dateGraphStart != dat) {
+      j = "";
+    }
+    return j;
+  }
+
+
+ 
   // const for the selection section on the left side of the window ----------------------------------------------------------
 
   const [menuAge, setmenuAge] = useState(initialValueAge);
@@ -371,7 +394,7 @@ export const MethodenDiv = () => {
                 </label>
                 <div id="inhalt">
                   <div id="div1" className="visible">
-                    <label for="scope-select">{t("Bundesland")}</label>
+                    <label className="BLlayout" for="scope-select">{t("Bundesland")}</label>
                     <button className="btn btn-light button-filter rounded">
                       <Dropdown
                         name="BundeslandSelect"
@@ -577,7 +600,7 @@ export const MethodenDiv = () => {
 
                   {/*1.1*/}
 
-                  <tr className="trmethod">
+                  <tr className="trmethod" hidden={showgrey()}>
                     <div
                       className={`container ${isDatenstandGrau ? "moved" : ""}`}
                       onClick={handleClickDatenstandGrau}
