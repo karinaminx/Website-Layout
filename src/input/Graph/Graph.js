@@ -12,7 +12,7 @@ import { AxisBottom } from "./AxisBottom";
 import { AxisLeft } from "./AxisLeft";
 import { Marks } from "./Marks";
 import "./Graph.css";
-import { line, curveNatural } from "d3";
+import { line, curvexNatural } from "d3";
 import { MarksRealDataGrau } from "./MarksRealDataGrau";
 import { MarksRealDataSchwarz } from "./MarksRealDataSchwarz";
 // import { isLabelWithInternallyDisabledControl } from "@testing-library/user-event/dist/utils";
@@ -76,7 +76,6 @@ export const Graph = ({
   let anzeigeSU;
   let anzeigeSZ;
 
-  //useEffect -> Björn
 
   if (isVisible === true) {
     width = +(0.55 * window.innerWidth);
@@ -188,7 +187,7 @@ export const Graph = ({
   const xAxisTickFormat = timeFormat("%d.%m.%Y");
 
   const dateStartMethoden= timeDay.offset(max(data, xValue), -35);
-  const dateStart = new Date(dateGraphStart);
+  // const dateStart = new Date(dateGraphStart);
 
   const dateEnde = timeDay.offset(max(data, xValue), 0);
 
@@ -207,10 +206,18 @@ yesterday.setDate(yesterday.getDate() - 1);
   //   .range([0, innerWidth])
   //   .nice();
 
+  // console.log(dateGraphStart);
+  // console.log(dateStartMethoden);
+
+  const dateGraphStartFormat = new Date(dateGraphStart);
+
+  console.log(dateGraphStartFormat);
+  console.log(dateStartMethoden);
+
     const xScale = scaleTime()
-    .domain([dateStart, yesterday])
+    .domain([dateGraphStartFormat, yesterday])
     .range([0, innerWidth])
-    .nice();
+    // .nice();
 
   const yScale = scaleLinear()
     .domain([0, max(data, yQuantileGroß)])

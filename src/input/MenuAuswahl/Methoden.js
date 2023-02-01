@@ -4,7 +4,6 @@ import { FiChevronRight } from "react-icons/fi";
 import { Graph } from "../Graph/Graph";
 import "./DesignMethoden.css";
 import { Dropdown } from "./Dropdown";
-import { color, timeFormat } from "d3";
 import { useData } from "../Graph/useDataMethode";
 import { QuestionMark } from "./QuestionMark";
 import { Tabelle } from "../Graph/Tabelle";
@@ -20,10 +19,11 @@ import {
   dateFormatter,
   initialDate,
   initialdateGraphStart,
-  initialdateGraphEnde
+  // initialdateGraphEnde
 } from "./optionsCollection";
 import { useDataAxes } from "../Graph/useDataAxes";
 import { useDataDatenstand } from "../Graph/useDataDatenstand";
+import { timeFormat, max, timeDay } from "d3";
 
 import datenstand_g from "../../images/datenstand_grau.png";
 import datenstand_sw from "../../images/datenstand_sw.png";
@@ -37,16 +37,18 @@ import RKI_line from "../../images/RKI_line.png";
 import SU_line from "../../images/SU_line.png";
 import SZ_line from "../../images/SZ_line.png";
 
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from "react-i18next";
 import { init } from "i18next";
 
 const lngs = [
-    { code: "de", native: "Deutsch" },
-    { code: "en", native: "English" },
-  ];
-
+  { code: "de", native: "Deutsch" },
+  { code: "en", native: "English" },
+];
 
 export const MethodenDiv = () => {
+  const [dateGraphStart, setGraphDateStart] = useState(initialdateGraphStart);
+  // console.log(dateGraphStart);
+
   // Tabelle mit Button eine und ausblende -----------------------------------
 
   const [dataTabelleMethode, setdataTabelleMethode] =
@@ -57,8 +59,6 @@ export const MethodenDiv = () => {
   const toggleCollapse = () => {
     setIsCollapsed(!isCollapsed);
   };
-
-
 
   //Filter: If one is selected, the other one´s opacity is set down
   const div1 = document.getElementById("div1");
@@ -142,38 +142,30 @@ export const MethodenDiv = () => {
 
   //hide and unhide RKI and ILM Button depending on attributes
   let l;
-  function showrki(){
-  
-      if(menuAge != "00+"){
-      l= "hidden"
-      } else if (menuAge == "00+") {
-      l= ""
-      }
-      return l;
-    }; 
+  function showrki() {
+    if (menuAge != "00+") {
+      l = "hidden";
+    } else if (menuAge == "00+") {
+      l = "";
+    }
+    return l;
+  }
 
-    let k;
-  function showilm(){
-  
-      if(selectedScope != "DE"){
-      k= "hidden"
-      } else if (selectedScope == "DE") {
-      k= ""
-      }
-      return k;
-    }; 
+  let k;
+  function showilm() {
+    if (selectedScope != "DE") {
+      k = "hidden";
+    } else if (selectedScope == "DE") {
+      k = "";
+    }
+    return k;
+  }
 
   // const for the selection section on the left side of the window ----------------------------------------------------------
 
   const [menuAge, setmenuAge] = useState(initialValueAge);
   const [anzeige, setAnzeige] = useState(initialValueAnzeige);
   const [selectedScope, setScope] = useState(initialValue);
-
-  const [dateGraphStart, setGraphDateStart] = useState(initialdateGraphStart)
-  // const [dateGraphEnde, setGraphDateEnde] = useState(initialdateGraphEnde);
-
-  // const 
-
 
   const [date, setDate] = useState(initialDate); // vom Datenstand
 
@@ -196,10 +188,11 @@ export const MethodenDiv = () => {
     selectedScope,
     intervall,
     anzeige,
+    dateGraphStart,
     date
   );
 
-  const ILMdata = useData("ILM-prop", menuAge, "DE", intervall, anzeige, date);
+  const ILMdata = useData("ILM-prop", menuAge, "DE", intervall, anzeige,   dateGraphStart,date);
 
   const KITdata = useData(
     "KIT-simple_nowcast",
@@ -207,6 +200,7 @@ export const MethodenDiv = () => {
     selectedScope,
     intervall,
     anzeige,
+    dateGraphStart,
     date
   );
 
@@ -216,6 +210,7 @@ export const MethodenDiv = () => {
     selectedScope,
     intervall,
     anzeige,
+    dateGraphStart,
     date
   );
   const Nowcastdata = useData(
@@ -224,6 +219,7 @@ export const MethodenDiv = () => {
     selectedScope,
     intervall,
     anzeige,
+    dateGraphStart,
     date
   );
   const RIVMdata = useData(
@@ -232,6 +228,7 @@ export const MethodenDiv = () => {
     selectedScope,
     intervall,
     anzeige,
+    dateGraphStart,
     date
   );
   const RKIdata = useData(
@@ -240,6 +237,7 @@ export const MethodenDiv = () => {
     selectedScope,
     intervall,
     anzeige,
+    dateGraphStart,
     date
   );
   const SUdata = useData(
@@ -248,6 +246,7 @@ export const MethodenDiv = () => {
     selectedScope,
     intervall,
     anzeige,
+    dateGraphStart,
     date
   );
   const SZdata = useData(
@@ -256,9 +255,9 @@ export const MethodenDiv = () => {
     selectedScope,
     intervall,
     anzeige,
+    dateGraphStart,
     date
   );
-
 
   const datenstand_schwarz = useDataDatenstand(
     menuAge,
@@ -274,48 +273,43 @@ export const MethodenDiv = () => {
     intervall,
     anzeige,
     dateGraphStart,
-    date,
+    date
   );
 
   const { t, i18n } = useTranslation();
 
   const handleTrans = (code) => {
-      i18n.changeLanguage(code);
-    };
+    i18n.changeLanguage(code);
+  };
 
-
+  // const xValue = (d) => d.date;
+  // const dateStartMethoden = timeDay.offset(max(data, xValue), -35);
+  // console.log(dateStartMethoden);
 
   return (
     <div>
       <div className=" buttonschart">
-      
-      <span class="hovertext hovermr" data-hover={t("buttonrightchart")}>
-      <button className="btn-outline-dark buttonmovearea">
-          
-            <p>
-            <i className="fa-solid fa-caret-left"></i> 
-            </p>
-      </button>
-      </span>
-      
-      <button className="btn-outline-dark buttonmovearea">
-          
-            <p>
-            default 
-            </p>
-      </button>
-      
-      <span class="hovertext hoverml" data-hover={t("buttonleftchart")}>
-      <button className=" btn-outline-dark buttonmovearea" handleClick>
-            <p>
-            <i className="fa-solid fa-caret-right"></i> 
-            </p>
+        <button
+          className="btn-outline-dark buttonmovearea"
+          onClick={() => setGraphDateStart(initialdateGraphStart)}
+        >
+          <p>default</p>
         </button>
 
-      </span>
-
-        
-        
+        <button
+          className="btn btn-light button-datenstand rounded"
+          onClick={() => {}}
+        >
+          <input
+            type="date"
+            name="select-date"
+            defaultValue={initialdateGraphStart}
+            onChange={(e) => setGraphDateStart(e.target.value)}
+            // max={initialDate}
+            min="2021-07-01"
+          />
+        </button>
+        {/* -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */}
         <button
           className=" btn btn-light button-method-exp"
           type="button"
@@ -325,7 +319,6 @@ export const MethodenDiv = () => {
           aria-controls="collapseWidthExample"
           onClick={handleClick}
         >
-        
           {isVisible ? (
             <p>
               <i className="fa-solid fa-caret-right"></i> {t("unshow_method")}
@@ -340,12 +333,7 @@ export const MethodenDiv = () => {
         <label className="methodenEinblenden" onClick={handleClick}>
           {label}
         </label>
-        
-        </div>
-      
-
-    
-
+      </div>
 
       <div className="row rowchart">
         <div className="col-2">
@@ -359,23 +347,24 @@ export const MethodenDiv = () => {
                   </label>
                   <div id="inhalt">
                     <div>
-                    <button className="btn btn-light button-datenstand rounded" onClick={() => {}}>
-                      <input
-                        type="date"
-                        name="select-date"
-                        defaultValue={initialDate}
-                        onChange={(e) => setDate(e.target.value)}
-                        max={initialDate}
-                        min="2021-07-01"
-                      />
-                    </button>
-
+                      <button
+                        className="btn btn-light button-datenstand rounded"
+                        onClick={() => {}}
+                      >
+                        <input
+                          type="date"
+                          name="select-date"
+                          defaultValue={initialDate}
+                          onChange={(e) => setDate(e.target.value)}
+                          max={initialDate}
+                          min="2021-07-01"
+                        />
+                      </button>
                     </div>
                   </div>
                 </div>
               </div>
 
-            
               <div id="filter" className="menuOptionen">
                 <label className="einführung">
                   <b>{t("Filter")}</b>
@@ -395,24 +384,22 @@ export const MethodenDiv = () => {
                           handleDiv1Selection();
                           if (selectedScope !== "DE") {
                             setILM(false);
-                            
-
                           }
                         }}
                       />
                     </button>
                   </div>
 
-                  <div
-                    className="hovertext "
-                    data-hover={t("hover_oder")} 
-                        > <p class="oderText"><sm>{t("oder")}</sm>  </p>
+                  <div className="hovertext " data-hover={t("hover_oder")}>
+                    {" "}
+                    <p class="oderText">
+                      <sm>{t("oder")}</sm>{" "}
+                    </p>
                   </div>
-                  
 
                   <div id="div2" className="hidden">
                     <label className="agelayout" for="scope-select">
-                    {t("Alter")}
+                      {t("Alter")}
                     </label>
                     <button className="btn btn-light button-filter rounded ">
                       <Dropdown
@@ -422,14 +409,14 @@ export const MethodenDiv = () => {
                         onSelectedValueChange={(selectedValue) => {
                           setmenuAge(selectedValue);
                           setScope("DE");
-                         
+
                           handleDiv2Selection();
                         }}
                       />
                     </button>
                   </div>
                 </div>
-                </div>
+              </div>
 
               <div id="anzeige" className="menuOptionen">
                 <label className="einführung">
@@ -437,31 +424,29 @@ export const MethodenDiv = () => {
                 </label>
                 <div id="inhalt">
                   <button
-                        className="btn btn-light button-anzeige rounded"
-                        onClick={() => setAnzeige("hunderttausend")}
-                        
-                      >
-                        <label>{t("per100k")}</label>
-                        <input
-                          type="radio"
-                          name="größe"
-                          value="hunderttausend"
-                          checked={anzeige === "hunderttausend"}
-                          
-                        />
-                      </button>
-                      <button
-                          className="btn btn-light button-anzeige rounded"
-                          onClick={() => setAnzeige("absoluteZahlen")}
-                        >
-                          <label>{t("absoluteZ")}</label>
-                          <input
-                            type="radio"
-                            name="größe"
-                            value="absoluteZahlen"
-                            checked={anzeige === "absoluteZahlen"}
-                          />
-                        </button>
+                    className="btn btn-light button-anzeige rounded"
+                    onClick={() => setAnzeige("hunderttausend")}
+                  >
+                    <label>{t("per100k")}</label>
+                    <input
+                      type="radio"
+                      name="größe"
+                      value="hunderttausend"
+                      checked={anzeige === "hunderttausend"}
+                    />
+                  </button>
+                  <button
+                    className="btn btn-light button-anzeige rounded"
+                    onClick={() => setAnzeige("absoluteZahlen")}
+                  >
+                    <label>{t("absoluteZ")}</label>
+                    <input
+                      type="radio"
+                      name="größe"
+                      value="absoluteZahlen"
+                      checked={anzeige === "absoluteZahlen"}
+                    />
+                  </button>
                 </div>
               </div>
 
@@ -470,60 +455,54 @@ export const MethodenDiv = () => {
                   <b>{t("Unsicherheitsintervall")}</b>
                 </label>
                 <div id="inhalt">
-                <button
-                      className="btn btn-light button-unsicherheitsintervall rounded"
-                      onClick={() => setIntervall("FÜNFundNEUNZIG")}
-                    >
-                      <label className="usi">95%</label>
-                      <input
-                        type="radio"
-                        name="unsicherheitsintervall"
-                        value="FÜNFundNEUNZIG"
-                        checked={intervall === "FÜNFundNEUNZIG"}
-                      />
-                    </button>
-                    <button
-                        className="btn btn-light button-unsicherheitsintervall rounded"
-                        onClick={() => setIntervall("FÜNFZIG")}
-                      >
-                        <label className="usi">50%</label>
-                        <input
-                          type="radio"
-                          name="unsicherheitsintervall"
-                          value="FÜNFZIG"
-                          checked={intervall === "FÜNFZIG"}
-                        />
-                      </button>
+                  <button
+                    className="btn btn-light button-unsicherheitsintervall rounded"
+                    onClick={() => setIntervall("FÜNFundNEUNZIG")}
+                  >
+                    <label className="usi">95%</label>
+                    <input
+                      type="radio"
+                      name="unsicherheitsintervall"
+                      value="FÜNFundNEUNZIG"
+                      checked={intervall === "FÜNFundNEUNZIG"}
+                    />
+                  </button>
+                  <button
+                    className="btn btn-light button-unsicherheitsintervall rounded"
+                    onClick={() => setIntervall("FÜNFZIG")}
+                  >
+                    <label className="usi">50%</label>
+                    <input
+                      type="radio"
+                      name="unsicherheitsintervall"
+                      value="FÜNFZIG"
+                      checked={intervall === "FÜNFZIG"}
+                    />
+                  </button>
 
-
-                      <button
-                          className="btn btn-light button-unsicherheitsintervall rounded"
-                          onClick={() => setIntervall("keines")}
-                        >
-                          <label className="usi">{t("keines")}</label>
-                          <input
-                            type="radio"
-                            name="unsicherheitsintervall"
-                            value="keines"
-                            checked={intervall === "keines"}
-                          />
-                        </button>
+                  <button
+                    className="btn btn-light button-unsicherheitsintervall rounded"
+                    onClick={() => setIntervall("keines")}
+                  >
+                    <label className="usi">{t("keines")}</label>
+                    <input
+                      type="radio"
+                      name="unsicherheitsintervall"
+                      value="keines"
+                      checked={intervall === "keines"}
+                    />
+                  </button>
                 </div>
               </div>
             </section>
           </div>
         </div>
-        
-        
-        <script>
 
-          
-          
-        </script>
+        <script></script>
 
-        <div className="col-9" >
+        <div className="col-9">
           {/* Graph ----------------------------------------------------------- */}
-          <div className= "GraphundMethoden">
+          <div className="GraphundMethoden">
             <Graph
               className="graph"
               isVisible={isVisible}
@@ -562,14 +541,14 @@ export const MethodenDiv = () => {
                 <div className="auswahl">
                   {/*1.0*/}
 
-                  <tr className= "trmethod">
+                  <tr className="trmethod">
                     <div
                       className={`container ${
                         isDatenstandSchwarz ? "moved" : ""
                       }`}
                       onClick={handleClickDatenstandSchwarz}
                     >
-                     <td className="linelayout">
+                      <td className="linelayout">
                         <img src={datenstand_sw} style={{ width: "38px" }} />
                       </td>
 
@@ -598,7 +577,7 @@ export const MethodenDiv = () => {
 
                   {/*1.1*/}
 
-                  <tr className= "trmethod">
+                  <tr className="trmethod">
                     <div
                       className={`container ${isDatenstandGrau ? "moved" : ""}`}
                       onClick={handleClickDatenstandGrau}
@@ -620,7 +599,7 @@ export const MethodenDiv = () => {
                       <td>
                         <div
                           className="hovertext questionmark hoverq"
-                          data-hover={t("hover1_methoden")} 
+                          data-hover={t("hover1_methoden")}
                         >
                           <div className="">
                             <p> ⓘ</p>
@@ -631,7 +610,7 @@ export const MethodenDiv = () => {
                   </tr>
 
                   {/*2*/}
-                  <tr className= "trmethod">
+                  <tr className="trmethod">
                     <div
                       className={`container ${isEpiforecast ? "moved" : ""}`}
                       onClick={handleClickEpi}
@@ -653,7 +632,7 @@ export const MethodenDiv = () => {
                       <td>
                         <div
                           className="hovertext questionmark hoverq"
-                          data-hover={t("hover2_methoden")} 
+                          data-hover={t("hover2_methoden")}
                         >
                           <div className="">
                             <p> ⓘ</p>
@@ -663,10 +642,8 @@ export const MethodenDiv = () => {
                     </div>
                   </tr>
 
-                  
-
                   {/*3*/}
-                  <tr className= "trmethod">
+                  <tr className="trmethod">
                     <div
                       className={`container ${isKIT ? "moved" : ""}`}
                       onClick={handleClickKIT}
@@ -686,7 +663,7 @@ export const MethodenDiv = () => {
                       <td>
                         <div
                           className="hovertext questionmark hoverq"
-                          data-hover={t("hover4_methoden")} 
+                          data-hover={t("hover4_methoden")}
                         >
                           <div className="">
                             <p> ⓘ</p>
@@ -697,7 +674,7 @@ export const MethodenDiv = () => {
                   </tr>
 
                   {/*4*/}
-                  <tr className= "trmethod">
+                  <tr className="trmethod">
                     <div
                       className={`container ${isLMU ? "moved" : ""}`}
                       onClick={handleClickLMU}
@@ -716,7 +693,7 @@ export const MethodenDiv = () => {
                       <td>
                         <div
                           className="hovertext questionmark hoverq"
-                          data-hover={t("hover5_methoden")} 
+                          data-hover={t("hover5_methoden")}
                         >
                           <div className="">
                             <p> ⓘ</p>
@@ -727,7 +704,7 @@ export const MethodenDiv = () => {
                   </tr>
 
                   {/*5*/}
-                  <tr className= "trmethod">
+                  <tr className="trmethod">
                     <div
                       className={`container ${isNowcast ? "moved" : ""}`}
                       onClick={handleClickNowcast}
@@ -746,7 +723,7 @@ export const MethodenDiv = () => {
                       <td>
                         <div
                           className="hovertext questionmark hoverq"
-                          data-hover={t("hover6_methoden")} 
+                          data-hover={t("hover6_methoden")}
                         >
                           <div className="">
                             <p> ⓘ</p>
@@ -756,7 +733,7 @@ export const MethodenDiv = () => {
                     </div>
                   </tr>
                   {/*6*/}
-                  <tr className= "trmethod">
+                  <tr className="trmethod">
                     <div
                       className={`container ${isRIVM ? "moved" : ""}`}
                       onClick={handleClickRIVM}
@@ -775,7 +752,7 @@ export const MethodenDiv = () => {
                       <td>
                         <div
                           className="hovertext questionmark hoverq"
-                          data-hover={t("hover7_methoden")} 
+                          data-hover={t("hover7_methoden")}
                         >
                           <div className="">
                             <p> ⓘ</p>
@@ -784,10 +761,9 @@ export const MethodenDiv = () => {
                       </td>
                     </div>
                   </tr>
-                  
 
                   {/*7*/}
-                  <tr className= "trmethod">
+                  <tr className="trmethod">
                     <div
                       className={`container ${isSU ? "moved" : ""}`}
                       onClick={handleClickSU}
@@ -806,7 +782,7 @@ export const MethodenDiv = () => {
                       <td>
                         <div
                           className="hovertext questionmark hoverq "
-                          data-hover={t("hover9_methoden")} 
+                          data-hover={t("hover9_methoden")}
                         >
                           <div className="">
                             <p> ⓘ</p>
@@ -816,7 +792,7 @@ export const MethodenDiv = () => {
                     </div>
                   </tr>
                   {/*8*/}
-                  <tr className= "trmethod">
+                  <tr className="trmethod">
                     <div
                       className={`container ${isSZ ? "moved" : ""}`}
                       onClick={handleClickSZ}
@@ -836,7 +812,7 @@ export const MethodenDiv = () => {
                       <td>
                         <div
                           className="hovertext questionmark hoverq"
-                          data-hover={t("hover10_methoden")} 
+                          data-hover={t("hover10_methoden")}
                         >
                           <div className="">
                             <p> ⓘ</p>
@@ -847,7 +823,7 @@ export const MethodenDiv = () => {
                   </tr>
 
                   {/*9*/}
-                  <tr id="ILMtr" className= "trmethod" hidden={showilm()}>
+                  <tr id="ILMtr" className="trmethod" hidden={showilm()}>
                     <div
                       className={`container ${isILM ? "moved" : ""}`}
                       onClick={handleClickILM}
@@ -860,14 +836,14 @@ export const MethodenDiv = () => {
                         <p
                           className={`ILM ${isILM ? "bold" : ""}`}
                           onClick={handleClickILM}
-                        > 
+                        >
                           ILM prop
                         </p>
                       </td>
                       <td>
                         <div
                           className="hovertext questionmark hoverq"
-                          data-hover={t("hover3_methoden")} 
+                          data-hover={t("hover3_methoden")}
                         >
                           <div className="">
                             <p> ⓘ</p>
@@ -877,9 +853,9 @@ export const MethodenDiv = () => {
                     </div>
                   </tr>
 
-                    {/*10*/} 
-              
-                    <tr id="RKItr" className= "trmethod" hidden={showrki()}>
+                  {/*10*/}
+
+                  <tr id="RKItr" className="trmethod" hidden={showrki()}>
                     <div
                       className={`container ${isRKI ? "moved" : ""}`}
                       onClick={handleClickRKI}
@@ -898,7 +874,7 @@ export const MethodenDiv = () => {
                       <td>
                         <div
                           className="hovertext questionmark hoverq"
-                          data-hover={t("hover8_methoden")} 
+                          data-hover={t("hover8_methoden")}
                         >
                           <div className="">
                             <p> ⓘ</p>
@@ -907,10 +883,6 @@ export const MethodenDiv = () => {
                       </td>
                     </div>
                   </tr>
-
-
-
-
                 </div>
               </table>
             )}
@@ -950,9 +922,7 @@ export const MethodenDiv = () => {
             </div>
           </div>
           
-        </div> */ }
-                          
-    </div>   
+        </div> */}
+    </div>
   );
 };
-

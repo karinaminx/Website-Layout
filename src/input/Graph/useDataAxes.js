@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { csv } from "d3";
 import "./Graph.css";
 import {DE00, DEBW, DEBY, DEBE, DEBB, DEHB, DEHH, DEHE, DEMV, DENI, DENW, DERP, DESL, DESN, DEST, DESH, DETH, age00to04, age05to14, age15to34, age35to59, age60to79, age80up} from "./useEinwohnerZahlen.js"
-import { getPopulation, Population } from "./Population"
 
 const datum = "2023-01-10";
 

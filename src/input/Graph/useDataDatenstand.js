@@ -23,7 +23,6 @@ export const useDataDatenstand = (
     const dateStart = new Date(dateGraphStart);
     const dateEnd = new Date(dateEndÜbergeben);
 
-    // console.log(dateStart);
     const processRow = (row) => {
       for (let i = 0; i <= 80; i++) {
         const value = row[`value_${i}d`];
@@ -85,7 +84,7 @@ export const useDataDatenstand = (
 
       setData(filteredDataWithValueSiebenUGefiltered);
     });
-  }, [menuAge, selectedScope, display, dateStart, dateEndÜbergeben]);
+  }, [menuAge, selectedScope, display, dateGraphStart, dateEndÜbergeben]);
 
   return data;
 };
