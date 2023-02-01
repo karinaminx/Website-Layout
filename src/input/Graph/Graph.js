@@ -16,7 +16,7 @@ import { line, curvexNatural } from "d3";
 import { MarksRealDataGrau } from "./MarksRealDataGrau";
 import { MarksRealDataSchwarz } from "./MarksRealDataSchwarz";
 // import { isLabelWithInternallyDisabledControl } from "@testing-library/user-event/dist/utils";
-import {Tooltipp} from "./Tooltipp";
+// import {Tooltipp} from "./Tooltipp";
 
 import { useTranslation } from 'react-i18next';
 
