@@ -300,7 +300,7 @@ export const MethodenDiv = () => {
 
   // const xValue = (d) => d.date;
   // const dateStartMethoden = timeDay.offset(max(data, xValue), -35);
-  // console.log(dateStartMethoden);
+  console.log(date);
 
   return (
     <div>
@@ -321,8 +321,8 @@ export const MethodenDiv = () => {
             type="date"
             name="select-date"
             defaultValue={initialdateGraphStart}
-            onChange={(e) => setGraphDateStart(e.target.value)}
-            // max={initialDate}
+            onInput={(e) => setGraphDateStart(e.target.value)}
+            max={date}
             min="2021-07-01"
           />
         </button>
