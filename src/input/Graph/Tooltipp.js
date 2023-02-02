@@ -32,8 +32,8 @@ const tooltipRef = useRef();
 const onMouseOver = (d, i, n) => {
 select(tooltipRef.current)
 .style("opacity", 1)
-.style("left", ${xScale(xValue(d)) + xScale.bandwidth() / 2}px)
-.style("top", ${yScale(yValueDatenstand(d))}px)
+.style("left", `${xScale(xValue(d)) + xScale.bandwidth() / 2}px`)
+.style("top", `${yScale(yValueDatenstand(d))}px`)
 .html( <p>xValue: ${xValue(d)}</p> <p>yValueDatenstand: ${yValueDatenstand(d)}</p> <p>yValue: ${yValue(d)}</p> <p>yQuantileKlein: ${yQuantileKlein(d)}</p> <p>yQuantileGroß: ${yQuantileGroß(d)}</p> );
 };
 
