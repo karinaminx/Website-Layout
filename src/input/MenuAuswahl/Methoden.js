@@ -84,9 +84,9 @@ export const MethodenDiv = () => {
   const [isDatenstandGrau, setDatenstandGrau] = useState(true);
   const [isEpiforecast, setEpiforecast] = useState(false);
   const [isILM, setILM] = useState(false);
-  const [isKIT, setKIT] = useState(true);
+  const [isKIT, setKIT] = useState(false);
   const [isLMU, setLMU] = useState(false);
-  const [isNowcast, setNowcast] = useState(false);
+  const [isNowcast, setNowcast] = useState(true);
   const [isRIVM, setRIVM] = useState(false);
   const [isRKI, setRKI] = useState(false);
   const [isSU, setSU] = useState(false);
