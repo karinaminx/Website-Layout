@@ -217,7 +217,7 @@ i18n
         
    
        /*Datenschutz*/
-        DatenschutzTitle:"DATENSCHUTZ | IMPRESSUM",
+        DatenschutzTitle:"DATENSCHUTZ ",
         Datenschutz_S1_Title: "Datenschutz",
         Datenschutz_S2_Title: "Cookies",
         Datenschutz_S3_Title: "Server-Log-Files",
@@ -462,7 +462,7 @@ i18n
         Deutschland: "Germany",
 
         /*Datenschutz*/
-        DatenschutzTitle:"PRIVACY | IMPRINT",
+        DatenschutzTitle:"PRIVACY",
         Datenschutz_S1_Title: "Privacy",
         Datenschutz_S2_Title: "Cookies",
         Datenschutz_S3_Title: "Server-Log-Files",
