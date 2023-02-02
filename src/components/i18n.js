@@ -16,7 +16,7 @@ i18n
         translation: {
 
         /* Landingpage*/
-        text1_home: "Das Forecasting, Modelling and Scenario hub (FOMOS Hub)  ist eine integrierte Plattform für die Kommunikation und Interaktion von Forschung zu transparenten Prognosen, Entscheidungen und Ergebnissen für und mit der Gesellschaft.", 
+        text1_home: "Das Forecasting, Modelling and Scenario hub (FOMOS hub)  ist eine integrierte Plattform für die Kommunikation und Interaktion von Forschung zu transparenten Prognosen, Entscheidungen und Ergebnissen für und mit der Gesellschaft.", 
         text2_home: "FOMOS zeigt Forschung und Forschungsergebnisse in Echtzeit zu wichtigen gesellschaftlichen Themenfeldern.", 
         corona_headline: "Nowcasting von COVID-Hospitalisierungen",
         corona_explain: "Echtzeitkorrektur der Meldeverzüge in COVID-19 Hospitalisierungsdaten.",
