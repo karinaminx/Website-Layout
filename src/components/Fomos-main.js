@@ -1,6 +1,7 @@
 import React from "react";
 import '../CSS/Fomos-main.css';
 import {Route, Routes, Link} from 'react-router-dom';
+import {MethodenDivSimple} from '../input/MenuAuswahl/MethodenSimple.js';
 import NavFomos from './Nav-Fomos.js';
 import FooterFomos from './Footer-Fomos.js';
 
@@ -112,7 +113,12 @@ function Fomosmain() {
         {/* Methode  */}
 
         <section id="chart" >
+        
         {/* Chart to be inserted*/}
+
+        <MethodenDivSimple />
+        
+         
         
 
         </section>
