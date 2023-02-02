@@ -207,30 +207,33 @@ yesterday.setDate(yesterday.getDate() - 1);
   //   .nice();
 
   // console.log(dateGraphStart);
-  // console.log(dateStartMethoden);
+  // console.log(dateStartMethoden);<<
 
   const dateGraphStartFormat = new Date(dateGraphStart);
 
   // console.log(dateGraphStartFormat);
   // console.log(dateStartMethoden);
 
-// console.log(Math.max(Math.max(dateGraphStart, valueSieben)),(Math.max(data, yQuantileGroß)));
+// (max(data, yQuantileGroß))
+// (max(datenstand_schwarz, yValueDatenstand)
+
+// console.log(Math.max(max(datenstand_schwarz, yValueDatenstand), max(data, yQuantileGroß)));
 
     const xScale = scaleTime()
     .domain([dateGraphStartFormat, yesterday])
     .range([0, innerWidth])
-    // .nice();
+    .nice();
 
   const yScale = scaleLinear()
-    .domain([0, max(data, yQuantileGroß)])
+    .domain([0, Math.max(max(datenstand_schwarz, yValueDatenstand), max(data, yQuantileGroß))])
     .range([innerHeight, 0])
     .nice();
 
-  // const toopltipp = 
+  // const toopltipp =
+  
+  
 
   return (
-
-    
     <div>
     {/* <Tooltipp xScale={xScale} yScale={yScale} innerWidth={innerWidth} innerHeight={innerHeight} yValueDatenstand={yValueDatenstand} xValue={xValue} yValue={yValue} yQuantileKlein={yQuantileKlein} yQuantileGroß={yQuantileGroß}/> */}
     <svg id = 'my_dataviz' width={width} height={height}>
