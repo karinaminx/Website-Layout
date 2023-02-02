@@ -58,7 +58,7 @@ function Kontakt() {
             <div class="card mb-2 Kontaktkarte" >
               <div class="row g-0">
                 <div class="col-md-4">
-                  <img src={Bild_Melanie_Schienle} class="img-fluid rounded-start contact_picture1" alt="Bild"></img>
+                  <img src={Bild_Melanie_Schienle} class="img-fluid rounded-start contact_picture1" alt="Bild" style={{ height: "190px" }} ></img>
                 </div>
                 <div class="col-md-8 kontakttext">
                   <div class="card-body">
@@ -80,7 +80,7 @@ function Kontakt() {
             <div class="card mb-3 Kontaktkarte" >
               <div class="row g-0">
                 <div class="col-md-4">
-                  <img src={Bild_Alexander_Mädche} class="img-fluid rounded-start contact_picture1" alt="Bild"></img>
+                  <img src={Bild_Alexander_Mädche} class="img-fluid rounded-start contact_picture1" alt="Bild" style={{ height: "190px" }}></img>
                 </div>
                 <div class="col-md-8 kontakttext">
                   <div class="card-body">
@@ -102,7 +102,7 @@ function Kontakt() {
             <div class="card mb-3 Kontaktkarte" >
               <div class="row g-0 contact_sm">
                 <div class="col-md-4 contact_picture">
-                  <img src={Bild_Johannes_Bracher} class="img-fluid rounded-start contact_picture2" alt="Bild"></img>
+                  <img src={Bild_Johannes_Bracher} class="img-fluid rounded-start contact_picture2" alt="Bild" ></img>
                 </div>
                 <div class="col-md-8 kontakttext">
                   <div class="card-body">

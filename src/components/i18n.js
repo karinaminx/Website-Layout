@@ -16,7 +16,7 @@ i18n
         translation: {
 
         /* Landingpage*/
-        text1_home: "Das Forecasting, Modelling and Scenario hub (FOMOS Hub)  ist eine integrierte Plattform für die Kommunikation und Interaktion von Forschung zu transparenten Prognosen, Entscheidungen und Ergebnissen für und mit der Gesellschaft.", 
+        text1_home: "Das Forecasting, Modelling and Scenario hub (FOMOS hub)  ist eine integrierte Plattform für die Kommunikation und Interaktion von Forschung zu transparenten Prognosen, Entscheidungen und Ergebnissen für und mit der Gesellschaft.", 
         text2_home: "FOMOS zeigt Forschung und Forschungsergebnisse in Echtzeit zu wichtigen gesellschaftlichen Themenfeldern.", 
         corona_headline: "Nowcasting von COVID-Hospitalisierungen",
         corona_explain: "Echtzeitkorrektur der Meldeverzüge in COVID-19 Hospitalisierungsdaten.",
@@ -174,7 +174,8 @@ i18n
 
         
         hover_oder: "Es ist nur möglich, nach Bundesland oder dem Alter zu Filtern. Eine Kombination ist aufgrund der Datengrundlage nicht möglich.",
-        hover1_methoden: "",
+        hover1_1_methoden: "Zeigt die aktuellen Zahlen vom RKI.",
+        hover1_2_methoden: "Zeigt den Wert der Zahlen vom RKI, die am eingegebenen Datum des Datenstands aktuell waren.",
         hover2_methoden: "Semiparametrisches Nowcasting-Verfahren für rechszensierte Hospitalisierungen nach Datum des positiven Tests.",
         hover3_methoden: "Verwenden von in der Vergangenheit beobachteten, an der 7-Tage-Inzidenz der COVID-19 Fällen anteiligen, 7-Tage-Hospitalisierungsinzidenz nach einer, zwei usw. Wochen.",
         hover4_methoden: "Basierend auf einfacher Schätzung der Verteilung der Verzögerungsdauern zwischen Meldedatum und Erscheinen einer Hospitalisierung in den RKI-Daten.",
@@ -217,7 +218,7 @@ i18n
         
    
        /*Datenschutz*/
-        DatenschutzTitle:"DATENSCHUTZ | IMPRESSUM",
+        DatenschutzTitle:"DATENSCHUTZ ",
         Datenschutz_S1_Title: "Datenschutz",
         Datenschutz_S2_Title: "Cookies",
         Datenschutz_S3_Title: "Server-Log-Files",
@@ -423,7 +424,8 @@ i18n
         buttonleftchart: "To reduce the size of the graph section.",
         
         hover_oder: "It is only possible to filter by state or age. A combination is not possible due to the data basis. ",
-        hover1_methoden: "",
+        hover1_1_methoden: "Shows the current figures from the RKI.",
+        hover1_2_methoden: "Zeigt den Wert der Zahlen vom RKI, die am eingegebenen Datum des Datenstands aktuell waren.",
         hover2_methoden: "A semi-parametric nowcasting procedure for right-censored hospitalisations by date of positive test",
         hover3_methoden: "Using past observed proportional to 7-day incidence of COVID-19 cases, 7-day hospitalisation incidence after one, two, etc. weeks.",
         hover4_methoden: "Based on simple estimation of the distribution of delay durations between reporting date and appearance of a hospitalisation in the RKI data.",
@@ -462,7 +464,7 @@ i18n
         Deutschland: "Germany",
 
         /*Datenschutz*/
-        DatenschutzTitle:"PRIVACY | IMPRINT",
+        DatenschutzTitle:"PRIVACY",
         Datenschutz_S1_Title: "Privacy",
         Datenschutz_S2_Title: "Cookies",
         Datenschutz_S3_Title: "Server-Log-Files",

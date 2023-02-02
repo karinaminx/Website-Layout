@@ -588,7 +588,7 @@ export const MethodenDiv = () => {
                       <td>
                         <div
                           className="hovertext questionmark hoverq"
-                          data-hover={t("hover1_methoden")} /*{{t("hover1")}}*/
+                          data-hover={t("hover1_1_methoden")} 
                         >
                           <div className="">
                             <p> ⓘ</p>
@@ -622,7 +622,7 @@ export const MethodenDiv = () => {
                       <td>
                         <div
                           className="hovertext questionmark hoverq"
-                          data-hover={t("hover1_methoden")}
+                          data-hover={t("hover1_2_methoden")}
                         >
                           <div className="">
                             <p> ⓘ</p>
