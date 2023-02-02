@@ -15,6 +15,8 @@ import "./Graph.css";
 import { line, curvexNatural } from "d3";
 import { MarksRealDataGrau } from "./MarksRealDataGrau";
 import { MarksRealDataSchwarz } from "./MarksRealDataSchwarz";
+
+
 // import { isLabelWithInternallyDisabledControl } from "@testing-library/user-event/dist/utils";
 // import {Tooltipp} from "./Tooltipp";
 
@@ -25,10 +27,14 @@ const lngs = [
     { code: "en", native: "English" },
   ];
 
+ 
+
 const height = 500;
 const margin = { top: 20, right: 10, bottom: 65, left: 100 };
 const xAxisLabelOffset = 50;
 const yAxisLabelOffset = 45;
+
+
 
 //_______________________________________________________
 
@@ -152,6 +158,12 @@ export const Graph = ({
     anzeigeSZ = "hidden";
   }
 
+  const { t, i18n } = useTranslation();
+
+const handleTrans = (code) => {
+    i18n.changeLanguage(code);
+  };
+  
   if (
     !data ||
     !EPIdata ||
@@ -175,7 +187,7 @@ export const Graph = ({
   const innerWidth = width - margin.left - margin.right;
 
   const xValue = (d) => d.date;
-  const xAxisLabel = "Meldedatum";
+  
 
   const yValueDatenstand = (d) => d.valueSieben;
 
@@ -229,11 +241,11 @@ yesterday.setDate(yesterday.getDate() - 1);
     .range([innerHeight, 0])
     .nice();
 
-  // const toopltipp =
-  
-  
+  // const toopltipp = 
 
   return (
+
+    
     <div>
     {/* <Tooltipp xScale={xScale} yScale={yScale} innerWidth={innerWidth} innerHeight={innerHeight} yValueDatenstand={yValueDatenstand} xValue={xValue} yValue={yValue} yQuantileKlein={yQuantileKlein} yQuantileGroß={yQuantileGroß}/> */}
     <svg id = 'my_dataviz' width={width} height={height}>
@@ -261,8 +273,11 @@ yesterday.setDate(yesterday.getDate() - 1);
           y={innerHeight + xAxisLabelOffset + 10}
           textAnchor="middle"
         >
-          {xAxisLabel}
+          {t("xAxis")}
         </text>
+
+        
+
         <g className="mark">
           <Marks
             data={EPIdata}
