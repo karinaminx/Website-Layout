@@ -302,6 +302,11 @@ export const MethodenDiv = () => {
   // const dateStartMethoden = timeDay.offset(max(data, xValue), -35);
   console.log(date);
 
+
+
+
+
+  
   return (
     <div>
       <div className=" buttonschart">
