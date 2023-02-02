@@ -43,6 +43,7 @@ export const useData = (
 
   useEffect(() => {
     const dateStart = new Date(dateGraphStart);
+
     const csvUrl =
       "https://raw.githubusercontent.com/KITmetricslab/hospitalization-nowcast-hub/main/nowcast_viz_de/plot_data/" +
       date +
@@ -176,15 +177,20 @@ export const useData = (
       );
 
       const filteredDataTime = filteredData.filter(
-        (row) =>
-                 row.date >= dateStart
+        (row) => row.date >= dateStart
       );
 
       setData(filteredDataTime);
-
-
     });
-  }, [methode, menuAge, selectedScope, intervall, anzeige, dateGraphStart, date]);
+  }, [
+    methode,
+    menuAge,
+    selectedScope,
+    intervall,
+    anzeige,
+    dateGraphStart,
+    date,
+  ]);
 
   return data;
 };

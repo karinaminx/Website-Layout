@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import {MethodenDiv} from '../input/MenuAuswahl/Methoden.js';
 import '../CSS/Fomos-exp.css';
@@ -6,8 +6,9 @@ import {Route, Routes, Link} from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import NavFomos from './Nav-Fomos.js';
 import FooterFomos from './Footer-Fomos.js';
-
 import {useData} from "../input/Graph/useDataMethode";
+import {useDataDatenstand} from "../input/Graph/useDataDatenstand";
+
 
 const lngs = [
     { code: "de", native: "Deutsch" },
@@ -23,7 +24,6 @@ const theDayBeforeYesterday = new Date(today.getTime());
 theDayBeforeYesterday.setDate(today.getDate() - 2);
 const theDayBeforeYesterdayAsString = theDayBeforeYesterday.toISOString().substring(0, 10);
 
-
 function Fomosexp() {
     const navStyle={
         textDecoration: 'none',
@@ -36,33 +36,76 @@ function Fomosexp() {
       };
 
 
-//  const k7TageWert = useData(
-//     "NowcastHub-MeanEnsemble",
-//     "00+",
-//     "DE",
-//     "FÜNFundNEUNZIG",
-//     "hunderttausend",
-//    "theDayBeforeYesterdayAsString",
-//     "yesterdayAsString"
-//   );
+    const nocastArray = useData(
+        "NowcastHub-MeanEnsemble",
+        "00+",
+        "DE",
+        "FÜNFundNEUNZIG",
+        "hunderttausend",
+        theDayBeforeYesterdayAsString,
+        yesterdayAsString
+      );
 
-//   const k7TageWert = useData(
-//     "NowcastHub-MeanEnsemble",
-//     "00+",
-//     "DE",
-//     "FÜNFundNEUNZIG",
-//     "hunderttausend",
-//    "2023-02-01",
-//     "yesterdayAsString"
-//   );
 
-//   if (
-//     !k7TageWert
-//   ) {
-//     return <p className="loading">Loading...</p>;
-//   }
+  const unkorrHundArray = useDataDatenstand(
+    "00+",
+    "DE",
+    "",
+    "hunderttausend",
+    theDayBeforeYesterdayAsString,
+    yesterdayAsString
+  );
 
-// console.log(k7TageWert);
+  const unkorrAbsolArray = useDataDatenstand(
+    "00+",
+    "DE",
+    "",
+    "absoluteZahlen",
+    theDayBeforeYesterdayAsString,
+    yesterdayAsString
+  );
+
+     
+
+
+  let nocastValueYesterday;
+    let nocastValueTheDayBeforeYesterday;
+    let unkorrHundValue;
+let unkorrAbsValue;
+
+  if (
+    !nocastArray,
+    !unkorrHundArray
+  ) {
+    nocastValueYesterday = "Loading"
+    unkorrHundValue = "Loading"
+  }else{
+    nocastValueYesterday = Math.round(nocastArray[1].value * 1000) / 1000;
+    nocastValueTheDayBeforeYesterday = Math.round(nocastArray[0].value * 10) / 10;
+    unkorrHundValue =  Math.round(unkorrHundArray[1].valueSieben * 10) / 10;
+ unkorrAbsValue =  Math.round(unkorrAbsolArray[1].valueSieben * 10) / 10;
+}
+
+console.log(nocastArray);
+
+function trendArrow(){
+    if(!nocastArray){
+        return "Loading"
+    }else{
+        if(nocastValueYesterday > nocastValueTheDayBeforeYesterday){
+            return "&uarr;"; // pfeil oben
+        } else {
+            return "&darr;"; //pfeil unten
+        }
+    }
+}
+
+
+
+    // yesterdayValue = k7TageWert.find(item => item.date === yesterdayAsString).value;
+
+  
+console.log(nocastValueYesterday);
 
 
     return (
@@ -102,7 +145,7 @@ function Fomosexp() {
                     <span class="hovertext" data-hover={t("button1hover_nowcast")}>
                     <div class="button infobutton" >
                         <p class="text-fix">{t("button1_nowcast")}</p>
-                        <p class="text-var">7</p>
+                        <p class="text-var">{nocastValueYesterday}</p>
                     </div>
                     </span>
                 </div>
@@ -110,7 +153,7 @@ function Fomosexp() {
                     <span class="hovertext" data-hover={t("button2hover_nowcast")}>
                     <div class="button infobutton"> 
                         <p class="text-fix">{t("button2_nowcast")}</p>
-                        <p class="text-var"> &uarr; </p>
+                        <p class="text-var"> {trendArrow()} </p>
                     </div> 
                     </span>
                 </div>
@@ -118,7 +161,7 @@ function Fomosexp() {
                     <span class="hovertext" data-hover={t("button3hover_nowcast")}>
                     <div class="button infobutton"> 
                         <p class="text-fix">{t("button3_nowcast")}</p>
-                        <p class="text-var">3,3</p>
+                        <p class="text-var">{unkorrHundValue}</p>
                     </div>
                     </span>
                 </div>
@@ -126,7 +169,7 @@ function Fomosexp() {
                     <span class="hovertext" data-hover={t("button4hover_nowcast")}>
                     <div class="button infobutton"> 
                         <p class="text-fix">{t("button4_nowcast")}</p>
-                        <p class="text-var">2.600</p>
+                        <p class="text-var">{unkorrAbsValue}</p>
                     </div> 
                     </span>
                 </div>  

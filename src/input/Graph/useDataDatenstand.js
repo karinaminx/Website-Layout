@@ -40,10 +40,19 @@ export const useDataDatenstand = (
 ) => {
   const [data, setData] = useState(null);
 
+
   useEffect(() => {
     const dateStart = new Date(dateGraphStart);
-    const dateEnd = new Date(dateEndÜbergeben);
 
+const [year, month, day] = dateEndÜbergeben.split("-").map(x => parseInt(x, 10));
+const dateEnd = new Date(Date.UTC(year, month - 1, day+1, 0, 0, 0));
+
+//     const dateStart = new Date(Date.UTC(dateGraphStart));
+// const dateEnd = new Date(Date.UTC(dateEndÜbergeben));
+
+    console.log(dateEndÜbergeben)
+    console.log(dateEnd);
+    
     const processRow = (row) => {
       for (let i = 0; i <= 80; i++) {
         const value = row[`value_${i}d`];

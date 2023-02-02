@@ -11,17 +11,13 @@ import {
   initialValueAge,
   initialValueAnzeige,
   initialValue,
-  initialValueIntervall,
   initialValueTabelle,
-  dateFormatter,
   initialDate,
   initialdateGraphStart,
   // initialdateGraphEnde
 } from "./optionsCollection";
 import { useDataAxes } from "../Graph/useDataAxes";
 import { useDataDatenstand } from "../Graph/useDataDatenstand";
-import { timeFormat, max, timeDay } from "d3";
-
 import datenstand_g from "../../images/datenstand_grau.png";
 import datenstand_sw from "../../images/datenstand_sw.png";
 import Epiforecast_line from "../../images/Epiforecast_line.png";
@@ -280,6 +276,7 @@ export const MethodenDiv = () => {
     dateGraphStart,
     initialDate
   );
+
   const datenstand_grau = useDataDatenstand(
     menuAge,
     selectedScope,
