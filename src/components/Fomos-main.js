@@ -4,13 +4,30 @@ import { Route, Routes, Link } from "react-router-dom";
 import { MethodenDivSimple } from "../input/MenuAuswahl/MethodenSimple.js";
 import NavFomos from "./Nav-Fomos.js";
 import FooterFomos from "./Footer-Fomos.js";
-
+import { useData } from "../input/Graph/useDataMethode";
+import { useDataDatenstand } from "../input/Graph/useDataDatenstand";
 import { useTranslation } from "react-i18next";
 
 const lngs = [
   { code: "de", native: "Deutsch" },
   { code: "en", native: "English" },
 ];
+
+
+const today = new Date();
+const yesterday = new Date(today.getTime());
+yesterday.setDate(today.getDate() - 1);
+const yesterdayAsString = yesterday.toISOString().substring(0, 10);
+
+const theDayBeforeYesterday = new Date(today.getTime());
+theDayBeforeYesterday.setDate(today.getDate() - 2);
+const theDayBeforeYesterdayAsString = theDayBeforeYesterday
+  .toISOString()
+  .substring(0, 10);
+
+
+
+
 
 function Fomosmain() {
   const navStyle = {
@@ -22,6 +39,63 @@ function Fomosmain() {
   const handleTrans = (code) => {
     i18n.changeLanguage(code);
   };
+
+const nocastArray = useData(
+    "NowcastHub-MeanEnsemble",
+    "00+",
+    "DE",
+    "FÜNFundNEUNZIG",
+    "hunderttausend",
+    theDayBeforeYesterdayAsString,
+    yesterdayAsString
+  );
+
+  const unkorrHundArray = useDataDatenstand(
+    "00+",
+    "DE",
+    "",
+    "hunderttausend",
+    theDayBeforeYesterdayAsString,
+    yesterdayAsString
+  );
+
+  const unkorrAbsolArray = useDataDatenstand(
+    "00+",
+    "DE",
+    "",
+    "absoluteZahlen",
+    theDayBeforeYesterdayAsString,
+    yesterdayAsString
+  );
+
+  let nocastValueYesterday;
+  let nocastValueTheDayBeforeYesterday;
+  let unkorrHundValue;
+  let unkorrAbsValue;
+
+  if ((!nocastArray, !unkorrHundArray, !unkorrAbsolArray)) {
+    nocastValueYesterday = "Loading";
+    unkorrHundValue = "Loading";
+    unkorrAbsValue = "Loading";
+  } else {
+    nocastValueYesterday = Math.round(nocastArray[1].value * 10) / 10;
+    nocastValueTheDayBeforeYesterday =
+      Math.round(nocastArray[0].value * 10) / 10;
+    unkorrHundValue = Math.round(unkorrHundArray[1].valueSieben * 10) / 10;
+    unkorrAbsValue = Math.round(unkorrAbsolArray[1].valueSieben * 10) / 10;
+  }
+
+  function trendArrow() {
+    if (!nocastArray) {
+      return "Loading";
+    } else {
+      if (nocastValueYesterday > nocastValueTheDayBeforeYesterday) {
+        return "&uarr;"; // pfeil oben
+      } else {
+        return "&darr;"; //pfeil unten
+      }
+    }
+  }
 
   return (
     <div>
@@ -56,7 +130,7 @@ function Fomosmain() {
               <span class="hovertext" data-hover={t("button1hover_nowcast")}>
                 <div class="button infobutton">
                   <p class="text-fix">{t("button1_nowcast")}</p>
-                  <p class="text-var">7</p>
+                  <p class="text-var">{nocastValueYesterday}</p>
                 </div>
               </span>
             </div>
@@ -64,7 +138,7 @@ function Fomosmain() {
               <span class="hovertext" data-hover={t("button2hover_nowcast")}>
                 <div class="button infobutton">
                   <p class="text-fix">{t("button2_nowcast")}</p>
-                  <p class="text-var"> &uarr; </p>
+                  <p class="text-var"> {trendArrow()}</p>
                 </div>
               </span>
             </div>
@@ -72,7 +146,7 @@ function Fomosmain() {
               <span class="hovertext" data-hover={t("button3hover_nowcast")}>
                 <div class="button infobutton">
                   <p class="text-fix">{t("button3_nowcast")}</p>
-                  <p class="text-var">3,3</p>
+                  <p class="text-var">{unkorrHundValue}</p>
                 </div>
               </span>
             </div>
@@ -80,7 +154,7 @@ function Fomosmain() {
               <span class="hovertext" data-hover={t("button4hover_nowcast")}>
                 <div class="button infobutton">
                   <p class="text-fix">{t("button4_nowcast")}</p>
-                  <p class="text-var">2.600</p>
+                  <p class="text-var">{unkorrAbsValue}</p>
                 </div>
               </span>
             </div>

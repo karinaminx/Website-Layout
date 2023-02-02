@@ -200,8 +200,6 @@ export const Graph = ({
     .range([innerHeight, 0])
     .nice();
 
-
-
     
 
   return (

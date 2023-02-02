@@ -30,6 +30,8 @@ import {
 const csvUrl =
   "https://raw.githubusercontent.com/KITmetricslab/hospitalization-nowcast-hub/main/data-truth/COVID-19/COVID-19_hospitalizations_preprocessed.csv";
 
+//  const csvUrl=  "/Users/bjoern004/Downloads/COVID-19_hospitalizations_preprocessed.csv";
+
 export const useDataDatenstand = (
   menuAge,
   selectedScope,
@@ -47,11 +49,6 @@ export const useDataDatenstand = (
 const [year, month, day] = dateEndÜbergeben.split("-").map(x => parseInt(x, 10));
 const dateEnd = new Date(Date.UTC(year, month - 1, day+1, 0, 0, 0));
 
-//     const dateStart = new Date(Date.UTC(dateGraphStart));
-// const dateEnd = new Date(Date.UTC(dateEndÜbergeben));
-
-    console.log(dateEndÜbergeben)
-    console.log(dateEnd);
     
     const processRow = (row) => {
       for (let i = 0; i <= 80; i++) {
@@ -157,7 +154,7 @@ const dateEnd = new Date(Date.UTC(year, month - 1, day+1, 0, 0, 0));
               d.valueSieben = (100000 / age80up) * d.valueSieben;
             }
           }else(d.valueSieben =  d.valueSieben)
-          return d.date >= dateStart && d.date <= dateEnd;
+          return d.date >= dateStart && d.date < dateEnd;
         });
 
       setData(filteredDataWithValueSiebenUHunderttausend);
