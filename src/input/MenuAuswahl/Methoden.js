@@ -566,14 +566,14 @@ export const MethodenDiv = () => {
                       }`}
                       onClick={handleClickDatenstandSchwarz}
                     >
-                      <td className="linelayout">
-                        <img src={datenstand_sw} style={{ width: "38px" }} />
+                      <td className="linelayout ">
+                        <img className="bildfix" src={datenstand_sw} style={{ width: "30px" }} />
                       </td>
 
                       <td className="methodnamerow">
                         <p
-                          className={`datenstand ${
-                            isDatenstandSchwarz ? "bold" : ""
+                          className={`datenstand methodtext ${
+                            isDatenstandSchwarz ? "bold " : ""
                           }`}
                           onClick={handleClickDatenstandSchwarz}
                         >
@@ -601,13 +601,13 @@ export const MethodenDiv = () => {
                       onClick={handleClickDatenstandGrau}
                     >
                       <td className="linelayout">
-                        <img src={datenstand_g} style={{ width: "38px" }} />
+                        <img src={datenstand_g} style={{ width: "30px" }} />
                       </td>
 
                       <td className="methodnamerow">
                         <p
-                          className={`datenstand ${
-                            isDatenstandGrau ? "bold" : ""
+                          className={`datenstand methodtext ${
+                            isDatenstandGrau ? "bold " : ""
                           }`}
                           onClick={handleClickDatenstandGrau}
                         >
@@ -634,13 +634,13 @@ export const MethodenDiv = () => {
                       onClick={handleClickEpi}
                     >
                       <td className="linelayout">
-                        <img src={Epiforecast_line} style={{ width: "35px" }} />
+                        <img src={Epiforecast_line} style={{ width: "28px" }} />
                       </td>
 
                       <td className="methodnamerow">
                         <p
-                          className={`Epiforecast ${
-                            isEpiforecast ? "bold" : ""
+                          className={`Epiforecast methodtext ${
+                            isEpiforecast ? "bold " : ""
                           }`}
                           onClick={handleClickEpi}
                         >
@@ -667,12 +667,12 @@ export const MethodenDiv = () => {
                       onClick={handleClickKIT}
                     >
                       <td className="linelayout">
-                        <img src={KIT_line} style={{ width: "35px" }} />
+                        <img className="bildfix" src={KIT_line} style={{ width: "30px" }} />
                       </td>
 
                       <td className="methodnamerow">
                         <p
-                          className={`KIT ${isKIT ? "bold" : ""}`}
+                          className={`KIT  methodtext ${isKIT ? "bold" : ""}`}
                           onClick={handleClickKIT}
                         >
                           KIT Simple Nowcast
@@ -698,11 +698,11 @@ export const MethodenDiv = () => {
                       onClick={handleClickLMU}
                     >
                       <td className="linelayout">
-                        <img src={LMU_line} style={{ width: "35px" }} />
+                        <img className="bildfix" src={LMU_line} style={{ width: "30px" }} />
                       </td>
                       <td className="methodnamerow">
                         <p
-                          className={`LMU ${isLMU ? "bold" : ""}`}
+                          className={`LMU methodtext ${isLMU ? "bold " : ""}`}
                           onClick={handleClickLMU}
                         >
                           LMU StaBlab-GAM Nowcast
@@ -728,11 +728,11 @@ export const MethodenDiv = () => {
                       onClick={handleClickNowcast}
                     >
                       <td className="linelayout">
-                        <img src={NowcastHub_line} style={{ width: "35px" }} />
+                        <img className="bildfix" src={NowcastHub_line} style={{ width: "30px" }} />
                       </td>
                       <td className="methodnamerow">
                         <p
-                          className={`Nowcast ${isNowcast ? "bold" : ""}`}
+                          className={`Nowcast methodtext ${isNowcast ? "bold " : ""}`}
                           onClick={handleClickNowcast}
                         >
                           NowcastHub MeanEnsemble
@@ -757,11 +757,11 @@ export const MethodenDiv = () => {
                       onClick={handleClickRIVM}
                     >
                       <td className="linelayout">
-                        <img src={RIVM_line} style={{ width: "35px" }} />
+                        <img className="bildfix" src={RIVM_line} style={{ width: "30px" }} />
                       </td>
                       <td className="methodnamerow">
                         <p
-                          className={`RIVM ${isRIVM ? "bold" : ""}`}
+                          className={`RIVM methodtext ${isRIVM ? "bold " : ""}`}
                           onClick={handleClickRIVM}
                         >
                           RIVM Weekly Report
@@ -787,11 +787,11 @@ export const MethodenDiv = () => {
                       onClick={handleClickSU}
                     >
                       <td className="linelayout">
-                        <img src={SU_line} style={{ width: "35px" }} />
+                        <img src={SU_line} style={{ width: "30px" }} />
                       </td>
                       <td className="methodnamerow">
                         <p
-                          className={`SU ${isSU ? "bold" : ""}`}
+                          className={`SU methodtext ${isSU ? "bold " : ""}`}
                           onClick={handleClickSU}
                         >
                           SU hier bayes
@@ -816,12 +816,12 @@ export const MethodenDiv = () => {
                       onClick={handleClickSZ}
                     >
                       <td className="linelayout">
-                        <img src={SZ_line} style={{ width: "35px" }} />
+                        <img src={SZ_line} style={{ width: "30px" }} />
                       </td>
 
                       <td className="methodnamerow">
                         <p
-                          className={`SZ ${isSZ ? "bold" : ""}`}
+                          className={`SZ methodtext ${isSZ ? "bold " : ""}`}
                           onClick={handleClickSZ}
                         >
                           SZ Nowcast
@@ -847,12 +847,12 @@ export const MethodenDiv = () => {
                       onClick={handleClickILM}
                     >
                       <td className="linelayout">
-                        <img src={ILM_line} style={{ width: "35px" }} />
+                        <img src={ILM_line} style={{ width: "30px" }} />
                       </td>
 
                       <td className="methodnamerow">
                         <p
-                          className={`ILM ${isILM ? "bold" : ""}`}
+                          className={`ILM methodtext ${isILM ? "bold " : ""}`}
                           onClick={handleClickILM}
                         >
                           ILM prop
@@ -879,11 +879,11 @@ export const MethodenDiv = () => {
                       onClick={handleClickRKI}
                     >
                       <td className="linelayout">
-                        <img src={RKI_line} style={{ width: "35px" }} />
+                        <img src={RKI_line} style={{ width: "30px" }} />
                       </td>
                       <td className="methodnamerow">
                         <p
-                          className={`RKI ${isRKI ? "bold" : ""}`}
+                          className={`RKI methodtext ${isRKI ? "bold " : ""}` }
                           onClick={handleClickRKI}
                         >
                           RKI Weekly Report

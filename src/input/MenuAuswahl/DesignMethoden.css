@@ -209,6 +209,10 @@
   width: 15%;
 }
 
+.methodtext{
+  font-size: 0.9rem;
+}
+
 
 
 .container{
@@ -258,6 +262,10 @@
     left: 2%;
   margin: 1%;
  }
+
+.bildfix{
+  margin-top: 13%;
+}
 
 
  
@@ -460,6 +468,7 @@
 /*Beginn Abschnitte*/
 
 /*Datenstand*/
+
 input[name="select-date"] {
   border: none;
   outline: 0px;
@@ -510,26 +519,7 @@ input[name="select-date"] {
   font-style: oblique;
 }
 
-/**/
 
-
-/*Unsicherheitsintervall und Anzeige nebeneinander 
-.Anzeigel {
- float: left;
-}
-.Anzeiger{
-  float: right; width: 0%;
-}*/
-
-
-
-/*selector für Bundesländer
-.BundeslandSelect {
-  border-color: transparent;
-  background-color: transparent;
-  
-  width: 90%;
-}*/
 
 input[name="größe"] {
 	accent-color: grey;
@@ -545,7 +535,3 @@ input[name="unsicherheitsintervall"] {
 
 
 
-/*/
-
-}*
-/**/ 
