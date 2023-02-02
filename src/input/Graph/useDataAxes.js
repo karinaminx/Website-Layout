@@ -5,7 +5,6 @@ import {DE00, DEBW, DEBY, DEBE, DEBB, DEHB, DEHH, DEHE, DEMV, DENI, DENW, DERP, 
 
 const datum = "2023-01-10";
 
-//{DE00, DEBW, DEBY, DEBE, DEBB, DEHB, DEHH, DEHE, DEMV, DENI, DENW, DERP, DESL, DESN, DEST, DESH, DETH, age00to04, age05to14, age15to34, age35to59, age60to79, age80up}
 
 const csvUrl =
   "https://raw.githubusercontent.com/KITmetricslab/hospitalization-nowcast-hub/main/nowcast_viz_de/plot_data/" +
