@@ -180,7 +180,7 @@ export const Graph = ({
   const yValue = (d) => d.value;
   const yQuantileKlein = (d) => d.quantileKlein;
   const yQuantileGroß = (d) => d.quantileGroß;
-  const yAxisLabel = "7 Tage Hospitalisierungsinzidenz";
+  
 
   const xAxisTickFormat = timeFormat("%d.%m.%Y");
 
@@ -255,7 +255,7 @@ export const Graph = ({
               innerHeight / 2
             }) rotate(-90)`}
           >
-            {yAxisLabel}
+            {t("yAxis")}
           </text>
           <AxisLeft yScale={yScale} innerWidth={innerWidth} tickOffset={10} />
           <text
