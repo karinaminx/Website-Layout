@@ -187,6 +187,9 @@ i18n
 
         hover_date: " Definiert das Startdatum des Graphen.",
 
+        yAxis: "7 Tage Hospitalisierungsinzidenz",
+        xAxis: "Meldedatum",
+
         /* Texte Graph*/
 
         Datenstand: "Datenstand",
@@ -433,8 +436,8 @@ i18n
 
         hover_date: "Defines the starting date of the graph.",
 
-        yAxis: "7 Tage Hospitalisierungsinzidenz",
-        xAxis: "Meldedatum",
+        yAxis: "7-day hospitalization incidence",
+        xAxis: "Reporting date",
 
 
         /*Texte Graph*/
