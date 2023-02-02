@@ -100,7 +100,7 @@ export const useDataDatenstand = (
 
       const filteredDataWithValueSiebenUHunderttausend =
         filteredDataWithValueSieben.filter((d) => {
-          if (anzeige === "hunderttausend") {
+          if (anzeige == "hunderttausend") {
             if (selectedScope === "DE" && menuAge === "00+") {
               d.valueSieben = (100000 / DE00) * d.valueSieben;
             } else if (selectedScope === "DE-BW") {
@@ -148,20 +148,14 @@ export const useDataDatenstand = (
             } else if (menuAge == "80+") {
               d.valueSieben = (100000 / age80up) * d.valueSieben;
             }
-
-            return d.date >= dateStart && d.date <= dateEnd;
-          }
+          }else(d.valueSieben =  d.valueSieben)
+          return d.date >= dateStart && d.date <= dateEnd;
         });
 
-      const filteredDataWithValueSiebenUGefiltered =
-        filteredDataWithValueSiebenUHunderttausend.filter(
-          (row) => row.date >= dateStart && row.date <= dateEnd
-        );
-
-      setData(filteredDataWithValueSiebenUGefiltered);
+      setData(filteredDataWithValueSiebenUHunderttausend);
     });
-  }, [menuAge, selectedScope, display, dateGraphStart, dateEndÜbergeben]);
 
+  }, [menuAge, selectedScope, display, anzeige, dateGraphStart, dateEndÜbergeben]);
   return data;
 };
 

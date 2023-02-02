@@ -61,7 +61,7 @@ function Fomosmain() {
                     <span class="hovertext" data-hover={t("button1hover_nowcast")}>
                     <div class="button infobutton" >
                         <p class="text-fix">{t("button1_nowcast")}</p>
-                        <p class="text-var">xxx</p>
+                        <p class="text-var">7</p>
                     </div>
                     </span>
                 </div>
@@ -69,7 +69,7 @@ function Fomosmain() {
                     <span class="hovertext" data-hover={t("button2hover_nowcast")}>
                     <div class="button infobutton"> 
                         <p class="text-fix">{t("button2_nowcast")}</p>
-                        <p class="text-var">xxx</p>
+                        <p class="text-var"> &uarr; </p>
                     </div> 
                     </span>
                 </div>
@@ -77,7 +77,7 @@ function Fomosmain() {
                     <span class="hovertext" data-hover={t("button3hover_nowcast")}>
                     <div class="button infobutton"> 
                         <p class="text-fix">{t("button3_nowcast")}</p>
-                        <p class="text-var">xxx</p>
+                        <p class="text-var">3,3</p>
                     </div>
                     </span>
                 </div>
@@ -85,7 +85,7 @@ function Fomosmain() {
                     <span class="hovertext" data-hover={t("button4hover_nowcast")}>
                     <div class="button infobutton"> 
                         <p class="text-fix">{t("button4_nowcast")}</p>
-                        <p class="text-var">xxx</p>
+                        <p class="text-var">2.600</p>
                     </div>                    
                     </span>
                 </div>  

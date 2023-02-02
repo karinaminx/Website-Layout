@@ -81,7 +81,7 @@ export const MethodenDiv = () => {
 
   //Const to show and hide the line for the method ----------------------------------------------------------
   const [isDatenstandSchwarz, setDatenstandSchwarz] = useState(true);
-  const [isDatenstandGrau, setDatenstandGrau] = useState(true);
+  const [isDatenstandGrau, setDatenstandGrau] = useState(false);
   const [isEpiforecast, setEpiforecast] = useState(false);
   const [isILM, setILM] = useState(false);
   const [isKIT, setKIT] = useState(false);
@@ -300,7 +300,7 @@ export const MethodenDiv = () => {
 
   // const xValue = (d) => d.date;
   // const dateStartMethoden = timeDay.offset(max(data, xValue), -35);
-  console.log(date);
+  // console.log(date);
 
 
 

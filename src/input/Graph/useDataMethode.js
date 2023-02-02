@@ -27,8 +27,6 @@ import {
   age80up,
 } from "./useEinwohnerZahlen.js";
 
-const datum = "2023-01-10";
-
 export const useData = (
   methode,
   menuAge,
@@ -183,6 +181,8 @@ export const useData = (
       );
 
       setData(filteredDataTime);
+
+
     });
   }, [methode, menuAge, selectedScope, intervall, anzeige, dateGraphStart, date]);
 

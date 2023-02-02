@@ -7,21 +7,24 @@ import { useTranslation } from 'react-i18next';
 import NavFomos from './Nav-Fomos.js';
 import FooterFomos from './Footer-Fomos.js';
 
+import {useData} from "../input/Graph/useDataMethode";
+
 const lngs = [
     { code: "de", native: "Deutsch" },
     { code: "en", native: "English" },
   ];
 
+  const today = new Date();
+const yesterday = new Date(today.getTime());
+yesterday.setDate(today.getDate() - 1);
+const yesterdayAsString = yesterday.toISOString().substring(0, 10);
+
+const theDayBeforeYesterday = new Date(today.getTime());
+theDayBeforeYesterday.setDate(today.getDate() - 2);
+const theDayBeforeYesterdayAsString = theDayBeforeYesterday.toISOString().substring(0, 10);
+
+
 function Fomosexp() {
-    
-    //
-
-
-
-
-
-
-
     const navStyle={
         textDecoration: 'none',
     };
@@ -31,6 +34,36 @@ function Fomosexp() {
     const handleTrans = (code) => {
         i18n.changeLanguage(code);
       };
+
+
+//  const k7TageWert = useData(
+//     "NowcastHub-MeanEnsemble",
+//     "00+",
+//     "DE",
+//     "FÜNFundNEUNZIG",
+//     "hunderttausend",
+//    "theDayBeforeYesterdayAsString",
+//     "yesterdayAsString"
+//   );
+
+//   const k7TageWert = useData(
+//     "NowcastHub-MeanEnsemble",
+//     "00+",
+//     "DE",
+//     "FÜNFundNEUNZIG",
+//     "hunderttausend",
+//    "2023-02-01",
+//     "yesterdayAsString"
+//   );
+
+//   if (
+//     !k7TageWert
+//   ) {
+//     return <p className="loading">Loading...</p>;
+//   }
+
+// console.log(k7TageWert);
+
 
     return (
         <div>
@@ -69,7 +102,7 @@ function Fomosexp() {
                     <span class="hovertext" data-hover={t("button1hover_nowcast")}>
                     <div class="button infobutton" >
                         <p class="text-fix">{t("button1_nowcast")}</p>
-                        <p class="text-var">xxx</p>
+                        <p class="text-var">7</p>
                     </div>
                     </span>
                 </div>
@@ -77,7 +110,7 @@ function Fomosexp() {
                     <span class="hovertext" data-hover={t("button2hover_nowcast")}>
                     <div class="button infobutton"> 
                         <p class="text-fix">{t("button2_nowcast")}</p>
-                        <p class="text-var">xxx</p>
+                        <p class="text-var"> &uarr; </p>
                     </div> 
                     </span>
                 </div>
@@ -85,7 +118,7 @@ function Fomosexp() {
                     <span class="hovertext" data-hover={t("button3hover_nowcast")}>
                     <div class="button infobutton"> 
                         <p class="text-fix">{t("button3_nowcast")}</p>
-                        <p class="text-var">xxx</p>
+                        <p class="text-var">3,3</p>
                     </div>
                     </span>
                 </div>
@@ -93,7 +126,7 @@ function Fomosexp() {
                     <span class="hovertext" data-hover={t("button4hover_nowcast")}>
                     <div class="button infobutton"> 
                         <p class="text-fix">{t("button4_nowcast")}</p>
-                        <p class="text-var">xxx</p>
+                        <p class="text-var">2.600</p>
                     </div> 
                     </span>
                 </div>  
