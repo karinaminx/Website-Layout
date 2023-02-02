@@ -81,7 +81,7 @@ export const MethodenDiv = () => {
 
   //Const to show and hide the line for the method ----------------------------------------------------------
   const [isDatenstandSchwarz, setDatenstandSchwarz] = useState(true);
-  const [isDatenstandGrau, setDatenstandGrau] = useState(false);
+  const [isDatenstandGrau, setDatenstandGrau] = useState(true);
   const [isEpiforecast, setEpiforecast] = useState(false);
   const [isILM, setILM] = useState(false);
   const [isKIT, setKIT] = useState(false);
