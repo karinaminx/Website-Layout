@@ -1,153 +1,121 @@
 import React from "react";
-import '../CSS/Fomos-main.css';
-import {Route, Routes, Link} from 'react-router-dom';
-import {MethodenDivSimple} from '../input/MenuAuswahl/MethodenSimple.js';
-import NavFomos from './Nav-Fomos.js';
-import FooterFomos from './Footer-Fomos.js';
+import "../CSS/Fomos-main.css";
+import { Route, Routes, Link } from "react-router-dom";
+import { MethodenDivSimple } from "../input/MenuAuswahl/MethodenSimple.js";
+import NavFomos from "./Nav-Fomos.js";
+import FooterFomos from "./Footer-Fomos.js";
 
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from "react-i18next";
 
 const lngs = [
-    { code: "de", native: "Deutsch" },
-    { code: "en", native: "English" },
-  ];
+  { code: "de", native: "Deutsch" },
+  { code: "en", native: "English" },
+];
 
 function Fomosmain() {
+  const navStyle = {
+    textDecoration: "none",
+  };
 
-    const navStyle={
-        textDecoration: 'none',
-    };
+  const { t, i18n } = useTranslation();
 
-    const { t, i18n } = useTranslation();
+  const handleTrans = (code) => {
+    i18n.changeLanguage(code);
+  };
 
-    const handleTrans = (code) => {
-        i18n.changeLanguage(code);
-      };
-    
-
-
-    return (
-        <div>
-        <NavFomos />
-        <div>
+  return (
+    <div>
+      <NavFomos />
+      <div>
         <section id="title">
-        
-        {/* Überschrift */}
-            <div class="title">
+          {/* Überschrift */}
+          <div class="title">
             <i class="fa-regular fa-dash lineheader"></i>
-                <div class="titel-text-main">
-                    <h1>NOWCAST</h1><h2> {t("heading_nowcast")}</h2> 
-                </div> 
+            <div class="titel-text-main">
+              <h1>NOWCAST</h1>
+              <h2> {t("heading_nowcast")}</h2>
             </div>
-       </section>
+          </div>
+        </section>
 
-       <section id="expbutton">
-       <div className="expbutton">
-
-        {/* Expert Mode Button */}
-                <Link style={navStyle} to="/fomosexpert">
-                <div class="button expbutton-expoff" >
-                    <p class="text-expoff">{t("expertbutton_on")}</p>
-                </div>
-                </Link>
-                
-         </div>
+        <section id="expbutton">
+          <div className="expbutton">
+            {/* Expert Mode Button */}
+            <Link style={navStyle} to="/fomosexpert">
+              <div class="button expbutton-expoff">
+                <p class="text-expoff">{t("expertbutton_on")}</p>
+              </div>
+            </Link>
+          </div>
         </section>
 
         <section id="entrance">
-            {/* Buttons */}
-            <div class="row rowbuttons">
-                <div class="col-lg-3 col-md-6 col-sm-12">
-                    <span class="hovertext" data-hover={t("button1hover_nowcast")}>
-                    <div class="button infobutton" >
-                        <p class="text-fix">{t("button1_nowcast")}</p>
-                        <p class="text-var">7</p>
-                    </div>
-                    </span>
+          {/* Buttons */}
+          <div class="row rowbuttons">
+            <div class="col-lg-3 col-md-6 col-sm-12">
+              <span class="hovertext" data-hover={t("button1hover_nowcast")}>
+                <div class="button infobutton">
+                  <p class="text-fix">{t("button1_nowcast")}</p>
+                  <p class="text-var">7</p>
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-12">
-                    <span class="hovertext" data-hover={t("button2hover_nowcast")}>
-                    <div class="button infobutton"> 
-                        <p class="text-fix">{t("button2_nowcast")}</p>
-                        <p class="text-var"> &uarr; </p>
-                    </div> 
-                    </span>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-12 ">
-                    <span class="hovertext" data-hover={t("button3hover_nowcast")}>
-                    <div class="button infobutton"> 
-                        <p class="text-fix">{t("button3_nowcast")}</p>
-                        <p class="text-var">3,3</p>
-                    </div>
-                    </span>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-12 ">
-                    <span class="hovertext" data-hover={t("button4hover_nowcast")}>
-                    <div class="button infobutton"> 
-                        <p class="text-fix">{t("button4_nowcast")}</p>
-                        <p class="text-var">2.600</p>
-                    </div>                    
-                    </span>
-                </div>  
+              </span>
             </div>
-            
+            <div class="col-lg-3 col-md-6 col-sm-12">
+              <span class="hovertext" data-hover={t("button2hover_nowcast")}>
+                <div class="button infobutton">
+                  <p class="text-fix">{t("button2_nowcast")}</p>
+                  <p class="text-var"> &uarr; </p>
+                </div>
+              </span>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 ">
+              <span class="hovertext" data-hover={t("button3hover_nowcast")}>
+                <div class="button infobutton">
+                  <p class="text-fix">{t("button3_nowcast")}</p>
+                  <p class="text-var">3,3</p>
+                </div>
+              </span>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 ">
+              <span class="hovertext" data-hover={t("button4hover_nowcast")}>
+                <div class="button infobutton">
+                  <p class="text-fix">{t("button4_nowcast")}</p>
+                  <p class="text-var">2.600</p>
+                </div>
+              </span>
+            </div>
+          </div>
 
-
-            {/* Text */}
-            <section id="text">
+          {/* Text */}
+          <section id="text">
             <div class="text-intro">
-                <p>
-                {t("text1_nowcast")}
-                </p>
-                <p>
-                {t("text2_nowcast")}
-                </p>
-                <p>
-                {t("text3_nowcast")}
-                </p>
+              <p>{t("text1_nowcast")}</p>
+              <p>{t("text2_nowcast")}</p>
+              <p>{t("text3_nowcast")}</p>
             </div>
-            </section>
-            </section>
+          </section>
+        </section>
 
         {/* Chart overall */}
         {/* Methode  */}
 
-        <section id="chart" >
-        
-        {/* Chart to be inserted*/}
+        <section id="chart">
+          {/* Chart to be inserted*/}
 
-        <MethodenDivSimple />
-        
-         
-        
-
+          <MethodenDivSimple />
         </section>
-
-        
-
-        
-
-
 
         {/* Hinweis*/}
-        
+
         <section id="hinweis">
-            <div class="text-hinweis">
-                
-                <p> {t("hinweis")} </p>
-                                
-            </div>
+          <div class="text-hinweis">
+            <p> {t("hinweis")} </p>
+          </div>
         </section>
-
-
-
-        </div>
-        <FooterFomos />
-        </div>
-       
-            );
-
-        
-        }
+      </div>
+      <FooterFomos />
+    </div>
+  );
+}
 
 export default Fomosmain;

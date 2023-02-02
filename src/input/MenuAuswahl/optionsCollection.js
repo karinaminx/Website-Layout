@@ -1,5 +1,4 @@
 import {  timeFormat } from "d3";
-import { useTranslation } from 'react-i18next';
 
 const lngs = [
     { code: "de", native: "Deutsch" },

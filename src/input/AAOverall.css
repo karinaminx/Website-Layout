@@ -2,31 +2,8 @@
     width: 99%;
     height: 900px;
     position: absolute;
-    /* top: 20px; */
-    /*left: 5px;*/
-    /* overflow: -moz-scrollbars-vertical;
-    overflow-y: scroll; */
-    /* border-width: 1px;
-    border-style: solid;
-    border-color: black; */
 }
-/* 
-.menuBand{
-    border-width: 1px;
-    border-style: solid;
-    border-color: black;
-}
-.menuOptionen{
-    width: 20%;
-    left: 18px
 
-}
-#datenstand{
-
-    height: 100px;
-    position: absolute;
-    top: 20px;
-}
 /* CSS für den Fiterkasten */
 #filter{
     height: 100px;

@@ -1,27 +1,27 @@
 body {
-    margin: 0;
-    
-    font-family: 'Poppins', sans-serif;
-  }
-  pre {
-    font-size: 7em;
-  }
-  .tick line {
-    stroke: #C0C0BB;
-  }
-  .tick text {
-    fill: #000000;
-  }
-  .mark path {
-    stroke-width: 2;
-    stroke-linejoin: round;
-  }
-  .axis-label {
-    font-size: 1.5em;
-    fill: #000000;
-  }
+  margin: 0;
 
-  .loading{
-    font-size: 6rem;
-    text-align: center;
-  }
+  font-family: "Poppins", sans-serif;
+}
+pre {
+  font-size: 7em;
+}
+.tick line {
+  stroke: #c0c0bb;
+}
+.tick text {
+  fill: #000000;
+}
+.mark path {
+  stroke-width: 2;
+  stroke-linejoin: round;
+}
+.axis-label {
+  font-size: 1.5em;
+  fill: #000000;
+}
+
+.loading {
+  font-size: 6rem;
+  text-align: center;
+}

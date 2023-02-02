@@ -1,11 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { FiChevronLeft } from "react-icons/fi";
-import { FiChevronRight } from "react-icons/fi";
 import { Graph } from "../Graph/Graph";
 import "./DesignMethoden.css";
 import { Dropdown } from "./Dropdown";
 import { useData } from "../Graph/useDataMethode";
-import { QuestionMark } from "./QuestionMark";
 import { Tabelle } from "../Graph/Tabelle";
 import {
   optionsAge,
@@ -912,40 +909,6 @@ export const MethodenDiv = () => {
           </div>
         </div>
       </div>
-
-      {/*
-        <div className="table">
-          <button
-            className="btn btn-light button-table rounded"
-            onClick={toggleCollapse}
-          >
-            {" "}
-            <i className="fa-solid fa-caret-down"></i> Tabelle anzeigen
-          </button>
-           
-          <div
-            className={`collapse ${!isCollapsed ? "show" : ""}`}
-            id="collapseExample"
-          >
-            <div className="card card-body card-table">
-              <Dropdown
-                options={methodenTabelle}
-                id="methodenSelectTabelle"
-                dataTabelle={dataTabelleMethode}
-                onSelectedValueChange={setdataTabelleMethode}
-              />
-              <Tabelle
-                menuAge={menuAge}
-                selectedScope={selectedScope}
-                intervall={intervall}
-                anzeige={anzeige}
-                date={date}
-                dataTabelleMethode={dataTabelleMethode}
-              />
-            </div>
-          </div>
-          
-        </div> */}
     </div>
   );
 };

@@ -3,9 +3,7 @@ import {
   scaleLinear,
   scaleTime,
   timeFormat,
-  min,
   max,
-  tickStep,
   timeDay,
 } from "d3";
 import { AxisBottom } from "./AxisBottom";
@@ -15,10 +13,6 @@ import "./Graph.css";
 import { line, curvexNatural } from "d3";
 import { MarksRealDataGrau } from "./MarksRealDataGrau";
 import { MarksRealDataSchwarz } from "./MarksRealDataSchwarz";
-
-// import { isLabelWithInternallyDisabledControl } from "@testing-library/user-event/dist/utils";
-// import {Tooltipp} from "./Tooltipp";
-
 import { useTranslation } from "react-i18next";
 
 const lngs = [
@@ -64,7 +58,6 @@ export const Graph = ({
 
   let anzeigeDatenstandSchwarz;
   let anzeigeDatenstandGrau;
-
   let anzeigeEpiforecast;
   let anzeigeILM;
   let anzeigeKIT;
@@ -180,42 +173,16 @@ export const Graph = ({
   const yValue = (d) => d.value;
   const yQuantileKlein = (d) => d.quantileKlein;
   const yQuantileGroß = (d) => d.quantileGroß;
-  
-
   const xAxisTickFormat = timeFormat("%d.%m.%Y");
 
-  const dateStartMethoden = timeDay.offset(max(data, xValue), -35);
-  // const dateStart = new Date(dateGraphStart);
 
-  const dateEnde = timeDay.offset(max(data, xValue), 0);
 
-  // dateGraphStart
-  // const xScale = scaleTime()
-  // .domain([dateStart,dateEnde])
-  // .range([0, innerWidth])
-  // .nice();
 
   const yesterday = new Date();
   yesterday.setDate(yesterday.getDate() - 1);
-  // const initialDate = dateFormatter(yesterday);
 
-  // const xScale = scaleTime()
-  //   .domain([dateStart, max(data, xValue)])
-  //   .range([0, innerWidth])
-  //   .nice();
-
-  // console.log(dateGraphStart);
-  // console.log(dateStartMethoden);<<
 
   const dateGraphStartFormat = new Date(dateGraphStart);
-
-  // console.log(dateGraphStartFormat);
-  // console.log(dateStartMethoden);
-
-  // (max(data, yQuantileGroß))
-  // (max(datenstand_schwarz, yValueDatenstand)
-
-  // console.log(Math.max(max(datenstand_schwarz, yValueDatenstand), max(data, yQuantileGroß)));
 
   const xScale = scaleTime()
     .domain([dateGraphStartFormat, yesterday])

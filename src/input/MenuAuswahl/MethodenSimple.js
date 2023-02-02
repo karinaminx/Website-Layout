@@ -1,11 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { FiChevronLeft } from "react-icons/fi";
-import { FiChevronRight } from "react-icons/fi";
 import { Graph } from "../Graph/Graph";
 import "./DesignMethoden.css";
 import { Dropdown } from "./Dropdown";
 import { useData } from "../Graph/useDataMethode";
-import { QuestionMark } from "./QuestionMark";
 import { Tabelle } from "../Graph/Tabelle";
 import {
   optionsAge,
@@ -14,16 +11,12 @@ import {
   initialValueAge,
   initialValueAnzeige,
   initialValue,
-  initialValueIntervall,
   initialValueTabelle,
-  dateFormatter,
   initialDate,
   initialdateGraphStart,
-  // initialdateGraphEnde
 } from "./optionsCollection";
 import { useDataAxes } from "../Graph/useDataAxes";
 import { useDataDatenstand } from "../Graph/useDataDatenstand";
-import { timeFormat, max, timeDay } from "d3";
 
 import datenstand_g from "../../images/datenstand_grau.png";
 import datenstand_sw from "../../images/datenstand_sw.png";
@@ -48,7 +41,6 @@ const lngs = [
 export const MethodenDivSimple = () => {
   const [dateGraphStart, setGraphDateStart] = useState(initialdateGraphStart);
   //console.log(dateGraphStart);
-  
 
   // Tabelle mit Button eine und ausblende -----------------------------------
 
@@ -161,13 +153,10 @@ export const MethodenDivSimple = () => {
     }
     return k;
   }
-  
-   
 
- 
   let j;
   function showgrey() {
-    if (date  == initialDate) {
+    if (date == initialDate) {
       j = "hidden";
     } else if (date != initialDate) {
       j = "";
@@ -175,8 +164,6 @@ export const MethodenDivSimple = () => {
     return j;
   }
 
-
- 
   // const for the selection section on the left side of the window ----------------------------------------------------------
 
   const [menuAge, setmenuAge] = useState(initialValueAge);
@@ -209,7 +196,15 @@ export const MethodenDivSimple = () => {
     date
   );
 
-  const ILMdata = useData("ILM-prop", menuAge, "DE", intervall, anzeige,   dateGraphStart,date);
+  const ILMdata = useData(
+    "ILM-prop",
+    menuAge,
+    "DE",
+    intervall,
+    anzeige,
+    dateGraphStart,
+    date
+  );
 
   const KITdata = useData(
     "KIT-simple_nowcast",
@@ -303,11 +298,6 @@ export const MethodenDivSimple = () => {
   // const dateStartMethoden = timeDay.offset(max(data, xValue), -35);
   // console.log(date);
 
-
-
-
-
-  
   return (
     <div>
       <div className=" buttonschart">
@@ -319,19 +309,16 @@ export const MethodenDivSimple = () => {
         </button>
 
         <span className="hovertext hoverd" data-hover={t("hover_date")}>
-        <button
-          className="btn btn-light rounded btn-date"
-          onClick={() => {}}
-        >
-          <input
-            type="date"
-            name="select-date"
-            defaultValue={initialdateGraphStart}
-            onInput={(e) => setGraphDateStart(e.target.value)}
-            max={date}
-            min="2021-07-01"
-          />
-        </button>
+          <button className="btn btn-light rounded btn-date" onClick={() => {}}>
+            <input
+              type="date"
+              name="select-date"
+              defaultValue={initialdateGraphStart}
+              onInput={(e) => setGraphDateStart(e.target.value)}
+              max={date}
+              min="2021-07-01"
+            />
+          </button>
         </span>
         {/* -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */}
         <button
@@ -395,7 +382,9 @@ export const MethodenDivSimple = () => {
                 </label>
                 <div id="inhalt">
                   <div id="div1" className="visible">
-                    <label className="BLlayout" for="scope-select">{t("Bundesland")}</label>
+                    <label className="BLlayout" for="scope-select">
+                      {t("Bundesland")}
+                    </label>
                     <button className="btn btn-light button-filter rounded">
                       <Dropdown
                         name="BundeslandSelect"
@@ -573,7 +562,11 @@ export const MethodenDivSimple = () => {
                       onClick={handleClickDatenstandSchwarz}
                     >
                       <td className="linelayout ">
-                        <img className="bildfix" src={datenstand_sw} style={{ width: "30px" }} />
+                        <img
+                          className="bildfix"
+                          src={datenstand_sw}
+                          style={{ width: "30px" }}
+                        />
                       </td>
 
                       <td className="methodnamerow">
@@ -589,7 +582,9 @@ export const MethodenDivSimple = () => {
                       <td>
                         <div
                           className="hovertext questionmark hoverq"
-                          data-hover={t("hover1_1_methoden")} /*{{t("hover1")}}*/
+                          data-hover={t(
+                            "hover1_1_methoden"
+                          )} /*{{t("hover1")}}*/
                         >
                           <div className="">
                             <p> ⓘ</p>
@@ -633,7 +628,6 @@ export const MethodenDivSimple = () => {
                     </div>
                   </tr>
 
-                                  
                   {/*3*/}
                   <tr className="trmethod">
                     <div
@@ -641,11 +635,17 @@ export const MethodenDivSimple = () => {
                       onClick={handleClickNowcast}
                     >
                       <td className="linelayout">
-                        <img className="bildfix" src={NowcastHub_line} style={{ width: "30px" }} />
+                        <img
+                          className="bildfix"
+                          src={NowcastHub_line}
+                          style={{ width: "30px" }}
+                        />
                       </td>
                       <td className="methodnamerow">
                         <p
-                          className={`Nowcast methodtext ${isNowcast ? "bold " : ""}`}
+                          className={`Nowcast methodtext ${
+                            isNowcast ? "bold " : ""
+                          }`}
                           onClick={handleClickNowcast}
                         >
                           NowcastHub MeanEnsemble
@@ -663,52 +663,12 @@ export const MethodenDivSimple = () => {
                       </td>
                     </div>
                   </tr>
-                  
-
-                  
-                  
-
-                  
                 </div>
               </table>
             )}
           </div>
         </div>
       </div>
-
-      {/*
-        <div className="table">
-          <button
-            className="btn btn-light button-table rounded"
-            onClick={toggleCollapse}
-          >
-            {" "}
-            <i className="fa-solid fa-caret-down"></i> Tabelle anzeigen
-          </button>
-           
-          <div
-            className={`collapse ${!isCollapsed ? "show" : ""}`}
-            id="collapseExample"
-          >
-            <div className="card card-body card-table">
-              <Dropdown
-                options={methodenTabelle}
-                id="methodenSelectTabelle"
-                dataTabelle={dataTabelleMethode}
-                onSelectedValueChange={setdataTabelleMethode}
-              />
-              <Tabelle
-                menuAge={menuAge}
-                selectedScope={selectedScope}
-                intervall={intervall}
-                anzeige={anzeige}
-                date={date}
-                dataTabelleMethode={dataTabelleMethode}
-              />
-            </div>
-          </div>
-          
-        </div> */}
     </div>
   );
 };

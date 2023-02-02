@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { csv, filter } from "d3";
 import "./Graph.css";
-import { initialDate } from "../MenuAuswahl/optionsCollection";
 import {
   DE00,
   DEBW,

@@ -1,6 +1,5 @@
  // Werte Einwohner Bundesländer / per Age Group
 
-
 export const DE00 = 83138368;
 export const DEBW = 11097559;
 export const DEBY = 13143271;

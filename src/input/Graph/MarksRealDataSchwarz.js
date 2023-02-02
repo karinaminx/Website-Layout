@@ -1,5 +1,5 @@
 import "./Graph.css";
-import { line, curveNatural, reduce, area } from "d3";
+import { line} from "d3";
 
 export const MarksRealDataSchwarz = ({
   data,

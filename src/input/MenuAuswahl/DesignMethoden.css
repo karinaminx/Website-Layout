@@ -6,54 +6,31 @@
   z-index: 1;
 }
 
-
-/* ---------------------------- nicht ändern */
-
-/* .line {
-  backgroundColor: "rgb(0,0,0)";
-  height:"1px";
- /* verticalAlign: "middle"; */
-  /* position: "absolute";
-  left: "250px";
-  top: "28.9px";
-  height: "3.4px";
-  width: "30px" 
-} */
-
-.rowchart{
+.rowchart {
   margin-bottom: 35px;
 }
 
 .GraphundMethoden {
   display: flex;
-  
-  
 }
-
 
 .Methoden {
-  
   cursor: pointer;
-   
+
   justify-content: flex-end;
 }
- 
+
 /* Methoden Button*/
 
 .methodenEinblenden {
   cursor: pointer;
-  
 }
 
-
-
-
-.methodenauswahl::before{
+.methodenauswahl::before {
   background-color: transparent;
-  
 }
 
-.btn-date{
+.btn-date {
   margin-bottom: 0;
 
   margin-left: auto;
@@ -64,109 +41,97 @@
   right: 15%;
   border-radius: 5px;
   border: 1px;
-  
+
   margin: -2px 0px;
   padding: 6px 4px;
   text-align: left;
-
 }
 
-.hoverd:before{
+.hoverd:before {
   position: absolute;
   z-index: 1;
   left: -90%;
   top: -470%;
 }
 
-.buttonmovearea{
+.buttonmovearea {
   width: 5rem;
 
   margin-left: auto;
   margin-right: 5px;
   margin-bottom: 5px;
   font-size: 0.9rem;
-  position: relative; 
-    right: 15%;
-  
+  position: relative;
+  right: 15%;
+
   border-radius: 5px;
   border: 1px;
   --bs-btn-border-color: black;
-
 }
 
-.hovermr:before{
+.hovermr:before {
   position: absolute;
-    left: -370%;
-    top: -420%;
+  left: -370%;
+  top: -420%;
   z-index: 5;
   padding: 2%;
 }
 
-.hoverml:before{
+.hoverml:before {
   position: absolute;
-    left: -250%;
-    top: -420%;
+  left: -250%;
+  top: -420%;
   z-index: 5;
   padding: 2%;
 }
 
-
-.button-method-exp{
+.button-method-exp {
   margin-left: auto;
   margin-right: 0;
   margin-bottom: 5px;
   width: 13rem;
   font-size: 0.9rem;
-  position: relative; 
-    right: -35%;
-  
+  position: relative;
+  right: -35%;
+
   border-radius: 5px;
   border: 0px;
-  
-
 }
 
-
-
-.card-body-method{    
+.card-body-method {
   margin-bottom: 10px;
   border-color: black;
 }
 
-.collapse-method{
-  float:right;
+.collapse-method {
+  float: right;
 }
 
-.input-table{
+.input-table {
   position: absolute;
   right: 15px;
 }
 
-
-
-.fa-angle-down{
+.fa-angle-down {
   background-color: white;
 }
-.btn-outline-dark{
+.btn-outline-dark {
   border-color: transparent;
   border: 0;
   padding: 4px 12px;
-  
 }
-.btn-outline-dark:hover{
+.btn-outline-dark:hover {
   background-color: rgba(64, 142, 243, 0.266);
   color: black;
 }
 
 /*Methoden */
 
-.methodnamerow{
+.methodnamerow {
   width: 190px;
   padding: 1% 0;
-  
 }
 /*Methoden ende */
-
 
 .iconPfeil {
   font-size: 2em;
@@ -177,68 +142,57 @@
 #methodenEinblenden {
   cursor: pointer;
   margin-left: 5%;
-
 }
-
-
 
 .auswahl {
   cursor: pointer;
-  
+
   position: absolute;
-   right: 50px;
-  
-  
+  right: 50px;
+
   padding: 0 2%;
   border-radius: 5px;
   width: 20%;
-  
+
   background-color: white;
   border-radius: 5px;
   border-color: grey;
   /* background-color: aliceblue; */
-  
 }
 
-.trmethod{
+.trmethod {
   position: relative;
   right: 1%;
 }
 
-.methodentabelle{
+.methodentabelle {
   width: 15%;
 }
 
-.methodtext{
+.methodtext {
   font-size: 0.9rem;
 }
 
-
-
-.container{
+.container {
   background-color: rgba(191, 192, 191, 0.418);
-  
+
   border-color: grey;
   border-radius: 5px;
   margin: 3px;
   margin-right: 10%;
   position: relative;
-    right: 7%;
+  right: 7%;
 }
-.moved{
- background-color: rgba(191, 192, 191, 0.418);
- width: 250px;
- border-radius: 1px;
- border-color: grey;
- border-radius: 5px;
- padding-right: 8px;
- padding-left: 8px;
- margin: 3px;
- 
-
- 
+.moved {
+  background-color: rgba(191, 192, 191, 0.418);
+  width: 250px;
+  border-radius: 1px;
+  border-color: grey;
+  border-radius: 5px;
+  padding-right: 8px;
+  padding-left: 8px;
+  margin: 3px;
 }
-  
 
 .popup-content {
   border: 1px solid gray;
@@ -247,109 +201,85 @@
   background-color: white;
 }
 
-
-
-
-/* border-width: 1px;
-    border-style: solid;
-    border-color: black; */
-
-
- /* Lines */
- .line{
+/* Lines */
+.line {
   position: absolute;
-    top: 40%;
-    left: 2%;
+  top: 40%;
+  left: 2%;
   margin: 1%;
- }
+}
 
-.bildfix{
+.bildfix {
   margin-top: 13%;
 }
 
-
- 
-.linelayout{
+.linelayout {
   padding-right: 20px;
   padding-left: 20px;
   object-position: center;
   z-index: 2;
-  
 }
 
- .questionmark{
-  
+.questionmark {
   padding-left: 30px;
   border: 0;
+}
 
- }
-
- .hoverq:before{
+.hoverq:before {
   width: 200px;
   position: absolute;
-    left: -880%;
-    top: -50%;
+  left: -880%;
+  top: -50%;
   z-index: 6;
   padding: 2%;
- 
-  
- }
+}
 
+/* Tabelle */
 
-
- /* Tabelle */
-
-
-.button-table{
+.button-table {
   margin-left: auto;
   margin-right: 0;
-  
+
   font-size: 0.9rem;
   float: left;
   border-radius: 5px;
   border: 0px;
   margin: 8px;
   padding: 12px 6px;
-  
 }
 
-.table{
+.table {
   margin-top: 30px;
 }
 
-.card-table{
+.card-table {
   position: relative;
-    left: 5%;
+  left: 5%;
 }
 
-#methodenSelectTabelle{
+#methodenSelectTabelle {
   padding: 8px;
   margin-bottom: 2%;
   height: auto;
-  
 }
-
-
 
 /*Auswahlbereich links von Tablle*/
 /*Position der Auswahlmöglichkeiten*/
 
-.menuOptionen{
+.menuOptionen {
   text-align: left;
 }
 
 #filter {
   position: relative;
-    top: 14%;
+  top: 14%;
   padding: 0.5%;
-
 }
 
 #anzeige {
   position: relative;
-    top: 14%;
+  top: 14%;
   padding: 0.5%;
-  
 }
 
 #inhalt {
@@ -360,32 +290,11 @@
 
 #unsicherheitsintervall {
   position: relative;
-    top: 26%;
-  padding:0.5%;
+  top: 26%;
+  padding: 0.5%;
 }
 
-
-
-
-/*Position der Auswahlmöglichkeiten*/
-/*  auch in AAOverall schon
-
-
-
-
-#anzeige {
-  position: absolute;
-  top: 22%
-}
-
-#unsicherheitsintervall {
-  position: absolute;
-  top: 26%
-}
-
-
-
-/*Überschriften*/ 
+/*Überschriften*/
 .einführung {
   font-size: 16px;
   /*background-color: #EEEEEE;*/
@@ -395,15 +304,13 @@
 
 /*design alle Button links*/
 
-
-
-.button-datenstand{
+.button-datenstand {
   margin-left: auto;
   margin-right: 0;
   width: 11rem;
   font-size: 0.9rem;
   position: relative;
-   
+
   border-radius: 5px;
   border: 0px;
   margin: -2px 0px;
@@ -412,13 +319,13 @@
   text-align: left;
 }
 
-.button-filter{
+.button-filter {
   margin-left: auto;
   margin-right: 0;
   width: 11rem;
   font-size: 0.9rem;
   position: relative;
-   left: 0px;
+  left: 0px;
   border-radius: 5px;
   border: 0px;
   margin: 3px 0px;
@@ -427,13 +334,13 @@
 
   text-align: left;
 }
-.button-anzeige{
+.button-anzeige {
   margin-left: auto;
   margin-right: 0;
   width: 11rem;
   font-size: 0.9rem;
   position: relative;
-   left: 0px;
+  left: 0px;
   border-radius: 5px;
   border: 0px;
   margin: 5px 0px;
@@ -443,13 +350,13 @@
   text-align: left;
 }
 
-.button-unsicherheitsintervall{
+.button-unsicherheitsintervall {
   margin-left: auto;
   margin-right: 0;
   width: 8rem;
   font-size: 0.9rem;
   position: relative;
-   left: 0px;
+  left: 0px;
   border-radius: 5px;
   border: 0px;
   margin-top: 5px;
@@ -459,7 +366,7 @@
   text-align: center;
 }
 
-.usi{
+.usi {
   padding-right: 8%;
   border: 1px;
   border-color: grey;
@@ -475,9 +382,7 @@ input[name="select-date"] {
   background: none;
   width: 98%;
   margin-left: 2px;
-
 }
-
 
 /*Filter: Bundesland und Alter Auswahl gleich groß*/
 #scope-select {
@@ -490,14 +395,13 @@ input[name="select-date"] {
   text-align: left;
   font-size: 0.9rem;
   accent-color: grey;
-  
 }
 
-.BLlayout{
+.BLlayout {
   padding-right: 30%;
 }
 
-.agelayout{
+.agelayout {
   padding-right: 50%;
 }
 #age-select {
@@ -514,24 +418,19 @@ input[name="select-date"] {
 }
 
 .oderText {
-  font-size: 1rem ;
+  font-size: 1rem;
   margin-bottom: 2%;
   font-style: oblique;
 }
 
-
-
 input[name="größe"] {
-	accent-color: grey;
+  accent-color: grey;
   position: absolute;
-    left: 85%;
+  left: 85%;
 }
 
 input[name="unsicherheitsintervall"] {
-	accent-color: grey;
+  accent-color: grey;
   position: absolute;
-    left: 65%;
+  left: 65%;
 }
-
-
-
