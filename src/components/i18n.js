@@ -185,6 +185,8 @@ i18n
         hover9_methoden: "tba",
         hover10_methoden: "Abweichungen zwischen täglich veröffentlichten und nachträglich korrigierten Werten.",
 
+        hover_date: " Definiert das Startdatum des Graphen.",
+
         /* Texte Graph*/
 
         Datenstand: "Datenstand",
@@ -428,6 +430,8 @@ i18n
         hover8_methoden:"Based on modified variant of nowcasting calculation for 7-day incidence.",
         hover9_methoden:"tba",
         hover10_methoden:"Discrepancies between daily published and subsequently corrected values.",
+
+        hover_date: "Defines the starting date of the graph.",
 
 
         /*Texte Graph*/

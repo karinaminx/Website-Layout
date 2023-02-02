@@ -53,6 +53,31 @@
   
 }
 
+.btn-date{
+  margin-bottom: 0;
+
+  margin-left: auto;
+  margin-right: 0;
+  width: 11rem;
+  font-size: 0.9rem;
+  position: relative;
+  right: 15%;
+  border-radius: 5px;
+  border: 1px;
+  
+  margin: -2px 0px;
+  padding: 6px 4px;
+  text-align: left;
+
+}
+
+.hoverd:before{
+  position: absolute;
+  z-index: 1;
+  left: -90%;
+  top: -470%;
+}
+
 .buttonmovearea{
   width: 5rem;
 
