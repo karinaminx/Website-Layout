@@ -7,9 +7,6 @@ const lngs = [
   ];
 
   
-
-  
-  
 export const optionsAge = [
     { value: "00+", label: "00+" },
     { value: "00-04", label: "00-04" },
@@ -20,13 +17,11 @@ export const optionsAge = [
     { value: "80+", label: "80+" },
   ];
 
- 
-
   export const options = [
 
     
     { value: "DE", label: "Deutschland" },
-    { value: "DE-SH", label: y },
+    { value: "DE-SH", label: "Schleswig-Holstein" },
     { value: "DE-HH", label: "Hamburg" },
     { value: "DE-NI", label: "Niedersachsen" },
     { value: "DE-HB", label: "Bremen" },
