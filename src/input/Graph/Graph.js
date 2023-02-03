@@ -36,6 +36,7 @@ export const Graph = ({
   isKIT,
   isLMU,
   isNowcast,
+  isNowcastMedian,
   isRIVM,
   isRKI,
   isSU,
@@ -46,6 +47,7 @@ export const Graph = ({
   KITdata,
   LMUdata,
   Nowcastdata,
+  NowcastMediandata,
   RIVMdata,
   RKIdata,
   SUdata,
@@ -63,6 +65,7 @@ export const Graph = ({
   let anzeigeKIT;
   let anzeigeLMU;
   let anzeigeNowcast;
+  let anzeigeNowcastMedian;
   let anzeigeRIVM;
   let anzeigeRKI;
   let anzeigeSU;
@@ -118,6 +121,11 @@ export const Graph = ({
   } else {
     anzeigeNowcast = "hidden";
   }
+  if (isNowcastMedian) {
+    anzeigeNowcastMedian = "visible";
+  } else {
+    anzeigeNowcastMedian = "hidden";
+  }
 
   if (isRIVM) {
     anzeigeRIVM = "visible";
@@ -156,6 +164,7 @@ export const Graph = ({
     !KITdata ||
     !LMUdata ||
     !Nowcastdata ||
+    !NowcastMediandata ||
     !RIVMdata ||
     !RKIdata ||
     !SUdata ||
@@ -293,6 +302,18 @@ export const Graph = ({
               yQuantileGroß={yQuantileGroß}
               circleRadius={3}
               anzeigeAnAus={anzeigeNowcast}
+              farbe={"100,049,0"}
+            />
+             <Marks
+              data={NowcastMediandata}
+              xScale={xScale}
+              yScale={yScale}
+              xValue={xValue}
+              yValue={yValue}
+              yQuantileKlein={yQuantileKlein}
+              yQuantileGroß={yQuantileGroß}
+              circleRadius={3}
+              anzeigeAnAus={anzeigeNowcastMedian}
               farbe={"100,049,0"}
             />
 
