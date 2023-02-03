@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { Graph } from "../Graph/Graph";
+import React, { useState } from "react";
+import { Graph } from "../Graph/GraphSimple";
 import "./DesignMethoden.css";
 import { Dropdown } from "./Dropdown";
 import { useData } from "../Graph/useDataMethode";
@@ -17,19 +17,9 @@ import {
 } from "./optionsCollection";
 import { useDataAxes } from "../Graph/useDataAxes";
 import { useDataDatenstand } from "../Graph/useDataDatenstand";
-
 import datenstand_g from "../../images/datenstand_grau.png";
 import datenstand_sw from "../../images/datenstand_sw.png";
-import Epiforecast_line from "../../images/Epiforecast_line.png";
-import ILM_line from "../../images/ILM_line.png";
-import KIT_line from "../../images/KIT_line.png";
-import LMU_line from "../../images/LMU_line.png";
 import NowcastHub_line from "../../images/NowcastHub_line.png";
-import RIVM_line from "../../images/RIVM_line.png";
-import RKI_line from "../../images/RKI_line.png";
-import SU_line from "../../images/SU_line.png";
-import SZ_line from "../../images/SZ_line.png";
-
 import { useTranslation } from "react-i18next";
 import { init } from "i18next";
 
@@ -40,18 +30,13 @@ const lngs = [
 
 export const MethodenDivSimple = () => {
   const [dateGraphStart, setGraphDateStart] = useState(initialdateGraphStart);
-  //console.log(dateGraphStart);
 
   // Tabelle mit Button eine und ausblende -----------------------------------
 
   const [dataTabelleMethode, setdataTabelleMethode] =
     useState(initialValueTabelle);
 
-  const [isCollapsed, setIsCollapsed] = useState(true);
 
-  const toggleCollapse = () => {
-    setIsCollapsed(!isCollapsed);
-  };
 
   //Filter: If one is selected, the other one´s opacity is set down
   const div1 = document.getElementById("div1");
@@ -74,15 +59,7 @@ export const MethodenDivSimple = () => {
   //Const to show and hide the line for the method ----------------------------------------------------------
   const [isDatenstandSchwarz, setDatenstandSchwarz] = useState(true);
   const [isDatenstandGrau, setDatenstandGrau] = useState(true);
-  const [isEpiforecast, setEpiforecast] = useState(false);
-  const [isILM, setILM] = useState(false);
-  const [isKIT, setKIT] = useState(false);
-  const [isLMU, setLMU] = useState(false);
   const [isNowcast, setNowcast] = useState(true);
-  const [isRIVM, setRIVM] = useState(false);
-  const [isRKI, setRKI] = useState(false);
-  const [isSU, setSU] = useState(false);
-  const [isSZ, setSZ] = useState(false);
 
   //Hide and Show the selection section for methods ----------------------------------------------------------
   const [label, setLabel] = useState("");
@@ -100,58 +77,8 @@ export const MethodenDivSimple = () => {
   function handleClickDatenstandGrau() {
     setDatenstandGrau(!isDatenstandGrau);
   }
-  function handleClickEpi() {
-    setEpiforecast(!isEpiforecast);
-  }
-  function handleClickILM() {
-    if (selectedScope != "DE") {
-      setILM(false);
-    } else {
-      setILM(!isILM);
-    }
-  }
-
-  function handleClickKIT() {
-    setKIT(!isKIT);
-  }
-  function handleClickLMU() {
-    setLMU(!isLMU);
-  }
   function handleClickNowcast() {
     setNowcast(!isNowcast);
-  }
-  function handleClickRIVM() {
-    setRIVM(!isRIVM);
-  }
-  function handleClickRKI() {
-    setRKI(!isRKI);
-  }
-  function handleClickSU() {
-    setSU(!isSU);
-  }
-  function handleClickSZ() {
-    setSZ(!isSZ);
-  }
-
-  //hide and unhide RKI and ILM Button depending on attributes
-  let l;
-  function showrki() {
-    if (menuAge != "00+") {
-      l = "hidden";
-    } else if (menuAge == "00+") {
-      l = "";
-    }
-    return l;
-  }
-
-  let k;
-  function showilm() {
-    if (selectedScope != "DE") {
-      k = "hidden";
-    } else if (selectedScope == "DE") {
-      k = "";
-    }
-    return k;
   }
 
   let j;
@@ -169,12 +96,9 @@ export const MethodenDivSimple = () => {
   const [menuAge, setmenuAge] = useState(initialValueAge);
   const [anzeige, setAnzeige] = useState(initialValueAnzeige);
   const [selectedScope, setScope] = useState(initialValue);
-
   const [date, setDate] = useState(initialDate); // vom Datenstand
-
   const [intervall, setIntervall] = useState("FÜNFundNEUNZIG");
 
-  console.log(intervall);
   //Importing the data for the graph
 
   const data = useDataAxes(
@@ -186,83 +110,8 @@ export const MethodenDivSimple = () => {
     date
   );
 
-  const EPIdata = useData(
-    "Epiforecasts-independent",
-    menuAge,
-    selectedScope,
-    intervall,
-    anzeige,
-    dateGraphStart,
-    date
-  );
-
-  const ILMdata = useData(
-    "ILM-prop",
-    menuAge,
-    "DE",
-    intervall,
-    anzeige,
-    dateGraphStart,
-    date
-  );
-
-  const KITdata = useData(
-    "KIT-simple_nowcast",
-    menuAge,
-    selectedScope,
-    intervall,
-    anzeige,
-    dateGraphStart,
-    date
-  );
-
-  const LMUdata = useData(
-    "LMU_StaBLab-GAM_nowcast",
-    menuAge,
-    selectedScope,
-    intervall,
-    anzeige,
-    dateGraphStart,
-    date
-  );
   const Nowcastdata = useData(
     "NowcastHub-MeanEnsemble",
-    menuAge,
-    selectedScope,
-    intervall,
-    anzeige,
-    dateGraphStart,
-    date
-  );
-  const RIVMdata = useData(
-    "RIVM-KEW",
-    menuAge,
-    selectedScope,
-    intervall,
-    anzeige,
-    dateGraphStart,
-    date
-  );
-  const RKIdata = useData(
-    "RKI-weekly_report",
-    menuAge,
-    selectedScope,
-    intervall,
-    anzeige,
-    dateGraphStart,
-    date
-  );
-  const SUdata = useData(
-    "SU-hier_bayes",
-    menuAge,
-    selectedScope,
-    intervall,
-    anzeige,
-    dateGraphStart,
-    date
-  );
-  const SZdata = useData(
-    "SZ-hosp_nowcast",
     menuAge,
     selectedScope,
     intervall,
@@ -293,10 +142,6 @@ export const MethodenDivSimple = () => {
   const handleTrans = (code) => {
     i18n.changeLanguage(code);
   };
-
-  // const xValue = (d) => d.date;
-  // const dateStartMethoden = timeDay.offset(max(data, xValue), -35);
-  // console.log(date);
 
   return (
     <div>
@@ -395,9 +240,9 @@ export const MethodenDivSimple = () => {
                           setmenuAge("00+");
                           setScope(selectedScope);
                           handleDiv1Selection();
-                          if (selectedScope !== "DE") {
-                            setILM(false);
-                          }
+                          // if (selectedScope !== "DE") {
+                          //   setILM(false);
+                          // }
                         }}
                       />
                     </button>
@@ -521,27 +366,9 @@ export const MethodenDivSimple = () => {
               isVisible={isVisible}
               isDatenstandSchwarz={isDatenstandSchwarz}
               isDatenstandGrau={isDatenstandGrau}
-              isEpiforecast={isEpiforecast}
-              isILM={isILM}
-              isKIT={isKIT}
-              isLMU={isLMU}
               isNowcast={isNowcast}
-              isRIVM={isRIVM}
-              isRKI={isRKI}
-              isSU={isSU}
-              isSZ={isSZ}
               data={data}
-              EPIdata={EPIdata}
-              ILMdata={ILMdata}
-              KITdata={KITdata}
-              LMUdata={LMUdata}
               Nowcastdata={Nowcastdata}
-              RIVMdata={RIVMdata}
-              RKIdata={RKIdata}
-              SUdata={SUdata}
-              SZdata={SZdata}
-              menuAge={menuAge}
-              selectedScope={selectedScope}
               datenstand_schwarz={datenstand_schwarz}
               datenstand_grau={datenstand_grau}
               dateGraphStart={dateGraphStart}

@@ -14,7 +14,6 @@ import {
   initialValueTabelle,
   initialDate,
   initialdateGraphStart,
-  // initialdateGraphEnde
 } from "./optionsCollection";
 import { useDataAxes } from "../Graph/useDataAxes";
 import { useDataDatenstand } from "../Graph/useDataDatenstand";
@@ -48,12 +47,6 @@ export const MethodenDiv = () => {
   const [dataTabelleMethode, setdataTabelleMethode] =
     useState(initialValueTabelle);
 
-  const [isCollapsed, setIsCollapsed] = useState(true);
-
-  const toggleCollapse = () => {
-    setIsCollapsed(!isCollapsed);
-  };
-
   //Filter: If one is selected, the other one´s opacity is set down
   const div1 = document.getElementById("div1");
   const div2 = document.getElementById("div2");
@@ -80,7 +73,7 @@ export const MethodenDiv = () => {
   const [isKIT, setKIT] = useState(false);
   const [isLMU, setLMU] = useState(false);
   const [isNowcast, setNowcast] = useState(true);
-  const [isNowcastMedian, setNowcastMedian] = useState(true);
+  const [isNowcastMedian, setNowcastMedian] = useState(false);
   const [isRIVM, setRIVM] = useState(false);
   const [isRKI, setRKI] = useState(false);
   const [isSU, setSU] = useState(false);
