@@ -80,6 +80,7 @@ export const MethodenDiv = () => {
   const [isKIT, setKIT] = useState(false);
   const [isLMU, setLMU] = useState(false);
   const [isNowcast, setNowcast] = useState(true);
+  const [isNowcastMedian, setNowcastMedian] = useState(true);
   const [isRIVM, setRIVM] = useState(false);
   const [isRKI, setRKI] = useState(false);
   const [isSU, setSU] = useState(false);
@@ -120,6 +121,9 @@ export const MethodenDiv = () => {
   }
   function handleClickNowcast() {
     setNowcast(!isNowcast);
+  }
+  function handleClickNowcastMedian() {
+    setNowcastMedian(!isNowcastMedian);
   }
   function handleClickRIVM() {
     setRIVM(!isRIVM);
@@ -231,6 +235,15 @@ export const MethodenDiv = () => {
     dateGraphStart,
     date
   );
+  const NowcastMediandata = useData(
+    "NowcastHub-MedianEnsemble",
+    menuAge,
+    selectedScope,
+    intervall,
+    anzeige,
+    dateGraphStart,
+    date
+  );
   const RIVMdata = useData(
     "RIVM-KEW",
     menuAge,
@@ -292,15 +305,7 @@ export const MethodenDiv = () => {
     i18n.changeLanguage(code);
   };
 
-  // const xValue = (d) => d.date;
-  // const dateStartMethoden = timeDay.offset(max(data, xValue), -35);
-  // console.log(date);
-
-
-
-
-
-  
+ 
   return (
     <div>
       <div className=" buttonschart">
@@ -530,6 +535,7 @@ export const MethodenDiv = () => {
               isKIT={isKIT}
               isLMU={isLMU}
               isNowcast={isNowcast}
+              isNowcastMedian={isNowcastMedian}
               isRIVM={isRIVM}
               isRKI={isRKI}
               isSU={isSU}
@@ -540,6 +546,7 @@ export const MethodenDiv = () => {
               KITdata={KITdata}
               LMUdata={LMUdata}
               Nowcastdata={Nowcastdata}
+              NowcastMediandata={NowcastMediandata}
               RIVMdata={RIVMdata}
               RKIdata={RKIdata}
               SUdata={SUdata}
@@ -749,6 +756,36 @@ export const MethodenDiv = () => {
                       </td>
                     </div>
                   </tr>
+                          {/*5.1*/}
+                          <tr className="trmethod">
+                    <div
+                      className={`container ${isNowcastMedian ? "moved" : ""}`}
+                      onClick={handleClickNowcastMedian}
+                    >
+                      <td className="linelayout">
+                        <img className="bildfix" src={NowcastHub_line} style={{ width: "30px" }} />
+                      </td>
+                      <td className="methodnamerow">
+                        <p
+                          className={`Nowcast methodtext ${isNowcastMedian ? "bold " : ""}`}
+                          onClick={handleClickNowcastMedian}
+                        >
+                          NowcastHub Median Ensemble
+                        </p>
+                      </td>
+                      <td>
+                        <div
+                          className="hovertext questionmark hoverq"
+                          data-hover={t("hover6_methoden")}
+                        >
+                          <div className="">
+                            <p> ⓘ</p>
+                          </div>
+                        </div>
+                      </td>
+                    </div>
+                  </tr>
+
                   {/*6*/}
                   <tr className="trmethod">
                     <div
