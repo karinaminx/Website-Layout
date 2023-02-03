@@ -85,11 +85,14 @@ function Fomosexp() {
     if (!nocastArray) {
       return "Loading";
     } else {
-      if (nocastValueYesterday > nocastValueTheDayBeforeYesterday) {
-        return "&uarr;"; // pfeil oben
-      } else {
-        return "&darr;"; //pfeil unten
-      }
+        if (nocastValueYesterday > nocastValueTheDayBeforeYesterday) {
+            return <p> &#8593; </p>  // pfeil oben
+          } else if (nocastValueYesterday < nocastValueTheDayBeforeYesterday){
+            return  <p> &darr; </p> //pfeil unten
+          }
+          else if (nocastValueYesterday = nocastValueTheDayBeforeYesterday){
+            return  <p> &rarr; </p>; //pfeil rechts
+          }
     }
   }
 

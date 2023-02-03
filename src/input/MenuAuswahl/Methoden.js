@@ -24,6 +24,7 @@ import ILM_line from "../../images/ILM_line.png";
 import KIT_line from "../../images/KIT_line.png";
 import LMU_line from "../../images/LMU_line.png";
 import NowcastHub_line from "../../images/NowcastHub_line.png";
+import NowcastHubMedian_line from "../../images/NowcastHubMedian_line.png";
 import RIVM_line from "../../images/RIVM_line.png";
 import RKI_line from "../../images/RKI_line.png";
 import SU_line from "../../images/SU_line.png";
@@ -756,20 +757,20 @@ export const MethodenDiv = () => {
                       onClick={handleClickNowcastMedian}
                     >
                       <td className="linelayout">
-                        <img className="bildfix" src={NowcastHub_line} style={{ width: "30px" }} />
+                        <img className="bildfix" src={NowcastHubMedian_line} style={{ width: "30px" }} />
                       </td>
                       <td className="methodnamerow">
                         <p
                           className={`Nowcast methodtext ${isNowcastMedian ? "bold " : ""}`}
                           onClick={handleClickNowcastMedian}
                         >
-                          NowcastHub Median Ensemble
+                          NowcastHub MedianEnsemble
                         </p>
                       </td>
                       <td>
                         <div
                           className="hovertext questionmark hoverq"
-                          data-hover={t("hover6_methoden")}
+                          data-hover={t("hover5_1_methoden")}
                         >
                           <div className="">
                             <p> ⓘ</p>

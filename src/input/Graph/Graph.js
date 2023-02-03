@@ -314,7 +314,7 @@ export const Graph = ({
               yQuantileGroß={yQuantileGroß}
               circleRadius={3}
               anzeigeAnAus={anzeigeNowcastMedian}
-              farbe={"100,049,0"}
+              farbe={"255, 115, 0"}
             />
 
             <Marks
