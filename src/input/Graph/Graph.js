@@ -1,11 +1,5 @@
 import React, { useEffect, useState, useCallback } from "react";
-import {
-  scaleLinear,
-  scaleTime,
-  timeFormat,
-  max,
-  timeDay,
-} from "d3";
+import { scaleLinear, scaleTime, timeFormat, max, timeDay } from "d3";
 import { AxisBottom } from "./AxisBottom";
 import { AxisLeft } from "./AxisLeft";
 import { Marks } from "./Marks";
@@ -20,12 +14,13 @@ const lngs = [
   { code: "en", native: "English" },
 ];
 
+// Here the graph (expert mode) is set
+
+//Set magnitudes for the graph
 const height = 500;
 const margin = { top: 20, right: 10, bottom: 65, left: 100 };
 const xAxisLabelOffset = 50;
 const yAxisLabelOffset = 45;
-
-//_______________________________________________________
 
 export const Graph = ({
   isVisible,
@@ -56,7 +51,20 @@ export const Graph = ({
   datenstand_grau,
   dateGraphStart,
 }) => {
-  let width = 800;
+  //Set the width for the graph depending on whether methods are open or not. 
+  let width;
+  if (isVisible === true) {
+    width = +(0.55 * window.innerWidth);
+    {
+    }
+  } else {
+    width = +(0.75 * window.innerWidth);
+  }
+
+  const innerHeight = height - margin.top - margin.bottom;
+  const innerWidth = width - margin.left - margin.right;
+
+//Convert button output (true/false) to hide/visible. This will then be passed to Marks.
 
   let anzeigeDatenstandSchwarz;
   let anzeigeDatenstandGrau;
@@ -70,15 +78,6 @@ export const Graph = ({
   let anzeigeRKI;
   let anzeigeSU;
   let anzeigeSZ;
-
-  if (isVisible === true) {
-    width = +(0.55 * window.innerWidth);
-    {
-      /* Stauchung Graph*/
-    }
-  } else {
-    width = +(0.75 * window.innerWidth);
-  }
 
   if (isEpiforecast) {
     anzeigeEpiforecast = "visible";
@@ -157,6 +156,7 @@ export const Graph = ({
     i18n.changeLanguage(code);
   };
 
+  //Check if the data are already loaded or still loading.
   if (
     !data ||
     !EPIdata ||
@@ -174,9 +174,7 @@ export const Graph = ({
     return <p className="loading">Loading...</p>;
   }
 
-  const innerHeight = height - margin.top - margin.bottom;
-  const innerWidth = width - margin.left - margin.right;
-
+  //Assign X and Y for the axes.
   const xValue = (d) => d.date;
   const yValueDatenstand = (d) => d.valueSieben;
   const yValue = (d) => d.value;
@@ -184,19 +182,16 @@ export const Graph = ({
   const yQuantileGroß = (d) => d.quantileGroß;
   const xAxisTickFormat = timeFormat("%d.%m.%Y");
 
-
-
-
   const yesterday = new Date();
   yesterday.setDate(yesterday.getDate() - 1);
 
-
   const dateGraphStartFormat = new Date(dateGraphStart);
 
+  //Setting the Achses
   const xScale = scaleTime()
     .domain([dateGraphStartFormat, yesterday])
-    .range([0, innerWidth])
-    // .nice();
+    .range([0, innerWidth]);
+  // .nice();
 
   const yScale = scaleLinear()
     .domain([
@@ -209,12 +204,11 @@ export const Graph = ({
     .range([innerHeight, 0])
     .nice();
 
-    
-
   return (
     <div>
-      {/* <Tooltipp xScale={xScale} yScale={yScale} innerWidth={innerWidth} innerHeight={innerHeight} yValueDatenstand={yValueDatenstand} xValue={xValue} yValue={yValue} yQuantileKlein={yQuantileKlein} yQuantileGroß={yQuantileGroß}/> */}
       <svg id="my_dataviz" width={width} height={height}>
+
+      {/* Pass axis settings AxisLeft and AxisBottom.  */}
         <g transform={`translate(${margin.left},${margin.top})`}>
           <AxisBottom
             xScale={xScale}
@@ -242,6 +236,8 @@ export const Graph = ({
           </text>
 
           <g className="mark">
+
+          {/* Set the different lines for the methods.  */}
             <Marks
               data={EPIdata}
               xScale={xScale}
@@ -304,7 +300,7 @@ export const Graph = ({
               anzeigeAnAus={anzeigeNowcast}
               farbe={"100,049,0"}
             />
-             <Marks
+            <Marks
               data={NowcastMediandata}
               xScale={xScale}
               yScale={yScale}

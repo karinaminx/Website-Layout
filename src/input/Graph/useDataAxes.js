@@ -27,6 +27,10 @@ import {
   age80up,
 } from "./useEinwohnerZahlen.js";
 
+// Here the data is drawn to set the axes for the methods.
+// This is then compared with the data status.
+// The difference to the useDataMethod is that useDataDatenstand does not filter by methods.
+
 export const useDataAxes = (
   methode,
   menuAge,

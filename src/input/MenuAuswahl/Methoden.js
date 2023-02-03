@@ -48,24 +48,6 @@ export const MethodenDiv = () => {
   const [dataTabelleMethode, setdataTabelleMethode] =
     useState(initialValueTabelle);
 
-  //Filter: If one is selected, the other one´s opacity is set down
-  const div1 = document.getElementById("div1");
-  const div2 = document.getElementById("div2");
-
-  function handleDiv1Selection() {
-    div1.classList.remove("visible");
-    div1.classList.add("hidden");
-    div2.classList.remove("hidden");
-    div2.classList.add("visible");
-  }
-
-  function handleDiv2Selection() {
-    div2.classList.remove("visible");
-    div2.classList.add("hidden");
-    div1.classList.remove("hidden");
-    div1.classList.add("visible");
-  }
-
   //Const to show and hide the line for the method ----------------------------------------------------------
   const [isDatenstandSchwarz, setDatenstandSchwarz] = useState(true);
   const [isDatenstandGrau, setDatenstandGrau] = useState(true);
@@ -397,7 +379,6 @@ export const MethodenDiv = () => {
                         onSelectedValueChange={(selectedScope) => {
                           setmenuAge("00+");
                           setScope(selectedScope);
-                          handleDiv1Selection();
                           if (selectedScope !== "DE") {
                             setILM(false);
                           }
@@ -425,8 +406,6 @@ export const MethodenDiv = () => {
                         onSelectedValueChange={(selectedValue) => {
                           setmenuAge(selectedValue);
                           setScope("DE");
-
-                          handleDiv2Selection();
                         }}
                       />
                     </button>

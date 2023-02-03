@@ -1,5 +1,6 @@
 import "./Graph.css"
 
+//This sets the Y axis
   export const AxisLeft = ({ yScale, innerWidth, tickOffset }) =>
   yScale.ticks().map(tickValue => (
     <g className="tick" transform={`translate(0,${yScale(tickValue)})`}>

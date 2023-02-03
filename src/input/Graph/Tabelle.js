@@ -2,6 +2,9 @@ import { useState, useEffect } from "react";
 import { useData } from "./useDataMethode";
 import "./DesignTabelle.css";
 
+//Here the table is defined. 
+//But at the moment it is not used
+
 export const Tabelle = ({
   menuAge,
   selectedScope,

@@ -32,6 +32,8 @@ const csvUrl =
 
 //  const csvUrl=  "/Users/bjoern004/Downloads/COVID-19_hospitalizations_preprocessed.csv";
 
+// Here the data for Datenstand are drawn. 
+
 export const useDataDatenstand = (
   menuAge,
   selectedScope,
