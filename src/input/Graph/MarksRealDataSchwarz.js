@@ -1,6 +1,8 @@
 import "./Graph.css";
 import { line} from "d3";
 
+//Set the line for "Datenstand grau".
+
 export const MarksRealDataSchwarz = ({
   data,
   xScale,
@@ -11,6 +13,7 @@ export const MarksRealDataSchwarz = ({
   farbe,
 }) => (
   <g className="mark" stroke={farbe}>
+    {/* Setting the line for "Datenstand grau"*/}
     <path
       visibility={anzeigeAnAus}
       fill="none"

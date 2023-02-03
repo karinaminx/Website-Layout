@@ -1,5 +1,6 @@
 import "./Graph.css"
 
+//This sets the X axis
 export const AxisBottom = ({ xScale, innerHeight, tickFormat, tickOffset = 1 }) =>
 xScale.ticks().filter((tickValue, index) => index % 4  === 0).map(tickValue => (
   <g

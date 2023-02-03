@@ -1,6 +1,8 @@
 import "./Graph.css";
 import { line } from "d3";
 
+//Set the line for "Datenstand grau".
+
 export const MarksRealDataGrau = ({
   data,
   xScale,
@@ -11,6 +13,7 @@ export const MarksRealDataGrau = ({
   farbe,
 }) => (
   <g className="mark" stroke={farbe}>
+  {/* Setting the line for "Datenstand grau"*/}
     <line
       x1={xScale(xValue(data[data.length - 1]))}
       x2={xScale(xValue(data[data.length - 1]))}

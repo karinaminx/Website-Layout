@@ -27,6 +27,8 @@ import {
   age80up,
 } from "./useEinwohnerZahlen.js";
 
+// Here the data for "Methoden" are drawn. 
+
 export const useData = (
   methode,
   menuAge,
